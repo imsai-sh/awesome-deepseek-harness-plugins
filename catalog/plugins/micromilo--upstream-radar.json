@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MicroMilo/upstream-radar",
+  "name": "upstream-radar",
+  "repository": "https://github.com/MicroMilo/upstream-radar",
+  "category": "dev",
+  "description": {
+    "en": "Always-on dependency security monitoring for DSH plugins: exact installed paths, OSV vulnerabilities, npm releases, and compatibility signals routed to a DSH Agent.",
+    "zh": "面向 DSH 插件的常驻依赖安全监控：追踪实际安装路径、OSV 漏洞、npm 发布与兼容性信号，并路由给 DSH Agent。"
+  },
+  "added": "2026-08-15"
+}
