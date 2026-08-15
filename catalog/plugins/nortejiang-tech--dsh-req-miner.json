@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "nortejiang-tech/dsh-req-miner",
+  "name": "dsh-req-miner",
+  "repository": "https://github.com/nortejiang-tech/dsh-req-miner",
+  "category": "workflow",
+  "description": {
+    "en": "Requirements-mining plugin: a sidebar entry opens a per-session floating interview window. A continuable subagent interviews the user round by round (decision tree, frontier questions, recommended answers), reads the bound session's workspace and recent context, and returns the summarized requirement prompt to the session composer in one click.",
+    "zh": "需求挖掘插件:侧边栏入口打开每会话独立的浮动访谈窗口,由 continuable 子代理逐轮访谈(决策树、前沿问题、推荐答案),读取绑定会话的工作目录与近期上下文,共识达成后汇总成需求提示词并一键回传当前会话输入框。"
+  },
+  "added": "2026-08-16"
+}
