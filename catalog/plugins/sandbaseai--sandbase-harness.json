@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sandbaseai/sandbase-harness",
+  "name": "sandbase-harness",
+  "repository": "https://github.com/sandbaseai/sandbase-harness",
+  "category": "dev",
+  "description": {
+    "en": "Local-first agent runtime with persistent sessions, sandbox backends, audit and replay, plus a DSH bundle exposing its MCP bridge.",
+    "zh": "本地优先的 Agent 运行时，提供持久会话、沙箱后端、审计与回放，并通过 DSH bundle 暴露 MCP bridge。"
+  },
+  "added": "2026-08-15"
+}
