@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "imsai-sh/awesome-deepseek-harness-plugins",
+  "name": "dsh-1024store",
+  "repository": "https://github.com/imsai-sh/awesome-deepseek-harness-plugins",
+  "category": "tools",
+  "description": {
+    "en": "The DSH 1024Store client plugin: browse and search the live deepseek1024.com catalog from Settings, filter by category, confirmed one-click installs and uninstalls, plus self-update checks.",
+    "zh": "DSH 1024Store 官方商店插件：设置页内浏览/搜索 deepseek1024.com 实时目录，按分类筛选，确认后一键安装/卸载，支持自更新检查。"
+  },
+  "added": "2026-08-15"
+}
