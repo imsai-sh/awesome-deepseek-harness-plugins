@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hi-wenw/dsh-telegram-channel",
+  "name": "dsh-telegram-channel",
+  "repository": "https://github.com/hi-wenw/dsh-telegram-channel",
+  "category": "notify",
+  "description": {
+    "en": "Telegram mobile remote for DeepSeek Harness: bind live Web sessions, same trajectory on phone and desktop, with /sessions /model /last commands.",
+    "zh": "DeepSeek Harness 的 Telegram 手机遥控器：附着本机正在跑的 Web 会话，手机与电脑同轨迹双向可见，支持 /sessions /model /last 命令。"
+  },
+  "added": "2026-08-16"
+}
