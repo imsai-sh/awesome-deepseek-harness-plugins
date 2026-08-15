@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "WOOK98/airesearch-plugin",
+  "name": "airesearch-plugin",
+  "repository": "https://github.com/WOOK98/airesearch-plugin",
+  "category": "skill",
+  "description": {
+    "en": "AIResearch skill bundle for stock research: one-screen snapshots, six-lens equity deep dives, pre-market watchlist briefs, Industry Mode theme mapping, and SEC filing analysis.",
+    "zh": "面向股票研究的 AIResearch 技能包：单页快照、六视角个股深度研究、盘前 watchlist 简报、行业主题映射与 SEC 文件分析。"
+  },
+  "added": "2026-08-16"
+}
