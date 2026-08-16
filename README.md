@@ -216,6 +216,7 @@ npx wrangler deploy --secrets-file .dev.vars
 
 ## 记忆
 
+- [dsh-context](https://github.com/bowenliang123/dsh-context) — 上下文洞察面板：一眼看清模型上下文窗口的组成与变化——构成对照窗口大小、按请求历史趋势、压缩/注入事件、消息级 token 统计。
 - [distill](https://github.com/LoserFox/distill) — 自动对话蒸馏：后台 subagent 反省 + 技能 create/update。
 - [dsh-file-memory](https://github.com/ICCuse/dsh-file-memory) — 文件型工作记忆：memorize/recall 把关键前提逐字保存在会话笔记文件，无损挺过上下文压缩。
 - [dsh-knowledge](https://github.com/ICCuse/dsh-knowledge) — 全局知识库桥：kb_add/kb_search/kb_show/kb_timeline 读写与 Codex 共享的 D:\knowledge（格式逐字节兼容）。
@@ -982,7 +983,6 @@ npx wrangler deploy --secrets-file .dev.vars
 - [dsh-config-sync](https://github.com/muyifc/dsh-config-sync) — DeepSeekHarness配置同步插件
 - [dsh-config-watch](https://github.com/Equinox7379/dsh-config-watch) — Config drift detective for DSH: snapshots profile/plugin state, records changes.
 - [dsh-content-studio](https://github.com/ZRui-C/dsh-content-studio) — DSH bundle plugin: screenshots, screen recording, Markdown→Xiaohongshu image cards, dev.to publishing, and human-in-the-loop review for DeepSeek Harness
-- [dsh-context](https://github.com/bowenliang123/dsh-context) — A DeepSeek Harness plugin for Context insight dashboard — showing what the model's context window is made of and how it evolves.
 - [dsh-context-lens](https://github.com/gordonlu/dsh-context-lens) — Request Context Profiler for DeepSeek Harness — see what changed between model requests, and how cache reuse changed with it.
 - [dsh-context-pack](https://github.com/MkaliezZ/dsh-context-pack) — Deterministic, privacy-aware repository context packs for DeepSeek Harness context injection.
 - [dsh-context-provenance](https://github.com/030611/dsh-context-provenance) — Observe-only provenance ledger over public DeepSeek Harness runtime evidence
