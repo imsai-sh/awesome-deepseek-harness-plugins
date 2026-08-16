@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GptsApp/dsh-stylevault",
+  "name": "dsh-stylevault",
+  "repository": "https://github.com/GptsApp/dsh-stylevault",
+  "category": "theme",
+  "description": {
+    "en": "StyleVault: 30 faithful classic palettes (Catppuccin, Nord, Tokyo Night, Gruvbox, Solarized, Dracula, One Dark, Rosé Pine, etc.) mapped to official ThemeService tokens, plus a full Style Settings panel for live color/font/radius tweaks and JSON export/import for shareable config packs.",
+    "zh": "StyleVault 主题系统：30 套忠实经典配色（Catppuccin、Nord、Tokyo Night、Gruvbox、Solarized、Dracula、One Dark、Rosé Pine 等），映射官方 ThemeService token；完整 Style Settings 面板支持颜色/字体/圆角 live 微调，配置可导出/导入 JSON 分享。"
+  },
+  "added": "2026-08-16"
+}
