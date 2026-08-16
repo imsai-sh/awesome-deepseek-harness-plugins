@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PGZXB/dsh-feishu",
+  "name": "dsh-feishu",
+  "repository": "https://github.com/PGZXB/dsh-feishu",
+  "category": "notify",
+  "description": {
+    "en": "Feishu (Lark) UI for DeepSeek Harness — a panel-driven control console: every slash command is a button on the control-panel card, in-card approvals and questions, live streaming cards, and one-QR app setup.",
+    "zh": "DeepSeek Harness 的飞书 UI：面板驱动控制台，每个斜杠命令都是控制面板卡片上的按钮，卡内审批与提问，流式卡片，扫码一次完成配置。"
+  },
+  "added": "2026-08-17"
+}
