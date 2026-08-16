@@ -503,6 +503,36 @@ try {
   ])
   await compactMobile.close()
 
+  // 看板娘（桌宠）回归：固定在视口内不越界、触屏按钮 ≥44px、
+  // 投喂 → 气泡、玩耍 → 气泡。鲸鱼娘常驻（无隐藏入口）。
+  // 看板娘带持续 3D 摆动动画，Playwright 的稳定检查会一直等，交互统一用 force。
+  const pet = await openPage({ width: 390, height: 844 }, '/rankings', { touch: true })
+  await waitForRankingList(pet)
+  await pet.locator('.kanban-girl').waitFor()
+  const petBounds = await pet.evaluate(() => {
+    const rect = document.querySelector('.kanban-girl')?.getBoundingClientRect()
+    return rect ? { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom } : null
+  })
+  if (
+    !petBounds
+    || petBounds.left < 0
+    || petBounds.top < 0
+    || petBounds.right > 390
+    || petBounds.bottom > 844
+  ) {
+    throw new Error(`mobile kanban girl leaves the viewport: ${JSON.stringify(petBounds)}`)
+  }
+  await pet.locator('.kanban-girl').tap({ force: true })
+  await pet.locator('.kanban-girl-menu .kanban-girl-action').first().waitFor()
+  await assertMinTouchTargets(pet, 'mobile kanban girl actions', [
+    '.kanban-girl-menu .kanban-girl-action',
+  ])
+  await pet.locator('.kanban-girl-menu .kanban-girl-action').first().tap({ force: true })
+  await pet.locator('.kanban-girl-bubble').waitFor()
+  await pet.locator('.kanban-girl-menu .kanban-girl-action').nth(1).tap({ force: true })
+  await pet.locator('.kanban-girl-bubble').waitFor()
+  await pet.close()
+
   if (errors.length > 0) throw new Error(`browser errors:\n${errors.join('\n')}`)
   console.log('Visual smoke check passed: desktop, touch-enabled 390px mobile, compact 320px mobile, search, copy actions, local scrollers, and package details.')
 } finally {

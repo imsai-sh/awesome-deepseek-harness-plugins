@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react'
 import { Outlet } from 'react-router-dom'
 import { useI18n } from '../lib/i18n'
+import { KanbanGirl } from './KanbanGirl'
 
 export function AppShell() {
   const { t } = useI18n()
@@ -18,6 +19,8 @@ export function AppShell() {
           <ExternalLink size={12} aria-hidden="true" />
         </a>
       </div>
+
+      <KanbanGirl />
     </div>
   )
 }

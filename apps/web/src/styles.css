@@ -3647,3 +3647,328 @@ main {
 .seo-shell-facts dd {
   margin: 0;
 }
+/* ============================================================================
+   看板娘（桌宠）—— 右下角悬浮的 DeepSeek 鲸鱼娘
+   全局壳层小部件：fixed 浮层，纯装饰，可拖拽 / 投喂 / 隐藏。
+   颜色只走设计令牌（tokens.css），动效在 prefers-reduced-motion 下全部关闭。
+   ========================================================================== */
+
+.kanban-girl-root {
+  --kanban-size: 110px;
+  position: fixed;
+  z-index: 60;
+  width: var(--kanban-size);
+  height: var(--kanban-size);
+  /* 3D 透视：给按钮/厚度层/高光层提供共享的透视投影 */
+  perspective: 600px;
+  pointer-events: none;
+}
+
+.kanban-girl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  pointer-events: auto;
+  touch-action: pan-y;
+  /* 3D 化：pointer 跟随倾斜（--kanban-tilt-* 由 JS 写入），透视在根容器上 */
+  transform: rotateX(var(--kanban-tilt-x, 0deg)) rotateY(var(--kanban-tilt-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 140ms ease-out;
+}
+
+.kanban-girl:hover,
+.kanban-girl:focus-visible {
+  cursor: grab;
+}
+
+.kanban-girl:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.kanban-girl.is-dragging {
+  cursor: grabbing;
+  touch-action: none;
+  user-select: none;
+  transition: none;
+}
+
+/* 朝向翻转（素材默认朝左，flip=-1 镜像朝右） */
+.kanban-girl-flip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms var(--ease);
+}
+
+/* 3D 主体：持续的轻微透视摆动（rotateY 左右回旋），配合厚度层形成立体感 */
+.kanban-girl-3d {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: kanban-sway 8s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* 背面厚度层：下沉到 Z=-32px、模糊压暗，摆动时从主体边缘露出。
+   选择器双类提升优先级，避免被 .kanban-girl-sprite 的 drop-shadow 覆盖。 */
+.kanban-girl-sprite.kanban-girl-depth {
+  position: absolute;
+  inset: 0;
+  transform: translateZ(-32px);
+  filter: blur(6px) brightness(0.5) saturate(0.75);
+  pointer-events: none;
+}
+
+/* 鲸鱼娘精灵图（whale-girl 素材，帧横排 256×256，background-size 缩放）。
+   drop-shadow 跟随轮廓投下阴影，配合 3D 摆动呈现"悬浮立体"感。 */
+.kanban-girl-sprite {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 12px 10px rgb(var(--shadow-rgb) / 30%));
+}
+
+/* 单帧状态的运动配方（manifest 的 motion 字段） */
+.kanban-girl-sprite.is-tilt {
+  animation: kanban-tilt 0.9s ease-in-out infinite alternate;
+}
+
+.kanban-girl-sprite.is-float {
+  animation: kanban-float 2.6s ease-in-out infinite;
+}
+
+/* 3D 体积感：顶层高光（浮在 Z=10px，随摆动产生视差） */
+.kanban-girl-shine {
+  position: absolute;
+  inset: 0;
+  transform: translateZ(10px);
+  border-radius: 18%;
+  background: radial-gradient(120% 70% at 32% 16%, rgb(255 255 255 / 26%), transparent 55%);
+  pointer-events: none;
+}
+
+/* 接触阴影（接地） */
+.kanban-girl-shadow {
+  position: absolute;
+  right: 10%;
+  bottom: -4px;
+  left: 10%;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(var(--shadow-rgb) / 14%);
+  pointer-events: none;
+}
+
+/* 气泡 + 菜单：悬停在鲸鱼娘上方 */
+.kanban-girl-pop {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.kanban-girl-bubble {
+  box-sizing: border-box;
+  max-width: min(250px, calc(100vw - 32px));
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px 12px 2px 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  pointer-events: auto;
+  animation: kanban-pop-in var(--duration-fast) var(--ease);
+}
+
+.kanban-girl-menu {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.kanban-girl-action {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--brand-dark);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background-color var(--duration-fast) var(--ease),
+    transform var(--duration-fast) var(--ease);
+}
+
+.kanban-girl-action:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-hover);
+  transform: var(--lift);
+}
+
+.kanban-girl-action:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* 小气泡上升（循环出现） */
+.kanban-girl-bubble-dot {
+  position: absolute;
+  right: 22%;
+  bottom: 18px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand-border);
+  opacity: 0;
+  animation: kanban-bubbles 6s ease-in infinite;
+  pointer-events: none;
+}
+
+.kanban-girl-bubble-dot:nth-child(4) {
+  right: 18%;
+  bottom: 26px;
+  animation-delay: 2s;
+}
+
+.kanban-girl-bubble-dot:nth-child(5) {
+  right: 26%;
+  bottom: 24px;
+  animation-delay: 4s;
+}
+
+/* 点击 / 投喂时的爱心 */
+.kanban-girl-heart {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  color: var(--accent-coral);
+  font-size: 16px;
+  line-height: 1;
+  animation: kanban-heart 1.2s ease-out forwards;
+  pointer-events: none;
+}
+
+/* 隐藏入口已移除：鲸鱼娘常驻，不想看可拖到角落，无需恢复机制 */
+
+@keyframes kanban-sway {
+  0% {
+    transform: rotateY(-5deg) rotateX(1.5deg);
+  }
+  100% {
+    transform: rotateY(5deg) rotateX(-1.5deg);
+  }
+}
+
+@keyframes kanban-tilt {
+  from {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes kanban-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes kanban-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes kanban-heart {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-46px) scale(1.15);
+  }
+}
+
+@keyframes kanban-bubbles {
+  0%,
+  62% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  68% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-26px);
+  }
+}
+
+/* 触屏 / 窄屏：缩小鲸鱼娘，操作按钮保持 44px 触摸目标 */
+@media (max-width: 680px) {
+  .kanban-girl-root {
+    --kanban-size: 72px;
+  }
+
+  .kanban-girl-action {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* 尊重系统的减少动效设置：循环动画关闭，帧播放器在组件层同样降级为静态帧0 */
+@media (prefers-reduced-motion: reduce) {
+  .kanban-girl-3d,
+  .kanban-girl-sprite,
+  .kanban-girl-bubble-dot {
+    animation: none;
+  }
+
+  .kanban-girl-depth {
+    display: none;
+  }
+
+  .kanban-girl,
+  .kanban-girl-flip {
+    transition: none;
+  }
+
+  .kanban-girl-bubble-dot {
+    display: none;
+  }
+}

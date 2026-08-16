@@ -166,6 +166,10 @@ const messages = {
     apiDocsErrDailyQuota: 'The daily quota is exhausted.',
     apiDocsErrInternal: 'Unexpected server error.',
     apiDocsErrServiceUnavailable: 'The service is temporarily unavailable (e.g. during maintenance).',
+    petLabel: 'DSH 1024Store whale girl',
+    petFeed: 'Feed a fish',
+    petPlay: 'Play with the whale girl',
+    petGreeting: 'Welcome to DSH 1024Store! I am your whale girl ~',
   },
   zh: {
     catalog: '插件目录',
@@ -329,6 +333,10 @@ const messages = {
     apiDocsErrDailyQuota: '当日配额已用完。',
     apiDocsErrInternal: '服务器内部错误。',
     apiDocsErrServiceUnavailable: '服务暂时不可用（例如维护期间）。',
+    petLabel: 'DSH 1024Store 看板娘小鲸',
+    petFeed: '投喂小鱼干',
+    petPlay: '和我玩',
+    petGreeting: '欢迎来到 DSH 1024Store，我是看板娘小鲸 ~',
   },
 } as const
 
