@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/skill-framework",
+    "name":  "skill-framework",
+    "repository":  "https://github.com/JohnXu22786/skill-framework",
+    "category":  "skill",
+    "description":  {
+                        "en":  "Praxis — a bundled engineering-methodology skill library: 14 Agent Skills (design, planning, test-first, debugging, review, delivery) wired into dsh\u0027s skill system as a self-contained plugin.",
+                        "zh":  "工程方法论技能库：14 个 Agent Skills（设计、规划、测试驱动、调试、评审、交付）以插件形式接入 dsh 技能系统。"
+                    },
+    "added":  "2026-08-17"
+}
