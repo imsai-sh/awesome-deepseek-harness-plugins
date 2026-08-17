@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/docs-retriever",
+    "name":  "docs-retriever",
+    "repository":  "https://github.com/JohnXu22786/docs-retriever",
+    "category":  "tools",
+    "description":  {
+                        "en":  "doctrove — versioned library documentation retrieval: a doc catalog index lets agents fetch accurate, versioned, traceable API documentation on demand instead of guessing from training memory.",
+                        "zh":  "版本化文档检索插件：通过文档目录索引按需拉取准确、带版本、可溯源的 API 文档，避免凭空猜测 API。"
+                    },
+    "added":  "2026-08-17"
+}
