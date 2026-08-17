@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/statusline",
+    "name":  "statusline",
+    "repository":  "https://github.com/JohnXu22786/statusline",
+    "category":  "ui",
+    "description":  {
+                        "en":  "statusline — real-time terminal status line: model name, context usage bar, rate-limit, elapsed time and clock compressed into a single refreshed line, plus structured JSON for scripts and panels.",
+                        "zh":  "实时终端状态栏：把模型名、上下文占用、限流、用时等压成一行持续刷新，并向脚本与面板输出结构化 JSON。"
+                    },
+    "added":  "2026-08-17"
+}
