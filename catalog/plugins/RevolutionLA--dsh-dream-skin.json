@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "RevolutionLA/dsh-dream-skin",
+  "name": "dsh-dream-skin",
+  "repository": "https://github.com/RevolutionLA/dsh-dream-skin",
+  "category": "ui",
+  "description": {
+    "en": "One-command skinning for DSH Web: 8 original themes, wallpaper (opacity/blur/gradient/URL), per-user accent, shareable theme packs, favorites and surprise-me. Purely native token system.",
+    "zh": "DSH Web 一键换肤插件：8 套原创主题、背景壁纸（透明度/模糊/渐变/URL）、每用户强调色、主题包导入导出与分享链接、收藏与随机，纯原生 token 系统。"
+  },
+  "added": "2026-08-17"
+}
