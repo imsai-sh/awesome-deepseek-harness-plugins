@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/skill-manager",
+    "name":  "skill-manager",
+    "repository":  "https://github.com/JohnXu22786/skill-manager",
+    "category":  "skill",
+    "description":  {
+                        "en":  "repertoire — skill discovery, loading, creation and statistics for dsh: multi-level auto-discovery, progressive disclosure, a creation wizard and validation/audit over the skill catalog.",
+                        "zh":  "技能库管理插件：多级目录自动发现、渐进式披露、创建向导与校验统计，统一管理 dsh 技能目录。"
+                    },
+    "added":  "2026-08-17"
+}
