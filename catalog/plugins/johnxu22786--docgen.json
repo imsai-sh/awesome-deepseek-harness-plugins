@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/docgen",
+    "name":  "docgen",
+    "repository":  "https://github.com/JohnXu22786/docgen",
+    "category":  "skill",
+    "description":  {
+                        "en":  "docgen — document workshop skill pack: pure-prompt Agent Skills for README generation, PR descriptions, changelogs and structured code review, installable into dsh.",
+                        "zh":  "文档工坊技能包：用于 README 生成、PR 描述、变更日志与代码评审的纯提示词 Agent Skills。"
+                    },
+    "added":  "2026-08-17"
+}
