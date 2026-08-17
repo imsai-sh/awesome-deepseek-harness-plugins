@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/codegraph",
+    "name":  "codegraph",
+    "repository":  "https://github.com/JohnXu22786/codegraph",
+    "category":  "dev",
+    "description":  {
+                        "en":  "CodeGraph — a code knowledge graph: parses a codebase into a queryable SQLite index answering callers/callees, dependency, full-text search and impact questions before making changes.",
+                        "zh":  "代码知识图谱：把代码库解析为可查询的 SQLite 索引，回答谁调用这个函数、依赖什么、改动的波及范围等问题。"
+                    },
+    "added":  "2026-08-17"
+}
