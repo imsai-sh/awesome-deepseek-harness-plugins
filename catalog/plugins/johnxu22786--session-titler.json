@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/session-titler",
+    "name":  "session-titler",
+    "repository":  "https://github.com/JohnXu22786/session-titler",
+    "category":  "session",
+    "description":  {
+                        "en":  "dsh-session-caption — two-phase session captioning for dsh: instant keyword titles while active, budget-model refinement when idle plus a one-line summary; cost-controlled and multilingual.",
+                        "zh":  "两阶段会话标题插件：会话进行时即时生成关键词标题，空闲时用最廉价模型精炼并生成一行摘要，成本受控且多语言。"
+                    },
+    "added":  "2026-08-17"
+}
