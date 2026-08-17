@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/model-catalog",
+    "name":  "model-catalog",
+    "repository":  "https://github.com/JohnXu22786/model-catalog",
+    "category":  "model",
+    "description":  {
+                        "en":  "Model Catalog — auto-discovers models from any OpenAI-compatible endpoint and generates ready-to-use dsh model configs with normalized pricing, context windows and capability flags.",
+                        "zh":  "模型目录插件：从任何 OpenAI 兼容端点自动发现模型，生成开箱即用的 dsh 模型配置，含归一化定价、上下文与能力标志。"
+                    },
+    "added":  "2026-08-17"
+}
