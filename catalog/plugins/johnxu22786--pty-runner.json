@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/pty-runner",
+    "name":  "pty-runner",
+    "repository":  "https://github.com/JohnXu22786/pty-runner",
+    "category":  "tools",
+    "description":  {
+                        "en":  "backstage — background terminal job management for dsh: launch long-running processes in dedicated PTY sessions, send them input, page through output, and stop them on demand.",
+                        "zh":  "后台终端任务管理：在专用 PTY 会话中运行长驻进程，可发送输入、分页查看输出、按需停止，跨 Windows/macOS/Linux。"
+                    },
+    "added":  "2026-08-17"
+}
