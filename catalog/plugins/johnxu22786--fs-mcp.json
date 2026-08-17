@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/fs-mcp",
+    "name":  "fs-mcp",
+    "repository":  "https://github.com/JohnXu22786/fs-mcp",
+    "category":  "tools",
+    "description":  {
+                        "en":  "paddock — local filesystem workbench as an MCP stdio server: text read/write, directory management, filename/content search and metadata queries, confined to configurable directories with a read-only mode.",
+                        "zh":  "本地文件系统工作台：以 MCP stdio 服务提供读写、目录管理、搜索与元数据查询，限制在可配置目录内并支持只读模式。"
+                    },
+    "added":  "2026-08-17"
+}
