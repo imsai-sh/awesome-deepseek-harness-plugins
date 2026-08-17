@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/file-planning",
+    "name":  "file-planning",
+    "repository":  "https://github.com/JohnXu22786/file-planning",
+    "category":  "workflow",
+    "description":  {
+                        "en":  "trailmap — disk-persisted execution planning: plan, execution state, field notes and debrief live in the workspace .trail/ directory, so interrupted sessions or context compression never lose your bearings.",
+                        "zh":  "落盘执行规划插件：把计划、执行状态、现场记录与回顾保存在 .trail/ 目录，会话中断也能无缝续进。"
+                    },
+    "added":  "2026-08-17"
+}
