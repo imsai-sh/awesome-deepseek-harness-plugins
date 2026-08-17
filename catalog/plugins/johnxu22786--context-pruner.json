@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/context-pruner",
+    "name":  "context-pruner",
+    "repository":  "https://github.com/JohnXu22786/context-pruner",
+    "category":  "workflow",
+    "description":  {
+                        "en":  "dsh-context-triage — automatic session context management: screens stale, duplicate, failed, oversized and low-value messages to save tokens and curb context bloat, integrated with dsh\u0027s native compaction seam.",
+                        "zh":  "会话上下文分诊插件：自动清理过期、重复、失败、超大与低价值消息，节省 token 并遏制上下文膨胀。"
+                    },
+    "added":  "2026-08-17"
+}
