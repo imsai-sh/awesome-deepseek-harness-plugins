@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/github-mcp",
+    "name":  "github-mcp",
+    "repository":  "https://github.com/JohnXu22786/github-mcp",
+    "category":  "tools",
+    "description":  {
+                        "en":  "repogate — GitHub workbench for agents: wraps the GitHub REST API into MCP tools for repo queries, issue management, PR creation/merging, code review and search, direct from the conversation.",
+                        "zh":  "GitHub 开发工作台：把 GitHub REST API 封装为 MCP 工具，支持仓库查询、Issue/PR 管理、代码评审与搜索。"
+                    },
+    "added":  "2026-08-17"
+}
