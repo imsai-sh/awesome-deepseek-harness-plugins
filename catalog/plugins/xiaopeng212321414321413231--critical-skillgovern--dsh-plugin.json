@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Xiaopeng212321414321413231/critical-skillgovern/dsh-plugin",
+  "name": "dsh-skillgovern",
+  "repository": "https://github.com/Xiaopeng212321414321413231/critical-skillgovern",
+  "category": "skill",
+  "description": {
+    "en": "Skill routing governance tools - diagnose routing health, batch audit skill libraries, and classify skills into 7 major / 19 sub categories.",
+    "zh": "技能路由治理工具集 - 诊断技能路由健康度、批量审计技能库、按 7 大类 19 子类结构化分类技能。"
+  },
+  "added": "2026-08-17"
+}
