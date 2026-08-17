@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/safety-net",
+    "name":  "safety-net",
+    "repository":  "https://github.com/JohnXu22786/safety-net",
+    "category":  "dev",
+    "description":  {
+                        "en":  "Barricade — intercepts destructive shell commands (rm -rf, git reset --hard, git push --force, etc.) before they land and requires human confirmation; a safety gate for irreversible terminal operations.",
+                        "zh":  "致命命令拦截器：在执行 rm -rf、git reset --hard 等不可逆命令前拦截并请求人工确认，保护工作区。"
+                    },
+    "added":  "2026-08-17"
+}
