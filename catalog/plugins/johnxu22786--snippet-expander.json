@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/snippet-expander",
+    "name":  "snippet-expander",
+    "repository":  "https://github.com/JohnXu22786/snippet-expander",
+    "category":  "tools",
+    "description":  {
+                        "en":  "Steno — inline shorthand expansion for dsh messages: type #tag and it is replaced with the configured snippet text before the message is sent; libraries, aliases, variables and recursive composition.",
+                        "zh":  "消息简写展开插件：发送前把 #tag 自动替换为配置的片段文本，支持多库、别名、变量与递归组合。"
+                    },
+    "added":  "2026-08-17"
+}
