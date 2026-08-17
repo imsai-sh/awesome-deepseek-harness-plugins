@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/task-board",
+    "name":  "task-board",
+    "repository":  "https://github.com/JohnXu22786/task-board",
+    "category":  "workflow",
+    "description":  {
+                        "en":  "dsh-slate — cross-session work ledger with event sourcing: register, track and complete tasks and issues persistently; a board digest is injected into the model context every turn.",
+                        "zh":  "跨会话工作看板：基于事件溯源的记录、跟踪与完成任务/问题，看板摘要每轮注入模型上下文，支持看板导出与 git 关联。"
+                    },
+    "added":  "2026-08-17"
+}
