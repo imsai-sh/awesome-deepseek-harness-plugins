@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/memory-vault",
+    "name":  "memory-vault",
+    "repository":  "https://github.com/JohnXu22786/memory-vault",
+    "category":  "memory",
+    "description":  {
+                        "en":  "Cross-session persistent memory for DeepSeek Harness: save experiences, decisions and preferences distilled from conversations into a local SQLite vault and recall them on demand in future sessions.",
+                        "zh":  "跨会话持久记忆插件：把对话中沉淀的经验、决策与偏好存入本地 SQLite 库，在后续会话中按需召回。"
+                    },
+    "added":  "2026-08-17"
+}
