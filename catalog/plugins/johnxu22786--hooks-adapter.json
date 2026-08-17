@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/hooks-adapter",
+    "name":  "hooks-adapter",
+    "repository":  "https://github.com/JohnXu22786/hooks-adapter",
+    "category":  "dev",
+    "description":  {
+                        "en":  "hooks-adapter — reuse hooks configs from Claude Code, Codex, opencode or native dsh on the DeepSeek Harness: maps lifecycle events and runs shell, webhook, oracle and proxy handlers.",
+                        "zh":  "钩子兼容层：把 Claude Code / Codex / opencode 的 hooks 配置复用到 dsh，支持 shell、webhook、oracle 与 proxy 四种处理器。"
+                    },
+    "added":  "2026-08-17"
+}
