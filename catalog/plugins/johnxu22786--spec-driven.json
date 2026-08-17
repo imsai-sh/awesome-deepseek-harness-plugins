@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/spec-driven",
+    "name":  "spec-driven",
+    "repository":  "https://github.com/JohnXu22786/spec-driven",
+    "category":  "workflow",
+    "description":  {
+                        "en":  "keel — spec-driven development discipline skill pack: five skills and three tools enforce write-the-spec-first, verified assumptions, scope control and per-criterion audit for dsh agents.",
+                        "zh":  "规格驱动开发纪律技能包：五项技能与三件工具约束 agent 先写规格、验证假设、控制范围并按验收标准审计。"
+                    },
+    "added":  "2026-08-17"
+}
