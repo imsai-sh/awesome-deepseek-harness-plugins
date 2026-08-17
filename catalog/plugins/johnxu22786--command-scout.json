@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/command-scout",
+    "name":  "command-scout",
+    "repository":  "https://github.com/JohnXu22786/command-scout",
+    "category":  "tools",
+    "description":  {
+                        "en":  "command-scout — scans the workspace and exposes declared build commands (Makefile targets, package.json scripts, just recipes, deno tasks) as callable agent tools.",
+                        "zh":  "命令侦察插件：扫描工作区，把项目声明的构建命令（Makefile、npm scripts、just、deno 等）暴露为可调用工具。"
+                    },
+    "added":  "2026-08-17"
+}
