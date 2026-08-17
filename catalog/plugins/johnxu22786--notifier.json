@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/notifier",
+    "name":  "notifier",
+    "repository":  "https://github.com/JohnXu22786/notifier",
+    "category":  "notify",
+    "description":  {
+                        "en":  "dsh-chime — desktop signal plugin: a system notification plus optional chime when a task finishes, approval is pending, or a run errors out; zero runtime dependencies, cross-platform.",
+                        "zh":  "桌面信号提醒插件：任务完成、等待审批或出错时弹出系统通知并可选播放提示音，无需盯着终端。"
+                    },
+    "added":  "2026-08-17"
+}
