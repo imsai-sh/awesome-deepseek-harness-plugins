@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/worktree-mgr",
+    "name":  "worktree-mgr",
+    "repository":  "https://github.com/JohnXu22786/worktree-mgr",
+    "category":  "workflow",
+    "description":  {
+                        "en":  "worktree-mgr — task-isolated git worktree workspaces for dsh: each parallel task gets its own branch and workspace with automatic commit, merge and cleanup; zero manual git operations.",
+                        "zh":  "任务隔离 git worktree 插件：每个并行任务拥有独立分支与工作区，自动完成提交、合并与清理，全程无需手动 git。"
+                    },
+    "added":  "2026-08-17"
+}
