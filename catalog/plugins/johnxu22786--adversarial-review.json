@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/adversarial-review",
+    "name":  "adversarial-review",
+    "repository":  "https://github.com/JohnXu22786/adversarial-review",
+    "category":  "dev",
+    "description":  {
+                        "en":  "gavel-review — adversarial, multi-perspective code review: independent review lenses attack a change in parallel, then an arbitration layer merges, de-duplicates and grades findings by severity; fully read-only.",
+                        "zh":  "对抗式多视角代码评审：多个独立评审视角并行攻击改动，再由仲裁层合并、去重并按严重度分级输出报告，全程只读。"
+                    },
+    "added":  "2026-08-17"
+}
