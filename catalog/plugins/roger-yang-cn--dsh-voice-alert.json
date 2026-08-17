@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Roger-Yang-CN/dsh-voice-alert",
+  "name": "dsh-voice-alert",
+  "repository": "https://github.com/Roger-Yang-CN/dsh-voice-alert",
+  "category": "notify",
+  "description": {
+    "en": "Plays a voice prompt, shows an in-page popup, and sends a system notification when a task completes or the agent asks the user for input (questions, approvals, plan reviews).",
+    "zh": "任务完成或 Agent 请示用户（提问/审批/方案评审）时播放语音提示并弹出页面提示条；页面失焦或最小化时发送系统通知，点击可跳回 DSH。"
+  },
+  "added": "2026-08-17"
+}
