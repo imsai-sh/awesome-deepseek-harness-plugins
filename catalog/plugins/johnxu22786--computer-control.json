@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/computer-control",
+    "name":  "computer-control",
+    "repository":  "https://github.com/JohnXu22786/computer-control",
+    "category":  "tools",
+    "description":  {
+                        "en":  "computer-control — desktop control for dsh: screen capture, mouse/keyboard injection and accessibility-tree semantic actions with safety guards, a confirmation flow, idle standby and dry-run mode.",
+                        "zh":  "桌面控制插件：截图、鼠标/键盘注入与可访问性树语义操作，内置急停、放行规则、确认流程、待机与试运行模式。"
+                    },
+    "added":  "2026-08-17"
+}
