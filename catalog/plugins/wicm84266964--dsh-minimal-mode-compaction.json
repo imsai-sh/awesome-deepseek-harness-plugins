@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wicm84266964/dsh-minimal-mode-compaction",
+  "name": "DeepSeek Harness 极简模式长会话",
+  "repository": "https://github.com/wicm84266964/dsh-minimal-mode-compaction",
+  "category": "workflow",
+  "description": {
+    "en": "Adds configurable-threshold context compaction for the DeepSeek Harness minimal mode, plus /compact, /context, and a model-callable compaction tool.",
+    "zh": "为 DeepSeek Harness 极简模式提供可配置阈值的自动上下文压缩，并增加 /compact、/context 与模型可调用的主动压缩工具。"
+  },
+  "added": "2026-08-17"
+}
