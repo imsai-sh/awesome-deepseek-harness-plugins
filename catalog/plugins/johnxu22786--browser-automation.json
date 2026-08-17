@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "JohnXu22786/browser-automation",
+    "name":  "browser-automation",
+    "repository":  "https://github.com/JohnXu22786/browser-automation",
+    "category":  "tools",
+    "description":  {
+                        "en":  "Web Bridge — real-browser automation MCP server for dsh: open pages, read structure via accessibility-tree snapshots, click, fill forms, take screenshots and run scripts, without needing a vision model.",
+                        "zh":  "真实浏览器自动化 MCP 服务器：通过可访问性树快照让 agent 打开网页、点击、填表、截图并执行脚本。"
+                    },
+    "added":  "2026-08-17"
+}
