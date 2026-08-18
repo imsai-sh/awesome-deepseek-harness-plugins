@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "y2zyyr/dsh-restart-button",
+  "name": "dsh-restart-button",
+  "repository": "https://github.com/y2zyyr/dsh-restart-button",
+  "category": "ui",
+  "description": {
+    "en": "One-click Restart DSH button in Settings > General for DeepSeek Harness Desktop, using the official desktopRuntime.requestRestart() graceful restart facade (no shell/kill/sudo), with native confirmation, single-flight protection and zh/en i18n.",
+    "zh": "在 DeepSeek Harness Desktop 设置 > 通用中添加一键「重启 DSH」按钮，通过官方 desktopRuntime.requestRestart() 优雅重启接口实现（无 shell/kill/sudo），含原生确认弹窗、防重复触发与中英文文案。"
+  },
+  "added": "2026-08-19"
+}
