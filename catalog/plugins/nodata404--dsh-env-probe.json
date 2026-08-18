@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "nodata404/dsh-env-probe",
+  "name": "dsh-env-probe",
+  "repository": "https://github.com/nodata404/dsh-env-probe",
+  "category": "tools",
+  "description": {
+    "en": "Probes the local machine environment (OS, shells, runtimes, tools, disks, proxy) once at startup, caches the report on disk, and injects it into every session's system prompt; registers /env-refresh and /env-suggest slash commands when a command adapter is available.",
+    "zh": "启动时探测一次本机环境（操作系统、Shell、运行时、常用工具、磁盘、代理），把报告缓存到磁盘并注入每个会话的系统提示词；在组合了命令适配器时注册 /env-refresh 与 /env-suggest 斜杠命令。"
+  },
+  "added": "2026-08-18"
+}
