@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "UllrAI/dsh-mqtt",
+  "name": "dsh-mqtt",
+  "repository": "https://github.com/UllrAI/dsh-mqtt",
+  "category": "notify",
+  "description": {
+    "en": "MQTT protocol driver and agent worker gateway for submitting, steering, observing, and cancelling DeepSeek Harness sessions.",
+    "zh": "通过 MQTT 提交、引导、观察和取消 DeepSeek Harness 会话的协议驱动与 Agent Worker 网关。"
+  },
+  "added": "2026-08-18"
+}
