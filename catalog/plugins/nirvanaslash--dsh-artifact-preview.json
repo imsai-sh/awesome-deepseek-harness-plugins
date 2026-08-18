@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "nirvanaslash/dsh-artifact-preview",
+  "name": "dsh-artifact-preview",
+  "repository": "https://github.com/nirvanaslash/dsh-artifact-preview",
+  "category": "ui",
+  "description": {
+    "en": "In-chat produced-files row with inline image thumbnails and a resizable side preview panel for Markdown, source code, CSV, JSON, images and HTML.",
+    "zh": "对话内产物文件行（含图片缩略图）与可拖宽的分屏侧边预览面板，支持 Markdown、源代码、CSV、JSON、图片与 HTML 渲染。"
+  },
+  "added": "2026-08-18"
+}
