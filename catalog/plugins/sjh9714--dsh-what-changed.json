@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sjh9714/dsh-what-changed",
+  "name": "dsh-what-changed",
+  "repository": "https://github.com/sjh9714/dsh-what-changed",
+  "category": "session",
+  "description": {
+    "en": "Lists every file the agent wrote during a session from the session header, with per-file hunks, counting writes the permission layer refused separately from edits. A second section compares the workspace against HEAD, so files changed through shell commands rather than the write tools are also listed.",
+    "zh": "在会话顶栏列出本次会话 Agent 写过的所有文件与逐处改动，被权限层拒绝的写入与实际编辑分开计数。另有一节将工作区与 HEAD 对照，因此通过 shell 命令而非写入工具改动的文件同样会列出。"
+  },
+  "added": "2026-08-18"
+}
