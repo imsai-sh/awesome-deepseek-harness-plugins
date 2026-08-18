@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "SpookySandwich/dsh-plugin-smooth-stream",
+  "name": "dsh-plugin-smooth-stream",
+  "repository": "https://github.com/SpookySandwich/dsh-plugin-smooth-stream",
+  "category": "ui",
+  "description": {
+    "en": "Reveals assistant replies in fading paragraph batches instead of token-by-token output, with smooth scroll-follow while streaming and a live one-line summary on reasoning blocks. Respects prefers-reduced-motion.",
+    "zh": "以淡入的段落批次呈现助手回复，而非逐字输出；流式过程中平滑跟随滚动，思考块显示实时单行摘要，并遵循 prefers-reduced-motion。"
+  },
+  "added": "2026-08-18"
+}
