@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "tokentopo-ai/dsh-octo",
+  "name": "dsh-octo",
+  "repository": "https://github.com/tokentopo-ai/dsh-octo",
+  "category": "skill",
+  "description": {
+    "en": "Installs a dsh skill and official Claude Code, Codex, and DeepSeek subagent integrations for staged planning, implementation, review, and optional experiment workflows on complex tasks.",
+    "zh": "为 dsh 安装一项技能及 Claude Code、Codex 与 DeepSeek 官方 subagent 集成，用于在复杂任务中按阶段组织计划、实现、审核与可选实验流程。"
+  },
+  "added": "2026-08-18"
+}
