@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ngk3pori/dsh-zh-cn-ui",
+  "name": "dsh-zh-cn-ui",
+  "repository": "https://github.com/ngk3pori/dsh-zh-cn-ui",
+  "category": "ui",
+  "description": {
+    "en": "Localizes selected DeepSeek Harness Web UI labels, command descriptions, session model reasoning-effort names, and permission and tool status text through client-side fetch interception and DOM observation.",
+    "zh": "通过客户端 fetch 拦截和 DOM 观察，将 DeepSeek Harness Web 界面中的部分命令描述、会话模型推理等级名称，以及权限和工具状态文字本地化为简体中文。"
+  },
+  "added": "2026-08-19"
+}
