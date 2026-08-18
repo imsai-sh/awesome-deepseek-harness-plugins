@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "y2zyyr/dsh-token-usage-sidebar",
+  "name": "dsh-token-usage-sidebar",
+  "repository": "https://github.com/y2zyyr/dsh-token-usage-sidebar",
+  "category": "ui",
+  "description": {
+    "en": "Persistent token usage sidebar and Settings page for DeepSeek Harness: Today / Yesterday / lifetime totals, per-range stats, provider/model breakdown, backed by an exactly-once local SQLite ledger. Data stays on the machine.",
+    "zh": "为 DeepSeek Harness 提供持久化的 Token 用量侧边栏与设置页：今日/昨日/累计总览、按范围统计、provider/model 明细，基于本地 SQLite 账本精确记账，数据仅保存在本机。"
+  },
+  "added": "2026-08-19"
+}
