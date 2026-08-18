@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "welsione/dsh-mmx-bridge",
+  "name": "dsh-mmx-bridge",
+  "repository": "https://github.com/welsione/dsh-mmx-bridge",
+  "category": "tools",
+  "description": {
+    "en": "Adds one mmx_bridge model tool to DeepSeek Harness that dispatches describe, image, video, speech, music, cover, search and quota actions to the MiniMax mmx CLI; optionally takes over the built-in web_search and read_image tools; ships a built-in client bundle that renders inline audio/video players and a settings-page management card in the Web GUI.",
+    "zh": "为 DeepSeek Harness 注册单个 mmx_bridge 模型工具，把 describe、image、video、speech、music、cover、search、quota 动作分发到 MiniMax mmx CLI；可选接管内置的 web_search 与 read_image 工具；内置客户端增强会在 Web 界面渲染内联音视频播放器和设置页管理卡片。"
+  },
+  "added": "2026-08-18"
+}
