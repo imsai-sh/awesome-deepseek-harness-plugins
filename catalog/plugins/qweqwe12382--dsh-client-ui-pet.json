@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "qweqwe12382/dsh-client-ui-pet",
+  "name": "dsh-client-ui-pet",
+  "repository": "https://github.com/qweqwe12382/dsh-client-ui-pet",
+  "category": "fun",
+  "description": {
+    "en": "Floating Q pet for the DSH Web UI: frame-atlas animation driven by the agent's session activity (thinking / reading / editing / working / replying / done / error), with rotating speech bubbles and in-session character switching.",
+    "zh": "DSH Web 界面的 Q 桌宠：帧图集动画随会话活动切换（思考 / 查阅 / 编辑 / 工作 / 回复 / 完成 / 出错），轮换对话气泡，支持角色切换。"
+  },
+  "added": "2026-08-18"
+}
