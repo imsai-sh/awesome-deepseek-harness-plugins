@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sjh9714/dsh-movein",
+  "name": "dsh-movein",
+  "repository": "https://github.com/sjh9714/dsh-movein",
+  "category": "tools",
+  "description": {
+    "en": "Moves an existing Claude Code or Codex CLI setup into DSH in one command, covering skills, slash commands, MCP servers, hooks, subagents and permission rules, with a dry run by default and a doctor command that checks the result afterwards.",
+    "zh": "一条命令把已有的 Claude Code 或 Codex CLI 配置迁入 DSH，涵盖技能、斜杠命令、MCP 服务器、hooks、子代理与权限规则，默认先执行 dry run，并提供 doctor 命令在迁移后检查结果。"
+  },
+  "added": "2026-08-18"
+}
