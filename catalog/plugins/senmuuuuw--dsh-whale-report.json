@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "SenmuuuuW/dsh-whale-report",
+  "name": "dsh-whale-report",
+  "repository": "https://github.com/SenmuuuuW/dsh-whale-report",
+  "category": "tools",
+  "description": {
+    "en": "DeepTrace — read-only agent reports for DeepSeek Harness: daily/weekly/monthly/yearly/custom reports from session logs with deterministic insights (cost, tokens, retry, dangerous commands, secret scan), collaboration review, tool health, live provider balance, multi-period trends and hourly activity heatmap; PDF/PNG/HTML export.",
+    "zh": "深迹 DeepTrace — DeepSeek Harness 只读 Agent 报告插件：从会话日志生成日报/周报/月报/年报/自定义区间报告，含确定性洞察（成本、Token、重试、危险命令、密钥扫描）、协作复盘、工具健康、模型余额、多周期趋势与小时级活跃热力图；支持 PDF/PNG/HTML 导出。"
+  },
+  "added": "2026-08-18"
+}
