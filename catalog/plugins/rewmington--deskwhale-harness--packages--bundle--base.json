@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Rewmington/deskwhale-harness/packages/bundle/base",
+  "name": "DeskWhale (dsh-base)",
+  "repository": "https://github.com/Rewmington/deskwhale-harness",
+  "category": "fun",
+  "description": {
+    "en": "The dsh-base bundle of DeskWhale, a community fork of DeepSeek Harness that adds a transparent desktop-pet whale, frosted-glass window, and startup splash to the agent UI.",
+    "zh": "DeskWhale 的 dsh-base 插件包：基于 DeepSeek Harness 的社区版桌宠改造，为 Agent 界面加入透明桌宠鲸鱼、磨砂玻璃窗口与启动闪屏。"
+  },
+  "added": "2026-08-18"
+}
