@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "y2zyyr/dsh-model-retry-settings",
+  "name": "dsh-model-retry-settings",
+  "repository": "https://github.com/y2zyyr/dsh-model-retry-settings",
+  "category": "ui",
+  "description": {
+    "en": "Adds a global \"Maximum model request retries\" setting (0/1/2/3/5/10, default 2) to Settings > General in DeepSeek Harness; the runtime honors it for every normal-mode provider retry policy. Pure plugin, install is behavior-neutral.",
+    "zh": "在 DeepSeek Harness 设置 > 通用中新增全局的「模型请求最大重试次数」选项（0/1/2/3/5/10，默认 2），运行时对 normal 模式的 provider 重试策略生效。纯插件实现，安装后行为不变。"
+  },
+  "added": "2026-08-19"
+}
