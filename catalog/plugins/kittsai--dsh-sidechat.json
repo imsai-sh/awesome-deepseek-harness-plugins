@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kittsai/dsh-sidechat",
+  "name": "dsh-sidechat",
+  "repository": "https://github.com/kittsai/dsh-sidechat",
+  "category": "ui",
+  "description": {
+    "en": "Side chat panel for the DeepSeek Harness web GUI: hover the browser's right edge to open a chat column alongside the main conversation, with streaming replies, collapsible reasoning, markdown tables, and in-panel model/effort switching.",
+    "zh": "面向 DeepSeek Harness Web GUI 的侧边聊天面板：鼠标悬停浏览器右边缘即打开与主对话并排的聊天栏，支持流式输出、可折叠思考过程、Markdown 表格，以及面板内切换模型与推理等级。"
+  },
+  "added": "2026-08-19"
+}
