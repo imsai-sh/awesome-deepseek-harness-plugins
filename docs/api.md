@@ -1,12 +1,12 @@
 # API reference (v1)
 
 The public developer API lives on its own host: `https://api.deepseek1024.com/v1/…`
-(currently only the search endpoint and `/v1/health`; everything else on that host is 404,
-and the bare host redirects to the website docs page). The same Worker serves both hosts —
-`api.deepseek1024.com` paths are rewritten onto the internal `/api/v1/…` routes below, so
-handler behaviour, quotas, and error codes are identical. `api.deepseek1024.com` is
-registered as a second custom domain of the `dsh-store` Worker via `wrangler.jsonc`
-`routes` and is provisioned automatically on deploy.
+(currently the search endpoint, the catalog registry, and `/v1/health`; everything else
+on that host is 404, and the bare host redirects to the website docs page). The same
+Worker serves both hosts — `api.deepseek1024.com` paths are rewritten onto the internal
+`/api/v1/…` routes below, so handler behaviour, quotas, and error codes are identical.
+`api.deepseek1024.com` is registered as a second custom domain of the `dsh-store` Worker
+via `wrangler.jsonc` `routes` and is provisioned automatically on deploy.
 
 All internal endpoints live under `https://deepseek1024.com/api/v1/`. The Worker is the only
 process that reads or writes the D1 catalog; every response is served from a 15-minute KV
@@ -104,7 +104,8 @@ was removed from the configuration after plugins referenced it).
 ## GET /api/v1/registry
 
 Compact full-catalog registry for the `dsh1024` in-DSH marketplace plugin, the README builder
-(`scripts/build-readme.mjs`), and external tools:
+(`scripts/build-readme.mjs`), and external tools. The public developer API mirrors it at
+`https://api.deepseek1024.com/v1/registry`:
 
 ```json
 {
@@ -145,6 +146,18 @@ the official DeepSeek Harness CLI command in its bare form. The website derives 
 wrapper command at the presentation layer and never stores it here; that command is the
 same official command under a different name
 (`dsh1024 plugin --profile web add <spec>`, after a one-off `npm install -g dsh1024`).
+
+The registry is **rate-limited with its own windows**, independent from search — the counter
+keys are namespaced (`ip:reg:` / `user:reg:`), so calling one endpoint never draws down the
+other's quota. Like search, metering lives on the handler rather than the host, so the
+main-domain path (`deepseek1024.com/api/v1/registry`) draws down the same counters as the
+public host. Anonymous callers get 500 requests/day and 20/minute; authenticated callers
+(any `Authorization: Bearer dsh_live_…` API key) get 5000/day and 100/minute. Every 200
+response carries `X-RateLimit-Daily-Limit` / `X-RateLimit-Daily-Remaining`; `429` responses
+add `Retry-After`. **Conditional requests are free:** a `304` (matching `If-None-Match`) and
+`HEAD` (a zero-body probe) never consume quota — only a full `200` payload is metered, so
+the quota measures data shipped, not how often a client asks. Clients should cache the
+`ETag` and poll with `If-None-Match`; the payload only changes when a catalog rebuild lands.
 
 ## POST /api/v1/install-events
 

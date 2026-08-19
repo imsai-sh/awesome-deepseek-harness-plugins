@@ -511,7 +511,7 @@ export function buildLlmsFullTxt(catalog: SeoCatalog): string {
     '',
     `> ${catalog.plugins.length} plugins for DeepSeek Harness (\`dsh\`), DeepSeek's coding-agent CLI. Updated ${catalog.updated}.`,
     '> Install any listed plugin with: dsh plugin --profile web add github:<owner>/<repository>',
-    `> Source: ${SITE_ORIGIN}/ · Search API: https://api.deepseek1024.com/v1/plugins/search?q=`,
+    `> Source: ${SITE_ORIGIN}/ · Search API: https://api.deepseek1024.com/v1/plugins/search?q= · Catalog: https://api.deepseek1024.com/v1/registry`,
     '',
     ...sections,
     '',

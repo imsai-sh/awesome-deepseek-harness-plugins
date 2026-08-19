@@ -5,6 +5,12 @@ export interface QuotaLimits {
 
 export const ANONYMOUS_QUOTA: QuotaLimits = { perMinute: 10, perDay: 50 }
 export const AUTHENTICATED_QUOTA: QuotaLimits = { perMinute: 30, perDay: 500 }
+// The registry is a full-catalog pull (up to hundreds of KB), so it gets its
+// own, looser windows than the small search queries. The counters live in their
+// own key namespace (`ip:reg:` / `user:reg:`), kept separate from search so one
+// endpoint can never burn the other's quota.
+export const REGISTRY_QUOTA: QuotaLimits = { perMinute: 20, perDay: 500 }
+export const AUTHENTICATED_REGISTRY_QUOTA: QuotaLimits = { perMinute: 100, perDay: 5000 }
 
 const MINUTE_MS = 60 * 1000
 const DAY_MS = 24 * 60 * 60 * 1000

@@ -14,12 +14,15 @@ describe('public API host mapping', () => {
     expect(search?.searchParams.get('q')).toBe('telegram')
     expect(search?.searchParams.get('limit')).toBe('5')
 
+    const registry = rewritePublicApiUrl(new URL('https://api.deepseek1024.com/v1/registry'))
+    expect(registry?.pathname).toBe('/api/v1/registry')
+
     const health = rewritePublicApiUrl(new URL('https://api.deepseek1024.com/v1/health'))
     expect(health?.pathname).toBe('/api/v1/health')
   })
 
   it('exposes nothing else on the public host', () => {
-    for (const path of ['/api/v1/plugins/search', '/v1/plugins', '/v1/registry', '/v1/api-keys', '/api/v1/registry', '/docs/api']) {
+    for (const path of ['/api/v1/plugins/search', '/v1/plugins', '/v1/api-keys', '/api/v1/registry', '/docs/api']) {
       expect(rewritePublicApiUrl(new URL(`https://api.deepseek1024.com${path}`))).toBeNull()
     }
   })
@@ -41,7 +44,7 @@ describe('public API host mapping', () => {
     expect(robots.status).toBe(200)
     await expect(robots.text()).resolves.toBe('User-agent: *\nDisallow: /\n')
 
-    const missing = publicApiNotFound('/v1/registry')
+    const missing = publicApiNotFound('/v1/api-keys')
     expect(missing.status).toBe(404)
     await expect(missing.json()).resolves.toMatchObject({ code: 'NOT_FOUND' })
   })

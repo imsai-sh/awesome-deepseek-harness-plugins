@@ -9,6 +9,7 @@ import {
 } from '../worker/lib/install-metrics'
 import { collectionQueryKind } from '../worker/seo'
 import type { PackageDetail } from '../worker/types'
+import { accountsDatabase, sqliteD1 } from './d1-sqlite'
 import { TEST_PLUGINS, testCatalogResult } from './fixtures'
 
 function testApp() {
@@ -394,9 +395,14 @@ describe('market API', () => {
   })
 
   it('projects the compact registry with categories and install commands', async () => {
+    const database = accountsDatabase()
+    const env = {
+      CATALOG_DB: sqliteD1(database),
+      INSTALL_CLIENT_HASH_SECRET: 'registry-projection-secret-0123456789abcdef!',
+    } as unknown as Env
     const response = await testApp().request('/api/v1/registry', {
       headers: { Origin: 'https://registry-consumer.example' },
-    })
+    }, env)
     expect(response.status).toBe(200)
     expect(response.headers.get('Access-Control-Allow-Origin')).toBe('*')
     // The in-app store reads this endpoint; without revalidation a newly listed
@@ -431,6 +437,7 @@ describe('market API', () => {
       added: '2026-08-14',
       stars: 42,
     })
+    database.close()
   })
 
   it('rejects catalog sync when the token is missing or wrong', async () => {
@@ -820,8 +827,14 @@ describe('catalog listing validator', () => {
   })
 
   it('gives the registry projection its own validator', async () => {
-    const registry = await testApp().request('https://deepseek1024.com/api/v1/registry')
+    const database = accountsDatabase()
+    const env = {
+      CATALOG_DB: sqliteD1(database),
+      INSTALL_CLIENT_HASH_SECRET: 'registry-etag-secret-0123456789abcdef!',
+    } as unknown as Env
+    const registry = await testApp().request('https://deepseek1024.com/api/v1/registry', {}, env)
     expect(registry.headers.get('ETag')).toMatch(/^W\/"/)
+    database.close()
   })
 })
 
