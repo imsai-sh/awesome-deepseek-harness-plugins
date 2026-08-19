@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "limuyang2/agent-team",
+  "name": "agent-team",
+  "repository": "https://github.com/limuyang2/agent-team",
+  "category": "workflow",
+  "description": {
+    "en": "Multi-agent team collaboration for DeepSeek Harness, with per-assistant models, skills, MCP servers, isolated contexts, and a shared workspace.",
+    "zh": "为 DeepSeek Harness 提供多 Agent 团队协作，支持为助手配置独立模型、Skills、MCP 服务和上下文，并共享工作区。"
+  },
+  "added": "2026-08-19"
+}
