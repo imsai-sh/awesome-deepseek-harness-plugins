@@ -113,20 +113,22 @@ export interface RankedPlugin extends CatalogPlugin {
   repositorySiblings: number
 }
 
+export interface RankingBoards {
+  stars: RankedPlugin[]
+  installs: RankedPlugin[]
+  installs24h: RankedPlugin[]
+  installs7d: RankedPlugin[]
+  installs30d: RankedPlugin[]
+  growth24h: RankedPlugin[]
+  growth7d: RankedPlugin[]
+  growth30d: RankedPlugin[]
+  newest: RankedPlugin[]
+  active: RankedPlugin[]
+}
+
 export interface CatalogResponse {
   packages: CatalogPlugin[]
-  rankings: {
-    stars: RankedPlugin[]
-    installs: RankedPlugin[]
-    installs24h: RankedPlugin[]
-    installs7d: RankedPlugin[]
-    installs30d: RankedPlugin[]
-    growth24h: RankedPlugin[]
-    growth7d: RankedPlugin[]
-    growth30d: RankedPlugin[]
-    newest: RankedPlugin[]
-    active: RankedPlugin[]
-  }
+  rankings: RankingBoards
   categories: CategoryResult[]
   meta: {
     total: number
@@ -137,6 +139,43 @@ export interface CatalogResponse {
     source: CatalogSource
     metricCoverage: number
   }
+}
+
+/**
+ * One page of the directory, for the main site's own `/api/v2/plugins`. Unlike
+ * the frozen `/api/v1/plugins`, this returns a slice rather than the whole
+ * catalog, so a browse never ships the multi-megabyte body that made slow
+ * connections give up mid-download. `categories` carries whole-catalog counts
+ * (not just this page's), because the sidebar shows the full tally.
+ */
+export interface PluginsPageResponse {
+  plugins: CatalogPlugin[]
+  page: number
+  limit: number
+  /** Matches for the current query — the denominator of "showing N of M". */
+  total: number
+  totalPages: number
+  /** Every plugin in the catalog, unfiltered — the hero and sidebar tally. */
+  catalogTotal: number
+  categories: CategoryResult[]
+  generatedAt: string
+  source: CatalogSource
+}
+
+/**
+ * The ten leaderboards, for `/api/v2/rankings`. A repository-collapsed seat
+ * needs its siblings to render the expand-in-place row the site already shows;
+ * with the full catalog no longer client-side, they travel here instead, keyed
+ * by `owner/repository` (lowercased) so the client can look each seat up
+ * exactly as it did when it grouped the whole catalog itself.
+ */
+export interface RankingsResponse {
+  rankings: RankingBoards
+  siblingsByRepository: Record<string, CatalogPlugin[]>
+  catalogTotal: number
+  categories: CategoryResult[]
+  generatedAt: string
+  source: CatalogSource
 }
 
 export interface RegistryProjectionPlugin {

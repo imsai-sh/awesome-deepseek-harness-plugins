@@ -1,51 +1,85 @@
-import { deriveCatalogResponse, parseCatalogQuery } from '../../worker/lib/catalog'
-import type { CatalogResponse as ServerCatalogResponse } from '../../worker/types'
-import type { CatalogResponse, CatalogSort } from './api'
-import { API_ORIGIN, requestJson } from './api'
+import {
+  fetchPluginsPage,
+  fetchRankings,
+  type PluginsPage,
+  type PluginsPageParams,
+  type RankingsData,
+} from './api'
 
-// One unfiltered catalog response already contains every plugin plus all
-// ranking groups, so filter/sort/search views are derived client-side with the
-// exact server logic (deriveCatalogResponse) instead of refetching ~2.5MB per
-// filter change. Module scope keeps the cache alive across route remounts,
-// e.g. returning from a plugin detail page.
-const CATALOG_TTL_MS = 5 * 60 * 1000
+// The directory now arrives a page at a time instead of as one multi-megabyte
+// body, so a browse no longer ships the whole catalog to filter it client-side.
+// A short-lived module cache keeps re-renders and back-navigation instant
+// without turning every one into a request; the edge cache and ETags handle
+// anything that does reach the network.
+const PAGE_TTL_MS = 5 * 60 * 1000
 
-let cached: { data: ServerCatalogResponse; fetchedAt: number } | null = null
-let inflight: Promise<ServerCatalogResponse> | null = null
-
-export function getCachedCatalog(): ServerCatalogResponse | null {
-  return cached?.data ?? null
+function pageKey(params: PluginsPageParams): string {
+  return [
+    params.q ?? '',
+    params.category ?? '',
+    params.sort ?? 'stars',
+    params.page ?? 1,
+    params.limit ?? '',
+  ].join('|')
 }
 
-export function isCatalogFresh(): boolean {
-  return cached !== null && Date.now() - cached.fetchedAt < CATALOG_TTL_MS
+interface Cached<T> {
+  data: T
+  fetchedAt: number
 }
 
-export function loadCatalog(options?: { force?: boolean }): Promise<ServerCatalogResponse> {
-  if (cached && !options?.force && isCatalogFresh()) return Promise.resolve(cached.data)
-  inflight ??= requestJson<ServerCatalogResponse>(`${API_ORIGIN}/api/v1/plugins`)
+const pages = new Map<string, Cached<PluginsPage>>()
+const pagesInflight = new Map<string, Promise<PluginsPage>>()
+
+export function getCachedPluginsPage(params: PluginsPageParams): PluginsPage | null {
+  return pages.get(pageKey(params))?.data ?? null
+}
+
+export function loadPluginsPage(
+  params: PluginsPageParams,
+  options?: { force?: boolean },
+): Promise<PluginsPage> {
+  const key = pageKey(params)
+  const cached = pages.get(key)
+  if (!options?.force && cached && Date.now() - cached.fetchedAt < PAGE_TTL_MS) {
+    return Promise.resolve(cached.data)
+  }
+  const existing = pagesInflight.get(key)
+  if (existing) return existing
+  const request = fetchPluginsPage(params)
     .then((data) => {
-      cached = { data, fetchedAt: Date.now() }
+      pages.set(key, { data, fetchedAt: Date.now() })
       return data
     })
     .finally(() => {
-      inflight = null
+      pagesInflight.delete(key)
     })
-  return inflight
+  pagesInflight.set(key, request)
+  return request
 }
 
-export interface CatalogViewParams {
-  q: string
-  category: string
-  sort: CatalogSort
+let rankings: Cached<RankingsData> | null = null
+let rankingsInflight: Promise<RankingsData> | null = null
+
+export function getCachedRankings(): RankingsData | null {
+  return rankings?.data ?? null
 }
 
-export function deriveCatalogView(
-  full: ServerCatalogResponse,
-  params: CatalogViewParams,
-): CatalogResponse {
-  return deriveCatalogResponse(
-    full,
-    parseCatalogQuery({ q: params.q, category: params.category, sort: params.sort }),
-  )
+export function isRankingsFresh(): boolean {
+  return rankings !== null && Date.now() - rankings.fetchedAt < PAGE_TTL_MS
+}
+
+export function loadRankings(options?: { force?: boolean }): Promise<RankingsData> {
+  if (!options?.force && rankings && Date.now() - rankings.fetchedAt < PAGE_TTL_MS) {
+    return Promise.resolve(rankings.data)
+  }
+  rankingsInflight ??= fetchRankings()
+    .then((data) => {
+      rankings = { data, fetchedAt: Date.now() }
+      return data
+    })
+    .finally(() => {
+      rankingsInflight = null
+    })
+  return rankingsInflight
 }

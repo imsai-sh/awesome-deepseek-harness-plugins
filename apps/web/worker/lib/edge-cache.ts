@@ -1,13 +1,21 @@
 import { isPublicApiHost, rewritePublicApiUrl } from '../public-api'
 
-// Only these two `/api/` paths may be answered from a POP's own cache. An
-// allowlist rather than a denylist: `/api/live` is a WebSocket, the community
-// and auth routes are per-user, and search is deliberately `no-store` — none of
-// them may ever be served to the wrong caller because a path was forgotten here.
-const CACHEABLE_API_PATHS = new Set(['/api/v1/plugins', '/api/v1/registry'])
+// The only `/api/` paths a POP may answer from its own cache, each mapped to
+// the query parameters that actually shape its body. An allowlist rather than a
+// denylist: `/api/live` is a WebSocket, the community and auth routes are
+// per-user, and search is deliberately `no-store` — none may ever be served to
+// the wrong caller because a path was forgotten here. The parameter lists also
+// harden the key: anything not listed is dropped, so `?utm=…` or a cache-buster
+// cannot fragment the cache into a cold miss per request.
+const CACHEABLE_API_PATHS: Record<string, readonly string[]> = {
+  '/api/v1/plugins': ['q', 'category', 'sort'],
+  '/api/v1/registry': [],
+  '/api/v2/plugins': ['q', 'category', 'sort', 'page', 'limit'],
+  '/api/v2/rankings': [],
+}
 
 export function edgeCacheablePath(pathname: string): boolean {
-  if (pathname.startsWith('/api/')) return CACHEABLE_API_PATHS.has(pathname)
+  if (pathname.startsWith('/api/')) return Object.prototype.hasOwnProperty.call(CACHEABLE_API_PATHS, pathname)
   // Hashed bundles are already immutable to the browser, and a miss here is the
   // SPA fallback document rather than an asset.
   if (pathname.startsWith('/assets/')) return false
@@ -33,7 +41,20 @@ export function edgeCacheablePath(pathname: string): boolean {
 export function edgeCacheKey(url: URL): Request | null {
   const pathname = isPublicApiHost(url) ? rewritePublicApiUrl(url)?.pathname : url.pathname
   if (pathname === undefined || !edgeCacheablePath(pathname)) return null
-  return new Request(url.toString(), { method: 'GET' })
+  const significant = pathname.startsWith('/api/') ? CACHEABLE_API_PATHS[pathname] : undefined
+  if (!significant) {
+    // HTML routes: the whole URL matters — a filtered permutation carries
+    // different SEO metadata (noindex, canonical) than the bare page.
+    return new Request(url.toString(), { method: 'GET' })
+  }
+  // Keep only the params that change the body, in a fixed order, so equivalent
+  // requests share one cached entry regardless of extra or reordered params.
+  const canonical = new URL(url.origin + pathname)
+  for (const name of [...significant].sort()) {
+    const value = url.searchParams.get(name)
+    if (value !== null && value !== '') canonical.searchParams.set(name, value)
+  }
+  return new Request(canonical.toString(), { method: 'GET' })
 }
 
 // A redirect, a 404 or anything carrying a cookie stays out; `cache.put` honours
@@ -57,6 +78,17 @@ export function tagged(response: Response, state: 'hit' | 'miss'): Response {
  * Weak, because `Content-Encoding` may differ between two responses carrying
  * the same bytes — a weak validator is exactly what a `304` needs.
  */
+/**
+ * A validator for the actual bytes of a response, the way RFC 9110 means an
+ * ETag: hash the serialized body, so any change to it — a restored field, a
+ * different page — moves the tag, and a `304` is only ever sent when the caller
+ * genuinely holds the current bytes. The v2 endpoints use this; hashing happens
+ * once on a cache miss, and the tag then rides the stored response.
+ */
+export function contentEtag(body: string): string {
+  return weakEtag([body])
+}
+
 export function weakEtag(parts: readonly string[]): string {
   // FNV-1a over the joined parts. Not a security boundary: this only has to
   // change whenever any part changes.

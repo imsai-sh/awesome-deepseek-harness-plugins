@@ -7,11 +7,15 @@ import { ANONYMOUS_QUOTA, AUTHENTICATED_QUOTA, consumeQuota } from './lib/api-qu
 import { authenticateApiKey, sha256Hex, timingSafeEqualStrings } from './lib/auth'
 import {
   buildCatalog,
+  buildPluginsPage,
+  buildRankingsResponse,
+  clampLimit,
   filterCatalogPackages,
   findPluginById,
   findPluginsUnder,
   parseCatalogQuery,
 } from './lib/catalog'
+import { contentEtag } from './lib/edge-cache'
 import {
   isPluginId,
   normalizePluginId,
@@ -21,7 +25,6 @@ import {
 } from './lib/plugin-id'
 import { syncCuratedEntries, type CuratedCatalogEntry } from './lib/catalog-db'
 import { loadCatalogSnapshot, refreshCatalogSnapshot } from './lib/catalog-store'
-import { weakEtag } from './lib/edge-cache'
 import { categoryDescriptor, isKnownCategoryId, projectCategories } from './lib/categories'
 import { fetchPackageDetail } from './lib/github'
 import {
@@ -344,22 +347,18 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
       executionContext(context),
     )
     const query = parseCatalogQuery(context.req.query())
-    const result = buildCatalog(snapshot, query)
+    const payload = JSON.stringify(buildCatalog(snapshot, query))
     context.header('Cache-Control', LIST_CACHE_HEADER)
-    // The body is a pure function of these five, so a caller polling for
-    // changes can be answered with 304 instead of another megabyte.
-    context.header('ETag', weakEtag([
-      snapshot.snapshot.generatedAt,
-      snapshot.source,
-      query.q,
-      query.category,
-      query.sort,
-    ]))
+    // Validator over the actual bytes, so a caller polling for changes is told
+    // 304 only when the body it holds is genuinely the body we would send — a
+    // field-set change across a deploy moves the tag, unlike a snapshot-keyed one.
+    context.header('ETag', contentEtag(payload))
     context.header('X-Catalog-Source', snapshot.source)
     // Crawlable so the SPA can be rendered, but the JSON itself must never be
     // indexed as a page in its own right.
     context.header('X-Robots-Tag', 'noindex')
-    return context.json(result)
+    context.header('Content-Type', 'application/json; charset=UTF-8')
+    return context.body(payload)
   })
 
   app.get('/api/v1/plugins/search', async (context) => {
@@ -535,10 +534,6 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
       executionContext(context),
     )
     const { snapshot } = result
-    context.header('Cache-Control', REGISTRY_CACHE_HEADER)
-    context.header('ETag', weakEtag([snapshot.generatedAt, result.source]))
-    context.header('X-Catalog-Source', result.source)
-    context.header('X-Robots-Tag', 'noindex')
     const registry: RegistryProjection = {
       name: 'dsh-1024store-catalog',
       updated: snapshot.generatedAt,
@@ -556,7 +551,49 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
         stars: plugin.stars,
       })),
     }
-    return context.json(registry)
+    const payload = JSON.stringify(registry)
+    context.header('Cache-Control', REGISTRY_CACHE_HEADER)
+    context.header('ETag', contentEtag(payload))
+    context.header('X-Catalog-Source', result.source)
+    context.header('X-Robots-Tag', 'noindex')
+    context.header('Content-Type', 'application/json; charset=UTF-8')
+    return context.body(payload)
+  })
+
+  // The site's own catalog API. Unlike the frozen `/api/v1/plugins`, which
+  // returns the whole catalog for external consumers, v2 paginates so a browse
+  // ships one page. Both read the same KV snapshot; neither touches D1 on the
+  // read path. ETags are derived from the body (see edge-cache), so a caller
+  // polling for changes is answered 304 only when its bytes still match.
+  app.get('/api/v2/plugins', async (context) => {
+    const snapshot = await dependencies.catalogLoader(
+      context.env,
+      executionContext(context),
+    )
+    const query = parseCatalogQuery(context.req.query())
+    const page = boundedPositiveInt(context.req.query('page'), 1, MAX_SEARCH_PAGE)
+    const limit = clampLimit(Number(context.req.query('limit')) || undefined)
+    const payload = JSON.stringify(buildPluginsPage(snapshot, query, page, limit))
+    context.header('Cache-Control', LIST_CACHE_HEADER)
+    context.header('ETag', contentEtag(payload))
+    context.header('X-Catalog-Source', snapshot.source)
+    context.header('X-Robots-Tag', 'noindex')
+    context.header('Content-Type', 'application/json; charset=UTF-8')
+    return context.body(payload)
+  })
+
+  app.get('/api/v2/rankings', async (context) => {
+    const snapshot = await dependencies.catalogLoader(
+      context.env,
+      executionContext(context),
+    )
+    const payload = JSON.stringify(buildRankingsResponse(snapshot))
+    context.header('Cache-Control', LIST_CACHE_HEADER)
+    context.header('ETag', contentEtag(payload))
+    context.header('X-Catalog-Source', snapshot.source)
+    context.header('X-Robots-Tag', 'noindex')
+    context.header('Content-Type', 'application/json; charset=UTF-8')
+    return context.body(payload)
   })
 
   app.post('/api/v1/catalog/sync', async (context) => {

@@ -3,6 +3,7 @@ import { edgeCacheKey, isStorable, notModifiedFor, tagged } from './lib/edge-cac
 import { communityPostMetadata } from './community/metadata'
 import { cleanupExpiredAuthRows } from './lib/auth'
 import { loadCatalogSnapshot, runScheduledCatalogRefresh } from './lib/catalog-store'
+import { runNpmRefreshTask } from './lib/npm-refresh-task'
 import { runPluginClassifyTask } from './lib/plugin-classify-task'
 import { runPluginDiscoveryTask } from './lib/plugin-discovery-task'
 import { isPublicApiHost, publicApiNotFound, rewritePublicApiUrl, wwwRedirect } from './public-api'
@@ -18,6 +19,7 @@ const STATS_OBJECT_NAME = 'global'
 const INCREMENTAL_DISCOVERY_CRONS = new Set(['7 * * * *', '37 * * * *'])
 const FULL_DISCOVERY_CRON = '17 3 * * SUN'
 const CLASSIFY_CRON = '2,12,22,32,42,52 * * * *'
+const NPM_REFRESH_CRON = '*/5 * * * *'
 const app = createApp()
 
 function isWorkerRoute(pathname: string): boolean {
@@ -159,6 +161,17 @@ const worker = {
         }))
       return
     }
+    if (controller.cron === NPM_REFRESH_CRON) {
+      ctx.waitUntil(runNpmRefreshTask(env, controller.scheduledTime)
+        .then(logNpmRefresh)
+        .catch((error) => {
+          console.error(JSON.stringify({
+            message: 'npm_refresh_failed',
+            error: error instanceof Error ? error.message : String(error),
+          }))
+        }))
+      return
+    }
     ctx.waitUntil(runScheduledCatalogRefresh(env, controller.scheduledTime))
   },
 } satisfies ExportedHandler<Env>
@@ -174,4 +187,10 @@ function logClassify(result: Awaited<ReturnType<typeof runPluginClassifyTask>>):
 
 function logDiscovery(result: Awaited<ReturnType<typeof runPluginDiscoveryTask>>): void {
   console.log(JSON.stringify({ message: 'plugin_discovery_completed', ...result }))
+}
+
+function logNpmRefresh(result: Awaited<ReturnType<typeof runNpmRefreshTask>>): void {
+  // A tick that only saw 304s changed nothing; keep the log for the ones that did.
+  if (result.found + result.absent + result.errors === 0) return
+  console.log(JSON.stringify({ message: 'npm_refresh', ...result }))
 }

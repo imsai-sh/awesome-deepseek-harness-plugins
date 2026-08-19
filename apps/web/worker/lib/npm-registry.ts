@@ -15,7 +15,10 @@ const REQUEST_TIMEOUT_MS = 10_000
 const USER_AGENT = 'dsh-1024store-catalog-verification (+https://deepseek1024.com)'
 
 export interface NpmProbeResult {
-  status: 'found' | 'absent' | 'error'
+  // `not_modified` is the conditional-request answer: the package has not
+  // published since `etag`, so version and binding are unchanged and the caller
+  // writes nothing at all.
+  status: 'found' | 'absent' | 'error' | 'not_modified'
   httpStatus: number | null
   version: string | null
   repositoryUrl: string | null
@@ -25,6 +28,9 @@ export interface NpmProbeResult {
   tarballUrl: string | null
   integrity: string | null
   binding: NpmBinding
+  // The validator to send as `If-None-Match` next time. Present on `found` and
+  // carried through on `not_modified`; null on `absent`/`error`.
+  etag: string | null
 }
 
 function unresolved(status: 'absent' | 'error', httpStatus: number | null): NpmProbeResult {
@@ -41,6 +47,7 @@ function unresolved(status: 'absent' | 'error', httpStatus: number | null): NpmP
     // 'absent' is a fact (nobody published it); 'error' is ignorance, and the
     // caller must not overwrite a good binding with it.
     binding: status === 'absent' ? 'absent' : 'unknown',
+    etag: null,
   }
 }
 
@@ -49,59 +56,97 @@ function text(value: unknown): string | null {
 }
 
 /**
- * Reads the published manifest of a package's `latest` tag.
+ * Reads a package's latest published manifest, conditionally.
  *
- * `/<name>/latest` returns only that version's manifest — a few KB against
- * megabytes for the full packument, which matters when several thousand
- * plugins are refreshed on a cron. Scoped names must keep their slash encoded.
+ * The request targets the packument root `/<name>` rather than `/<name>/latest`:
+ * `/latest` is a computed sub-document with no ETag, so it can never be answered
+ * `304` and every poll pays for the full body. The root carries an ETag, so
+ * passing the previous one as `If-None-Match` means npm returns `304` with an
+ * empty body whenever nothing has published — which is almost always. The
+ * abbreviated media type would be smaller still, but it drops `repository` from
+ * each version, and `repository` is the whole basis of the binding check, so we
+ * take the full packument and pay its (rare) 200 body. Scoped names must keep
+ * their slash encoded.
  *
  * @param id - the plugin id the package claims to belong to.
  * @param packageName - the name declared by the plugin's own manifest.
+ * @param etag - the validator from the previous probe, or null to fetch fresh.
  */
 export async function probeNpmPackage(
   id: string,
   packageName: string,
+  etag: string | null = null,
   fetcher: typeof fetch = fetch,
 ): Promise<NpmProbeResult> {
   const encoded = packageName.startsWith('@')
     ? `@${encodeURIComponent(packageName.slice(1)).replace('%2F', '/')}`.replace('/', '%2f')
     : encodeURIComponent(packageName)
+  const headers: Record<string, string> = {
+    Accept: 'application/json',
+    'User-Agent': USER_AGENT,
+  }
+  if (etag) headers['If-None-Match'] = etag
+
   let response: Response
   try {
-    response = await fetcher(`${REGISTRY_ORIGIN}/${encoded}/latest`, {
-      headers: { Accept: 'application/json', 'User-Agent': USER_AGENT },
+    response = await fetcher(`${REGISTRY_ORIGIN}/${encoded}`, {
+      headers,
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     })
   } catch {
     return unresolved('error', null)
   }
+
+  if (response.status === 304) {
+    return {
+      status: 'not_modified',
+      httpStatus: 304,
+      version: null,
+      repositoryUrl: null,
+      repositoryDirectory: null,
+      bundleDeclared: false,
+      entryPoint: null,
+      tarballUrl: null,
+      integrity: null,
+      binding: 'unknown',
+      // A 304 still carries the ETag; fall back to the one we sent.
+      etag: response.headers.get('etag') ?? etag,
+    }
+  }
   if (response.status === 404) return unresolved('absent', 404)
   if (!response.ok) return unresolved('error', response.status)
 
-  let published: Record<string, unknown>
+  let packument: { 'dist-tags'?: Record<string, unknown>; versions?: Record<string, unknown> }
   try {
-    published = (await response.json()) as Record<string, unknown>
+    packument = (await response.json()) as typeof packument
   } catch {
     return unresolved('error', response.status)
   }
 
-  const { binding, bundleDeclared } = classifyNpmBinding(id, published)
-  const repositoryField = published.repository
+  const latest = text(packument['dist-tags']?.latest)
+  const manifest = latest ? (packument.versions?.[latest] as Record<string, unknown> | undefined) : undefined
+  // A packument with no `latest` tag or no matching version manifest is
+  // malformed; treat it as ignorance rather than overwrite a good binding.
+  if (latest === null || manifest === undefined) return unresolved('error', response.status)
+
+  const { binding, bundleDeclared } = classifyNpmBinding(id, manifest)
+  const repositoryField = manifest.repository
   const repository = typeof repositoryField === 'string'
     ? { url: repositoryField, directory: undefined as unknown }
     : (repositoryField as { url?: unknown; directory?: unknown } | null) ?? {}
-  const dist = (published.dist as { tarball?: unknown; integrity?: unknown } | null) ?? {}
+  const dist = (manifest.dist as { tarball?: unknown; integrity?: unknown } | null) ?? {}
 
   return {
     status: 'found',
     httpStatus: response.status,
-    version: text(published.version),
+    version: text(manifest.version) ?? latest,
     repositoryUrl: text(repository.url),
     repositoryDirectory: text(repository.directory),
     bundleDeclared,
-    entryPoint: text(published.main),
+    entryPoint: text(manifest.main),
     tarballUrl: text(dist.tarball),
     integrity: text(dist.integrity),
     binding,
+    etag: response.headers.get('etag'),
   }
 }

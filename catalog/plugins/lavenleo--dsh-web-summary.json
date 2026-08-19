@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lavenleo/dsh-web-summary",
+  "name": "dsh-web-summary",
+  "repository": "https://github.com/lavenleo/dsh-web-summary",
+  "category": "tools",
+  "description": {
+    "en": "Fetch a public web page and return its title and plain-text summary to the agent.",
+    "zh": "抓取公开网页并返回标题与纯文本摘要给智能体。"
+  },
+  "added": "2026-08-19"
+}

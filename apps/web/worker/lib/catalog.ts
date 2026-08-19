@@ -4,7 +4,10 @@ import type {
   CatalogSnapshotResult,
   CatalogSort,
   CategoryResult,
+  PluginsPageResponse,
   RankedPlugin,
+  RankingBoards,
+  RankingsResponse,
   RegistryPlugin,
   StoredCatalogSnapshot,
 } from '../types'
@@ -160,6 +163,23 @@ export function filterCatalogPackages(
 
 const RANKING_SIZE = 100
 
+/** `owner/repository`, lowercased — the key repository facts are grouped by. */
+export function repositoryKey(plugin: Pick<CatalogPlugin, 'owner' | 'repository'>): string {
+  return `${plugin.owner}/${plugin.repository}`.toLocaleLowerCase('en-US')
+}
+
+/**
+ * The one field a listing never needs. `installMethods` is the heaviest thing
+ * on a plugin and only the detail page renders it, so the v2 list and rankings
+ * ship without it while the frozen v1 response keeps it for its consumers.
+ * Undefined rather than deleted: the field is optional and `JSON.stringify`
+ * omits it either way, and the generic return keeps a RankedPlugin a
+ * RankedPlugin.
+ */
+function withoutInstallMethods<T extends CatalogPlugin>(plugin: T): T {
+  return plugin.installMethods === undefined ? plugin : { ...plugin, installMethods: undefined }
+}
+
 /** A ranking row for a board whose metric already tells siblings apart. */
 function ranked(plugins: CatalogPlugin[]): RankedPlugin[] {
   return plugins.slice(0, RANKING_SIZE).map((plugin) => ({ ...plugin, repositorySiblings: 0 }))
@@ -185,7 +205,7 @@ function ranked(plugins: CatalogPlugin[]): RankedPlugin[] {
 function collapseByRepository(plugins: CatalogPlugin[]): RankedPlugin[] {
   const seats = new Map<string, RankedPlugin>()
   for (const plugin of plugins) {
-    const key = `${plugin.owner}/${plugin.repository}`.toLocaleLowerCase('en-US')
+    const key = repositoryKey(plugin)
     const seat = seats.get(key)
     if (seat === undefined) {
       seats.set(key, { ...plugin, repositorySiblings: 0 })
@@ -196,40 +216,40 @@ function collapseByRepository(plugins: CatalogPlugin[]): RankedPlugin[] {
   return [...seats.values()].slice(0, RANKING_SIZE)
 }
 
+/** The ten leaderboards. Shared so v1 and v2 rank identically. */
+function rankingBoards(plugins: CatalogPlugin[]): RankingBoards {
+  // Growth comes from the repository's star history, so this collapses too.
+  const growthRanking = (sort: 'growth24h' | 'growth7d' | 'growth30d') =>
+    collapseByRepository(
+      [...plugins].filter((plugin) => hasGrowthForSort(plugin, sort)).sort(comparePlugins(sort)),
+    )
+
+  const installRanking = (sort: 'installs' | 'installs24h' | 'installs7d' | 'installs30d') =>
+    ranked([...plugins].filter((plugin) => (installsForSort(plugin, sort) ?? 0) > 0).sort(comparePlugins(sort)))
+
+  return {
+    stars: collapseByRepository([...plugins].sort(comparePlugins('stars'))),
+    installs: installRanking('installs'),
+    installs24h: installRanking('installs24h'),
+    installs7d: installRanking('installs7d'),
+    installs30d: installRanking('installs30d'),
+    growth24h: growthRanking('growth24h'),
+    growth7d: growthRanking('growth7d'),
+    growth30d: growthRanking('growth30d'),
+    // `added` falls back to the repository's updated_at and `pushedAt` is a
+    // repository column, so siblings tie on both of these boards as well.
+    newest: collapseByRepository([...plugins].sort(comparePlugins('newest'))),
+    active: collapseByRepository([...plugins].sort(comparePlugins('active'))),
+  }
+}
+
 export function buildCatalog(result: CatalogSnapshotResult, query: CatalogQuery): CatalogResponse {
   const { snapshot, source } = result
   const filtered = filterCatalogPackages(snapshot.plugins, query)
 
-  // Growth comes from the repository's star history, so this collapses too.
-  const growthRanking = (sort: 'growth24h' | 'growth7d' | 'growth30d') =>
-    collapseByRepository(
-      [...snapshot.plugins]
-        .filter((plugin) => hasGrowthForSort(plugin, sort))
-        .sort(comparePlugins(sort)),
-    )
-
-  const installRanking = (
-    sort: 'installs' | 'installs24h' | 'installs7d' | 'installs30d',
-  ) => ranked([...snapshot.plugins]
-    .filter((plugin) => (installsForSort(plugin, sort) ?? 0) > 0)
-    .sort(comparePlugins(sort)))
-
   return {
     packages: filtered,
-    rankings: {
-      stars: collapseByRepository([...snapshot.plugins].sort(comparePlugins('stars'))),
-      installs: installRanking('installs'),
-      installs24h: installRanking('installs24h'),
-      installs7d: installRanking('installs7d'),
-      installs30d: installRanking('installs30d'),
-      growth24h: growthRanking('growth24h'),
-      growth7d: growthRanking('growth7d'),
-      growth30d: growthRanking('growth30d'),
-      // `added` falls back to the repository's updated_at and `pushedAt` is a
-      // repository column, so siblings tie on both of these boards as well.
-      newest: collapseByRepository([...snapshot.plugins].sort(comparePlugins('newest'))),
-      active: collapseByRepository([...snapshot.plugins].sort(comparePlugins('active'))),
-    },
+    rankings: rankingBoards(snapshot.plugins),
     categories: categoryResults(snapshot),
     meta: {
       total: filtered.length,
@@ -240,6 +260,97 @@ export function buildCatalog(result: CatalogSnapshotResult, query: CatalogQuery)
       source,
       metricCoverage: snapshot.metricCoverage,
     },
+  }
+}
+
+/** Clamp a requested page size to a sane band; the client asks, the server decides. */
+export const DEFAULT_PAGE_LIMIT = 100
+export const MAX_PAGE_LIMIT = 200
+
+export function clampLimit(requested: number | undefined): number {
+  if (!requested || !Number.isFinite(requested)) return DEFAULT_PAGE_LIMIT
+  return Math.min(MAX_PAGE_LIMIT, Math.max(1, Math.floor(requested)))
+}
+
+/**
+ * One page of the filtered directory. The heavy field is dropped and only the
+ * slice is projected, so a browse ships kilobytes where v1 ships megabytes.
+ * The page is clamped into range rather than 404'd, so a stale "page 40" from a
+ * catalog that just shrank lands on the last real page instead of an error.
+ */
+export function buildPluginsPage(
+  result: CatalogSnapshotResult,
+  query: CatalogQuery,
+  page: number,
+  limit: number,
+): PluginsPageResponse {
+  const { snapshot, source } = result
+  const filtered = filterCatalogPackages(snapshot.plugins, query)
+  const total = filtered.length
+  const totalPages = Math.max(1, Math.ceil(total / limit))
+  const safePage = Math.min(Math.max(1, Math.floor(page) || 1), totalPages)
+  const start = (safePage - 1) * limit
+  return {
+    plugins: filtered.slice(start, start + limit).map(withoutInstallMethods),
+    page: safePage,
+    limit,
+    total,
+    totalPages,
+    catalogTotal: snapshot.plugins.length,
+    // Whole-catalog counts, not this page's — the sidebar shows the full tally.
+    categories: categoryResults(snapshot),
+    generatedAt: snapshot.generatedAt,
+    source,
+  }
+}
+
+/**
+ * The leaderboards plus the sibling groups they need to expand in place.
+ *
+ * Only repositories that actually appear on a board carry a sibling entry, and
+ * only when they published more than one plugin — a lone-plugin repository has
+ * nothing to expand, so the client's lookup returning nothing for it is
+ * correct. That keeps the map to the handful of monorepos on the boards rather
+ * than the whole catalog.
+ */
+export function buildRankingsResponse(result: CatalogSnapshotResult): RankingsResponse {
+  const { snapshot, source } = result
+  const boards = rankingBoards(snapshot.plugins)
+
+  const seatedRepositories = new Set<string>()
+  for (const board of Object.values(boards)) {
+    for (const seat of board) seatedRepositories.add(repositoryKey(seat))
+  }
+
+  const groups = new Map<string, CatalogPlugin[]>()
+  for (const plugin of snapshot.plugins) {
+    const key = repositoryKey(plugin)
+    if (!seatedRepositories.has(key)) continue
+    const group = groups.get(key)
+    if (group) group.push(plugin)
+    else groups.set(key, [plugin])
+  }
+
+  const siblingsByRepository: Record<string, CatalogPlugin[]> = {}
+  for (const [key, group] of groups) {
+    if (group.length < 2) continue
+    siblingsByRepository[key] = group
+      .slice()
+      .sort((left, right) => left.name.localeCompare(right.name))
+      .map(withoutInstallMethods)
+  }
+
+  const strippedBoards = Object.fromEntries(
+    Object.entries(boards).map(([board, rows]) => [board, rows.map(withoutInstallMethods)]),
+  ) as RankingBoards
+
+  return {
+    rankings: strippedBoards,
+    siblingsByRepository,
+    catalogTotal: snapshot.plugins.length,
+    categories: categoryResults(snapshot),
+    generatedAt: snapshot.generatedAt,
+    source,
   }
 }
 

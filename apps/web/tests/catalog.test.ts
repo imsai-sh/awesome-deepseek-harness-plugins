@@ -1,13 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import { edgeCacheablePath, notModifiedFor, weakEtag } from '../worker/lib/edge-cache'
+import { contentEtag, edgeCacheKey, edgeCacheablePath, notModifiedFor } from '../worker/lib/edge-cache'
 import {
   buildCatalog,
+  buildPluginsPage,
+  buildRankingsResponse,
+  clampLimit,
   deriveCatalogResponse,
   findPlugin,
   parseCatalogQuery,
   repositoryName,
 } from '../worker/lib/catalog'
-import type { CatalogPlugin } from '../worker/types'
+import type { CatalogPlugin, CatalogSnapshotResult } from '../worker/types'
 import { TEST_PLUGINS, TEST_REGISTRY, testCatalogResult } from './fixtures'
 
 describe('catalog queries', () => {
@@ -324,6 +327,8 @@ describe('edge cache allowlist', () => {
     for (const pathname of [
       '/api/v1/plugins',
       '/api/v1/registry',
+      '/api/v2/plugins',
+      '/api/v2/rankings',
       '/',
       '/plugins',
       '/rankings',
@@ -335,13 +340,47 @@ describe('edge cache allowlist', () => {
   })
 })
 
+describe('edge cache key normalization', () => {
+  function key(url: string): string | null {
+    return edgeCacheKey(new URL(url))?.url ?? null
+  }
+
+  it('keeps only the params that shape the body, in a fixed order', () => {
+    // A cache-buster or reordered params must land on the same entry, or a
+    // busy caller shatters the cache into a cold miss per request.
+    const canonical = key('https://deepseek1024.com/api/v2/plugins?category=ui&page=2&sort=newest')
+    expect(key('https://deepseek1024.com/api/v2/plugins?page=2&category=ui&sort=newest&utm=x&_=99'))
+      .toBe(canonical)
+    expect(key('https://deepseek1024.com/api/v2/plugins?sort=newest&category=ui&page=2'))
+      .toBe(canonical)
+  })
+
+  it('drops every param on a no-param endpoint', () => {
+    const bare = key('https://deepseek1024.com/api/v2/rankings')
+    expect(key('https://deepseek1024.com/api/v2/rankings?bust=123')).toBe(bare)
+    expect(bare).toBe('https://deepseek1024.com/api/v2/rankings')
+  })
+
+  it('leaves HTML routes keyed by their whole URL', () => {
+    // A filtered permutation carries different SEO metadata than the bare page,
+    // so its query must stay in the key.
+    expect(key('https://deepseek1024.com/plugins?category=ui'))
+      .toBe('https://deepseek1024.com/plugins?category=ui')
+  })
+
+  it('does not cache an off-allowlist api path', () => {
+    expect(key('https://deepseek1024.com/api/v1/plugins/search?q=x')).toBeNull()
+  })
+})
+
 describe('conditional catalog requests', () => {
-  const etag = weakEtag(['2026-08-18T15:00:00.000Z', 'kv', '', '', 'stars'])
+  const body = '{"packages":[{"id":"a/b"}]}'
+  const etag = contentEtag(body)
 
   function responseWith(tag: string | null): Response {
     const headers = new Headers({ 'Cache-Control': 'public, max-age=300', 'X-Catalog-Source': 'kv' })
     if (tag) headers.set('ETag', tag)
-    return new Response('{"packages":[]}', { headers })
+    return new Response(body, { headers })
   }
 
   function conditional(ifNoneMatch: string | null): Request {
@@ -350,29 +389,33 @@ describe('conditional catalog requests', () => {
     })
   }
 
-  it('moves whenever any part of the identity moves', () => {
-    const base = ['2026-08-18T15:00:00.000Z', 'kv', '', '', 'stars']
-    expect(weakEtag(base)).toBe(weakEtag([...base]))
-    for (const changed of [
-      ['2026-08-18T15:15:00.000Z', 'kv', '', '', 'stars'],
-      ['2026-08-18T15:00:00.000Z', 'stale', '', '', 'stars'],
-      ['2026-08-18T15:00:00.000Z', 'kv', 'terminal', '', 'stars'],
-      ['2026-08-18T15:00:00.000Z', 'kv', '', 'ui', 'stars'],
-      ['2026-08-18T15:00:00.000Z', 'kv', '', '', 'newest'],
+  it('is stable for identical bytes and moves for any change', () => {
+    expect(contentEtag(body)).toBe(contentEtag(body))
+    expect(contentEtag(body)).toMatch(/^W\//)
+    for (const other of [
+      '{"packages":[{"id":"a/b"},{"id":"c/d"}]}',
+      '{"packages":[{"id":"a/b","stars":1}]}',
+      '{"packages":[]}',
     ]) {
-      expect(weakEtag(changed), changed.join('|')).not.toBe(weakEtag(base))
+      expect(contentEtag(other)).not.toBe(etag)
     }
   })
 
+  it('moves when the body changes even though the snapshot did not', () => {
+    // The bug this replaces: keyed on snapshot identity, the validator kept the
+    // old tag when a deploy restored a field, and a poller was answered 304
+    // against a body that no longer matched. Same snapshot, one extra field —
+    // the tag must differ.
+    const withoutField = '{"packages":[{"id":"a/b"}]}'
+    const withField = '{"packages":[{"id":"a/b","installMethods":[{"kind":"github"}]}]}'
+    expect(contentEtag(withField)).not.toBe(contentEtag(withoutField))
+  })
+
   it('answers a matching validator with an empty 304', async () => {
-    // A client polling for changes otherwise re-downloads the whole catalog to
-    // be told nothing moved.
     const notModified = notModifiedFor(conditional(etag), responseWith(etag))
     expect(notModified?.status).toBe(304)
     expect(await notModified?.text()).toBe('')
     expect(notModified?.headers.get('ETag')).toBe(etag)
-    // A 304 has to carry forward the freshness information, or the caller has
-    // nothing left to decide with.
     expect(notModified?.headers.get('Cache-Control')).toBe('public, max-age=300')
   })
 
@@ -383,8 +426,94 @@ describe('conditional catalog requests', () => {
   })
 
   it('serves the body when the validator is stale, absent, or unmatchable', () => {
-    expect(notModifiedFor(conditional(weakEtag(['other'])), responseWith(etag))).toBeNull()
+    expect(notModifiedFor(conditional(contentEtag('{"x":1}')), responseWith(etag))).toBeNull()
     expect(notModifiedFor(conditional(null), responseWith(etag))).toBeNull()
     expect(notModifiedFor(conditional(etag), responseWith(null))).toBeNull()
+  })
+})
+
+describe('v2 paginated directory', () => {
+  // A snapshot with enough plugins to page. The fixture repeats one plugin's
+  // shape under distinct ids so pagination and filtering have something to bite.
+  function snapshotOf(count: number, category = 'ui'): CatalogSnapshotResult {
+    const base = testCatalogResult().snapshot.plugins[0]!
+    const plugins = Array.from({ length: count }, (_unused, index) => ({
+      ...base,
+      id: `owner${index}/repo${index}`,
+      name: `repo${index}`,
+      owner: `owner${index}`,
+      repository: `repo${index}`,
+      url: `https://github.com/owner${index}/repo${index}`,
+      category,
+      installMethods: [{
+        kind: 'github' as const,
+        spec: `github:owner${index}/repo${index}`,
+        command: 'dsh plugin add …',
+        verification: 'verified' as const,
+        code: 'entry_committed' as const,
+        requiresBuildAllowance: false,
+        revision: null,
+        checkedAt: null,
+      }],
+    }))
+    return { snapshot: { ...testCatalogResult().snapshot, plugins }, source: 'kv' }
+  }
+
+  it('returns one page and the totals a pager needs', () => {
+    const result = buildPluginsPage(snapshotOf(250), parseCatalogQuery({}), 2, 100)
+    expect(result.plugins).toHaveLength(100)
+    expect(result).toMatchObject({ page: 2, limit: 100, total: 250, totalPages: 3, catalogTotal: 250 })
+    // Page 2 is the second slice, not the first.
+    expect(result.plugins[0]!.id).not.toBe(buildPluginsPage(snapshotOf(250), parseCatalogQuery({}), 1, 100).plugins[0]!.id)
+  })
+
+  it('drops installMethods from list rows but keeps them derivable elsewhere', () => {
+    const page = buildPluginsPage(snapshotOf(3), parseCatalogQuery({}), 1, 100)
+    for (const plugin of page.plugins) expect(plugin.installMethods).toBeUndefined()
+    expect(JSON.parse(JSON.stringify(page)).plugins[0]).not.toHaveProperty('installMethods')
+  })
+
+  it('clamps a page past the end onto the last real page instead of 404ing', () => {
+    const page = buildPluginsPage(snapshotOf(120), parseCatalogQuery({}), 999, 100)
+    expect(page.page).toBe(2)
+    expect(page.plugins).toHaveLength(20)
+  })
+
+  it('clamps the limit into a sane band', () => {
+    expect(clampLimit(undefined)).toBe(100)
+    expect(clampLimit(0)).toBe(100)
+    expect(clampLimit(5000)).toBe(200)
+    expect(clampLimit(37)).toBe(37)
+  })
+
+  it('carries whole-catalog category counts, not the page', () => {
+    const page = buildPluginsPage(snapshotOf(250, 'ui'), parseCatalogQuery({ category: 'ui' }), 1, 10)
+    expect(page.plugins).toHaveLength(10)
+    const ui = page.categories.find((c) => c.id === 'ui')
+    expect(ui?.count).toBe(250)
+  })
+})
+
+describe('v2 rankings', () => {
+  it('bundles the siblings a collapsed seat needs, and only those', () => {
+    // Two plugins share a repository; a third is alone. Only the shared repo
+    // earns a sibling entry, and it carries both of its plugins.
+    const base = testCatalogResult().snapshot.plugins[0]!
+    const plugins: CatalogPlugin[] = [
+      { ...base, id: 'mono/repo/a', owner: 'mono', repository: 'repo', name: 'a', url: 'https://github.com/mono/repo', stars: 50 },
+      { ...base, id: 'mono/repo/b', owner: 'mono', repository: 'repo', name: 'b', url: 'https://github.com/mono/repo', stars: 50 },
+      { ...base, id: 'solo/one', owner: 'solo', repository: 'one', name: 'one', url: 'https://github.com/solo/one', stars: 10 },
+    ]
+    const response = buildRankingsResponse({ snapshot: { ...testCatalogResult().snapshot, plugins }, source: 'kv' })
+
+    expect(response.siblingsByRepository['mono/repo']).toHaveLength(2)
+    expect(response.siblingsByRepository['solo/one']).toBeUndefined()
+    // The bundled siblings are list rows: no installMethods.
+    for (const sibling of response.siblingsByRepository['mono/repo']!) {
+      expect(sibling.installMethods).toBeUndefined()
+    }
+    // The stars board seats the monorepo once and records the sibling it hid.
+    const seat = response.rankings.stars.find((row) => row.owner === 'mono')
+    expect(seat?.repositorySiblings).toBe(1)
   })
 })

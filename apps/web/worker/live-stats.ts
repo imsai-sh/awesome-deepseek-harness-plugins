@@ -4,11 +4,18 @@ import {
   partitionConnections,
   type LiveConnection,
 } from './lib/live-connections'
+import { alarmToSet } from './lib/live-schedule'
 import { VISIT_ID_PATTERN } from './lib/visit-id'
 import type { LiveStatsPayload } from './types'
 
 const VISIT_DEDUPE_MS = 60 * 60 * 1000
 const SWEEP_INTERVAL_MS = HEARTBEAT_TIMEOUT_MS / 3
+// A membership change never fans out on its own; it schedules a flush this far
+// out and lets any other change in the window ride the same alarm. That caps the
+// broadcast rate at one O(N) fan-out per window no matter how many sockets join
+// or leave at once — the property that keeps a reconnect storm from turning into
+// O(N^2) work on this single object.
+const BROADCAST_DEBOUNCE_MS = 2_000
 
 interface ConnectionAttachment {
   visitId: string
@@ -103,6 +110,22 @@ export class LiveStats extends DurableObject<Env> {
     return stale.length
   }
 
+  /** Move the single alarm no later than `target`, never pushing it out. */
+  private async ensureAlarmBy(target: number): Promise<void> {
+    const at = Math.max(target, Date.now() + 1)
+    const next = alarmToSet(await this.ctx.storage.getAlarm(), at)
+    if (next !== null) await this.ctx.storage.setAlarm(next)
+  }
+
+  /**
+   * A membership change asks the next sweep to run soon rather than fanning out
+   * itself. Within the debounce window every such request coalesces onto one
+   * alarm, so a burst of joins or leaves costs a single broadcast, not one each.
+   */
+  private async scheduleFlush(): Promise<void> {
+    await this.ensureAlarmBy(Date.now() + BROADCAST_DEBOUNCE_MS)
+  }
+
   private async scheduleNextSweep(): Promise<void> {
     const now = Date.now()
     // Connected clients need a regular sweep; an idle object only has to wake up
@@ -114,9 +137,7 @@ export class LiveStats extends DurableObject<Env> {
       ).one().expiresAt
 
     if (next === null) return
-    const current = await this.ctx.storage.getAlarm()
-    if (current !== null && current <= next) return
-    await this.ctx.storage.setAlarm(Math.max(next, now + 1000))
+    await this.ensureAlarmBy(Math.max(next, now + 1000))
   }
 
   async fetch(request: Request): Promise<Response> {
@@ -135,8 +156,11 @@ export class LiveStats extends DurableObject<Env> {
     server.serializeAttachment({ visitId, connectedAt: Date.now() } satisfies ConnectionAttachment)
     this.ctx.acceptWebSocket(server)
     this.recordVisit(visitId)
-    await this.scheduleNextSweep()
-    this.broadcast()
+    // A join used to broadcast to the whole roster before returning the upgrade,
+    // so every connect was O(N) and a reconnect storm was O(N^2) on this one
+    // object — the shape that overloads it. Now it only schedules the coalesced
+    // flush; this newcomer learns the count from that flush like everyone else.
+    await this.scheduleFlush()
 
     return new Response(null, { status: 101, webSocket: client })
   }
@@ -147,23 +171,30 @@ export class LiveStats extends DurableObject<Env> {
     if (message === 'stats') socket.send(JSON.stringify(this.currentStats()))
   }
 
-  webSocketClose(_socket: WebSocket, _code: number, _reason: string, _wasClean: boolean): void {
-    this.broadcast()
+  // Async so the runtime keeps this object awake until the alarm is persisted;
+  // a fire-and-forget schedule could be lost to hibernation before it lands.
+  async webSocketClose(): Promise<void> {
+    // A mass disconnect schedules one flush, not a fan-out per closing socket.
+    await this.scheduleFlush()
   }
 
-  webSocketError(_socket: WebSocket, error: unknown): void {
+  async webSocketError(_socket: WebSocket, error: unknown): Promise<void> {
     console.error(
       JSON.stringify({
         message: 'live_stats_websocket_error',
         error: error instanceof Error ? error.message : String(error),
       }),
     )
-    this.broadcast()
+    await this.scheduleFlush()
   }
 
   async alarm(): Promise<void> {
     this.ctx.storage.sql.exec('DELETE FROM recent_visits WHERE expires_at <= ?', Date.now())
-    if (this.evictStaleConnections() > 0) this.broadcast()
+    this.evictStaleConnections()
+    // The one place the headcount fans out. Joins, leaves and stale evictions all
+    // converge here, so a burst costs a single O(N) broadcast per debounce window
+    // instead of one per event.
+    this.broadcast()
     await this.scheduleNextSweep()
   }
 }

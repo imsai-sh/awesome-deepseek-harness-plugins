@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xiaoliang2/dsh-compact-after-task",
+  "name": "dsh-compact-after-task",
+  "repository": "https://github.com/xiaoliang2/dsh-compact-after-task",
+  "category": "workflow",
+  "description": {
+    "en": "Automatically compacts the conversation context after the current task completes, when context usage reaches a user-configurable ratio of the model's context window (0.05-1.0, default 0.5), adjustable via a toggle and slider on the settings page.",
+    "zh": "当前任务执行完成后自动压缩会话上下文：当上下文占用达到模型上下文窗口的用户可配置比例（0.05-1，默认 0.5）时触发，可在设置页通过开关与滑块调整。"
+  },
+  "added": "2026-08-19"
+}

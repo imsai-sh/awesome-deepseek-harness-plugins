@@ -92,6 +92,55 @@ export interface CatalogResponse {
   }
 }
 
+export type CatalogSource = 'd1' | 'kv' | 'stale' | 'empty'
+
+/** One page of the directory from `/api/v2/plugins`. */
+export interface PluginsPage {
+  plugins: CatalogPlugin[]
+  page: number
+  limit: number
+  total: number
+  totalPages: number
+  catalogTotal: number
+  categories: CategoryResult[]
+  generatedAt: string
+  source: CatalogSource
+}
+
+/** The leaderboards from `/api/v2/rankings`, with their sibling groups. */
+export interface RankingsData {
+  rankings: Record<RankingMode, RankedPlugin[]>
+  siblingsByRepository: Record<string, CatalogPlugin[]>
+  catalogTotal: number
+  categories: CategoryResult[]
+  generatedAt: string
+  source: CatalogSource
+}
+
+export interface PluginsPageParams {
+  q?: string
+  category?: string
+  sort?: CatalogSort
+  page?: number
+  limit?: number
+}
+
+export function fetchPluginsPage(params: PluginsPageParams, signal?: AbortSignal): Promise<PluginsPage> {
+  const search = new URLSearchParams()
+  if (params.q) search.set('q', params.q)
+  if (params.category) search.set('category', params.category)
+  // 'stars' is the server default; omitting it keeps the cache key canonical.
+  if (params.sort && params.sort !== 'stars') search.set('sort', params.sort)
+  if (params.page && params.page > 1) search.set('page', String(params.page))
+  if (params.limit) search.set('limit', String(params.limit))
+  const query = search.toString()
+  return requestJson<PluginsPage>(`${API_ORIGIN}/api/v2/plugins${query ? `?${query}` : ''}`, signal)
+}
+
+export function fetchRankings(signal?: AbortSignal): Promise<RankingsData> {
+  return requestJson<RankingsData>(`${API_ORIGIN}/api/v2/rankings`, signal)
+}
+
 export interface CategoryDescriptor {
   id: string
   order: number

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ExElectron/dsh-gov-portal",
+  "name": "dsh-gov-portal",
+  "repository": "https://github.com/ExElectron/dsh-gov-portal",
+  "category": "ui",
+  "description": {
+    "en": "A DeepSeek Harness plugin that provides an independent government-service portal interface backed by the host apiProxy.",
+    "zh": "为 DeepSeek Harness 提供独立政务服务门户界面的插件，通过宿主 apiProxy 对接会话、模型、权限与统计能力。"
+  },
+  "added": "2026-08-19"
+}

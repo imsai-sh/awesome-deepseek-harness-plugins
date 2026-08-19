@@ -824,3 +824,34 @@ describe('catalog listing validator', () => {
     expect(registry.headers.get('ETag')).toMatch(/^W\/"/)
   })
 })
+
+describe('v2 endpoints', () => {
+  it('serves a directory page with pagination metadata and a content validator', async () => {
+    const response = await testApp().request('https://deepseek1024.com/api/v2/plugins?limit=1')
+    expect(response.status).toBe(200)
+    expect(response.headers.get('Content-Type')).toContain('application/json')
+    expect(response.headers.get('ETag')).toMatch(/^W\/"/)
+    expect(response.headers.get('X-Robots-Tag')).toBe('noindex')
+    const body = await response.json() as { plugins: unknown[]; page: number; limit: number; total: number; totalPages: number; catalogTotal: number }
+    expect(body.plugins).toHaveLength(1)
+    expect(body).toMatchObject({ page: 1, limit: 1 })
+    expect(body.total).toBeGreaterThan(0)
+    expect(body.catalogTotal).toBeGreaterThan(0)
+  })
+
+  it('gives a different page a different validator', async () => {
+    const app = testApp()
+    const p1 = await app.request('https://deepseek1024.com/api/v2/plugins?limit=1&page=1')
+    const p2 = await app.request('https://deepseek1024.com/api/v2/plugins?limit=1&page=2')
+    expect(p1.headers.get('ETag')).not.toBe(p2.headers.get('ETag'))
+  })
+
+  it('serves the rankings boards with their sibling groups', async () => {
+    const response = await testApp().request('https://deepseek1024.com/api/v2/rankings')
+    expect(response.status).toBe(200)
+    expect(response.headers.get('ETag')).toMatch(/^W\/"/)
+    const body = await response.json() as { rankings: Record<string, unknown[]>; siblingsByRepository: Record<string, unknown> }
+    expect(Object.keys(body.rankings)).toContain('stars')
+    expect(body.siblingsByRepository).toBeTypeOf('object')
+  })
+})

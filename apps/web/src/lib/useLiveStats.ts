@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { newVisitId, VISIT_ID_PATTERN } from '../../worker/lib/visit-id'
 import { API_ORIGIN, type LiveStats } from './api'
+import { reconnectDelayMs } from './reconnect'
 
 interface LiveStatsState {
   stats: LiveStats | null
@@ -83,9 +84,10 @@ export function useLiveStats(): LiveStatsState {
         if (heartbeatTimer !== undefined) window.clearInterval(heartbeatTimer)
         setState((current) => ({ ...current, connected: false }))
         if (!stopped) {
-          const delay = Math.min(30_000, 1_000 * 2 ** attempt)
+          // Jittered so that clients dropped together by one overloaded object do
+          // not reconnect in lockstep and immediately re-stampede it.
+          reconnectTimer = window.setTimeout(connect, reconnectDelayMs(attempt))
           attempt += 1
-          reconnectTimer = window.setTimeout(connect, delay)
         }
       })
       socket.addEventListener('error', () => socket?.close())

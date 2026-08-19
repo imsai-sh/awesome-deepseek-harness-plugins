@@ -19,12 +19,19 @@ const DESTINATIONS = [
   { to: '/docs/api', end: false, icon: Code, label: 'navApi' },
 ] as const
 
+// An embedded build can set VITE_HIDE_COMMUNITY=true to drop the community
+// entry when it ships the catalog as a standalone mobile shell with no room for
+// the discussion section. Unset (the default) keeps every destination.
+const HIDE_COMMUNITY = import.meta.env.VITE_HIDE_COMMUNITY === 'true'
+
 export function FloatingNav() {
   const { t } = useI18n()
 
+  const destinations = DESTINATIONS.filter(({ to }) => !(HIDE_COMMUNITY && to === '/community'))
+
   return (
     <nav className="floating-nav" aria-label={t('siteActions')}>
-      {DESTINATIONS.map(({ to, end, icon: Icon, label }) => (
+      {destinations.map(({ to, end, icon: Icon, label }) => (
         <NavLink key={to} to={to} end={end} className="floating-nav-item">
           <Icon size={16} aria-hidden="true" />
           <span>{t(label)}</span>

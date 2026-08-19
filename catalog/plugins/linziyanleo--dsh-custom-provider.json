@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "linziyanleo/dsh-custom-provider",
+  "name": "dsh-custom-provider",
+  "repository": "https://github.com/linziyanleo/dsh-custom-provider",
+  "category": "model",
+  "description": {
+    "en": "Configures static OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages providers in DeepSeek Harness.",
+    "zh": "在 DeepSeek Harness 中配置静态的 OpenAI Chat Completions、OpenAI Responses 和 Anthropic Messages 提供方。"
+  },
+  "added": "2026-08-19"
+}

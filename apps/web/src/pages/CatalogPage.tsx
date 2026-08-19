@@ -14,12 +14,21 @@ import { LoadingState } from '../components/LoadingState'
 import { LanguageSwitch } from '../components/LanguageSwitch'
 import { PackageRow } from '../components/PackageRow'
 import { SelfInstallBanner } from '../components/SelfInstallBanner'
-import type { CatalogPlugin, CatalogSort, Language, RankingMode } from '../lib/api'
+import type {
+  CatalogPlugin,
+  CatalogSort,
+  CategoryResult,
+  Language,
+  PluginsPage,
+  RankingMode,
+  RankingsData,
+} from '../lib/api'
 import {
-  deriveCatalogView,
-  getCachedCatalog,
-  isCatalogFresh,
-  loadCatalog,
+  getCachedPluginsPage,
+  getCachedRankings,
+  isRankingsFresh,
+  loadPluginsPage,
+  loadRankings,
 } from '../lib/catalog-cache'
 import { publicAsset } from '../lib/assets'
 import { formatDateTime, formatNumber, formatRelativeUpdate } from '../lib/format'
@@ -36,9 +45,35 @@ import {
 import { usePageSeo } from '../lib/usePageSeo'
 
 const SORT_MODES: CatalogSort[] = ['stars', 'newest', 'active']
-// Directory rows render in bounded batches so a filter click does not mount
-// the full multi-thousand-plugin list in one commit.
+// One directory page. The server slices the catalog; the client asks for the
+// next page on "load more" and appends, so a browse never holds more than it
+// has scrolled to.
 const PAGE_SIZE = 100
+
+interface DirectoryState {
+  /** `${query}|${category}|${sort}` — the filter this accumulation belongs to. */
+  key: string
+  plugins: CatalogPlugin[]
+  page: number
+  totalPages: number
+  total: number
+  catalogTotal: number
+  categories: CategoryResult[]
+  generatedAt: string
+}
+
+function directoryFrom(key: string, page: PluginsPage): DirectoryState {
+  return {
+    key,
+    plugins: page.plugins,
+    page: page.page,
+    totalPages: page.totalPages,
+    total: page.total,
+    catalogTotal: page.catalogTotal,
+    categories: page.categories,
+    generatedAt: page.generatedAt,
+  }
+}
 // growth7d / growth30d stay available in the API but are hidden here until
 // enough snapshot history accumulates to make those windows meaningful.
 const GITHUB_RANKING_MODES: RankingMode[] = [
@@ -150,9 +185,17 @@ export function CatalogPage({ view }: CatalogPageProps) {
     : 'stars'
   const [draftQuery, setDraftQuery] = useState(query)
   const [rankingMode, setRankingMode] = useState<RankingMode>('growth24h')
-  // The full unfiltered catalog; every filter/sort/search view derives from it
-  // synchronously, so selection feedback never waits on the network.
-  const [fullCatalog, setFullCatalog] = useState(() => getCachedCatalog())
+  const directoryKey = `${query}|${category}|${sort}`
+  // The directory, a page at a time and accumulated on "load more"; the
+  // rankings boards; and, when a search runs on the rankings view, that
+  // search's first page. None of these is the whole catalog.
+  const [directory, setDirectory] = useState<DirectoryState | null>(() => {
+    const first = getCachedPluginsPage({ q: query, category, sort, page: 1, limit: PAGE_SIZE })
+    return first ? directoryFrom(directoryKey, first) : null
+  })
+  const [rankingsData, setRankingsData] = useState<RankingsData | null>(() => getCachedRankings())
+  const [rankingSearch, setRankingSearch] = useState<{ key: string; plugins: CatalogPlugin[]; total: number } | null>(null)
+  const [loadingMore, setLoadingMore] = useState(false)
   const [playIntro] = useState(() => !heroIntroPlayed)
   useEffect(() => {
     heroIntroPlayed = true
@@ -174,21 +217,22 @@ export function CatalogPage({ view }: CatalogPageProps) {
     return () => window.clearTimeout(timeout)
   }, [draftQuery, query, searchParams, setSearchParams])
 
+  // Directory: fetch page 1 whenever the filter changes or a refresh fires.
+  // "Load more" appends later pages; it does not run here.
   useEffect(() => {
+    if (view !== 'catalog') return
     let cancelled = false
     const force = reload > 0
-    if (force || !isCatalogFresh()) setRefreshing(true)
-    // The shared fetch is not aborted on unmount: letting it finish primes the
-    // module cache for the next mount (e.g. back from a detail page).
-    loadCatalog({ force })
+    const params = { q: query, category, sort, page: 1, limit: PAGE_SIZE }
+    if (force || getCachedPluginsPage(params) === null) setRefreshing(true)
+    loadPluginsPage(params, { force })
       .then((data) => {
         if (cancelled) return
-        setFullCatalog(data)
+        setDirectory(directoryFrom(directoryKey, data))
         setError(null)
       })
       .catch((requestError: unknown) => {
-        // A failed background refresh keeps showing the last good catalog.
-        if (cancelled || getCachedCatalog()) return
+        if (cancelled || getCachedPluginsPage(params)) return
         setError(requestError instanceof Error ? requestError.message : t('loadError'))
       })
       .finally(() => {
@@ -197,20 +241,86 @@ export function CatalogPage({ view }: CatalogPageProps) {
     return () => {
       cancelled = true
     }
-  }, [reload, t])
+  }, [view, directoryKey, query, category, sort, reload, t])
 
-  const catalog = useMemo(
-    () =>
-      fullCatalog
-        ? deriveCatalogView(
-            fullCatalog,
-            view === 'catalog'
-              ? { q: query, category, sort }
-              : { q: query, category: '', sort: rankingMode },
-          )
-        : null,
-    [category, fullCatalog, query, rankingMode, sort, view],
-  )
+  // Rankings: one small payload for all ten boards, fetched when that view shows.
+  useEffect(() => {
+    if (view !== 'rankings') return
+    let cancelled = false
+    const force = reload > 0
+    if (force || !isRankingsFresh()) setRefreshing(true)
+    loadRankings({ force })
+      .then((data) => {
+        if (cancelled) return
+        setRankingsData(data)
+        setError(null)
+      })
+      .catch((requestError: unknown) => {
+        if (cancelled || getCachedRankings()) return
+        setError(requestError instanceof Error ? requestError.message : t('loadError'))
+      })
+      .finally(() => {
+        if (!cancelled) setRefreshing(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [view, reload, t])
+
+  // Searching on the rankings view shows the matches, ranked by the active
+  // board's metric — the same behaviour the client-derived model had, now a
+  // single search page instead of a filter over the whole catalog.
+  useEffect(() => {
+    if (view !== 'rankings' || !query) {
+      setRankingSearch(null)
+      return
+    }
+    let cancelled = false
+    const key = `${query}|${rankingMode}`
+    loadPluginsPage({ q: query, sort: rankingMode, page: 1, limit: 100 })
+      .then((data) => {
+        if (!cancelled) setRankingSearch({ key, plugins: data.plugins, total: data.total })
+      })
+      .catch(() => {
+        if (!cancelled) setRankingSearch({ key, plugins: [], total: 0 })
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [view, query, rankingMode])
+
+  async function loadMore() {
+    if (!directory || directory.key !== directoryKey || loadingMore) return
+    if (directory.page >= directory.totalPages) return
+    setLoadingMore(true)
+    try {
+      const next = await loadPluginsPage({
+        q: query,
+        category,
+        sort,
+        page: directory.page + 1,
+        limit: PAGE_SIZE,
+      })
+      setDirectory((prev) =>
+        prev && prev.key === directoryKey
+          ? {
+              ...prev,
+              plugins: [...prev.plugins, ...next.plugins],
+              page: next.page,
+              totalPages: next.totalPages,
+              total: next.total,
+            }
+          : prev,
+      )
+    } catch {
+      // Keep what is already shown; the button stays and the reader can retry.
+    } finally {
+      setLoadingMore(false)
+    }
+  }
+
+  const directoryReady = directory !== null && directory.key === directoryKey
+  const rankingReady = query ? rankingSearch?.key === `${query}|${rankingMode}` : rankingsData !== null
 
   useEffect(() => {
     const interval = window.setInterval(() => setReload((value) => value + 1), 5 * 60 * 1000)
@@ -224,36 +334,33 @@ export function CatalogPage({ view }: CatalogPageProps) {
     }
   }, [])
 
+  // Categories carry whole-catalog counts on both responses, so the sidebar
+  // reads from whichever view is active.
+  const activeCategories = (view === 'catalog' ? directory?.categories : rankingsData?.categories) ?? []
   const categoryMap = useMemo(
-    () => new Map(catalog?.categories.map((item) => [item.id, item]) ?? []),
-    [catalog?.categories],
+    () => new Map(activeCategories.map((item) => [item.id, item])),
+    [activeCategories],
   )
 
-  // Boards ranked by a repository-level metric seat a repository once, so a
-  // seat has to be able to show what it stands for. The catalog response
-  // already carries every plugin, so grouping them here costs no request.
-  const pluginsByRepository = useMemo(() => {
-    const groups = new Map<string, CatalogPlugin[]>()
-    for (const plugin of catalog?.packages ?? []) {
-      const key = `${plugin.owner}/${plugin.repository}`.toLocaleLowerCase('en-US')
-      const group = groups.get(key)
-      if (group) group.push(plugin)
-      else groups.set(key, [plugin])
-    }
-    for (const group of groups.values()) group.sort((a, b) => a.name.localeCompare(b.name))
-    return groups
-  }, [catalog?.packages])
-
-  // Incremental directory rendering; the visible count resets whenever the
-  // filter combination changes (key mismatch falls back to the first page).
-  const directoryKey = `${query}|${category}|${sort}`
-  const [directoryPage, setDirectoryPage] = useState({ key: directoryKey, count: PAGE_SIZE })
-  const visibleCount = directoryPage.key === directoryKey ? directoryPage.count : PAGE_SIZE
-  const visiblePackages = useMemo(
-    () => catalog?.packages.slice(0, visibleCount) ?? [],
-    [catalog, visibleCount],
+  // A repository-collapsed board seat expands to its siblings; with the catalog
+  // no longer client-side, those siblings arrive with the rankings response,
+  // keyed by `owner/repository` exactly as the client used to group them.
+  const pluginsByRepository = useMemo(
+    () => new Map(Object.entries(rankingsData?.siblingsByRepository ?? {})),
+    [rankingsData],
   )
-  const hasMorePackages = (catalog?.packages.length ?? 0) > visibleCount
+
+  const visiblePackages = directoryReady ? directory.plugins : []
+  const hasMorePackages = directoryReady && directory.page < directory.totalPages
+  const directoryTotal = directoryReady ? directory.total : 0
+  const catalogTotal = directory?.catalogTotal ?? rankingsData?.catalogTotal ?? null
+  const generatedAt = directory?.generatedAt ?? rankingsData?.generatedAt ?? null
+  // The search box's match count: the directory's filtered total on the catalog
+  // view, the search total when searching the rankings, the whole catalog
+  // otherwise. Null until the relevant response has arrived.
+  const resultCount: number | null = view === 'catalog'
+    ? (directoryReady ? directoryTotal : null)
+    : (query ? rankingSearch?.total ?? null : catalogTotal)
 
   function updateFilter(key: 'category' | 'sort', value: string) {
     const next = new URLSearchParams(searchParams)
@@ -269,10 +376,10 @@ export function CatalogPage({ view }: CatalogPageProps) {
 
   const ranking = useMemo(() => {
     const candidates = query
-      ? catalog?.packages ?? []
-      : catalog?.rankings[rankingMode] ?? []
+      ? rankingSearch?.plugins ?? []
+      : rankingsData?.rankings[rankingMode] ?? []
     return candidates.slice(0, 100)
-  }, [catalog, query, rankingMode])
+  }, [query, rankingSearch, rankingsData, rankingMode])
   const isGrowthMode =
     rankingMode === 'growth24h' || rankingMode === 'growth7d' || rankingMode === 'growth30d'
   const isPendingRanking = !query && isGrowthMode
@@ -284,14 +391,14 @@ export function CatalogPage({ view }: CatalogPageProps) {
   const copy = collectionCopy(
     view === 'catalog' ? 'catalog' : 'rankings',
     language,
-    catalog?.meta.catalogTotal ?? 0,
+    catalogTotal ?? 0,
   )
   const hasIndexableFilters = Boolean(query || category || requestedSort)
   const rankedForSchema = useMemo(
     () => (view === 'catalog'
-      ? catalog?.rankings.stars ?? []
-      : catalog?.rankings[rankingMode] ?? []).slice(0, 30),
-    [catalog, rankingMode, view],
+      ? directory?.plugins ?? []
+      : rankingsData?.rankings[rankingMode] ?? []).slice(0, 30),
+    [directory, rankingsData, rankingMode, view],
   )
 
   usePageSeo({
@@ -302,7 +409,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
     // Until the catalog resolves there is no ItemList and no plugin count, and
     // writing that emptiness over the Worker's populated metadata is strictly
     // worse than leaving the served head alone.
-    ready: Boolean(catalog),
+    ready: catalogTotal !== null,
     robots: hasIndexableFilters ? 'noindex,follow' : 'index,follow',
     canonical: hasIndexableFilters ? null : `${SITE_ORIGIN}${canonicalPath}`,
     schema: graph([
@@ -317,7 +424,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
         rankedForSchema,
         canonicalPath,
         copy.listHeading,
-        catalog?.meta.catalogTotal ?? rankedForSchema.length,
+        catalogTotal ?? rankedForSchema.length,
       ),
     ]),
   })
@@ -395,7 +502,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                 <dt className="hero-tally-label">{t('totalPlugins')}</dt>
                 <dd className="hero-tally-value">
                   <TallyCount
-                    total={catalog?.meta.catalogTotal ?? null}
+                    total={catalogTotal}
                     language={language}
                     animate={playIntro}
                   />
@@ -410,8 +517,8 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   {stats ? formatNumber(stats.online, language) : '--'}
                 </dd>
               </div>
-              {catalog?.meta.generatedAt && (
-                <CatalogUpdatedAt value={catalog.meta.generatedAt} language={language} />
+              {generatedAt && (
+                <CatalogUpdatedAt value={generatedAt} language={language} />
               )}
             </dl>
 
@@ -432,9 +539,9 @@ export function CatalogPage({ view }: CatalogPageProps) {
                 onChange={(event) => setDraftQuery(event.target.value)}
                 placeholder={t('searchPlaceholder')}
               />
-              {catalog && (
+              {resultCount !== null && (
                 <small>
-                  {catalog.meta.total} {t(catalog.meta.total === 1 ? 'result' : 'results')}
+                  {resultCount} {t(resultCount === 1 ? 'result' : 'results')}
                 </small>
               )}
             </label>
@@ -448,7 +555,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
             <Link to={catalogHref} className={view === 'catalog' ? 'selected' : undefined} aria-current={view === 'catalog' ? 'page' : undefined}>
               <ListFilter size={16} aria-hidden="true" />
               <span>
-                {t('catalog')}{catalog ? ` (${formatNumber(catalog.meta.catalogTotal, language)})` : ''}
+                {t('catalog')}{catalogTotal !== null ? ` (${formatNumber(catalogTotal, language)})` : ''}
               </span>
             </Link>
           </nav>
@@ -467,9 +574,9 @@ export function CatalogPage({ view }: CatalogPageProps) {
                 aria-pressed={!category}
               >
                 {t('allCategories')}
-                <span>{catalog?.meta.catalogTotal ?? '--'}</span>
+                <span>{catalogTotal ?? '--'}</span>
               </button>
-              {catalog?.categories.map((item) => (
+              {activeCategories.map((item) => (
                 <button
                   key={item.id}
                   type="button"
@@ -506,7 +613,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   </div>
                 </div>
               </div>
-              {refreshing && catalog && (
+              {refreshing && rankingReady && (
                 <span className="refresh-note" role="status">{t('refreshing')}</span>
               )}
             </div>
@@ -520,7 +627,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   {t('retry')}
                 </button>
               </div>
-            ) : catalog && ranking.length === 0 ? (
+            ) : rankingReady && ranking.length === 0 ? (
               <div className="state-panel">
                 <Search size={27} aria-hidden="true" />
                 <h3>{t(
@@ -541,7 +648,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   {t(isPendingRanking ? 'topStars' : 'reset')}
                 </button>
               </div>
-            ) : catalog ? (
+            ) : rankingReady ? (
               <div className={`package-list ranking-list${refreshing ? ' is-refreshing' : ''}`}>
                 {ranking.map((plugin, index) => (
                   <PackageRow
@@ -586,7 +693,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   </button>
                 ))}
               </div>
-              {refreshing && catalog && (
+              {refreshing && directoryReady && (
                 <span className="refresh-note" role="status">{t('refreshing')}</span>
               )}
             </div>
@@ -600,9 +707,9 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   {t('retry')}
                 </button>
               </div>
-            ) : !catalog ? (
+            ) : !directoryReady ? (
               <LoadingState />
-            ) : catalog.packages.length === 0 ? (
+            ) : visiblePackages.length === 0 ? (
               <div className="state-panel">
                 <Search size={27} aria-hidden="true" />
                 <h3>{t('emptyTitle')}</h3>
@@ -628,15 +735,15 @@ export function CatalogPage({ view }: CatalogPageProps) {
                     <button
                       className="button button-secondary"
                       type="button"
-                      onClick={() =>
-                        setDirectoryPage({ key: directoryKey, count: visibleCount + PAGE_SIZE })}
+                      onClick={loadMore}
+                      disabled={loadingMore}
                     >
-                      {t('loadMore')}
+                      {t(loadingMore ? 'loading' : 'loadMore')}
                     </button>
                     <span className="load-more-count">
                       {formatNumber(visiblePackages.length, language)}
                       {' / '}
-                      {formatNumber(catalog.meta.total, language)}
+                      {formatNumber(directoryTotal, language)}
                     </span>
                   </div>
                 )}

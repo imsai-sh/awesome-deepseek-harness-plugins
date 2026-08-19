@@ -2,24 +2,11 @@ import { readFileSync } from 'node:fs'
 import { DatabaseSync } from 'node:sqlite'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-// The snapshot refresh and the npm registry are separate external dependencies
-// with their own tests; stubbing them keeps this file about the crawl loop.
+// The snapshot refresh is a separate external dependency with its own tests;
+// stubbing it keeps this file about the crawl loop. npm probing no longer runs
+// here — it moved to npm-refresh-task.
 vi.mock('../worker/lib/catalog-store', () => ({
   refreshCatalogSnapshot: vi.fn(async () => ({ snapshot: null, source: 'd1' })),
-}))
-vi.mock('../worker/lib/npm-registry', () => ({
-  probeNpmPackage: vi.fn(async () => ({
-    status: 'absent' as const,
-    httpStatus: 404,
-    version: null,
-    repositoryUrl: null,
-    repositoryDirectory: null,
-    bundleDeclared: false,
-    entryPoint: null,
-    tarballUrl: null,
-    integrity: null,
-    binding: 'absent',
-  })),
 }))
 
 const { runPluginDiscoveryTask } = await import('../worker/lib/plugin-discovery-task')

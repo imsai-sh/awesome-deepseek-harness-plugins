@@ -1019,30 +1019,87 @@ export async function loadCatalogSnapshotFromD1(
 export interface NpmProbeCandidate {
   pluginId: string
   packageName: string
+  // The validator to send as `If-None-Match`; null when never probed.
+  etag: string | null
+  // Stable unique key the refresh sweep uses as its cursor.
+  normalizedId: string
+  // The stored status, so the caller can skip re-writing an unchanged result
+  // (an `absent` package that is still absent has no ETag to answer 304, so it
+  // would otherwise be rewritten every sweep).
+  currentStatus: string
+}
+
+// A package is probed only when it is published here AND its own manifest named
+// the package — the name comes from the repository, never from a guess.
+const NPM_PROBE_ELIGIBLE = `p.package_name IS NOT NULL
+        AND (p.from_pr = 1 OR (r.from_topic = 1 AND p.validation_status = 'accepted'))`
+
+interface NpmProbeCandidateRow {
+  plugin_id: string
+  package_name: string
+  npm_etag: string | null
+  npm_status: string
+  normalized_plugin_id: string
+}
+
+function toNpmProbeCandidate(row: NpmProbeCandidateRow): NpmProbeCandidate {
+  return {
+    pluginId: row.plugin_id,
+    packageName: row.package_name,
+    etag: row.npm_etag ?? null,
+    normalizedId: row.normalized_plugin_id,
+    currentStatus: row.npm_status,
+  }
 }
 
 /**
- * Plugins whose npm binding is stale or unknown, oldest first.
+ * Newly discovered packages that have never been probed.
  *
- * Only published plugins are probed, and only those whose own manifest named a
- * package — the name comes from the repository, never from a guess.
+ * These are drained first each tick so a freshly submitted plugin earns its npm
+ * badge within one cron rather than waiting for the rolling sweep to reach it.
  */
-export async function loadPendingNpmProbes(
+export async function loadNpmPendingProbes(
   db: D1Database,
-  limit = 60,
-  staleBefore: string | null = null,
+  limit = 200,
 ): Promise<NpmProbeCandidate[]> {
   const result = await db.prepare(
-    `SELECT p.plugin_id, p.package_name
+    `SELECT p.plugin_id, p.package_name, p.npm_etag, p.npm_status, p.normalized_plugin_id
        FROM catalog_plugins p
        JOIN catalog_repositories r ON r.id = p.repository_id
-      WHERE p.package_name IS NOT NULL
-        AND (p.from_pr = 1 OR (r.from_topic = 1 AND p.validation_status = 'accepted'))
-        AND (p.npm_status = 'pending' OR p.npm_checked_at IS NULL OR p.npm_checked_at < ?)
-      ORDER BY p.npm_checked_at IS NOT NULL, p.npm_checked_at
+      WHERE ${NPM_PROBE_ELIGIBLE}
+        AND p.npm_status = 'pending'
+      ORDER BY p.normalized_plugin_id
       LIMIT ?`,
-  ).bind(staleBefore ?? '', limit).all<{ plugin_id: string; package_name: string }>()
-  return result.results.map((row) => ({ pluginId: row.plugin_id, packageName: row.package_name }))
+  ).bind(limit).all<NpmProbeCandidateRow>()
+  return result.results.map(toNpmProbeCandidate)
+}
+
+/**
+ * The rolling re-check sweep over every eligible package, ordered by the stable
+ * unique id and resumed from a cursor.
+ *
+ * Conditional requests make re-probing nearly free (a `304` is a header round
+ * trip), so there is no freshness window: the sweep simply cycles through all
+ * packages, and the caller persists the last id as the cursor. An empty cursor
+ * starts from the beginning, which is also where a completed cycle wraps back
+ * to. `npm_checked_at` is deliberately not consulted — it is not written on a
+ * `304`, so ordering by it would stall on the same rows forever.
+ */
+export async function loadNpmSweepBatch(
+  db: D1Database,
+  limit: number,
+  cursor = '',
+): Promise<NpmProbeCandidate[]> {
+  const result = await db.prepare(
+    `SELECT p.plugin_id, p.package_name, p.npm_etag, p.npm_status, p.normalized_plugin_id
+       FROM catalog_plugins p
+       JOIN catalog_repositories r ON r.id = p.repository_id
+      WHERE ${NPM_PROBE_ELIGIBLE}
+        AND p.normalized_plugin_id > ?
+      ORDER BY p.normalized_plugin_id
+      LIMIT ?`,
+  ).bind(cursor, limit).all<NpmProbeCandidateRow>()
+  return result.results.map(toNpmProbeCandidate)
 }
 
 export interface NpmProbeRecord {
@@ -1058,6 +1115,10 @@ export interface NpmProbeRecord {
   tarballUrl: string | null
   integrity: string | null
   binding: string
+  // The validator to store for the next conditional request. `found` carries
+  // npm's ETag; `absent` clears it (a 404 has none); `error` never reaches the
+  // column at all.
+  etag: string | null
 }
 
 /**
@@ -1084,13 +1145,13 @@ export async function saveNpmProbes(
         `UPDATE catalog_plugins
             SET npm_package_name = ?, npm_status = ?, npm_http_status = ?,
                 npm_version = ?, npm_repository_url = ?, npm_repository_directory = ?,
-                npm_bundle_declared = ?, npm_binding = ?,
+                npm_bundle_declared = ?, npm_binding = ?, npm_etag = ?,
                 npm_checked_at = ?, updated_at = ?
           WHERE normalized_plugin_id = ?`,
       ).bind(
         probe.packageName, probe.status, probe.httpStatus,
         probe.version, probe.repositoryUrl, probe.repositoryDirectory,
-        probe.bundleDeclared ? 1 : 0, probe.binding,
+        probe.bundleDeclared ? 1 : 0, probe.binding, probe.etag,
         now, now, normalizePluginId(probe.pluginId),
       ))))
   }
