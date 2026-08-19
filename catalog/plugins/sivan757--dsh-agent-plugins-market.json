@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Sivan757/dsh-agent-plugins-market",
+  "name": "dsh-agent-plugins-market",
+  "repository": "https://github.com/Sivan757/dsh-agent-plugins-market",
+  "category": "tools",
+  "description": {
+    "en": "Bring Claude Code / Codex / Cursor plugin marketplaces into DeepSeek Harness: install and inject agent plugins — skills, MCP servers, hooks, slash commands — from git marketplace repos, with a Web GUI market page.",
+    "zh": "把 Claude Code / Codex / Cursor 插件市场生态带进 DeepSeek Harness：从 git 市场仓库安装并注入 Agent 插件（技能、MCP 服务器、hooks、斜杠命令），自带 Web 市场页。"
+  },
+  "added": "2026-08-19"
+}
