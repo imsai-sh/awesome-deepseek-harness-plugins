@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Iwctwbh/dsh-flowglass",
+  "name": "dsh-flowglass(流镜)",
+  "repository": "https://github.com/Iwctwbh/dsh-flowglass",
+  "category": "session",
+  "description": {
+    "en": "Live session flowgraph for DeepSeek Harness — three-lane layout with subagent branches, parallel groups, drill-down, and zero-jump detail overlays. Auto-refreshes every 2 seconds.",
+    "zh": "DeepSeek Harness 实时会话流程图——三列泳道、子代理分支、并行分组与逐层钻取，零跳跃详情浮层，每 2 秒自动刷新。"
+  },
+  "added": "2026-08-19"
+}
