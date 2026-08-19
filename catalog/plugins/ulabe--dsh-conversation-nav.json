@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "UlaBe/dsh-conversation-nav",
+  "name": "dsh-conversation-nav",
+  "repository": "https://github.com/UlaBe/dsh-conversation-nav",
+  "category": "ui",
+  "description": {
+    "en": "DeepSeek web-style conversation navigation: a right-edge tick rail with a hover panel listing every user message, click to jump.",
+    "zh": "DS 网页版风格对话导航：右侧刻度条 + 悬停面板列出每条用户消息，点击跳转。"
+  },
+  "added": "2026-08-19"
+}

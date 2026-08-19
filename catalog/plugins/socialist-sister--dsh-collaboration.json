@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Socialist-Sister/dsh-collaboration",
+  "name": "dsh-collaboration",
+  "repository": "https://github.com/Socialist-Sister/dsh-collaboration",
+  "category": "tools",
+  "description": {
+    "en": "Multi-agent collaboration suite for DeepSeek Harness: a user-configured specialist roster with on-demand dispatch (team_call, roundtable), same-prompt multi-model comparison, a multimodal vision bridge, and an invisible image-paste bridge for text-only main agents. Models connect through the official provider flow; no bundled adapters.",
+    "zh": "DeepSeek Harness 多智能体协作套件：可配置专家名册与按需调度（team_call、圆桌 roundtable）、同题多模型对比、多模态视觉桥，以及面向纯文本主模型的隐形图片粘贴桥。模型全部通过官方供应商流程接入，不捆绑适配器。"
+  },
+  "added": "2026-08-18"
+}

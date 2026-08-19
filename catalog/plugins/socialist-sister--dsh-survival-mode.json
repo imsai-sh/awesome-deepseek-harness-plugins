@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Socialist-Sister/dsh-survival-mode",
+  "name": "dsh-survival-mode",
+  "repository": "https://github.com/Socialist-Sister/dsh-survival-mode",
+  "category": "fun",
+  "description": {
+    "en": "Minecraft-survival rules layered over real coding work in DeepSeek Harness: the engine hard-settles HP, hunger, day/night cycles and hostile mobs; finishing tasks drops vanilla ores and XP; original-recipe crafting gates tools (iron pickaxe for subagent); death rolls the workspace back to your respawn point (per-session difficulty, including hardcore).",
+    "zh": "在 DeepSeek Harness 里用 Minecraft 生存规则装点真实编码工作：引擎硬结算生命/饥饿/昼夜与夜晚刷怪，完成任务掉落原版矿石与经验，原版配方合成解锁工具门禁（铁镐才能用 subagent），死亡时文件与状态回退到重生点，支持会话级难度（含极限模式死亡即删档）。"
+  },
+  "added": "2026-08-19"
+}
