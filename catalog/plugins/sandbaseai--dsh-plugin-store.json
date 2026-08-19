@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sandbaseai/dsh-plugin-store",
+  "name": "dsh-plugin-store",
+  "repository": "https://github.com/sandbaseai/dsh-plugin-store",
+  "category": "ui",
+  "description": {
+    "en": "Native Settings marketplace with Community and Installed views, search, tag filters, local install feedback, and agent catalog tools.",
+    "zh": "原生 Settings 插件市场，提供 Community / Installed 双视图、搜索、Tag 筛选、本地安装反馈和 Agent 目录工具。"
+  },
+  "added": "2026-08-20"
+}
