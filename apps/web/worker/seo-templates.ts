@@ -469,6 +469,15 @@ export function apiDocsNodes(copy: CollectionCopy, language: Language): object[]
       url: 'https://api.deepseek1024.com/v1/plugins/search',
       provider: { '@id': `${SITE_ORIGIN}/#organization` },
     },
+    {
+      '@type': 'WebAPI',
+      '@id': `${url}#registry`,
+      name: 'DSH 1024Store Plugin Catalog Registry API',
+      description: copy.description,
+      documentation: url,
+      url: 'https://api.deepseek1024.com/v1/registry',
+      provider: { '@id': `${SITE_ORIGIN}/#organization` },
+    },
   ]
 }
 

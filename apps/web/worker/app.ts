@@ -3,7 +3,15 @@ import { cors } from 'hono/cors'
 import { secureHeaders } from 'hono/secure-headers'
 import { registerCommunityRoutes } from './community/routes'
 import { registerAuthRoutes } from './auth-api'
-import { ANONYMOUS_QUOTA, AUTHENTICATED_QUOTA, consumeQuota } from './lib/api-quota'
+import {
+  ANONYMOUS_QUOTA,
+  AUTHENTICATED_QUOTA,
+  AUTHENTICATED_REGISTRY_QUOTA,
+  REGISTRY_QUOTA,
+  consumeQuota,
+  type QuotaDecision,
+  type QuotaLimits,
+} from './lib/api-quota'
 import { authenticateApiKey, sha256Hex, timingSafeEqualStrings } from './lib/auth'
 import {
   buildCatalog,
@@ -80,6 +88,74 @@ const SLUG_PART = /^[A-Za-z0-9_.-]+$/
 const ENTRY_ID = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(\/[A-Za-z0-9_.-]+)*$/
 const ENTRY_DATE = /^\d{4}-\d{2}-\d{2}$/
 const ENTRY_KEYS = new Set(['id', 'name', 'repository', 'category', 'description', 'added'])
+
+interface MeteredRequest {
+  decision: QuotaDecision
+  counterKey: string
+}
+
+/**
+ * Shared metering for the public read endpoints (search, registry).
+ *
+ * Resolves the caller the same way for both: a Bearer API key grants the
+ * authenticated quota keyed to the account, anything else counts as an
+ * anonymous caller keyed by HMAC-hashed client IP. `namespace` separates the
+ * counter keys of each endpoint (`ip:reg:` vs `ip:`), so hitting one endpoint
+ * never draws down the other's quota window.
+ *
+ * Returns the quota decision plus the counter key that produced it; the caller
+ * is responsible for applying the `X-RateLimit-*` response headers and turning
+ * a rejection into a 429. Conditional (304) revalidations must not reach this
+ * helper — a 304 costs almost nothing and must not consume quota.
+ */
+async function meterPublicRequest(
+  context: { env?: Env; req: { raw: Request } },
+  namespace: string,
+  anonymousLimits: QuotaLimits,
+  authenticatedLimits: QuotaLimits,
+  clock: () => number,
+): Promise<{ ok: true; metered: MeteredRequest } | { ok: false; error: 'no-db' | 'bad-key'; limits: QuotaLimits }> {
+  const db = context.env?.CATALOG_DB
+  if (!db) return { ok: false, error: 'no-db', limits: anonymousLimits }
+
+  const authorization = context.req.raw.headers.get('Authorization') ?? ''
+  let limits = anonymousLimits
+  let counterKey: string
+  if (authorization) {
+    const presented = authorization.startsWith('Bearer ') ? authorization.slice('Bearer '.length).trim() : ''
+    const keyAuth = presented
+      ? await authenticateApiKey(db, presented, clock())
+      : null
+    if (!keyAuth) {
+      return { ok: false, error: 'bad-key', limits: authenticatedLimits }
+    }
+    limits = authenticatedLimits
+    // Keyed by account, not key id: rotating or multiplying keys must not
+    // mint fresh quota windows.
+    counterKey = `user:${namespace}${keyAuth.userId}`
+  } else {
+    // The raw client IP never reaches D1: it is keyed through the same HMAC
+    // secret the install telemetry uses (plain SHA-256 as a fallback when
+    // the secret is not configured, e.g. bare local dev).
+    const ip = context.req.raw.headers.get('CF-Connecting-IP')?.trim() || 'unknown'
+    const secret = context.env?.INSTALL_CLIENT_HASH_SECRET?.trim()
+    counterKey = `ip:${namespace}${secret ? await hashInstallationClient(secret, ip) : await sha256Hex(ip)}`
+  }
+
+  const decision = await consumeQuota(db, counterKey, limits, clock())
+  return { ok: true, metered: { decision, counterKey } }
+}
+
+function applyRateLimitHeaders(
+  context: { header(name: string, value: string): void },
+  decision: QuotaDecision,
+): void {
+  context.header('X-RateLimit-Daily-Limit', String(decision.dailyLimit))
+  context.header('X-RateLimit-Daily-Remaining', String(decision.dailyRemaining))
+  if (decision.retryAfterSeconds !== undefined) {
+    context.header('Retry-After', String(decision.retryAfterSeconds))
+  }
+}
 
 async function readBoundedBody(request: Request, maximumBytes: number): Promise<string | null> {
   if (!request.body) return ''
@@ -380,35 +456,22 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
     const page = boundedPositiveInt(context.req.query('page'), 1, MAX_SEARCH_PAGE)
     const limit = boundedPositiveInt(context.req.query('limit'), DEFAULT_SEARCH_LIMIT, MAX_SEARCH_LIMIT)
 
-    const authorization = context.req.header('Authorization') ?? ''
-    let limits = ANONYMOUS_QUOTA
-    let counterKey: string
-    if (authorization) {
-      const presented = authorization.startsWith('Bearer ') ? authorization.slice('Bearer '.length).trim() : ''
-      const keyAuth = presented
-        ? await authenticateApiKey(context.env.CATALOG_DB, presented, dependencies.clock())
-        : null
-      if (!keyAuth) {
+    const metered = await meterPublicRequest(
+      context,
+      '',
+      ANONYMOUS_QUOTA,
+      AUTHENTICATED_QUOTA,
+      dependencies.clock,
+    )
+    if (!metered.ok) {
+      if (metered.error === 'bad-key') {
         return context.json({ error: 'Invalid API key.', code: 'INVALID_API_KEY' }, 401)
       }
-      limits = AUTHENTICATED_QUOTA
-      // Keyed by account, not key id: rotating or multiplying keys must not
-      // mint fresh quota windows.
-      counterKey = `user:${keyAuth.userId}`
-    } else {
-      // The raw client IP never reaches D1: it is keyed through the same HMAC
-      // secret the install telemetry uses (plain SHA-256 as a fallback when
-      // the secret is not configured, e.g. bare local dev).
-      const ip = context.req.header('CF-Connecting-IP')?.trim() || 'unknown'
-      const secret = context.env?.INSTALL_CLIENT_HASH_SECRET?.trim()
-      counterKey = `ip:${secret ? await hashInstallationClient(secret, ip) : await sha256Hex(ip)}`
+      return context.json({ error: 'Search is temporarily unavailable.', code: 'SERVICE_UNAVAILABLE' }, 503)
     }
-
-    const decision = await consumeQuota(context.env.CATALOG_DB, counterKey, limits, dependencies.clock())
-    context.header('X-RateLimit-Daily-Limit', String(decision.dailyLimit))
-    context.header('X-RateLimit-Daily-Remaining', String(decision.dailyRemaining))
+    const { decision } = metered.metered
+    applyRateLimitHeaders(context, decision)
     if (!decision.allowed) {
-      context.header('Retry-After', String(decision.retryAfterSeconds ?? 60))
       if (decision.reason === 'day') {
         return context.json({ error: 'Daily API quota exceeded.', code: 'DAILY_QUOTA_EXCEEDED' }, 429)
       }
@@ -552,11 +615,64 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
       })),
     }
     const payload = JSON.stringify(registry)
+    const etag = contentEtag(payload)
     context.header('Cache-Control', REGISTRY_CACHE_HEADER)
-    context.header('ETag', contentEtag(payload))
+    context.header('ETag', etag)
     context.header('X-Catalog-Source', result.source)
     context.header('X-Robots-Tag', 'noindex')
     context.header('Content-Type', 'application/json; charset=UTF-8')
+
+    // A 304 costs a snapshot read and a few header bytes, so a client polling
+    // with If-None-Match is answered before metering — it must not draw down
+    // the quota, or correct cache use would be punished and the quota would
+    // measure "how often asked" instead of "how much data shipped".
+    const ifNoneMatch = context.req.header('If-None-Match')
+    if (ifNoneMatch && ifNoneMatch.trim().split(',').some((candidate) => candidate.trim().replace(/^W\//, '') === etag.replace(/^W\//, ''))) {
+      return new Response(null, { status: 304, headers: {
+        'ETag': etag,
+        'Cache-Control': REGISTRY_CACHE_HEADER,
+        'X-Catalog-Source': result.source,
+      } })
+    }
+
+    // HEAD is a zero-body probe for "has anything changed?"; like 304 it must
+    // not consume quota. Hono runs GET handlers for HEAD and strips the body,
+    // so this returns the same headers a GET would without the payload.
+    if (context.req.method === 'HEAD') {
+      return new Response(null, { status: 200, headers: {
+        'ETag': etag,
+        'Cache-Control': REGISTRY_CACHE_HEADER,
+        'X-Catalog-Source': result.source,
+      } })
+    }
+
+    // Metering mirrors the search endpoint exactly: it lives on the handler, not
+    // on the host check, so the main-domain path (deepseek1024.com/api/v1/registry)
+    // draws down the same counters as the public developer host
+    // (api.deepseek1024.com/v1/registry). The two endpoints keep their own
+    // namespaced counters, but neither host escapes the quota.
+    const metered = await meterPublicRequest(
+      context,
+      'reg:',
+      REGISTRY_QUOTA,
+      AUTHENTICATED_REGISTRY_QUOTA,
+      dependencies.clock,
+    )
+    if (!metered.ok) {
+      if (metered.error === 'bad-key') {
+        return context.json({ error: 'Invalid API key.', code: 'INVALID_API_KEY' }, 401)
+      }
+      return context.json({ error: 'The registry is temporarily unavailable.', code: 'SERVICE_UNAVAILABLE' }, 503)
+    }
+    const { decision } = metered.metered
+    applyRateLimitHeaders(context, decision)
+    if (!decision.allowed) {
+      if (decision.reason === 'day') {
+        return context.json({ error: 'Daily API quota exceeded.', code: 'DAILY_QUOTA_EXCEEDED' }, 429)
+      }
+      return context.json({ error: 'Too many requests.', code: 'RATE_LIMITED' }, 429)
+    }
+
     return context.body(payload)
   })
 

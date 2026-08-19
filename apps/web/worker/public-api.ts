@@ -1,14 +1,16 @@
 import { buildApiHostRobotsTxt, SITE_ORIGIN } from './seo'
 
 /**
- * Public developer-API host. Only the search API (and its health probe) is
- * exposed here, under the shorter /v1/ prefix; everything else on this host
- * is a 404. Sign-in, key management, and the website stay on the main site.
+ * Public developer-API host. Only the search and catalog-registry APIs (and the
+ * health probe) are exposed here, under the shorter /v1/ prefix; everything
+ * else on this host is a 404. Sign-in, key management, and the website stay on
+ * the main site.
  */
 export const PUBLIC_API_HOST = 'api.deepseek1024.com'
 
 const PUBLIC_API_PATHS: Record<string, string> = {
   '/v1/plugins/search': '/api/v1/plugins/search',
+  '/v1/registry': '/api/v1/registry',
   '/v1/health': '/api/v1/health',
 }
 

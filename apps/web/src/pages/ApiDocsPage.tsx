@@ -13,6 +13,13 @@ const SEARCH_EXAMPLE = `curl "${PUBLIC_API_ORIGIN}/v1/plugins/search?q=telegram&
 curl -H "Authorization: Bearer dsh_live_your_api_key" \\
   "${PUBLIC_API_ORIGIN}/v1/plugins/search?q=telegram&sortBy=recent"`
 
+const REGISTRY_EXAMPLE = `# First pull: the full catalog, metered.
+curl -i "${PUBLIC_API_ORIGIN}/v1/registry"
+
+# Store the ETag, then poll — 304 responses never consume quota.
+ETAG=$(curl -sI "${PUBLIC_API_ORIGIN}/v1/registry" | awk '/^etag:/ { print $2 }' | tr -d '\\r')
+curl -i -H "If-None-Match: $ETAG" "${PUBLIC_API_ORIGIN}/v1/registry"`
+
 const RESPONSE_EXAMPLE = `{
   "query": "telegram",
   "page": 1,
@@ -114,6 +121,7 @@ export function ApiDocsPage() {
 
       <section className="api-docs-section">
         <h2>{t('apiDocsRateHeading')}</h2>
+        <p className="api-endpoint"><code>{t('apiDocsSearchEndpoint')}</code></p>
         <div className="api-table-scroll">
           <table className="api-table">
             <thead>
@@ -137,12 +145,42 @@ export function ApiDocsPage() {
             </tbody>
           </table>
         </div>
+        <p className="api-endpoint"><code>{t('apiDocsRegistryEndpoint')}</code></p>
+        <div className="api-table-scroll">
+          <table className="api-table">
+            <thead>
+              <tr>
+                <th>{t('apiDocsRatePlan')}</th>
+                <th>{t('apiDocsPerDay')}</th>
+                <th>{t('apiDocsPerMinute')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{t('apiDocsRateAnonymous')}</td>
+                <td>500</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>{t('apiDocsRateAuthenticated')}</td>
+                <td>5000</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p>{t('apiDocsRateHeaders')}</p>
       </section>
 
       <section className="api-docs-section">
         <h2>{t('apiDocsEndpointsHeading')}</h2>
-        <p className="api-endpoint"><code>GET /v1/plugins/search</code></p>
+
+        <p className="api-endpoint"><code>{t('apiDocsRegistryEndpoint')}</code></p>
+        <p>{t('apiDocsRegistryDescription')}</p>
+        <h3>{t('apiDocsExampleHeading')}</h3>
+        <pre className="api-code"><code>{REGISTRY_EXAMPLE}</code></pre>
+
+        <p className="api-endpoint"><code>{t('apiDocsSearchEndpoint')}</code></p>
         <p>{t('apiDocsSearchDescription')}</p>
 
         <h3>{t('apiDocsParamsHeading')}</h3>
