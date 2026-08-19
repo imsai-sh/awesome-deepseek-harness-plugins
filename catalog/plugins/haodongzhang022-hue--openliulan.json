@@ -1,12 +1,1 @@
-{
-  "$schema": "../schema/plugin.schema.json",
-  "id": "haodongzhang022-hue/OpenLiulan",
-  "name": "OpenLiulan",
-  "repository": "https://github.com/haodongzhang022-hue/OpenLiulan",
-  "category": "tools",
-  "description": {
-    "en": "Browser automation framework for AI Agents: 7 MCP tools (observe/act/diagnose/eval/screenshot/session_log/close), integrating Browser-Use, Stagehand, Chrome DevTools, Playwright. Stealth anti-detection, real-time visualization panel, 6-star scripting engine.",
-    "zh": "AI Agent 浏览器自动化控制框架：7 个 MCP 工具（observe/act/diagnose/eval/screenshot/session_log/close），融合 Browser-Use、Stagehand、Chrome DevTools、Playwright 四大引擎。隐身反检测、实时可视化面板、6 星脚本化引擎。"
-  },
-  "added": "2026-08-18"
-}
+ewogICIkc2NoZW1hIjogIi4uL3NjaGVtYS9wbHVnaW4uc2NoZW1hLmpzb24iLAogICJpZCI6ICJoYW9kb25nemhhbmcwMjItaHVlL09wZW5MaXVsYW4iLAogICJuYW1lIjogIk9wZW5MaXVsYW4iLAogICJyZXBvc2l0b3J5IjogImh0dHBzOi8vZ2l0aHViLmNvbS9oYW9kb25nemhhbmcwMjItaHVlL09wZW5MaXVsYW4iLAogICJjYXRlZ29yeSI6ICJ0b29scyIsCiAgImRlc2NyaXB0aW9uIjogewogICAgImVuIjogIkJyb3dzZXIgYXV0b21hdGlvbiBmcmFtZXdvcmsgZm9yIEFJIEFnZW50czogNyBNQ1AgdG9vbHMgKG9ic2VydmUvYWN0L2RpYWdub3NlL2V2YWwvc2NyZWVuc2hvdC9zZXNzaW9uX2xvZy9jbG9zZSksIGludGVncmF0aW5nIEJyb3dzZXItVXNlLCBTdGFnZWhhbmQsIENocm9tZSBEZXZUb29scywgUGxheXdyaWdodCBlbmdpbmVzLiBQcm92aWRlcyBicm93c2VyIGFudGktZGV0ZWN0aW9uLCByZWFsLXRpbWUgdmlzdWFsaXphdGlvbiBwYW5lbCwgYW5kIGEgc2NyaXB0aW5nIGVuZ2luZS4iLAogICAgInpoIjogIkFJIEFnZW50IOa1j+ihjOWbm+WKo+WMuuaXoOaZkue7tOW8gO+8mjcg5LiqIE1DUCDlt6Xlh7sgKG9ic2VydmUvYWN0L2RpYWdub3NlL2V2YWwvc2NyZWVuc2hvdC9zZXNzaW9uX2xvZy9jbG9zZSksIOaZjuWIl+WIq+WbvuWFsCBCcm93c2VyLVVzZSwgU3RhZ2VoYW5kLCBDaHJvbWUgRGV2VG9vbHMsIFBsYXl3cmlnaHQg5Zub5aSn5byV5ri45Y2V44CC5o+Q5L6b5rWP6KGg5Y+N5qCH5rWL6KaB5Yiw44CB5a6e5pe26KGo5KeW5YyW6Kej5Y2V5ZKM6ISa5pys5YyW5byV5ri044CCIgogIH0sCiAgImFkZGVkIjogIjIwMjYtMDgtMTgiCn0=
