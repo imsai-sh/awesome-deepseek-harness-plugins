@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "haodongzhang022-hue/OpenLiulan",
+  "name": "OpenLiulan",
+  "repository": "https://github.com/haodongzhang022-hue/OpenLiulan",
+  "category": "tools",
+  "description": {
+    "en": "Browser automation framework for AI Agents: 7 MCP tools (observe/act/diagnose/eval/screenshot/session_log/close), integrating Browser-Use, Stagehand, Chrome DevTools, Playwright. Stealth anti-detection, real-time visualization panel, 6-star scripting engine.",
+    "zh": "AI Agent 浏览器自动化控制框架：7 个 MCP 工具（observe/act/diagnose/eval/screenshot/session_log/close），融合 Browser-Use、Stagehand、Chrome DevTools、Playwright 四大引擎。隐身反检测、实时可视化面板、6 星脚本化引擎。"
+  },
+  "added": "2026-08-18"
+}
