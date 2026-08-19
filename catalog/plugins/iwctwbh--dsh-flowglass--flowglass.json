@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Iwctwbh/dsh-flowglass/flowglass",
+  "name": "dsh-flowglass",
+  "repository": "https://github.com/Iwctwbh/dsh-flowglass",
+  "category": "session",
+  "description": {
+    "en": "Draws the current DeepSeek Harness session as a live flow graph in a drawer panel: three lanes, subagent branches, parallel tool groups, and step drill-down details.",
+    "zh": "流镜：把 DeepSeek Harness 当前会话实时绘制成流程图面板——三列泳道、子代理分支、并行分组、逐层钻取详情。"
+  },
+  "added": "2026-08-19"
+}
