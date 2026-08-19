@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Winter-And-You-Gone/dsh-turn-fold",
+  "name": "dsh-turn-fold",
+  "repository": "https://github.com/Winter-And-You-Gone/dsh-turn-fold",
+  "category": "ui",
+  "description": {
+    "en": "Automatically groups and collapses tool calls by Think segment, and folds each completed turn into a single header showing elapsed time, token usage, tokens-per-second, and cache-hit rate.",
+    "zh": "按 Think 段自动分组折叠工具调用；回合结束后把整回合收成一个组头，显示耗时、token、tok/s 与缓存命中率。"
+  },
+  "added": "2026-08-18"
+}
