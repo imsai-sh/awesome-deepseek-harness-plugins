@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fakechris/dsh-harness-ops/plugins/dsh-restart-recover",
+  "name": "dsh-restart-recover",
+  "repository": "https://github.com/fakechris/dsh-harness-ops",
+  "category": "session",
+  "description": {
+    "en": "Restart recovery for DeepSeek Harness web: after a crash or restart, an interrupted agent turn continues automatically (host-side agent/created listener).",
+    "zh": "DeepSeek Harness web 重启恢复：崩溃或重启后，被打断的 agent 回合自动继续（host 侧 agent/created 监听）。"
+  },
+  "added": "2026-08-19"
+}
