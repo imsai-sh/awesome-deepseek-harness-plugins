@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ZHI-QI/dsh-okf-memory",
+  "name": "dsh-okf-memory",
+  "repository": "https://github.com/ZHI-QI/dsh-okf-memory",
+  "category": "memory",
+  "description": {
+    "en": "OKF v0.1 knowledge memory driven by cognitive-neuroscience principles: predictive recall (predict-then-verify), uncertainty-driven exploration, prediction-error capture (user corrections / first disclosures trigger writes), and a reinforcement feedback loop (score = relevance x weight x recency) with weight decay and archiving. TechChoice type distills frontend/backend/language selections into candidate tables with a three-tier choice rule; every concept is standard OKF Markdown (type-required frontmatter, index/log, cross-links).",
+    "zh": "由认知神经科学原理驱动的 OKF v0.1 知识记忆：预测性唤起（先预测再检索校验）、不确定性驱动探索、预测误差驱动捕获（用户纠正/首次披露自动触发写入）、强化反馈回路（score = relevance x weight x recency）与权重衰减归档。TechChoice 类型把前端/后端/语言选型沉淀为候选表并按三档选择规则唤起；所有概念均为标准 OKF Markdown（type 必填 frontmatter、index/log、交叉链接）。"
+  },
+  "added": "2026-08-19"
+}
