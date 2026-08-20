@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Iwctwbh/dsh-flowglass",
+  "name": "dsh-flowglass",
+  "repository": "https://github.com/Iwctwbh/dsh-flowglass",
+  "category": "session",
+  "description": {
+    "en": "Live flowgraph for DeepSeek Harness sessions, visualizing messages, tool groups, subagent branches, and step details in a drawer panel.",
+    "zh": "流镜：在抽屉面板中实时可视化 DeepSeek Harness 会话，展示消息、工具组、子代理分支与步骤详情。"
+  },
+  "added": "2026-08-20"
+}
