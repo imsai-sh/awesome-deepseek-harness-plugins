@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "taptap/instant-games-open-mcp/packages/dsh-maker",
+  "name": "dsh-maker",
+  "repository": "https://github.com/taptap/instant-games-open-mcp",
+  "category": "tools",
+  "description": {
+    "en": "Provides TapTap Maker MCP tools and bundled game-development skills for DeepSeek Harness.",
+    "zh": "为 DeepSeek Harness 提供 TapTap Maker MCP 工具和配套的游戏开发技能。"
+  },
+  "added": "2026-08-20"
+}
