@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Github-CJX/dsh-tool-imagegen",
+  "name": "dsh-tool-imagegen",
+  "repository": "https://github.com/Github-CJX/dsh-tool-imagegen",
+  "category": "tools",
+  "description": {
+    "en": "OpenAI-compatible image generation in DSH Desktop chat: generate inline, upload or one-click edit reference images (image-to-image), with storage cleanup.",
+    "zh": "对话内联生图插件：模型在对话框直接出图，上传参考图即可图生图连续修改，附存储清理。"
+  },
+  "added": "2026-08-20"
+}
