@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yangpeng-space/my-image-drop",
+  "name": "my-image-drop",
+  "repository": "https://github.com/yangpeng-space/my-image-drop",
+  "category": "ui",
+  "description": {
+    "en": "Adds drag-and-drop of images into the DeepSeek Harness composer. Dropped images are stored as a private temp file and inserted as a file path, so text-only models can read them with the read tool instead of failing image admission.",
+    "zh": "为 DeepSeek Harness 输入框增加图片拖放能力。拖入的图片被存为私有临时文件并以文件路径形式插入输入框，让纯文本模型能用 read 工具读取，而不会触发图片准入失败。"
+  },
+  "added": "2026-08-20"
+}
