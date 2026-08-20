@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xiehuan123/dsh-deepread",
+  "name": "dsh-deepread",
+  "repository": "https://github.com/xiehuan123/dsh-deepread",
+  "category": "tools",
+  "description": {
+    "en": "Evidence-first deep reading for books, articles, PDFs, and document sets with claim-evidence reports, knowledge maps, recall questions, a Host tool, and an optional Web reading panel.",
+    "zh": "面向图书、文章、PDF 与文档集的证据优先精读工具，提供观点—证据报告、知识地图、回忆问题、Host 工具与可选 Web 阅读面板。"
+  },
+  "added": "2026-08-20"
+}
