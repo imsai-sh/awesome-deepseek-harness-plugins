@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "q35888/dsh-plugin-browser",
+  "name": "dsh-plugin-browser",
+  "repository": "https://github.com/q35888/dsh-plugin-browser",
+  "category": "tools",
+  "description": {
+    "en": "Adds 15 browser_* tools (navigate, snapshot with element refs, click, type, select, hover, tabs, dialog handling, eval, storage, console, screenshot, human-in-the-loop wait) that drive a logged-in Chrome via Playwright over CDP, with automatic Chrome launch and windowless-zombie self-healing.",
+    "zh": "提供 15 个 browser_* 工具(导航、带元素 ref 的快照、点击、输入、下拉选择、悬停、标签页管理、弹窗处理、eval、存储、控制台、截图、人工确认等待),通过 Playwright 经 CDP 驱动已登录的 Chrome,支持自动拉起 Chrome 与无窗口僵尸态自愈。"
+  },
+  "added": "2026-08-20"
+}
