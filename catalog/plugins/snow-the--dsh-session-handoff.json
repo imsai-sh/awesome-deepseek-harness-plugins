@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "snow-The/dsh-session-handoff",
+  "name": "dsh-session-handoff",
+  "repository": "https://github.com/snow-The/dsh-session-handoff",
+  "category": "session",
+  "description": {
+    "en": "Session handoff & context management: export/resume/status structured handoff documents so a fresh session continues seamlessly, active context pruning (acp_* tools via the official compaction API with model-authored summaries), session trash/restore/purge, and model routes for one model across vendors/plans.",
+    "zh": "会话交接与上下文管理：导出/恢复/查看结构化交接文档，让新会话无缝续接；集成主动上下文裁剪（acp_* 工具，基于官方 compaction API 与模型自写摘要）；附带会话回收/恢复/清除与跨供应商模型路由。"
+  },
+  "added": "2026-08-20"
+}
