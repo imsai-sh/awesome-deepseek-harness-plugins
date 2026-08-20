@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ERVeepp/dsh-plugins/packages/tool-npm-advisor",
+  "name": "npm-advisor",
+  "repository": "https://github.com/ERVeepp/dsh-plugins",
+  "category": "tools",
+  "description": {
+    "en": "npm package adoption advisor for DeepSeek Harness: audits whether a candidate dependency is the best choice (native alternatives, maintenance health, README migration hints) and renders a dependency tree.",
+    "zh": "为 DeepSeek Harness 提供 npm 包引入前审查工具：判断候选依赖是否是最优解（原生替代、维护健康度、README 迁移线索），并生成依赖树。"
+  },
+  "added": "2026-08-21"
+}
