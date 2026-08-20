@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bpc-oss/chrome-faithful",
+  "name": "chrome-faithful",
+  "repository": "https://github.com/bpc-oss/chrome-faithful",
+  "category": "tools",
+  "description": {
+    "en": "Control your real, logged-in Chrome profiles over MCP: exact multi-profile routing through an MV3 chrome.debugger extension and an authenticated localhost bridge. No copied profiles, no debug profile, no remote-debugging port, no Edge. Includes multi-signal challenge detection with humanized verification handling, page File injection, signed-URL-safe media export, and durable virtual-list capture.",
+    "zh": "通过 MCP 忠实控制你真实、已登录的 Chrome 配置文件：基于 MV3 chrome.debugger 扩展与经认证的本地桥接实现精确多 Profile 路由。不复制配置文件、不用调试 Profile、不开远程调试端口、不用 Edge。内置多信号挑战检测与人机化验证处理、页面 File 注入、签名 URL 安全的媒体导出，以及持久化虚拟列表采集。"
+  },
+  "added": "2026-08-20"
+}
