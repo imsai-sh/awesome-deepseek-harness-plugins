@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ERVeepp/dsh-plugins/packages/tool-hardware-benchmark",
+  "name": "hardware-benchmark",
+  "repository": "https://github.com/ERVeepp/dsh-plugins",
+  "category": "tools",
+  "description": {
+    "en": "Reads local machine hardware and scores it for engineering development and gaming performance, plus network speed test and DIY upgrade suggestions with real-time price lookup hints.",
+    "zh": "读取本机硬件，从工程开发与游戏性能两个维度打分，附加网络实测与 DIY 升级建议（含推荐规格与实时查价搜索词）。"
+  },
+  "added": "2026-08-21"
+}
