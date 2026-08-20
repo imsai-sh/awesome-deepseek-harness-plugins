@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Puxora/dsh-browserpilot",
+  "name": "BrowserPilot for DeepSeek Harness",
+  "repository": "https://github.com/Puxora/dsh-browserpilot",
+  "category": "tools",
+  "description": {
+    "en": "Connects BrowserPilot local Chrome MCP tools to DeepSeek Harness with configurable permission policies and a dashboard entry point.",
+    "zh": "将 BrowserPilot 的本机 Chrome MCP 工具接入 DeepSeek Harness，提供可配置的权限策略和管理面板入口。"
+  },
+  "added": "2026-08-20"
+}
