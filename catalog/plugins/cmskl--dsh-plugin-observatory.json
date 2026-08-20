@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CMSKL/dsh-plugin-observatory",
+  "name": "dsh-plugin-observatory",
+  "repository": "https://github.com/CMSKL/dsh-plugin-observatory",
+  "category": "dev",
+  "description": {
+    "en": "Provides bounded static compatibility audits for local DSH plugin manifests and bundle patches, plus process-local Loader lifecycle observation.",
+    "zh": "为本地 DSH 插件清单与 bundle patch 提供有界静态兼容性审计，并观测进程内 Loader 生命周期。"
+  },
+  "added": "2026-08-20"
+}
