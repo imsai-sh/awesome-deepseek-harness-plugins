@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "TinyPanda168/SpecsRelay-DSH",
+  "name": "SpecsRelay for DeepSeek",
+  "repository": "https://github.com/TinyPanda168/SpecsRelay-DSH",
+  "category": "workflow",
+  "description": {
+    "en": "Captures the current DeepSeek web conversation inside supported DSH desktop clients, structures it into an implementation requirement with the configured DSH model, and sends it to a selected DSH project.",
+    "zh": "在受支持的 DSH 桌面客户端内获取当前 DeepSeek 网页对话，使用已配置的 DSH 模型整理为可执行需求，并发送到选定的 DSH 项目。"
+  },
+  "added": "2026-08-20"
+}
