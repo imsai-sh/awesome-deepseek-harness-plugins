@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xbyzzZ/dsh_token_usage",
+  "name": "dsh_token_usage",
+  "repository": "https://github.com/xbyzzZ/dsh_token_usage",
+  "category": "ui",
+  "description": {
+    "en": "Sidebar Usage action above Settings with a 30-day heatmap and per-model table from local session JSONL. Produced tokens are input + output + cache write; no estimates for sessions without usage.",
+    "zh": "在设置上方放用量入口，从本地会话 JSONL 汇总最近 30 天热力图和按模型表。新产生为 input + output + cache write，没有 usage 的会话不估算。"
+  },
+  "added": "2026-08-20"
+}
