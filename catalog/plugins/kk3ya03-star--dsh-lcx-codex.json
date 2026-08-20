@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kk3ya03-star/dsh-lcx-codex",
+  "name": "dsh-lcx-codex",
+  "repository": "https://github.com/kk3ya03-star/dsh-lcx-codex",
+  "category": "tools",
+  "description": {
+    "en": "Adds capability-gated Hosted and Alpha web search plus Responses Native V2 compaction for Sub2API-proxied or NewAPI-relayed GPT models in DSH.",
+    "zh": "为 DSH 中经 Sub2API 反代或 NewAPI 中转的 GPT 模型提供按部署能力启用的 Hosted/Alpha 网页搜索与 Responses Native V2 压缩。"
+  },
+  "added": "2026-08-21"
+}
