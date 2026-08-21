@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Heeweelee/dsh-session-plugin",
+  "name": "dsh-session-plugin",
+  "repository": "https://github.com/Heeweelee/dsh-session-plugin",
+  "category": "session",
+  "description": {
+    "en": "Recall previously sent messages in the input box with Up/Down, and archive (delete) a workspace session from the session-header action menu.",
+    "zh": "在输入框内按 ↑/↓ 回填历史消息，并通过会话头部操作菜单归档（删除）工作区会话。"
+  },
+  "added": "2026-08-21"
+}
