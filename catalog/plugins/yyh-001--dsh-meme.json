@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yyh-001/dsh-meme",
+  "name": "dsh-meme",
+  "repository": "https://github.com/yyh-001/dsh-meme",
+  "category": "fun",
+  "description": {
+    "en": "A DeepSeek Harness plugin for browsing, learning, and sending categorized meme images.",
+    "zh": "DeepSeek Harness 表情包插件：浏览、学习并发送分类表情包。"
+  },
+  "added": "2026-08-14"
+}
