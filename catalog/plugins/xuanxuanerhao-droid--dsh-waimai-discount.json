@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xuanxuanerhao-droid/dsh-waimai-discount",
+  "name": "dsh-waimai-discount",
+  "repository": "https://github.com/xuanxuanerhao-droid/dsh-waimai-discount",
+  "category": "skill",
+  "description": {
+    "en": "Takeout/delivery discount helper. Aggregates official coupon entry guides for Meituan, Ele.me, JD Delivery and Taobao Shanguo (14 channels), matching user input by platform and coupon type (red packet, new user, student, full-reduction, coupon pack). All entries are official, commission-free channel guides; no CPS affiliate links.",
+    "zh": "外卖优惠助手。聚合美团、饿了么、京东外卖、淘宝闪购等平台的官方领券渠道（14 个入口），按用户输入的平台与券类型（红包/新客/学生/满减/神券包）智能匹配并返回领取路径。全部为无返佣的官方入口指引，不含任何 CPS 推广链接。"
+  },
+  "added": "2026-08-21"
+}
