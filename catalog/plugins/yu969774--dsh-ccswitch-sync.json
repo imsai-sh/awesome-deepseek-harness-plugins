@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yu969774/dsh-ccswitch-sync",
+  "name": "dsh-ccswitch-sync",
+  "repository": "https://github.com/yu969774/dsh-ccswitch-sync",
+  "category": "tools",
+  "description": {
+    "en": "Sync CC Switch (cc-switch) providers and models into DeepSeek Harness custom providers (llm-pi-ai).",
+    "zh": "把 CC Switch 中配置的模型/服务商同步为 DeepSeek Harness 自定义提供方（llm-pi-ai）。"
+  },
+  "added": "2026-08-21"
+}
