@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Norman-else/dsh-claude",
+  "name": "dsh-claude",
+  "repository": "https://github.com/Norman-else/dsh-claude",
+  "category": "model",
+  "description": {
+    "en": "Runs the local Claude Code CLI as a DSH agent preset with session resume, permission bridging, activity presentation, and Claude Code skills, hooks, plugins, and MCP configuration.",
+    "zh": "将本地 Claude Code CLI 作为 DSH Agent Preset 运行，支持会话恢复、权限桥接、活动展示，以及 Claude Code 的 Skills、Hooks、Plugins 和 MCP 配置。"
+  },
+  "added": "2026-08-21"
+}
