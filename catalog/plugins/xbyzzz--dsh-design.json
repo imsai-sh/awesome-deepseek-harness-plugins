@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xbyzzZ/dsh_design",
+  "name": "dsh_design",
+  "repository": "https://github.com/xbyzzZ/dsh_design",
+  "category": "tools",
+  "description": {
+    "en": "Clickable HTML prototype canvas for DeepSeek Harness. Chat describes a screen; design_* tools write HTML under .dsh-design/; Prototype preview is a scaled artboard with zoom, pan, pins, and a prototype list.",
+    "zh": "DeepSeek Harness 的可点击 HTML 原型画布。聊天描述界面后，design_* 工具把 HTML 写到 .dsh-design/；原型预览按平台尺寸缩放，支持缩放、平移、批注和多份原型切换。"
+  },
+  "added": "2026-08-21"
+}
