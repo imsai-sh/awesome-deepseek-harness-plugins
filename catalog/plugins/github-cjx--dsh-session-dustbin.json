@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Github-CJX/dsh-session-dustbin",
+  "name": "dsh-session-dustbin",
+  "repository": "https://github.com/Github-CJX/dsh-session-dustbin",
+  "category": "session",
+  "description": {
+    "en": "Session dustbin for DSH Desktop: browse archived conversations, delete sessions (files included) or restore them instantly, no restart needed.",
+    "zh": "DSH 会话纸篓：归档会话可在设置页翻看内容、一键删除（含文件）或恢复，删除即时生效无需重启。"
+  },
+  "added": "2026-08-21"
+}
