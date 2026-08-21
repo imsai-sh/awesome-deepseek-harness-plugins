@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YRN-playmaker/dsh-wallpaper_share",
+  "name": "dsh-wallpaper_share",
+  "repository": "https://github.com/YRN-playmaker/dsh-wallpaper_share",
+  "category": "theme",
+  "description": {
+    "en": "Visualizes background work and mirrors the wallpapers currently shown on your Wallpaper Engine displays into the DSH web background, supporting videos, web pages, and select scene types.",
+    "zh": "后台工作可视化并同步壁纸引擎中显示器的壁纸，支持视频网页和部分场景类型。"
+  },
+  "added": "2026-08-21"
+}
