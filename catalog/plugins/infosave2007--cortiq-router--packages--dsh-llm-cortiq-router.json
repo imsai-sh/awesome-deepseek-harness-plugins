@@ -5,8 +5,8 @@
   "repository": "https://github.com/infosave2007/cortiq-router",
   "category": "model",
   "description": {
-    "en": "Smart LLM request router. Classifies prompts by task type (code, math, translation, etc.) and complexity (low/medium/high) via the allaigate semantic router, then dispatches to the best-suited model. Configurable routing rules, complexity thresholds, 7 UI languages.",
-    "zh": "智能LLM请求路由器。通过allaigate语义路由器按任务类型（代码、数学、翻译等）和复杂度（低/中/高）对提示词分类，然后分发到最合适的模型。可配置路由规则、复杂度阈值，支持7种界面语言。"
+    "en": "LLM request router. Classifies each prompt by task type (code, math, translation, etc.) and complexity (low/medium/high) via the allaigate semantic router, then delegates the call to whichever registered provider plugin serves the selected model. Configurable routing rules, complexity thresholds, per-conversation policy profiles, and its own copy in 7 languages.",
+    "zh": "LLM 请求路由器。通过 allaigate 语义路由器按任务类型（代码、数学、翻译等）和复杂度（低/中/高）对每个提示词分类，然后将调用委托给已注册的、提供所选模型的提供商插件。可配置路由规则、复杂度阈值、按会话选择的策略档位，并自带 7 种语言的文案。"
   },
   "added": "2026-08-20"
 }
