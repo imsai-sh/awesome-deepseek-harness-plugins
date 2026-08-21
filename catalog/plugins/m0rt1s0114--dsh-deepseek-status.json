@@ -6,7 +6,7 @@
   "category": "tools",
   "description": {
     "en": "Displays official DeepSeek API balance, a link to the DeepSeek platform usage page, and current peak/off-peak pricing status in the DSH session header.",
-    "zh": "鍦?DSH 浼氳瘽澶撮儴鏄剧ず瀹樻柟 DeepSeek API 浣欓銆丏eepSeek 骞冲彴鐢ㄩ噺椤甸摼鎺ワ紝浠ュ強褰撳墠宄拌胺瀹氫环鐘舵€併€?
+    "zh": "在 DSH 会话头部显示官方 DeepSeek API 余额、DeepSeek 平台用量页链接，以及当前峰谷定价状态。"
   },
   "added": "2026-08-21"
 }
