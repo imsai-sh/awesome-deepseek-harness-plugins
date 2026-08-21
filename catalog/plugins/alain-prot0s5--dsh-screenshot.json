@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "alain-prot0s5/dsh-screenshot",
+  "name": "dsh-screenshot",
+  "repository": "https://github.com/alain-prot0s5/dsh-screenshot",
+  "category": "tools",
+  "description": {
+    "en": "Screenshot-to-input for DeepSeek Harness Desktop (Windows 10/11 only): composer camera button + global hotkey Alt+A, snip and auto-paste into the input box.",
+    "zh": "截图自动粘贴到 DSH Desktop 输入框（仅 Windows 10/11）：相机按钮 + 全局热键 Alt+A，截图后自动粘贴。"
+  },
+  "added": "2026-08-22"
+}
