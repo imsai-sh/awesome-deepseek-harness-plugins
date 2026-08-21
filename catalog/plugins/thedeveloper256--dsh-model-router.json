@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "thedeveloper256/dsh-model-router",
+  "name": "dsh-model-router",
+  "repository": "https://github.com/thedeveloper256/dsh-model-router",
+  "category": "model",
+  "description": {
+    "en": "Role-based model routing for DeepSeek Harness: the planner (root agent) runs on deepseek-v4-pro, delegated executor subagents run on deepseek-v4-flash; ships a prompt section and a pro-flash-routing skill.",
+    "zh": "DeepSeek Harness 角色化模型路由：规划者（根 Agent）运行 deepseek-v4-pro，委派执行子 Agent 运行 deepseek-v4-flash；附带提示词区块与 pro-flash-routing 技能。"
+  },
+  "added": "2026-08-21"
+}
