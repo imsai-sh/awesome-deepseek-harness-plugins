@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YukunR/dsh-ezprot-plugin",
+  "name": "dsh-ezprot-plugin",
+  "repository": "https://github.com/YukunR/dsh-ezprot-plugin",
+  "category": "tools",
+  "description": {
+    "en": "Plug-and-play proteomics analysis: auto-managed R 4.4 runtime and a traceable normalization / PCA / batch-correction / differential-expression / GO-KEGG enrichment / GSEA pipeline with cached annotation backgrounds.",
+    "zh": "即插即用的蛋白质组学分析插件：自动管理 R 4.4 运行时，提供归一化 / PCA / 批次校正 / 差异表达 / GO/KEGG 富集 / GSEA 的逐步可回溯流程，注释背景自动缓存。"
+  },
+  "added": "2026-08-17"
+}
