@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "M0rt1s0114/dsh-deepseek-status",
+  "name": "dsh-deepseek-status",
+  "repository": "https://github.com/M0rt1s0114/dsh-deepseek-status",
+  "category": "tools",
+  "description": {
+    "en": "Displays official DeepSeek API balance, a link to the DeepSeek platform usage page, and current peak/off-peak pricing status in the DSH session header.",
+    "zh": "鍦?DSH 浼氳瘽澶撮儴鏄剧ず瀹樻柟 DeepSeek API 浣欓銆丏eepSeek 骞冲彴鐢ㄩ噺椤甸摼鎺ワ紝浠ュ強褰撳墠宄拌胺瀹氫环鐘舵€併€?
+  },
+  "added": "2026-08-21"
+}
