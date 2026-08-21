@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "znnVSNOOU/dsh-skin-Tlipoca",
+  "name": "dsh-skin-Tlipoca",
+  "repository": "https://github.com/znnVSNOOU/dsh-skin-Tlipoca",
+  "category": "theme",
+  "description": {
+    "en": "Visual novel style immersive skin plugin featuring Tlipoca from Yog-Sothoth's Yard for DeepSeek Harness.",
+    "zh": "《犹格索托斯的庭院》特莉波卡 (Tlipoca) GAL 视觉小说沉浸式皮肤插件。"
+  },
+  "added": "2026-08-21"
+}
