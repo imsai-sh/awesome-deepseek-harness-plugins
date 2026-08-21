@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Howe829/dsh-runtime/packages/dsh-runtime",
+  "name": "dsh-runtime",
+  "repository": "https://github.com/Howe829/dsh-runtime",
+  "category": "dev",
+  "description": {
+    "en": "A read-only Runtime Explorer for DeepSeek Harness that visualizes Cordis runtime state, plugin and service relationships, Effect activity, and session request metadata.",
+    "zh": "面向 DeepSeek Harness 的只读 Runtime Explorer，可视化 Cordis 运行时状态、插件与服务关系、Effect 活动及会话请求元数据。"
+  },
+  "added": "2026-08-21"
+}
