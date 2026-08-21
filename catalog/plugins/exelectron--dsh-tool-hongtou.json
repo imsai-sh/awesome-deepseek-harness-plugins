@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ExElectron/dsh-tool-hongtou",
+  "name": "dsh-tool-hongtou",
+  "repository": "https://github.com/ExElectron/dsh-tool-hongtou",
+  "category": "tools",
+  "description": {
+    "en": "A DeepSeek Harness host-side plugin that turns a session's context into a standard red-header official document (Word 2003 XML) via a two-phase pipeline: an LLM-structured JSON outline, then deterministic template rendering.",
+    "zh": "DeepSeek Harness 主机侧插件：通过 /hongtou 命令将会话上下文生成为标准红头公文（Word 2003 XML）。两阶段解耦流水线——LLM 结构化 JSON 提纲（schema 校验与确定性回退）+ 确定性 Word 2003 XML 版式渲染，模板无文本框/批注。"
+  },
+  "added": "2026-08-21"
+}
