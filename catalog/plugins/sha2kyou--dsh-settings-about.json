@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sha2kyou/dsh-settings-about",
+  "name": "dsh-settings-about",
+  "repository": "https://github.com/sha2kyou/dsh-settings-about",
+  "category": "ui",
+  "description": {
+    "en": "Adds an About section to the dsh Settings panel showing runtime version, environment, and the installed plugin inventory.",
+    "zh": "在 dsh 设置面板新增「关于」区块，展示运行时版本、环境信息与已安装插件清单。"
+  },
+  "added": "2026-08-21"
+}
