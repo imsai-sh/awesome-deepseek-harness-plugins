@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bpc-oss/dsh-fork-to-preset",
+  "name": "dsh-fork-to-preset",
+  "repository": "https://github.com/bpc-oss/dsh-fork-to-preset",
+  "category": "session",
+  "description": {
+    "en": "Fork any session into a different agent preset from the conversation header: a preset-picker button that creates a new child session mounted on the chosen preset, inheriting the source session's completed turns.",
+    "zh": "在会话 Header 上一键把当前会话分叉到任意 agent preset：选择 preset 后创建挂载到该 preset 的新子会话，并继承源会话的已完成轮次。"
+  },
+  "added": "2026-08-21"
+}
