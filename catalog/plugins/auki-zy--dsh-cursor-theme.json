@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "auki-zy/dsh-cursor-theme",
+  "name": "dsh-cursor-theme",
+  "repository": "https://github.com/auki-zy/dsh-cursor-theme",
+  "category": "theme",
+  "description": {
+    "en": "Per-state mouse cursor customization for DeepSeek Harness: 14 UI states, 18 original preset themes (color palettes, paw, neon, emoji, pixel, weather, origami, astro and more), ZIP image pack import/export, one-click system-level apply on Windows (registry + SPI_SETCURSORS) and experimental macOS overlay.",
+    "zh": "为 DeepSeek Harness 自定义鼠标各种状态的图案：覆盖 14 种 UI 状态，内置 18 套原创预设主题（配色、猫爪、霓虹、表情、像素、天气、折纸、太空人等），支持 ZIP 图片包导入导出，可一键应用到系统级光标（Windows 注册表 + SPI_SETCURSORS，macOS 实验性覆盖层）。"
+  },
+  "added": "2026-08-21"
+}
