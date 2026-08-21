@@ -1,0 +1,12 @@
+{
+  "description": {
+    "en": "Read-only Windows startup diagnostics for DeepSeek Harness, covering command discovery, runtime, profiles, bundle patches, links, and PowerShell conditions.",
+    "zh": "面向 DeepSeek Harness 的只读 Windows 启动诊断工具，检查命令发现、运行时、profile、bundle patch、链接与 PowerShell 环境。"
+  },
+  "name": "dsh-doctor-windows",
+  "added": "2026-08-21",
+  "id": "xianfanwindy/dsh-doctor-windows",
+  "repository": "https://github.com/xianfanwindy/dsh-doctor-windows",
+  "category": "dev",
+  "$schema": "../schema/plugin.schema.json"
+}
