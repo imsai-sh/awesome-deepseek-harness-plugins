@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YuemingHub/Ming-Capability-Pack",
+  "name": "ming-capability-pack",
+  "repository": "https://github.com/YuemingHub/Ming-Capability-Pack",
+  "category": "tools",
+  "description": {
+    "en": "Natural-language middleware for DeepSeek Harness. Matches a user goal to curated capability recipes (personal site, file tidying, HTML reports, infographics, presentations), offers execution strategies (MVP-first / clarify-first), assembles the required tools and skills, executes via a Harness subagent, and records independent verification evidence.",
+    "zh": "面向 DeepSeek Harness 的自然语言中间件：把用户目标匹配到内置能力方案（个人网站、文件整理、HTML 报表、信息图、演示文稿），提供执行策略选择（先跑 MVP / 先对齐需求），装配所需工具与技能后交由 Harness 子代理执行，并产出独立验证证据。"
+  },
+  "added": "2026-08-22"
+}
