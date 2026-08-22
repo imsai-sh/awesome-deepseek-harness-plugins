@@ -5,8 +5,8 @@
   "repository": "https://github.com/sjh9714/dsh-win32",
   "category": "tools",
   "description": {
-    "en": "Supplies the win32 process inspector that DSH's Minimal preset needs, so the persistent shell starts on Windows instead of failing with terminal inspection is unsupported on platform win32. Ships a busybox-w32 preset variant whose shell also runs under the workspace-write restricted token, where MSYS shells die at cygheap init.",
-    "zh": "补上 DSH 极简预设所需的 win32 进程检查器，使持久 shell 在 Windows 上可用，不再报 terminal inspection is unsupported on platform win32。另带 busybox-w32 预设变体，其 shell 在 workspace-write 受限令牌下同样可运行，而 MSYS 系 shell 在该令牌下死于 cygheap 初始化。"
+    "en": "Provides native Windows shell and Workspace Write sandbox presets for DSH without WSL. Sandboxed sessions use busybox-w32 and unrestricted sessions use Git Bash. Includes legacy text decoding and setup diagnostics.",
+    "zh": "为 DSH 提供无需 WSL 的原生 Windows shell 与 Workspace Write 沙箱预设。沙箱会话使用 busybox-w32，非受限会话使用 Git Bash，并提供旧编码读取与安装诊断。"
   },
   "added": "2026-08-18"
 }
