@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "delef/dsh-free-web-search",
+  "name": "dsh-free-web-search",
+  "repository": "https://github.com/delef/dsh-free-web-search",
+  "category": "tools",
+  "description": {
+    "en": "Free web search with 10 engines (Bing/DuckDuckGo/SearXNG/AnySearch free + Exa/Tavily/Keenable/Perplexity/DeepSeek paid), automatic fallback chain, time-filtered advanced search, platform search (GitHub/Reddit), web page fetching, LRU caching, and a settings UI. No API keys required for basic use.",
+    "zh": "免费网页搜索：10 个搜索引擎（Bing/DuckDuckGo/SearXNG/AnySearch 免费 + Exa/Tavily/Keenable/Perplexity/DeepSeek 付费），自动故障转移、时间过滤搜索、平台搜索（GitHub/Reddit）、网页抓取、LRU 缓存和设置界面。基础使用无需 API 密钥。"
+  },
+  "added": "2026-08-22"
+}
