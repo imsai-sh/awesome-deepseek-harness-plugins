@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lammarco86/dsh-plugin-chatgpt-crash-fix",
+  "name": "dsh-plugin-chatgpt-crash-fix",
+  "repository": "https://github.com/lammarco86/dsh-plugin-chatgpt-crash-fix",
+  "category": "tools",
+  "description": {
+    "en": "Diagnoses and fixes ChatGPT/Codex desktop app startup crashes on Windows: triages the Store-updater native crash (windows-updater.node), checks the Microsoft Store/Update channel, and repairs Clash/system-proxy interference by adding Microsoft domains to the proxy bypass list. Ships a Cordis command, an agent Skill, and runnable PowerShell diagnostic/fix scripts.",
+    "zh": "诊断并修复 Windows 上 ChatGPT/Codex 桌面应用启动崩溃：定位商店更新器原生崩溃（windows-updater.node）、检测微软商店/更新通道，并用“微软域名加入代理绕过列表”修复 Clash/系统代理干扰。附带 Cordis 命令、agent Skill 与可运行 PowerShell 诊断/修复脚本。"
+  },
+  "added": "2026-08-22"
+}
