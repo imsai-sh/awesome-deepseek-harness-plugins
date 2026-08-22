@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "SpookySandwich/dsh-plugin-no-workspace",
+  "name": "dsh-plugin-no-workspace",
+  "repository": "https://github.com/SpookySandwich/dsh-plugin-no-workspace",
+  "category": "session",
+  "description": {
+    "en": "Adds standalone conversations that can be created and displayed without a workspace while retaining the native workspace UI.",
+    "zh": "添加可脱离工作区创建和显示的独立会话，同时保留原生工作区界面。"
+  },
+  "added": "2026-08-23"
+}
