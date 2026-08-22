@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "elviass/dsh-usage-insights",
-  "name": "dsh-usage-insights",
-  "repository": "https://github.com/elviass/dsh-usage-insights",
+  "id": "elviass/dsh-cost-insights",
+  "name": "dsh-cost-insights",
+  "repository": "https://github.com/elviass/dsh-cost-insights",
   "category": "model",
   "description": {
     "en": "Adds local usage and cost analytics for DeepSeek Harness, including tokens, cache activity, API balances, model pricing, and date-range breakdowns.",
