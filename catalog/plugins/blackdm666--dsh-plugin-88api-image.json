@@ -1,12 +1,12 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "blackdm666/dsh-plugin-88api-image",
-  "name": "dsh-plugin-88api-image",
+  "name": "88API Image Studio",
   "repository": "https://github.com/blackdm666/dsh-plugin-88api-image",
   "category": "tools",
   "description": {
-    "en": "Unified 88api.ai image generation and editing tools for DSH, supporting Image2 and Nano Banana models, persistent default-model selection, and masked API Key configuration.",
-    "zh": "面向 DSH 的统一 88api.ai 生图与编辑工具，支持 Image2 与 Nano Banana 模型、持久化默认模型选择和脱敏 API Key 配置。"
+    "en": "A conversational image studio for DSH with four Image2 and Nano Banana models, text-to-image, multi-reference editing, 2K/4K output, sequential batches, persistent defaults, and masked Key setup.",
+    "zh": "统一接入 Image2 与 Nano Banana 四款模型，覆盖文生图、多参考图编辑、2K/4K 输出、顺序批量任务、默认模型持久化和脱敏 Key 配置。"
   },
   "added": "2026-08-22"
 }
