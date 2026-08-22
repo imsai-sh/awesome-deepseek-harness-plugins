@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fastengiel-kurai/dsh-peekfile-everything",
+  "name": "dsh-peekfile-everything",
+  "repository": "https://github.com/fastengiel-kurai/dsh-peekfile-everything",
+  "category": "ui",
+  "description": {
+    "en": "A DSH plugin that searches workspace, WSL, and Windows Everything sources and provides local multi-format preview and conversation references.",
+    "zh": "DSH 全盘文件搜索与预览插件，统一搜索工作目录、WSL 和 Windows Everything 索引，并提供本地多格式预览与会话引用。"
+  },
+  "added": "2026-08-22"
+}
