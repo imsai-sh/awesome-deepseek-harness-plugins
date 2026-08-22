@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "EthanYoQ/Invoice-Downloader/plugins/dsh-invoice-downloader",
+  "name": "dsh-invoice-downloader",
+  "repository": "https://github.com/EthanYoQ/Invoice-Downloader",
+  "category": "tools",
+  "description": {
+    "en": "Local IMAP invoice download, OCR, archive, and Excel reimbursement summaries for DeepSeek Harness.",
+    "zh": "面向 DeepSeek Harness 的本地 IMAP 发票下载、OCR 识别、归档与 Excel 报销汇总。"
+  },
+  "added": "2026-08-22"
+}
