@@ -67,14 +67,27 @@ export function validateRegistry(value) {
         throw new Error('registry categories are invalid');
     }
     const categoryIds = new Set(registry.categories.map(category => category.id));
-    if (!Array.isArray(registry.plugins) || registry.plugins.length === 0) {
+    const rawPlugins = registry.plugins;
+    if (!Array.isArray(rawPlugins) || rawPlugins.length === 0) {
         throw new Error('registry plugins are empty');
     }
-    if (registry.count !== registry.plugins.length)
+    if (registry.count !== rawPlugins.length)
         throw new Error('registry count does not match plugins');
-    if (!registry.plugins.every(plugin => isPlugin(plugin, categoryIds))) {
-        throw new Error('registry contains an invalid plugin');
-    }
+    // One malformed catalog entry must not take the whole store down: skip
+    // entries that fail strict validation instead of rejecting the entire
+    // registry, which previously surfaced as HTTP 503 on /dsh1024/installed and
+    // made every installed plugin unrecognizable (issue #159). Valid entries are
+    // unaffected and invalid ones are never installable.
+    const validPlugins = rawPlugins.filter(plugin => isPlugin(plugin, categoryIds));
+    // `count` is the server's raw plugin count and no longer matches the filtered
+    // array above. The persisted cache stores this exact registry object, so
+    // re-hydrating it later re-ran the strict count check against the
+    // already-filtered array, threw, and forced a network round-trip on every
+    // request — the whole store went 503 whenever the API was slow or
+    // unreachable. Normalize count to the filtered length so the cached registry
+    // round-trips through the same validation.
+    registry.plugins = validPlugins;
+    registry.count = validPlugins.length;
     return registry;
 }
 /**
@@ -183,10 +196,35 @@ function hydrateRegistryCache(path, registryUrl) {
                 || persisted.fetchedAt > Date.now() + CACHE_TTL_MS
                 || Date.now() - persisted.fetchedAt > PERSISTED_CACHE_MAX_AGE_MS)
                 return;
+            let registry = null;
+            try {
+                registry = validateRegistry(persisted.registry);
+            }
+            catch {
+                // Self-heal a cache written before the count normalization fix: its
+                // `count` reflects the raw upstream total while `plugins` was already
+                // filtered, so strict validation rejects it. The payload is the
+                // plugin's own last-good output — re-validate it with the count
+                // reconciled to the filtered length.
+                const cached = persisted.registry;
+                if (cached !== null && typeof cached === 'object' && !Array.isArray(cached)) {
+                    try {
+                        registry = validateRegistry({
+                            ...cached,
+                            count: Array.isArray(cached.plugins) ? cached.plugins.length : 0,
+                        });
+                    }
+                    catch {
+                        registry = null;
+                    }
+                }
+            }
+            if (registry === null)
+                return;
             cache = {
                 url: registryUrl,
                 at: persisted.fetchedAt,
-                registry: validateRegistry(persisted.registry),
+                registry,
                 persisted: true,
             };
         }

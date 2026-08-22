@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { mkdtemp, readFile, rm } from 'node:fs/promises'
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import {
@@ -193,40 +193,101 @@ test('a monorepo subpackage installs its own directory, not the repository root'
 })
 
 test('invalid API data cannot extend the installation allowlist', () => {
-  assert.throws(
-    () => validateRegistry({
-      ...registry,
-      plugins: [{ ...registry.plugins[0], target: 'github:attacker/other' }],
-    }),
-    /invalid plugin/,
-  )
-  assert.throws(
-    () => validateRegistry({
-      ...registry,
-      plugins: [{ ...registry.plugins[0], allowBuild: 'plugin;unsafe' }],
-    }),
-    /invalid plugin/,
-  )
-  assert.throws(
-    () => validateRegistry({
-      ...registry,
-      plugins: [{ ...registry.plugins[0], url: 'https://example.com/owner/repo' }],
-    }),
-    /invalid plugin/,
-  )
-  assert.throws(
-    () => validateRegistry({
-      ...registry,
-      plugins: [{ ...registry.plugins[0], category: 'unlisted' }],
-    }),
-    /invalid plugin/,
-  )
+  // Malformed entries are skipped rather than poisoning the whole registry:
+  // they must never become installable, but they also must not take the store
+  // down with a wholesale rejection (issue #159).
+  const invalid = { ...registry.plugins[0], target: 'github:attacker/other' }
+  const validated = validateRegistry({
+    ...registry,
+    count: 2,
+    plugins: [registry.plugins[0], invalid],
+  })
+  assert.deepEqual(validated.plugins, [registry.plugins[0]])
+  assert.equal(validated.count, 1)
+  // An unsafe build allowance is likewise filtered, never installable.
+  const unsafeAllowance = validateRegistry({
+    ...registry,
+    plugins: [{ ...registry.plugins[0], allowBuild: 'plugin;unsafe' }],
+  })
+  assert.equal(unsafeAllowance.count, 0)
+  assert.deepEqual(unsafeAllowance.plugins, [])
+  // Structural corruption is still fatal.
   assert.throws(() => validateRegistry({ ...registry, count: 2 }), /count does not match/)
   assert.throws(
     () => validateRegistry({ ...registry, categories: { tools: { en: 'Tools' } } }),
     /categories are invalid/,
   )
   assert.throws(() => validateRegistry({ ...registry, plugins: [] }), /plugins are empty/)
+})
+
+test('a single invalid entry is filtered and the count is normalized to match', () => {
+  const valid = registry.plugins[0]
+  const invalid = { ...registry.plugins[0], id: 'owner/bad', target: 'github:attacker/other' }
+  const validated = validateRegistry({ ...registry, count: 2, plugins: [valid, invalid] })
+  assert.equal(validated.count, 1)
+  assert.deepEqual(validated.plugins, [valid])
+  // An all-invalid response degrades to an empty allowlist instead of 503.
+  const empty = validateRegistry({ ...registry, count: 1, plugins: [invalid] })
+  assert.equal(empty.count, 0)
+  assert.deepEqual(empty.plugins, [])
+})
+
+test('the persisted cache round-trips after invalid entries are filtered', async () => {
+  clearRegistryCache()
+  const dshHome = await mkdtemp(join(tmpdir(), 'dsh1024-registry-filter-'))
+  const registryUrl = 'https://store.example/api/v1/registry'
+  const valid = registry.plugins[0]
+  const invalid = { ...registry.plugins[0], id: 'owner/bad', target: 'github:attacker/other' }
+  const payload = { ...registry, count: 2, plugins: [valid, invalid] }
+  const fetcher = async () => new Response(JSON.stringify(payload), {
+    status: 200,
+    headers: { 'content-type': 'application/json' },
+  })
+  try {
+    const first = await loadRegistry(registryUrl, fetcher, { dshHome })
+    assert.equal(first.source, 'api')
+    assert.equal(first.registry.count, 1)
+    assert.deepEqual(first.registry.plugins, [valid])
+
+    // The persisted snapshot must re-hydrate cleanly: its count now matches the
+    // filtered plugins, so the next load never needs the network.
+    const cachePath = join(dshHome, '.dsh-1024store', 'registry-cache.json')
+    const persisted = JSON.parse(await readFile(cachePath, 'utf8'))
+    assert.equal(persisted.registry.count, persisted.registry.plugins.length)
+
+    clearRegistryCache()
+    const restored = await loadRegistry(registryUrl, async () => { throw new Error('offline') }, { dshHome })
+    assert.equal(restored.source, 'cache')
+    assert.equal(restored.registry.count, 1)
+    assert.deepEqual(restored.registry.plugins, [valid])
+  } finally {
+    clearRegistryCache()
+    await rm(dshHome, { recursive: true, force: true })
+  }
+})
+
+test('a stale poisoned cache self-heals without the network', async () => {
+  clearRegistryCache()
+  const dshHome = await mkdtemp(join(tmpdir(), 'dsh1024-registry-poison-'))
+  const registryUrl = 'https://store.example/api/v1/registry'
+  // Reproduce a cache written before the count normalization fix: the server's
+  // raw `count` while `plugins` was already filtered down.
+  const cacheDir = join(dshHome, '.dsh-1024store')
+  await mkdir(cacheDir, { recursive: true })
+  await writeFile(join(cacheDir, 'registry-cache.json'), JSON.stringify({
+    version: 1,
+    url: registryUrl,
+    fetchedAt: Date.now(),
+    registry: { ...registry, count: registry.plugins.length + 1 },
+  }))
+  try {
+    const restored = await loadRegistry(registryUrl, async () => { throw new Error('offline') }, { dshHome })
+    assert.equal(restored.source, 'cache')
+    assert.deepEqual(restored.registry, registry)
+  } finally {
+    clearRegistryCache()
+    await rm(dshHome, { recursive: true, force: true })
+  }
 })
 
 test('revalidation goes to the network even when the cache is still fresh', async () => {
