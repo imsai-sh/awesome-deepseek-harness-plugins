@@ -1,12 +1,12 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "NextE-Moffatt/deepseek-harness/packages/bundle/kb",
-  "name": "kb",
+  "name": "kb-dance",
   "repository": "https://github.com/NextE-Moffatt/deepseek-harness",
   "category": "tools",
   "description": {
-    "en": "An opt-in knowledge-base bundle with model-facing tools and a Web governance workbench.",
-    "zh": "一个可选知识库组合包，提供模型工具与 Web 治理工作台。"
+    "en": "Turn local and shared team documents into searchable knowledge libraries with agent tools and a Web governance workbench.",
+    "zh": "把本地文档和共享团队文档组织成可检索的知识库，并提供 Agent 工具与 Web 治理工作台。"
   },
   "added": "2026-08-21"
 }
