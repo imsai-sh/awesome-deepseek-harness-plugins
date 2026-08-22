@@ -5,8 +5,8 @@
   "repository": "https://github.com/Anionex/dsh-vision-toolkit",
   "category": "tools",
   "description": {
-    "en": "Vision tasks for text-only models: intent-aware image Q&A, long-screenshot OCR, UI reproduction, grounding, and pixel diff.",
-    "zh": "让纯文本模型更好地做视觉任务：带意图的图片问答、长截图 OCR、UI 还原等。"
+    "en": "One-command install and free to use; paste an image to see and ask. Provides a nearly seamless multimodal experience for text-only models, supporting image Q&A, multi-image comparison, long-screenshot OCR, screenshot-to-UI restoration, element grounding, pixel diff, and more.",
+    "zh": "一键安装、免费使用；粘贴图片即可看图问答。为纯文本模型提供近乎无缝的多模态体验，支持图片问答、多图比较、长图 OCR、截图到前端 UI 还原、元素定位、像素对比等。"
   },
   "added": "2026-08-13"
 }
