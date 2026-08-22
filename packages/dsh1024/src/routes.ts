@@ -6,7 +6,7 @@ import { homedir } from 'node:os'
 import { dirname, isAbsolute, join, resolve } from 'node:path'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import { installExtraArgs, installTarget, loadRegistry, parseGitHubSource } from './registry.ts'
-import type { RegistryPlugin } from './registry.ts'
+import type { Registry, RegistryPlugin } from './registry.ts'
 import { runPluginCommand } from './shared/install-runner.ts'
 import type { InstallInvocation } from './shared/install-runner.ts'
 import { reportInstallEvent } from './telemetry.ts'
@@ -402,32 +402,49 @@ export function mountMarketRoutes(webServer: WebServerService, config: MarketRou
       path: '/dsh1024/installed',
       handler: async (request, response) => {
         if (!requireMethod(request, response, 'GET')) return
+        const installed = readInstalled(config.profile)
+        let registry: Registry | null = null
+        let registryError: string | null = null
         try {
-          const installed = readInstalled(config.profile)
-          const { registry } = await loadRegistry(config.registryUrl, fetch, { dshHome })
-          const pluginIds = installedPluginIds(installed, registry.plugins)
-          const idSet = new Set(pluginIds)
-          const categoryLabels = new Map(registry.categories.map(category => [category.id, category.label]))
+          ;({ registry } = await loadRegistry(config.registryUrl, fetch, { dshHome }))
+        } catch (error) {
+          registryError = error instanceof Error ? error.message : String(error)
+        }
+        if (registry === null) {
+          // The registry is unreachable and no last-good cache exists. Report
+          // the local install state with an empty catalog mapping instead of
+          // failing the whole panel with 503, so the installed plugins stay
+          // visible (issue #159).
           sendJson(response, 200, {
             profile: config.profile,
             installed,
-            pluginIds,
-            plugins: registry.plugins.filter(plugin => idSet.has(plugin.id)).map(plugin => ({
-              id: plugin.id,
-              name: plugin.name,
-              owner: plugin.owner,
-              url: plugin.url,
-              category: plugin.category,
-              categoryLabel: categoryLabels.get(plugin.category) ?? {},
-              description: plugin.description,
-              install: plugin.install,
-              added: plugin.added,
-              stars: plugin.stars ?? null,
-            })),
+            pluginIds: [],
+            plugins: [],
+            registryError,
           })
-        } catch (error) {
-          sendJson(response, 503, { error: error instanceof Error ? error.message : String(error) })
+          return
         }
+        const pluginIds = installedPluginIds(installed, registry.plugins)
+        const idSet = new Set(pluginIds)
+        const categoryLabels = new Map(registry.categories.map(category => [category.id, category.label]))
+        sendJson(response, 200, {
+          profile: config.profile,
+          installed,
+          pluginIds,
+          plugins: registry.plugins.filter(plugin => idSet.has(plugin.id)).map(plugin => ({
+            id: plugin.id,
+            name: plugin.name,
+            owner: plugin.owner,
+            url: plugin.url,
+            category: plugin.category,
+            categoryLabel: categoryLabels.get(plugin.category) ?? {},
+            description: plugin.description,
+            install: plugin.install,
+            added: plugin.added,
+            stars: plugin.stars ?? null,
+          })),
+          ...(registryError === null ? {} : { registryError }),
+        })
       },
     }),
     webServer.register({

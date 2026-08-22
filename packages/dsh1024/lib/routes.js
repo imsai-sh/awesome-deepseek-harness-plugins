@@ -348,33 +348,51 @@ export function mountMarketRoutes(webServer, config) {
             handler: async (request, response) => {
                 if (!requireMethod(request, response, 'GET'))
                     return;
+                const installed = readInstalled(config.profile);
+                let registry = null;
+                let registryError = null;
                 try {
-                    const installed = readInstalled(config.profile);
-                    const { registry } = await loadRegistry(config.registryUrl, fetch, { dshHome });
-                    const pluginIds = installedPluginIds(installed, registry.plugins);
-                    const idSet = new Set(pluginIds);
-                    const categoryLabels = new Map(registry.categories.map(category => [category.id, category.label]));
+                    ;
+                    ({ registry } = await loadRegistry(config.registryUrl, fetch, { dshHome }));
+                }
+                catch (error) {
+                    registryError = error instanceof Error ? error.message : String(error);
+                }
+                if (registry === null) {
+                    // The registry is unreachable and no last-good cache exists. Report
+                    // the local install state with an empty catalog mapping instead of
+                    // failing the whole panel with 503, so the installed plugins stay
+                    // visible (issue #159).
                     sendJson(response, 200, {
                         profile: config.profile,
                         installed,
-                        pluginIds,
-                        plugins: registry.plugins.filter(plugin => idSet.has(plugin.id)).map(plugin => ({
-                            id: plugin.id,
-                            name: plugin.name,
-                            owner: plugin.owner,
-                            url: plugin.url,
-                            category: plugin.category,
-                            categoryLabel: categoryLabels.get(plugin.category) ?? {},
-                            description: plugin.description,
-                            install: plugin.install,
-                            added: plugin.added,
-                            stars: plugin.stars ?? null,
-                        })),
+                        pluginIds: [],
+                        plugins: [],
+                        registryError,
                     });
+                    return;
                 }
-                catch (error) {
-                    sendJson(response, 503, { error: error instanceof Error ? error.message : String(error) });
-                }
+                const pluginIds = installedPluginIds(installed, registry.plugins);
+                const idSet = new Set(pluginIds);
+                const categoryLabels = new Map(registry.categories.map(category => [category.id, category.label]));
+                sendJson(response, 200, {
+                    profile: config.profile,
+                    installed,
+                    pluginIds,
+                    plugins: registry.plugins.filter(plugin => idSet.has(plugin.id)).map(plugin => ({
+                        id: plugin.id,
+                        name: plugin.name,
+                        owner: plugin.owner,
+                        url: plugin.url,
+                        category: plugin.category,
+                        categoryLabel: categoryLabels.get(plugin.category) ?? {},
+                        description: plugin.description,
+                        install: plugin.install,
+                        added: plugin.added,
+                        stars: plugin.stars ?? null,
+                    })),
+                    ...(registryError === null ? {} : { registryError }),
+                });
             },
         }),
         webServer.register({

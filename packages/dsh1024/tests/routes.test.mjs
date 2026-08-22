@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { mkdir, mkdtemp, writeFile } from 'node:fs/promises'
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import {
@@ -9,6 +9,7 @@ import {
   mountMarketRoutes,
   readProfilePnpmStoreDir,
 } from '../lib/routes.js'
+import { clearRegistryCache, loadRegistry } from '../lib/registry.js'
 
 const baseConfig = {
   profile: 'market-test',
@@ -16,14 +17,34 @@ const baseConfig = {
   updateUrl: 'https://deepseek1024.com/api/v1/self/update',
 }
 
-function routeHarness(embedUrl) {
+const catalog = {
+  name: 'dsh-1024store-catalog',
+  updated: '2026-08-15T00:00:00Z',
+  count: 2,
+  categories: [{ id: 'tools', order: 1, label: { en: 'Tools', zh: '工具' } }],
+  plugins: [
+    {
+      id: 'owner/mono/packages/child', name: 'child', owner: 'owner',
+      url: 'https://github.com/owner/mono', category: 'tools', description: { en: 'child' },
+      install: 'dsh plugin add github:owner/mono#path:packages/child',
+      target: 'github:owner/mono#path:packages/child', added: '2026-01-01',
+    },
+    {
+      id: 'owner/npm-plugin', name: 'npm-plugin', owner: 'owner',
+      url: 'https://github.com/owner/npm-plugin', category: 'tools', description: { en: 'npm' },
+      install: 'dsh plugin add published-plugin', target: 'published-plugin', added: '2026-01-01',
+    },
+  ],
+}
+
+function routeHarness(embedUrl, overrides = {}) {
   const routes = new Map()
   const dispose = mountMarketRoutes({
     register(route) {
       routes.set(route.path, route)
       return () => routes.delete(route.path)
     },
-  }, { ...baseConfig, embedUrl })
+  }, { ...baseConfig, embedUrl, ...overrides })
   return { routes, dispose }
 }
 
@@ -133,4 +154,89 @@ test('plugin installs reuse the pnpm store already linked to the profile', async
 
   await writeFile(join(modules, '.modules.yaml'), JSON.stringify({ storeDir: '../unsafe' }))
   assert.equal(readProfilePnpmStoreDir(profile), undefined)
+})
+
+test('/dsh1024/installed maps profile dependencies against the catalog', async () => {
+  const dshHome = await mkdtemp(join(tmpdir(), 'dsh1024-installed-route-'))
+  const profile = join(dshHome, 'profiles', 'market-test')
+  await mkdir(profile, { recursive: true })
+  await writeFile(join(profile, 'package.json'), JSON.stringify({
+    dependencies: {
+      child: 'github:owner/mono#path:packages/child&commit=abc123',
+      'published-plugin': '^1.2.3',
+    },
+  }))
+  const previous = process.env.DSH_HOME
+  process.env.DSH_HOME = dshHome
+  try {
+    // Seed the process cache through the shared loader so the route never
+    // touches the network.
+    clearRegistryCache()
+    await loadRegistry(baseConfig.registryUrl, async () => new Response(JSON.stringify(catalog), {
+      status: 200,
+      headers: { 'content-type': 'application/json' },
+    }))
+    const { routes, dispose } = routeHarness('https://deepseek1024.com/embed/store?bridge=dsh1024-v1')
+    let status = 0
+    let body = null
+    await routes.get('/dsh1024/installed').handler(
+      { method: 'GET' },
+      {
+        writeHead(value) { status = value },
+        end(value = '') { body = JSON.parse(value) },
+      },
+    )
+    assert.equal(status, 200)
+    assert.equal(body.profile, 'market-test')
+    assert.deepEqual(body.pluginIds, ['owner/mono/packages/child', 'owner/npm-plugin'])
+    assert.equal(body.plugins.length, 2)
+    assert.equal(body.registryError, undefined)
+    dispose()
+  } finally {
+    clearRegistryCache()
+    delete process.env.DSH_HOME
+    if (previous !== undefined) process.env.DSH_HOME = previous
+    await rm(dshHome, { recursive: true, force: true })
+  }
+})
+
+test('/dsh1024/installed degrades to the local install state when the registry is unreachable', async () => {
+  const dshHome = await mkdtemp(join(tmpdir(), 'dsh1024-installed-route-offline-'))
+  const profile = join(dshHome, 'profiles', 'market-test')
+  await mkdir(profile, { recursive: true })
+  await writeFile(join(profile, 'package.json'), JSON.stringify({
+    dependencies: { 'published-plugin': '^1.2.3' },
+  }))
+  const previous = process.env.DSH_HOME
+  process.env.DSH_HOME = dshHome
+  try {
+    clearRegistryCache()
+    // `.invalid` is guaranteed not to resolve, so the registry fetch fails and
+    // no cache exists: the route must answer 200 with the local install state
+    // instead of failing the whole panel with 503.
+    const { routes, dispose } = routeHarness(
+      'https://deepseek1024.com/embed/store?bridge=dsh1024-v1',
+      { registryUrl: 'https://store.invalid/api/v1/registry' },
+    )
+    let status = 0
+    let body = null
+    await routes.get('/dsh1024/installed').handler(
+      { method: 'GET' },
+      {
+        writeHead(value) { status = value },
+        end(value = '') { body = JSON.parse(value) },
+      },
+    )
+    assert.equal(status, 200)
+    assert.deepEqual(body.pluginIds, [])
+    assert.deepEqual(body.plugins, [])
+    assert.equal(typeof body.registryError, 'string')
+    assert.equal(body.installed['published-plugin'], '^1.2.3')
+    dispose()
+  } finally {
+    clearRegistryCache()
+    delete process.env.DSH_HOME
+    if (previous !== undefined) process.env.DSH_HOME = previous
+    await rm(dshHome, { recursive: true, force: true })
+  }
 })
