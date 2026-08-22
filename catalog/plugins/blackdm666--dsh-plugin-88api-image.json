@@ -6,7 +6,7 @@
   "category": "tools",
   "description": {
     "en": "A conversational image studio for DSH with four Image2 and Nano Banana models, text-to-image, multi-reference editing, 2K/4K output, sequential batches, persistent defaults, and masked Key setup.",
-    "zh": "DSH 对话式生图工作台：统一接入 Image2 与 Nano Banana 四款模型，覆盖文生图、多参考图编辑、2K/4K 输出、顺序批量任务、默认模型持久化和脱敏 Key 配置。"
+    "zh": "统一接入 Image2 与 Nano Banana 四款模型，覆盖文生图、多参考图编辑、2K/4K 输出、顺序批量任务、默认模型持久化和脱敏 Key 配置。"
   },
   "added": "2026-08-22"
 }
