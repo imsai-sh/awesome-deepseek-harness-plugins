@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fplj-fplj/dsh-ua-headers",
+  "name": "dsh-ua-headers",
+  "repository": "https://github.com/fplj-fplj/dsh-ua-headers",
+  "category": "model",
+  "description": {
+    "en": "Customize User-Agent and extra request headers for selected model calls, with a settings control page.",
+    "zh": "自定义所选模型调用时的 User-Agent 与请求头，并提供设置控制页面。"
+  },
+  "added": "2026-08-23"
+}
