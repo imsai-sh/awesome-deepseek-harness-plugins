@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ZekaiShi/smart-subagent",
+  "name": "smart-subagent",
+  "repository": "https://github.com/ZekaiShi/smart-subagent",
+  "category": "model",
+  "description": {
+    "en": "Maps a stable agent_key to an exact provider/model pair declared in role Markdown files, with per-workspace evolution of prefercmd and memory files.",
+    "zh": "将稳定的 agent_key 映射到角色 Markdown 文件中声明的具体 provider/model 组合，支持按工作区维护 prefercmd 与 memory 进化文件。"
+  },
+  "added": "2026-08-23"
+}
