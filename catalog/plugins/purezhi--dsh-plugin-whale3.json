@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "purezhi/dsh-plugin-whale3",
+  "name": "dsh-plugin-whale3",
+  "repository": "https://github.com/purezhi/dsh-plugin-whale3",
+  "category": "ui",
+  "description": {
+    "en": "An animated whale companion for the DSH Web UI: a humpback whale by default with right-click cycling through blue whale and orca, each with its own realistic body contour and blow shape. Drag to reposition; swims across the top of the interface. Lives in the user profile so it survives app upgrades.",
+    "zh": "在 DSH Web UI 里放一只会动的鲸鱼桌宠：默认座头鲸，右键循环切换蓝鲸、虎鲸，每种都有独立写实轮廓与喷水形态。可拖拽移动，在界面顶部来回游动。注册在用户配置里，应用升级后依然存在。"
+  },
+  "added": "2026-08-23"
+}
