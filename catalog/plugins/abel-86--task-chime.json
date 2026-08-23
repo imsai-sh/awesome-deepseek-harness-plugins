@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Abel-86/task-chime",
+  "name": "task-chime",
+  "repository": "https://github.com/Abel-86/task-chime",
+  "category": "notify",
+  "description": {
+    "en": "Play local sounds for approval/permission requests and task completion, configurable from the Web GUI.",
+    "zh": "审批/权限请求与任务完成提示音，可在 GUI 设置中自定义声音、音量与冷却。"
+  },
+  "added": "2026-08-23"
+}
