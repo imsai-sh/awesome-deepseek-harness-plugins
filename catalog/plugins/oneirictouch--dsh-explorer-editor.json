@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "oneirictouch/dsh-explorer-editor",
+  "name": "dsh-explorer-editor",
+  "repository": "https://github.com/oneirictouch/dsh-explorer-editor",
+  "category": "tools",
+  "description": {
+    "en": "A DSH's VS Code-style file manager: browse the current conversation workspace files in the sidebar, edit with the Monaco editor. Tab-based switching, perfect for those who hate having their desktop over-split.",
+    "zh": "DSH 的 VS Code 风格文件管理器：在侧边栏浏览当前对话工作区文件，用 Monaco 编辑器编辑。页签式切换，适合讨厌桌面被过度分割的人。"
+  },
+  "added": "2026-08-22"
+}
