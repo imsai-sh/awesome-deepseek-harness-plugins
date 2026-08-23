@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xiaobaiyg09/dsh-pickdom",
+  "name": "dsh-pickdom",
+  "repository": "https://github.com/xiaobaiyg09/dsh-pickdom",
+  "category": "tools",
+  "description": {
+    "en": "Provides a DSH sidebar browser for local HTML and HTTP/HTTPS pages, with DOM element picking that inserts structured references into the Agent composer; local HTML also supports visual editing and saving.",
+    "zh": "为 DSH 提供本地 HTML 与 HTTP/HTTPS 页面的侧边栏浏览器，可框选 DOM 元素并将结构化引用插入 Agent 输入框；本地 HTML 还支持可视化编辑与保存。"
+  },
+  "added": "2026-08-23"
+}
