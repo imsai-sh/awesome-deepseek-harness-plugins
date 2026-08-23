@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "AgentsDanceAI/deepseek-harness-cloud/packages/dsh-plugin-cloud",
+  "name": "dsh-plugin-cloud",
+  "repository": "https://github.com/AgentsDanceAI/deepseek-harness-cloud",
+  "category": "model",
+  "description": {
+    "en": "Connects DeepSeek Harness to a DSH Cloud gateway (hosted or self-hosted): device-authorized login plus a multi-model provider row written into the user config layer.",
+    "zh": "把 DeepSeek Harness 接入 DSH Cloud 网关（托管或自部署）：设备授权登录，并在用户配置层写入多模型提供方条目。"
+  },
+  "added": "2026-08-22"
+}
