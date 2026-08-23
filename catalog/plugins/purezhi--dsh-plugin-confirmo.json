@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "purezhi/dsh-plugin-confirmo",
+  "name": "dsh-plugin-confirmo",
+  "repository": "https://github.com/purezhi/dsh-plugin-confirmo",
+  "category": "ui",
+  "description": {
+    "en": "A confirmo.love-style desktop pet for the DSH Web UI: floating yellow cat with community sprite support from sprites.confirmo.love (8x7 magenta chroma-key sheets). Drag to move, click for reactions, right-click to switch sprites.",
+    "zh": "在 DSH Web UI 里放一只 Confirmo 桌宠：默认同款黄猫，支持 sprites.confirmo.love 社区精灵图（8x7 品红抠图雪碧图）。可拖拽移动、单击播放反应动画、右键切换精灵。"
+  },
+  "added": "2026-08-23"
+}
