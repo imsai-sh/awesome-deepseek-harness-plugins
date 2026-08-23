@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "chidaic/dsh-light-memory",
+  "name": "dsh-light-memory",
+  "repository": "https://github.com/chidaic/dsh-light-memory",
+  "category": "memory",
+  "description": {
+    "en": "Lightweight memory plugin for DSH: four Markdown files (USER/PROJECT/WORKLOG/CONVENTION) plus append/distill actions, zero external parts, prefix-cache-friendly dual-layer injection.",
+    "zh": "轻量记忆系统插件：四个 Markdown 文件（USER/PROJECT/WORKLOG/CONVENTION）+ append/distill 两个动作，零外部部件，prefix-cache 友好的双层注入。"
+  },
+  "added": "2026-08-23"
+}
