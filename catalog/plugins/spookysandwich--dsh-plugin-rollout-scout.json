@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "SpookySandwich/dsh-plugin-rollout-scout",
+  "name": "dsh-plugin-rollout-scout",
+  "repository": "https://github.com/SpookySandwich/dsh-plugin-rollout-scout",
+  "category": "model",
+  "description": {
+    "en": "Detects which conversation model an account is being served by launching concurrent throwaway probe conversations and scoring each streaming chain-of-thought by how its paragraphs open, cancelling probes that read as the older model within seconds. Includes an offline self-check that replays 13 hand-labelled chains-of-thought through the same classifier.",
+    "zh": "通过并发发起一次性探测会话，按段落开头的写法为流式思维链打分，检测账号当前被分配到哪个对话模型；读起来像旧模型的探测在数秒内中止。附带离线自检，用同一分类器回放 13 条人工标注的思维链。"
+  },
+  "added": "2026-08-23"
+}
