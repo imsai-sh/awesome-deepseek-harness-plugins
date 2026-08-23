@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "SpookySandwich/dsh-plugin-message-edit",
+  "name": "dsh-plugin-message-edit",
+  "repository": "https://github.com/SpookySandwich/dsh-plugin-message-edit",
+  "category": "session",
+  "description": {
+    "en": "Edit an already-sent message to rewind the conversation to that turn and branch from it, keeping the previous version. A counter under the bubble switches between versions, and a Versions tab draws the whole family as a turn-level tree. Control placement follows a ChatGPT, DeepSeek or Claude preset.",
+    "zh": "编辑已发送的消息，将对话回溯到该轮次并从此分叉，同时保留原有版本。气泡下方的计数器用于切换版本，「版本」标签页以轮次级树状图展示整个版本家族。控件位置提供 ChatGPT、DeepSeek、Claude 三种预设。"
+  },
+  "added": "2026-08-23"
+}
