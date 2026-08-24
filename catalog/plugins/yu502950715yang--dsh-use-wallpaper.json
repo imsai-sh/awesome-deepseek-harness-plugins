@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yu502950715yang/dsh-use-wallpaper",
+  "name": "dsh-use-wallpaper",
+  "repository": "https://github.com/yu502950715yang/dsh-use-wallpaper",
+  "category": "theme",
+  "description": {
+    "en": "Renders Wallpaper Engine wallpapers as the DeepSeek Harness web background: scene wallpapers are drawn live by a Rust/WebGPU (wasm) renderer (image objects and GPU particles), video wallpapers loop, web wallpapers load in a sandboxed iframe, and everything else falls back to a preview image with Ken Burns. No Wallpaper Engine runtime required.",
+    "zh": "把 Wallpaper Engine 壁纸渲染为 DeepSeek Harness 的 Web 背景：scene 壁纸由 Rust/WebGPU（wasm）渲染器实时绘制（图片对象 + GPU 粒子），视频壁纸循环播放，web 壁纸用沙箱 iframe 加载，其余回退 preview 图 + Ken Burns；无需 Wallpaper Engine 运行时。"
+  },
+  "added": "2026-08-24"
+}
