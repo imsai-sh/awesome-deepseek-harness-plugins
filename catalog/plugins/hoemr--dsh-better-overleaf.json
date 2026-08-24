@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Hoemr/dsh-better-overleaf",
+  "name": "dsh-better-overleaf",
+  "repository": "https://github.com/Hoemr/dsh-better-overleaf",
+  "category": "tools",
+  "description": {
+    "en": "Overleaf tab for DSH better-sidebar: direct-CDP browser login (third-party Chromium supported), project list and switch, local git mirrors under <workspace>/overleaf/, two-way git sync with read-only API fallback, and file preview through the sidebar workbench.",
+    "zh": "DSH better-sidebar 的 Overleaf 标签页：支持直连 CDP 浏览器登录（含第三方 Chromium）、项目列表与切换、<workspace>/overleaf/ 本地 git 镜像、git 双向同步（API 只读兜底）以及侧边栏工作台文件预览。"
+  },
+  "added": "2026-08-24"
+}
