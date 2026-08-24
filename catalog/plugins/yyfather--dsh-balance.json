@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YYfather/dsh-balance",
+  "name": "dsh-balance",
+  "repository": "https://github.com/YYfather/dsh-balance",
+  "category": "tools",
+  "description": {
+    "en": "Balance & cost plugin for DeepSeek Harness: shows DeepSeek/MiMo account balance and usage in the status dock, per-request pricing by model and peak/off-peak periods, with over-limit alerts.",
+    "zh": "余额与开销插件：状态栏显示 DeepSeek/MiMo 余额与花费，逐请求按模型+峰谷时段计价，支持花费超线提醒（点击设置）。"
+  },
+  "added": "2026-08-24"
+}

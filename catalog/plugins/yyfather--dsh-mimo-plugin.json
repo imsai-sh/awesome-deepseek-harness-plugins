@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YYfather/dsh-mimo-plugin",
+  "name": "dsh-mimo-plugin",
+  "repository": "https://github.com/YYfather/dsh-mimo-plugin",
+  "category": "tools",
+  "description": {
+    "en": "MiMo (Xiaomi) native agent tools: web search, image/audio/video understanding, ASR transcription, TTS, voice design and voice cloning, with a Settings page for the API key.",
+    "zh": "小米 MiMo 原生工具：联网搜索、图片/音频/视频理解、专用 ASR 转写、语音合成(TTS)、音色设计、音色克隆，设置页配置 API Key，音频默认输出到 <工作区>/MiMo-Generate。"
+  },
+  "added": "2026-08-24"
+}
