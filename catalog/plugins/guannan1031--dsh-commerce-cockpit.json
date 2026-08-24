@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "guannan1031/dsh-commerce-cockpit",
+  "name": "dsh-commerce-cockpit",
+  "repository": "https://github.com/guannan1031/dsh-commerce-cockpit",
+  "category": "tools",
+  "description": {
+    "en": "An ecommerce business cockpit demo for DeepSeek Harness with dashboard metrics, validated CSV imports, explicit Demo and Imported data modes, and rule-based data Q&A.",
+    "zh": "面向 DeepSeek Harness 的电商经营驾驶舱演示插件，提供经营指标看板、CSV 导入校验、明确隔离的 Demo 与 Imported 数据模式，以及规则式问数。"
+  },
+  "added": "2026-08-24"
+}
