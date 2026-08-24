@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MitsukiJoe/dsh-vision-router-inline",
+  "name": "dsh-vision-router-inline",
+  "repository": "https://github.com/MitsukiJoe/dsh-vision-router-inline",
+  "category": "ui",
+  "description": {
+    "en": "Display companion for dsh-vision-router: fold each Auto Vision twin into a square picture button on the original model row.",
+    "zh": "dsh-vision-router 的显示层配套：把每条自动识图孪生收进原模型行右侧的正方形图片按钮。"
+  },
+  "added": "2026-08-24"
+}
