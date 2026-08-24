@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-russian-lang",
+  "name": "dsh-russian-lang",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-russian-lang",
+  "category": "ui",
+  "description": {
+    "en": "Russian localization for the web UI: adds a third option to Settings - General - Language and translates the core and plugin locale namespaces at runtime.",
+    "zh": "Web UI 俄语本地化：在 设置 - 通用 - 语言 中增加第三个选项，并在运行时翻译核心与插件的语言命名空间。"
+  },
+  "added": "2026-08-24"
+}
