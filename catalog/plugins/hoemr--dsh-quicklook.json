@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "../schema/plugin.schema.json",
   "id": "Hoemr/dsh-quicklook",
   "name": "dsh-quicklook",
