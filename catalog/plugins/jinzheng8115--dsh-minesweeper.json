@@ -3,7 +3,7 @@
   "id": "jinzheng8115/dsh-Minesweeper",
   "name": "dsh-Minesweeper",
   "repository": "https://github.com/jinzheng8115/dsh-Minesweeper",
-  "category": "games",
+  "category": "fun",
   "description": {
     "en": "Minesweeper plugin for DeepSeek Harness: agent tool set and a human web panel sharing the same board. Supports reveal, flag, chord, a deterministic auto-solver and batch moves; three preset difficulties plus custom sizes.",
     "zh": "DeepSeek Harness 扫雷插件：agent 工具集与人类网页面板共享同一棋盘，支持挖开、插旗、快翻、确定性自动求解与批量落子；三种预设难度加自定义尺寸。"
