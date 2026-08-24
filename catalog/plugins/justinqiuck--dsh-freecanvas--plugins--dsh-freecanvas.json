@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "JustinQiuck/dsh-freecanvas/plugins/dsh-freecanvas",
+  "name": "dsh-freecanvas",
+  "repository": "https://github.com/JustinQiuck/dsh-freecanvas",
+  "category": "workflow",
+  "description": {
+    "en": "Bundles an AI infinite canvas into DSH with built-in Web assets, local Canvas Agent connectivity, image and video workspaces, and visual content orchestration.",
+    "zh": "将 AI 无限画布作为自包含 DSH bundle 集成，内置 Web 资源、本地 Canvas Agent 连接、生图与视频工作台及可视化内容编排。"
+  },
+  "added": "2026-08-25"
+}
