@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-grok-xsearch",
+  "name": "dsh-grok-xsearch",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-grok-xsearch",
+  "category": "tools",
+  "description": {
+    "en": "Adds an x_search tool for X/Twitter search, authenticated through a separate SuperGrok OAuth account.",
+    "zh": "新增用于 X/Twitter 搜索的 x_search 工具，通过独立的 SuperGrok OAuth 账号鉴权。"
+  },
+  "added": "2026-08-24"
+}
