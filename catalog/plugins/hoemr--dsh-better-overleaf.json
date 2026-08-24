@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "../schema/plugin.schema.json",
   "id": "Hoemr/dsh-better-overleaf",
   "name": "dsh-better-overleaf",
