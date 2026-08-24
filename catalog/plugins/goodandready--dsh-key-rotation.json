@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-key-rotation",
+  "name": "dsh-key-rotation",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-key-rotation",
+  "category": "model",
+  "description": {
+    "en": "Keeps a pool of API keys per provider and switches to the next key on quota or rate-limit errors, with the key pools and cooldown editable in Settings.",
+    "zh": "为每个提供方维护 API Key 池，在配额或限流错误时切换到下一个 Key，Key 池与冷却时间可在设置中编辑。"
+  },
+  "added": "2026-08-24"
+}
