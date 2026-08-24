@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-lanmode",
+  "name": "dsh-lanmode",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-lanmode",
+  "category": "dev",
+  "description": {
+    "en": "Serves the settings service on pages that are not localhost and supplies the web APIs a browser withholds over plain HTTP, for LAN and reverse-proxy access to the web UI.",
+    "zh": "在非 localhost 页面提供设置服务，并补齐浏览器在纯 HTTP 下限制的 Web API，用于局域网与反向代理访问 Web UI。"
+  },
+  "added": "2026-08-24"
+}
