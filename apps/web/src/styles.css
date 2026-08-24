@@ -5285,3 +5285,118 @@ html[data-dsh1024-embed="true"] .catalog-content {
     min-height: 44px;
   }
 }
+
+/* Uninstall confirmation dialog (installed-plugins tab).
+   Destructive actions get an explicit in-app confirmation — never a native
+   window.confirm, which the host shell can suppress and which would freeze
+   the embedded flow. Scoped under .bridge-* so it cannot leak into the
+   community section's generic class names. */
+.bridge-confirm-backdrop {
+  align-items: center;
+  background: rgba(10, 13, 18, 0.5);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  z-index: 80;
+}
+
+.bridge-confirm {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  max-width: 420px;
+  padding: 20px;
+  width: 100%;
+}
+
+.bridge-confirm-head {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.bridge-confirm-head svg {
+  color: var(--danger, #dc2626);
+  flex: 0 0 auto;
+}
+
+.bridge-confirm-head h3 {
+  color: var(--ink);
+  flex: 1;
+  font-size: 16px;
+  font-weight: 680;
+  margin: 0;
+}
+
+.bridge-confirm-close {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  padding: 0;
+  width: 36px;
+}
+
+.bridge-confirm-close:hover {
+  background: var(--surface-hover);
+  color: var(--ink);
+}
+
+.bridge-confirm-body {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  overflow-wrap: anywhere;
+}
+
+.bridge-confirm-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.bridge-confirm-actions .button {
+  min-height: 44px;
+}
+
+.bridge-confirm-danger,
+.bridge-confirm-danger:hover {
+  background: var(--danger, #dc2626);
+  border-color: var(--danger, #dc2626);
+  color: #fff;
+}
+
+.bridge-confirm-danger:hover {
+  filter: brightness(0.94);
+}
+
+@media (max-width: 640px) {
+  .bridge-confirm-backdrop {
+    padding: 16px;
+  }
+
+  .bridge-confirm-actions {
+    justify-content: stretch;
+  }
+
+  .bridge-confirm-actions .button {
+    flex: 1;
+  }
+
+  .bridge-confirm-close {
+    height: 44px;
+    width: 44px;
+  }
+}

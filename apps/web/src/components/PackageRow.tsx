@@ -275,7 +275,7 @@ export const PackageRow = memo(function PackageRow({
           <div className="split-install">
             {isSelfPlugin(plugin)
               ? <BridgeInstallButton pluginId={plugin.id} className="split-install-main bridge-local-install" />
-              : <BridgeUninstallButton pluginId={plugin.id} />}
+              : <BridgeUninstallButton pluginId={plugin.id} pluginName={listIdentity.displayName} />}
           </div>
         )
         : isRepository
