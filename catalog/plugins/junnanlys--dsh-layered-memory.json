@@ -5,8 +5,8 @@
   "repository": "https://github.com/JunNanLYS/dsh-layered-memory",
   "category": "memory",
   "description": {
-    "en": "Layered long-term memory ported from TencentDB-Agent-Memory's MemoryCore pipeline: conversations are auto-distilled into L1 facts, L2 scene summaries and L3 persona, then recalled and injected before each step. Hybrid retrieval (SQLite FTS5 BM25 + sqlite-vec vectors with optional local embedding models), per-session capture modes (auto/chat/work/off), recall dedupe and recency decay, settings UI with memory browser, and rebuild from the L0 raw-event source.",
-    "zh": "移植自 TencentDB-Agent-Memory MemoryCore 管线的分层长期记忆：对话自动蒸馏为 L1 事实 / L2 场景 / L3 画像三层记忆，并在每一步前召回注入。混合检索（SQLite FTS5 BM25 + sqlite-vec 向量，可选本地嵌入模型）、按会话捕获档位（auto/chat/work/off）、召回去重与时效衰减、设置页记忆浏览器、支持从 L0 原始事件全量重建。"
+    "en": "Long-term memory for DeepSeek Harness that persists across sessions. The AI automatically remembers who you are, what projects you are working on, and your preferences from your conversations, and brings that context into every new session — no more re-introducing yourself or re-explaining background. It runs automatically with nothing to configure; sessions you don't want remembered can be excluded, and everything the AI remembers is viewable in Settings.",
+    "zh": "让 DeepSeek Harness 拥有跨会话的长期记忆：AI 自动从对话中记住你是谁、你在做什么项目、你的偏好和约定，新开会话时自动带上这些背景——不用每次重新自我介绍、重复交代上下文。装好即自动运行，无需任何配置和操作；不想被记住的会话可以单独关闭，AI 记住了什么随时能在设置页查看。"
   },
   "added": "2026-08-25"
 }
