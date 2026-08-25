@@ -544,6 +544,10 @@ function MarketShell({ locale, onClose, activation }) {
   }, [connectFrame, embedUrl])
 
   const frameLoaded = useCallback(() => {
+    // A fast storefront can complete the bridge before the iframe's 'load'
+    // event fires; tearing the port down here would kill a live connection.
+    // Only reset when no bridge is established yet.
+    if (portRef.current !== null) return
     closeBridge()
     setConnection('connecting')
     readyTimerRef.current = window.setTimeout(() => setConnection('failed'), READY_TIMEOUT_MS)
