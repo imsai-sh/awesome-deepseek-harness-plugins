@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "key8023lala/dsh-ark-balance",
+  "name": "dsh-ark-balance",
+  "repository": "https://github.com/key8023lala/dsh-ark-balance",
+  "category": "ui",
+  "description": {
+    "en": "Draggable DSH web widget showing remaining free-inference and data-permission quota for Volcano Engine Ark collaboration reward plan models, with type/vendor filtering, sorting, and 60-second auto-refresh. Data is read from the official arkcli CLI; the plugin reuses its login state and does not store credentials.",
+    "zh": "在 DSH Web 界面以可拖拽挂件展示火山引擎方舟协作奖励计划各模型的免费推理与数据权限资源包余量（总量/已用/剩余），支持类型与厂商筛选、排序和 60 秒自动刷新。数据来自官方 arkcli 命令，插件复用其登录态，不保存任何凭据。"
+  },
+  "added": "2026-08-25"
+}
