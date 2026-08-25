@@ -5,8 +5,8 @@
   "repository": "https://github.com/JunNanLYS/dsh-layered-memory",
   "category": "memory",
   "description": {
-    "en": "Long-term memory for DeepSeek Harness that persists across sessions. The AI automatically remembers who you are, what projects you are working on, and your preferences from your conversations, and brings that context into every new session — no more re-introducing yourself or re-explaining background. It runs automatically with nothing to configure; sessions you don't want remembered can be excluded, and everything the AI remembers is viewable in Settings.",
-    "zh": "让 DeepSeek Harness 拥有跨会话的长期记忆：AI 自动从对话中记住你是谁、你在做什么项目、你的偏好和约定，新开会话时自动带上这些背景——不用每次重新自我介绍、重复交代上下文。装好即自动运行，无需任何配置和操作；不想被记住的会话可以单独关闭，AI 记住了什么随时能在设置页查看。"
+    "en": "Long-term memory for DeepSeek Harness that persists across sessions. The AI automatically remembers who you are, what projects you are working on, and your preferences from your conversations, and brings that context into every new session — no more re-introducing yourself or re-explaining background. Daily-life and work memories are kept separate and never mixed, and each session can be marked as personal or work. It runs automatically with nothing to configure; sessions you don't want remembered can be excluded, and everything the AI remembers is viewable in Settings.",
+    "zh": "让 DeepSeek Harness 拥有跨会话的长期记忆：AI 自动从对话中记住你是谁、你在做什么项目、你的偏好和约定，新开会话时自动带上这些背景——不用每次重新自我介绍、重复交代上下文。日常生活和工作项目的记忆自动分开存放、互不干扰，还能按会话指定当前在聊生活还是工作。装好即自动运行，无需任何配置和操作；不想被记住的会话可以单独关闭，AI 记住了什么随时能在设置页查看。"
   },
   "added": "2026-08-25"
 }
