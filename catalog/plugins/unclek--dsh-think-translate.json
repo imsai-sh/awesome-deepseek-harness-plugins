@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "UncleK/dsh-think-translate",
+  "name": "dsh-think-translate",
+  "repository": "https://github.com/UncleK/dsh-think-translate",
+  "category": "ui",
+  "description": {
+    "en": "Display-layer translation for the DSH Web UI: renders thinking chains (chain-of-thought), task cards and answers in one of 8 target languages, with local Ollama or Google/Bing providers and originals preserved.",
+    "zh": "DSH Web 显示层翻译：将思考链、任务卡片与回答以 8 种目标语言之一显示，支持本地 Ollama 或 Google/Bing，原文完整保留。"
+  },
+  "added": "2026-08-26"
+}
