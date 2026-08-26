@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wwumit/dsh-phone/client",
+  "name": "dsh-phone",
+  "repository": "https://github.com/wwumit/dsh-phone",
+  "category": "tools",
+  "description": {
+    "en": "Cross-device phone plugin for DeepSeek Harness: dual-panel dialer and incoming calls, WebRTC voice (P2P media with STUN, signalling relayed through the operator), cross-device SMS relay, RCS group chat with trust gates, SHA-256 attachment hashing, and L0–L4 trust-level call verification with evidence audit. Experimental: trust summaries are not a security guarantee, and SMS/signalling is relayed through the operator's inbox (visible to them); E2E encryption is planned.",
+    "zh": "DeepSeek Harness 跨设备电话插件：双面板拨号/来电、WebRTC 语音（P2P 媒体 + STUN，信令经服务端中继）、短信跨设备中继、带信任门槛的 RCS 群聊、附件 SHA-256 哈希、L0–L4 信任等级来电核验与证据审计。实验性项目：信任摘要非安全保证，短信/信令内容经服务方收件箱投递（服务方可见）；E2E 加密为演进方向。"
+  },
+  "added": "2026-08-26"
+}
