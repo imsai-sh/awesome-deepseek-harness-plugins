@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MikumikuDAIFans/PrivateAgentSkills",
+  "name": "PrivateAgentSkills",
+  "repository": "https://github.com/MikumikuDAIFans/PrivateAgentSkills",
+  "category": "skill",
+  "description": {
+    "en": "DeepSeek Harness skill bundle: registers the seven-skill integrated development workflow suite on ctx.skills - lifecycle routing, method selection (SDD/BDD/TDD/EDD and overlays), proportional Lite/Standard/Full planning, implementation control, evidence-based verification, review/release, and session handoff. Standard SKILL.md layout, also usable with Codex and Claude Code.",
+    "zh": "DeepSeek Harness 技能包：在 ctx.skills 上注册七技能一体化开发工作流套件——生命周期路由、方法选择（SDD/BDD/TDD/EDD 及叠加层）、Lite/Standard/Full 分级规划、实施控制、基于证据的验证、评审发布与会话交接。采用标准 SKILL.md 布局，也可用于 Codex 与 Claude Code。"
+  },
+  "added": "2026-08-26"
+}
