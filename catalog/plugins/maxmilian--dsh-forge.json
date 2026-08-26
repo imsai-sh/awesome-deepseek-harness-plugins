@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "maxmilian/dsh-forge",
+  "name": "dsh-forge",
+  "repository": "https://github.com/maxmilian/dsh-forge",
+  "category": "tools",
+  "description": {
+    "en": "Read-only Gitea and Forgejo tools over the REST API both projects share: repositories, issue and pull request search, PR diffs and changed files, and Actions runs, jobs and job logs.",
+    "zh": "面向自建 Gitea / Forgejo 的只读工具，走两者共用的 REST API：仓库列表、议题与 PR 搜索、PR diff 与变更文件，以及 Actions 运行、任务与任务日志。"
+  },
+  "added": "2026-08-26"
+}
