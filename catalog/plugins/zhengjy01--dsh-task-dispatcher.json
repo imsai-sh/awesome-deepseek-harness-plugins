@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-task-dispatcher",
+  "name": "dsh-task-dispatcher",
+  "repository": "https://github.com/zhengjy01/dsh-task-dispatcher",
+  "category": "workflow",
+  "description": {
+    "en": "TickTick (滴答清单) daily task dispatcher for DeepSeek Harness: interval-based pulls of today's due tasks with change-aware flomo + macOS notifications, optional auto-execute (one headless DSH session per task), worker workspace selection, a dispatcher_report flomo summary tool, and a web task board.",
+    "zh": "DeepSeek Harness 的滴答清单任务派发器：按间隔拉取今天到期任务（有变化才通知 flomo+macOS），可选自动执行（每任务一个 headless 会话）、执行会话工作区选择、dispatcher_report flomo 汇总工具与 Web 任务看板。"
+  },
+  "added": "2026-08-26"
+}
