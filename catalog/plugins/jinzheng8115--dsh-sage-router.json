@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jinzheng8115/dsh-sage-router",
+  "name": "dsh-sage-router",
+  "repository": "https://github.com/jinzheng8115/dsh-sage-router",
+  "category": "workflow",
+  "description": {
+    "en": "SAGE routing plugin that scores declared agents and returns SELF, HANDOFF, or COLLABORATE decisions for a task DAG, with optional subagent execution through sage_orchestrate_task.",
+    "zh": "SAGE 路由插件，为任务 DAG 对声明 Agent 评分并返回 SELF、HANDOFF 或 COLLABORATE 决策，可通过 sage_orchestrate_task 按需执行子 Agent 编排。"
+  },
+  "added": "2026-08-26"
+}
