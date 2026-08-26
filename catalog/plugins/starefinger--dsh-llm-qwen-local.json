@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "starefinger/dsh-llm-qwen-local",
+  "name": "dsh-llm-qwen-local",
+  "repository": "https://github.com/starefinger/dsh-llm-qwen-local",
+  "category": "model",
+  "description": {
+    "en": "LLM adapter for locally deployed Qwen models behind a vLLM OpenAI-compatible endpoint: per-model multimodal switch, fully configurable reasoning efforts, and a bilingual web settings page.",
+    "zh": "面向本地部署 Qwen 模型（vLLM OpenAI 兼容端点）的 LLM 适配器：按模型多模态开关、完全可配置的推理档位、中英双语 Web 设置页。"
+  },
+  "added": "2026-08-26"
+}
