@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "maxmilian/dsh-sonarqube",
+  "name": "dsh-sonarqube",
+  "repository": "https://github.com/maxmilian/dsh-sonarqube",
+  "category": "dev",
+  "description": {
+    "en": "Read-only SonarQube Community Build tools: instance status, project Quality Gate for a branch or pull request, issue and Security Hotspot search, single hotspot detail, and coverage, duplication or caller-selected measures.",
+    "zh": "面向 SonarQube Community Build 的只读工具：实例状态、分支或 PR 的项目质量阈、议题与安全热点搜索、单个热点详情，以及覆盖率、重复率或调用方指定的度量项。"
+  },
+  "added": "2026-08-26"
+}
