@@ -4,13 +4,14 @@ import { secureHeaders } from 'hono/secure-headers'
 import { registerCommunityRoutes } from './community/routes'
 import { registerAuthRoutes } from './auth-api'
 import { ANONYMOUS_QUOTA, AUTHENTICATED_QUOTA, consumeQuota } from './lib/api-quota'
-import { authenticateApiKey, sha256Hex, timingSafeEqualStrings } from './lib/auth'
+import { authenticateApiKey, cleanupExpiredAuthRows, sha256Hex, timingSafeEqualStrings } from './lib/auth'
 import {
   buildCatalog,
   buildPluginsPage,
   buildRankingsResponse,
   buildRankingsV3Response,
   clampLimit,
+  comparePlugins,
   filterCatalogPackages,
   findPluginById,
   findPluginsUnder,
@@ -91,6 +92,17 @@ const REGISTRY_CACHE_HEADER = 'public, max-age=60, s-maxage=300, stale-while-rev
 // not: without revalidation they can sit a whole day behind the catalog.
 const CRAWLER_CACHE_HEADER = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400'
 const V1_PLUGIN_LIMIT = 500
+// The registry mirrors the /api/v1/plugins narrowing: the frozen shape stays,
+// the content caps at the install-ranked head of the catalog. Install rank,
+// not star rank, because the registry's remaining job in the dsh1024 client is
+// recognizing installed plugins (the Installed tab, uninstall resolution, the
+// id-only install path): comparePlugins('installs') keeps every entry anyone
+// has ever installed through the store (~305 of ~9223 at the time of the cap)
+// and backfills the rest of the 500 by stars via its tie-breakers. `count`
+// keeps its contract meaning — the length of `plugins` (the dsh1024 validator
+// rejects a response where they disagree) — and the additive `total` carries
+// the full catalog size for clients that want to display it.
+const REGISTRY_PLUGIN_LIMIT = 500
 const DEFAULT_SEARCH_LIMIT = 20
 const MAX_SEARCH_LIMIT = 100
 const MAX_SEARCH_PAGE = 1_000_000
@@ -667,12 +679,24 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
       executionContext(context),
     )
     const { snapshot } = result
+    // Install-ranked head of the catalog, kept in snapshot order: a catalog at
+    // or under the cap serves the same entries as the uncapped era (plus the
+    // additive `total` field), and above it the survivors are every entry with
+    // recorded installs, star-backfilled — see REGISTRY_PLUGIN_LIMIT.
+    let projected = snapshot.plugins
+    if (projected.length > REGISTRY_PLUGIN_LIMIT) {
+      const kept = new Set(
+        [...projected].sort(comparePlugins('installs')).slice(0, REGISTRY_PLUGIN_LIMIT),
+      )
+      projected = projected.filter((plugin) => kept.has(plugin))
+    }
     const registry: RegistryProjection = {
       name: 'dsh-1024store-catalog',
       updated: snapshot.generatedAt,
-      count: snapshot.plugins.length,
+      count: projected.length,
+      total: snapshot.plugins.length,
       categories: projectCategories(snapshot.categories),
-      plugins: snapshot.plugins.map((plugin) => {
+      plugins: projected.map((plugin) => {
         const preferred = plugin.installMethods?.[0]
         return {
           id: plugin.id,
@@ -791,6 +815,15 @@ export function createApp(overrides: Partial<AppDependencies> = {}) {
       new Date(capturedAt).toISOString(),
     )
     await dependencies.snapshotRefresher(context.env, fetch, capturedAt)
+    // Auth hygiene rides the sync: with no scheduled handler in this Worker,
+    // this authenticated daily call is the reliable in-Worker tick that purges
+    // expired sessions, oauth states, and stale rate counters.
+    await cleanupExpiredAuthRows(context.env.CATALOG_DB, capturedAt).catch((error) => {
+      console.error(JSON.stringify({
+        message: 'auth_cleanup_failed',
+        error: error instanceof Error ? error.message : String(error),
+      }))
+    })
     return context.json({
       ok: true,
       total: result.total,

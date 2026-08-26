@@ -23,9 +23,9 @@ handler behaviour, quotas, and error codes are identical. `api.deepseek1024.com`
 registered as a second custom domain of the `dsh-store` Worker via `wrangler.jsonc`
 `routes` and is provisioned automatically on deploy.
 
-All internal endpoints live under `https://deepseek1024.com/api/v1/`. The Worker is the only
-process that reads or writes the D1 catalog; every response is served from a 15-minute KV
-snapshot of D1, and stale KV is the only degradation mode. Legacy paths (`/api/plugin`,
+All internal endpoints live under `https://deepseek1024.com/api/v1/`. The Worker and the
+maintainer's out-of-band collection jobs are the only D1 writers; every response is served
+from a 15-minute KV snapshot of D1, and stale KV is the only degradation mode. Legacy paths (`/api/plugin`,
 `/api/plugin/:owner/:name`, `/plugins.json`, `/api/install-stats/:owner/:name`,
 `/api/dsh-1024store`, `/api/packages*`, `/api/health`) are removed without compatibility
 shims.
@@ -40,7 +40,8 @@ the installable view: only plugins with a published npm package (the `dsh.bundle
 latest manifest) are listed, star-ranked by default, and `packages` contains at most the
 first 500 entries after filtering and sorting — every listed entry therefore carries a
 working npm install command. Browse-only plugins (no npm package) do not appear here; they
-remain on the website and in `/api/v1/registry`. `meta.total` reports the number of matching
+remain on the website and, within its own 500-entry install-ranked cap, in
+`/api/v1/registry`. `meta.total` reports the number of matching
 installable plugins and `meta.catalogTotal` reports the full catalog size, installable or
 not.
 For npm install methods, this frozen v1 projection emits both the current
@@ -106,7 +107,7 @@ in D1; API keys are shown once at creation and stored only as hashes.
 - `DELETE /api/v1/api-keys/:id` — revokes (soft-deletes) the key.
 
 Cookie-authenticated mutations reject mismatched `Origin` headers (`403`); expired
-sessions and stale rate counters are purged by the weekly cron.
+sessions and stale rate counters are purged whenever the daily catalog sync runs.
 
 ## GET /api/v1/plugins/:owner/:name[/sub/dir…]
 
@@ -129,14 +130,23 @@ was removed from the configuration after plugins referenced it).
 
 ## GET /api/v1/registry
 
-Compact full-catalog registry for the `dsh1024` in-DSH marketplace plugin, the README builder
-(`scripts/build-readme.mjs`), and external tools:
+Compact registry for the `dsh1024` in-DSH marketplace plugin and external tools. The
+response shape is frozen, but the content is narrowed the same way as `/api/v1/plugins`:
+`plugins` lists at most 500 entries — the install-ranked head of the catalog (every plugin
+with recorded store installs, backfilled by stars), kept in snapshot order. Install rank
+rather than star rank because the store client resolves installed plugins against this
+list. `count` remains the length of the served `plugins` array — the two must always agree
+— and the additive `total` field reports the full catalog size, served entries or not.
+Responses from before the cap simply have no `total` field. Clients needing the whole
+catalog should page through the website's `/api/v2/plugins` (the README builder
+`scripts/build-readme.mjs` does exactly that).
 
 ```json
 {
   "name": "dsh-1024store-catalog",
   "updated": "<ISO 8601>",
-  "count": 1492,
+  "count": 500,
+  "total": 9223,
   "categories": [{ "id": "ui", "order": 10, "label": { "en": "UI Enhancements", "zh": "UI 增强" } }],
   "plugins": [{
     "id": "owner/repository",
@@ -236,7 +246,7 @@ the fixed self-update package name and executes the official DSH CLI.
 ## POST /api/v1/catalog/sync
 
 Full-catalog reconciliation from GitHub CI — one of exactly two catalog write paths (the
-other is the Worker's own cron topic scan).
+other is the maintainer's out-of-band collection pipeline).
 
 Authentication: `Authorization: Bearer <CATALOG_SYNC_TOKEN>` where the token is a Cloudflare
 Worker secret of at least 32 bytes. The endpoint is not a public submission API: anonymous and

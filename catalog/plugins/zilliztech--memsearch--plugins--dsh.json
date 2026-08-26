@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zilliztech/memsearch/plugins/dsh",
+  "name": "memsearch-dsh",
+  "repository": "https://github.com/zilliztech/memsearch",
+  "category": "memory",
+  "description": {
+    "en": "Shared Markdown memory for DSH and other coding agents, with automatic capture, pre-step context injection, searchable recall, and a review panel.",
+    "zh": "供 DSH 与其他编程 Agent 共享的 Markdown 记忆，支持自动捕获、步骤前上下文注入、搜索召回与审阅面板。"
+  },
+  "added": "2026-08-24"
+}

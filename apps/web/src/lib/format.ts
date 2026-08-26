@@ -34,6 +34,16 @@ export function formatNumber(value: number, language: Language): string {
   }).format(value)
 }
 
+/**
+ * Counts of catalog items are always exact — "10,033" tells the reader
+ * something "1万" cannot, and the surfaces that show them have room for the
+ * digits. Metric magnitudes (stars, installs, downloads) stay on
+ * formatNumber's compact notation, which suits dense rows.
+ */
+export function formatExactNumber(value: number, language: Language): string {
+  return new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : 'en').format(value)
+}
+
 export function formatRelativeUpdate(
   value: string,
   language: Language,

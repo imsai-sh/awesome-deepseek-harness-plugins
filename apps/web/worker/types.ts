@@ -223,7 +223,10 @@ export interface RegistryProjectionPlugin {
 export interface RegistryProjection {
   name: string
   updated: string
+  /** Number of entries in `plugins` — the frozen contract ties them together. */
   count: number
+  /** Full catalog size, additive: pre-cap clients ignore it. */
+  total: number
   categories: CategoryDescriptor[]
   plugins: RegistryProjectionPlugin[]
 }

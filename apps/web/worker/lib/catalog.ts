@@ -196,8 +196,8 @@ function ranked(plugins: CatalogPlugin[]): RankedPlugin[] {
 /**
  * One seat per repository, for boards ranked by a repository-level metric.
  *
- * Stars, forks and `pushed_at` are fetched per repository (`metricKey` in
- * github-metrics.ts) and the star history is keyed the same way, so every
+ * Stars, forks and `pushed_at` are repository facts (`metricKey` in
+ * catalog-store.ts) and the star history is keyed the same way, so every
  * plugin a monorepo publishes carries byte-identical numbers. Ranked flat, they
  * sort adjacently and the board degenerates: one 24-package repository would
  * take 24 of the 100 star seats with 24 copies of the same star count, and the

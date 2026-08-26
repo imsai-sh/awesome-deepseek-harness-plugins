@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-subscriptions",
+  "name": "dsh-subscriptions",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-subscriptions",
+  "category": "model",
+  "description": {
+    "en": "Registers ChatGPT Codex, Claude, Grok and Antigravity subscriptions as LLM providers through OAuth, without an API key.",
+    "zh": "通过 OAuth 将 ChatGPT Codex、Claude、Grok 与 Antigravity 订阅注册为 LLM 提供方，无需 API Key。"
+  },
+  "added": "2026-08-24"
+}

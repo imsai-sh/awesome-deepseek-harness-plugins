@@ -49,6 +49,15 @@ function normalizePlugin(plugin, id, stars) {
 
 export function normalizeRegistry(data) {
   assert(isObject(data) && Array.isArray(data.plugins), 'Registry response must contain a plugins array')
+  // A capped /api/v1/registry response advertises the full catalog size in
+  // `total` while serving only its install-ranked head. Regenerating from it —
+  // over the network or via --from-file — would silently shrink the README to
+  // the cap, so it is refused here, in the one place every registry-shaped
+  // payload passes through.
+  assert(
+    typeof data.total !== 'number' || data.total <= data.plugins.length,
+    'The registry payload is capped and cannot rebuild the README; use a full-catalog source such as /api/v2/plugins',
+  )
   return {
     updated: updatedDate(data.updated),
     plugins: data.plugins.map(plugin => {
@@ -78,12 +87,85 @@ function detectRegistryShape(data) {
   return normalizeRegistry(data)
 }
 
+const v2PageLimit = 200
+// One sort per attempt. Membership does not depend on the sort, but the edge
+// cache keys on it, so a retry under a different real sort value reads fresh
+// origin pages instead of replaying whichever mixed cached copies just failed
+// the consistency check. (The edge cache deliberately strips unknown params,
+// so a synthetic cache-buster would not work.)
+const v2SweepSorts = ['name', 'active', 'newest']
+const v2SweepRetryDelayMs = 10_000
+
+function v2PageUrl(base, sort, page) {
+  return `${base}/api/v2/plugins?sort=${sort}&limit=${v2PageLimit}&page=${page}`
+}
+
+// The README needs the whole catalog, and /api/v1/registry no longer serves it
+// (the endpoint caps at its install-ranked head), so the projections page
+// through /api/v2/plugins instead. A page sweep is not atomic — the 15-minute
+// KV snapshot can rotate mid-sweep, the edge can hold pages cached from
+// different snapshots, and a single page can hit a transient 5xx — so a sweep
+// only counts when every page arrives, reports the same generatedAt, and the
+// pages add up to the advertised total; anything else retries under the next
+// sort, and a persistent failure fails the build rather than publishing a
+// partial listing.
+async function loadPagedCatalog(fetchImplementation, base, retryDelayMs = v2SweepRetryDelayMs) {
+  let lastError = null
+  for (const [attempt, sort] of v2SweepSorts.entries()) {
+    if (attempt > 0 && retryDelayMs > 0) {
+      await new Promise(resolve => setTimeout(resolve, retryDelayMs))
+    }
+    const firstResponse = await fetchImplementation(v2PageUrl(base, sort, 1))
+    if (firstResponse.status === 404) return null
+    if (!firstResponse.ok) {
+      lastError = new Error(`GET ${base}/api/v2/plugins failed: HTTP ${firstResponse.status}`)
+      continue
+    }
+    const first = JSON.parse(await firstResponse.text())
+    assert(
+      isObject(first) && Array.isArray(first.plugins)
+        && Number.isInteger(first.totalPages) && first.totalPages >= 1
+        && Number.isInteger(first.total) && typeof first.generatedAt === 'string',
+      'The /api/v2/plugins response is missing its pagination metadata',
+    )
+    const plugins = [...first.plugins]
+    let attemptError = null
+    for (let page = 2; page <= first.totalPages; page += 1) {
+      const response = await fetchImplementation(v2PageUrl(base, sort, page))
+      if (!response.ok) {
+        attemptError = new Error(`GET ${base}/api/v2/plugins page ${page} failed: HTTP ${response.status}`)
+        break
+      }
+      const body = JSON.parse(await response.text())
+      if (!isObject(body) || !Array.isArray(body.plugins) || body.generatedAt !== first.generatedAt) {
+        attemptError = new Error('The catalog snapshot rotated while paging /api/v2/plugins; the sweep was inconsistent')
+        break
+      }
+      plugins.push(...body.plugins)
+    }
+    if (attemptError === null) {
+      const ids = new Set(plugins.map(plugin => (isObject(plugin) ? plugin.id : undefined)))
+      if (plugins.length === first.total && ids.size === plugins.length) {
+        return normalizeRegistry({ updated: first.generatedAt, plugins })
+      }
+      attemptError = new Error('The /api/v2/plugins sweep did not add up to the advertised catalog total')
+    }
+    lastError = attemptError
+  }
+  throw lastError
+}
+
 export async function loadRegistry(options = {}) {
   if (options.fromFile !== undefined) {
     return detectRegistryShape(JSON.parse(await readFile(options.fromFile, 'utf8')))
   }
   const fetchImplementation = options.fetchImplementation ?? globalThis.fetch
   const base = (options.base ?? defaultBase).replace(/\/+$/, '')
+  const paged = await loadPagedCatalog(fetchImplementation, base, options.retryDelayMs)
+  if (paged !== null) return paged
+  // v2 not deployed yet: the original bootstrap chain. normalizeRegistry
+  // refuses a capped registry response (total larger than the entries served)
+  // instead of silently shrinking the README to the cap.
   const registryResponse = await fetchImplementation(`${base}/api/v1/registry`)
   if (registryResponse.ok) {
     return normalizeRegistry(JSON.parse(await registryResponse.text()))
@@ -332,7 +414,7 @@ ${generatedNotice.zh}
 
 面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（\`dsh\`）生态的社区插件目录，共收录 **${total}** 个插件（含 PR 收录与 GitHub \`dsh-plugin\` topic 自动发现），目录数据更新于 ${registry.updated}。
 
-**但这个仓库不只是一份 awesome list。** 维护这份目录所需要的全部基建都在这里开源：一个在线插件市场、一个把市场装进 \`dsh\` 本体的插件、一条定时自动收集并做格式校验的目录流水线，以及一套免费的公开查询 API。代码采用 MIT 协议，fork 之后就能部署成你自己的插件市场。
+**但这个仓库不只是一份 awesome list。** 这里开源了一个在线插件市场、一个把市场装进 \`dsh\` 本体的插件、经静态校验的 PR 收录流水线，以及一套免费的公开查询 API；目录数据另有自动收集服务持续喂入。代码采用 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
 ${heroImage(registry, 'zh')}
 
@@ -364,11 +446,11 @@ dsh plugin --profile web add dsh1024@latest
 
 这是本目录与多数插件市场最大的区别：**目录不靠人肉维护，收录前一定过校验。**
 
-- **定时收集**：Cloudflare Cron 每 30 分钟做一次增量扫描，用 \`created:\` 与 \`pushed:\` 两路搜索抓取带 \`dsh-plugin\` topic 的 GitHub 仓库；每周日再做一次全量对账，长期不活跃的仓库不会被漏收，掉了 topic 也只在一次成功的全量扫描后才下架。
+- **定时收集**：自动收录带 \`dsh-plugin\` topic 的 GitHub 仓库，增量抓取新建与新推送的仓库，并定期全量对账——长期不活跃的仓库不会被漏收，掉了 topic 也只在一次成功的全量对账后才下架。
 - **格式校验**：每个候选仓库都要通过静态校验——读取默认分支的 Git tree，检查 \`package.json\`、\`dsh.bundle.patch\` 字段，以及 patch 文件在同一棵 tree 中确实存在。**全程只读文件，绝不安装依赖、绝不执行仓库代码。** 校验不通过就不进目录。
 - **自动同步**：PR 合并后由 CI 自动同步目录到网站数据库并刷新本 README，贡献者和维护者都不需要手工改任何生成文件。
 
-调度节奏、GitHub API 限额与失败行为见 [插件发现运维文档](docs/plugin-discovery.md)。
+数据来源与校验语义见 [目录数据来源文档](docs/plugin-discovery.md)。
 
 ### 免费查询 API
 
@@ -378,7 +460,7 @@ dsh plugin --profile web add dsh1024@latest
 curl 'https://api.deepseek1024.com/v1/plugins/search?q=memory'
 \`\`\`
 
-匿名调用每天 50 次、每分钟 10 次；用 GitHub 账号登录网站创建 API Key 后提升到每天 500 次、每分钟 30 次。另有 \`/api/v1/registry\` 返回全量目录快照——本 README 就是由它生成的。完整端点、参数与错误码见 [API 参考](docs/api.md)。
+匿名调用每天 50 次、每分钟 10 次；用 GitHub 账号登录网站创建 API Key 后提升到每天 500 次、每分钟 30 次。另有 \`/api/v1/registry\` 返回按安装热度排序的精简目录快照（至多 500 条）。完整端点、参数与错误码见 [API 参考](docs/api.md)。
 
 ## 参与进来
 
@@ -429,7 +511,7 @@ npx skills add imsai-sh/awesome-deepseek-harness-plugins --skill submit-dsh-plug
 
 ## 项目定位
 
-本项目与 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 都服务于 DeepSeek Harness 插件生态。在继承其目录数据与社区整理思路的基础上，本项目把「一份人工维护的列表」扩展成一套开源、可自部署的插件市场基建：自动发现与静态校验的目录流水线、在线市场网站、dsh 内置市场插件与免费查询 API，具体见上文[项目亮点](#项目亮点)。
+本项目与 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 都服务于 DeepSeek Harness 插件生态。在继承其目录数据与社区整理思路的基础上，本项目把「一份人工维护的列表」扩展成一套开源、可自部署的插件市场基建：在线市场网站、dsh 内置市场插件、静态校验的 PR 收录流水线与免费查询 API，并由自动收集服务持续补充目录数据，具体见上文[项目亮点](#项目亮点)。
 
 ## 项目结构
 
@@ -438,7 +520,7 @@ catalog/plugins/    插件提交表单与 curated 元数据（每个插件一个
 catalog/categories.json  分类定义（唯一分类信源）
 skills/             面向贡献者的可安装 Agent Skills
 apps/web/src/       React + Vite 前端
-apps/web/worker/    Cloudflare Worker API 与数据刷新（唯一读写 D1 的进程）
+apps/web/worker/    Cloudflare Worker API 与数据刷新
 packages/dsh1024/   dsh1024 npm 包：上报安装统计的包装 CLI + DSH 设置页内插件市场
 scripts/            提交审查、目录同步与 README 生成脚本
 \`\`\`
@@ -471,7 +553,7 @@ npx wrangler d1 migrations apply dsh-store-star-history --remote
 npx wrangler deploy --secrets-file .dev.vars
 \`\`\`
 
-\`wrangler.jsonc\` 已声明 KV、D1、Durable Object、Cron 定时任务和静态资源配置。生产环境要先执行 \`npm run db:migrate:remote\`，再部署 Worker；完整顺序、GitHub API 限额和费用估算见 [Cloudflare 插件发现运维文档](docs/plugin-discovery.md)，公开 API 见 [API 参考](docs/api.md)。请勿提交 \`.dev.vars\`。
+\`wrangler.jsonc\` 已声明 KV、D1、Durable Object 和静态资源配置。生产环境要先执行 \`npm run db:migrate:remote\`，再部署 Worker；完整顺序见 [目录数据来源文档](docs/plugin-discovery.md)，公开 API 见 [API 参考](docs/api.md)。请勿提交 \`.dev.vars\`。
 
 ## 致谢
 
@@ -512,7 +594,7 @@ ${generatedNotice.en}
 
 The **DSH 1024Store** community catalog for [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) plugins: **${total}** plugins, updated ${registry.updated}.
 
-**This repository is more than an awesome list.** Everything needed to run the catalog is open source here: a hosted plugin marketplace, a plugin that puts that marketplace inside \`dsh\` itself, a scheduled discovery pipeline that validates every entry, and a free public query API. The code is MIT licensed, so you can fork it and run your own marketplace.
+**This repository is more than an awesome list.** It open-sources a hosted plugin marketplace, a plugin that puts that marketplace inside \`dsh\` itself, a statically validated PR submission pipeline, and a free public query API; an automated collection service feeds the catalog alongside them. The code is MIT licensed, so you can fork it and run your own marketplace.
 
 ${heroImage(registry, 'en')}
 
@@ -524,8 +606,8 @@ ${heroImage(registry, 'en')}
 
 - **Hosted plugin marketplace, one fork away.** [deepseek1024.com](https://deepseek1024.com/) offers search, category filters, install rankings, plugin detail pages, and GitHub activity data on Cloudflare Workers + D1 + KV ([\`apps/web\`](../apps/web)). To self-host: fork the repository, point \`routes\` in \`apps/web/wrangler.jsonc\` at your own domain, create the D1 database and KV namespace, set the Worker secrets listed under \`secrets.required\`, and add \`CLOUDFLARE_API_TOKEN\` and \`CLOUDFLARE_ACCOUNT_ID\` as repository secrets. From then on every push to \`main\` runs the D1 migrations and deploys the Worker for you.
 - **The marketplace as a \`dsh\` plugin.** \`dsh plugin --profile web add dsh1024@latest\` installs or upgrades a **1024 Store** entry in Settings and a **1024 Store (count)** tab under Settings → Plugins, with search, filters, installed-state detection, install, and uninstall ([\`packages/dsh1024\`](../packages/dsh1024)).
-- **Scheduled collection with format validation.** Cron scans GitHub for \`dsh-plugin\` topic repositories every 30 minutes and reconciles the full set weekly. Every candidate is statically validated — the default-branch Git tree, \`package.json\`, \`dsh.bundle.patch\`, and the patch blob must exist — by reading files only, never installing dependencies or executing repository code ([\`docs/plugin-discovery.md\`](../docs/plugin-discovery.md)).
-- **Free query API.** \`curl 'https://api.deepseek1024.com/v1/plugins/search?q=memory'\` works anonymously at 50 requests/day (10/minute); a GitHub-login API key raises that to 500/day (30/minute). \`/api/v1/registry\` returns the full catalog snapshot that generates this file ([\`docs/api.md\`](../docs/api.md)).
+- **Scheduled collection with format validation.** GitHub repositories carrying the \`dsh-plugin\` topic are collected automatically and periodically reconciled against the full set. Every candidate is statically validated — the default-branch Git tree, \`package.json\`, \`dsh.bundle.patch\`, and the patch blob must exist — by reading files only, never installing dependencies or executing repository code ([\`docs/plugin-discovery.md\`](../docs/plugin-discovery.md)).
+- **Free query API.** \`curl 'https://api.deepseek1024.com/v1/plugins/search?q=memory'\` works anonymously at 50 requests/day (10/minute); a GitHub-login API key raises that to 500/day (30/minute). \`/api/v1/registry\` serves a compact, install-ranked snapshot of the catalog (at most 500 entries) — see [\`docs/api.md\`](../docs/api.md).
 
 ## Get involved
 
@@ -591,8 +673,9 @@ function usage() {
   return `Usage: npm run readme:build [-- options]
 
 Regenerates README.md (Chinese) and catalog/README.md (English) from the full
-DSH 1024Store catalog: GET <base>/api/v1/registry, falling back to the legacy
-<base>/plugins.json shape when the v1 endpoint is not deployed yet.
+DSH 1024Store catalog: paged GET <base>/api/v2/plugins sweeps, falling back to
+the uncapped-era <base>/api/v1/registry and then the legacy <base>/plugins.json
+shape when newer endpoints are not deployed yet.
 
 Options:
   --base <url>        Catalog API origin (default: ${defaultBase})

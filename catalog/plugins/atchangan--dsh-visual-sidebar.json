@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ATchangan/dsh-visual-sidebar",
+  "name": "dsh-visual-sidebar",
+  "repository": "https://github.com/ATchangan/dsh-visual-sidebar",
+  "category": "tools",
+  "description": {
+    "en": "A visual right sidebar for DeepSeek Harness Web: cross-session overview, compare, insights, context composition and a reusable collection.",
+    "zh": "面向 DeepSeek Harness Web 的右侧可视化侧边栏: 跨会话总览、对比、洞察、上下文构成与可复用收藏库。"
+  },
+  "added": "2026-08-25"
+}

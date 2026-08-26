@@ -2,6 +2,7 @@
   "name": "dsh-1024store-catalog",
   "updated": "2026-08-14T12:00:00Z",
   "count": 9,
+  "total": 9,
   "firstCategory": {
     "id": "ui",
     "order": 10,

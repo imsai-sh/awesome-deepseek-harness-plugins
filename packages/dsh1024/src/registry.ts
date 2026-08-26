@@ -28,6 +28,12 @@ export interface Registry {
   name: string
   updated: string
   count: number
+  /**
+   * Full catalog size; absent on older registry responses. The API caps
+   * `plugins` at an install-ranked head of the catalog, so `count` only says
+   * how many entries were served — this is the number the store can display.
+   */
+  total?: number
   categories: RegistryCategory[]
   plugins: RegistryPlugin[]
 }
@@ -133,7 +139,13 @@ export function validateRegistry(value: unknown): Registry {
         : '<malformed>')
     console.warn(`[dsh1024] skipped ${skipped} invalid registry entr${skipped === 1 ? 'y' : 'ies'}: ${skippedIds.slice(0, 10).join(', ')}${skippedIds.length > 10 ? ', …' : ''}`)
   }
-  return { ...registry, count: plugins.length, plugins } as unknown as Registry
+  const validated = { ...registry, count: plugins.length, plugins } as unknown as Registry
+  // The additive full-catalog size is display-only and survives validation
+  // only as a sane number; anything else is dropped rather than trusted.
+  if (!(typeof validated.total === 'number' && Number.isInteger(validated.total) && validated.total >= 0)) {
+    delete validated.total
+  }
+  return validated
 }
 
 /**

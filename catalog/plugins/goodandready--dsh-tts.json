@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-tts",
+  "name": "dsh-tts",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-tts",
+  "category": "tools",
+  "description": {
+    "en": "Speaks agent replies in the web UI through a provider fallback chain (OpenAI, ElevenLabs, Google, Azure, Groq, Deepgram, OpenRouter, Edge, Piper, eSpeak).",
+    "zh": "在 Web UI 中朗读智能体回复，支持服务商回退链（OpenAI、ElevenLabs、Google、Azure、Groq、Deepgram、OpenRouter、Edge、Piper、eSpeak）。"
+  },
+  "added": "2026-08-24"
+}

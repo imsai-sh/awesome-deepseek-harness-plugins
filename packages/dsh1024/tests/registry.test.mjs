@@ -38,6 +38,22 @@ test('compact v1 registry response is accepted as the installation allowlist', (
   assert.deepEqual(validated.categories[0], { id: 'tools', order: 1, label: { en: 'Tools', zh: '工具' } })
   assert.equal(validated.plugins[0]?.stars, 42)
   assert.equal(validated.plugins[0]?.id, 'owner/repo')
+  assert.equal(validated.total, undefined)
+})
+
+test('a capped registry passes validation with the catalog size preserved', () => {
+  // The API caps `plugins` at a star-ranked head of the catalog: `count` still
+  // has to match the served array, while `total` carries the full catalog size.
+  const validated = validateRegistry({ ...registry, total: 9000 })
+  assert.equal(validated.count, 1)
+  assert.equal(validated.total, 9000)
+})
+
+test('a malformed catalog size is dropped instead of trusted', () => {
+  for (const total of ['9000', -1, 1.5, Number.NaN, null, {}]) {
+    const validated = validateRegistry({ ...registry, total })
+    assert.equal(validated.total, undefined, `total ${String(total)} must be dropped`)
+  }
 })
 
 test('registry loading reuses fresh API data without reporting an outage', async () => {

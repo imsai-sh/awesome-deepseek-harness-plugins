@@ -64,7 +64,9 @@
     }
   ],
   "triggers": {
-    // Collection schedules are intentionally disabled for this Worker.
+    // Explicitly empty, not omitted: deploying with no `crons` key would LEAVE
+    // any previously deployed Cron Triggers in place, and this Worker no longer
+    // exports a scheduled() handler. Collection does not run in this Worker.
     "crons": []
   },
   "limits": {

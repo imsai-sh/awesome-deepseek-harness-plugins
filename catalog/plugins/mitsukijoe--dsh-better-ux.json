@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MitsukiJoe/dsh-better-ux",
+  "name": "dsh-better-ux",
+  "repository": "https://github.com/MitsukiJoe/dsh-better-ux",
+  "category": "ui",
+  "description": {
+    "en": "Web UX kit for DeepSeek Harness with hover session-row rename/fork/archive icons and a large model-picker overlay.",
+    "zh": "DeepSeek Harness 网页交互体验套件：会话行悬停显示重命名/分叉/归档，以及带搜索、供应商筛选和底部思考档位的大浮层模型选择器。"
+  },
+  "added": "2026-08-24"
+}

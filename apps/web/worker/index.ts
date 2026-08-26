@@ -2,11 +2,7 @@ import { createApp } from './app'
 import { LIVE_STATS_API_PATH } from './api-paths'
 import { browserRevalidated, edgeCacheKey, isStorable, notModifiedFor, tagged } from './lib/edge-cache'
 import { communityPostMetadata } from './community/metadata'
-import { cleanupExpiredAuthRows } from './lib/auth'
-import { loadCatalogSnapshot, runScheduledCatalogRefresh } from './lib/catalog-store'
-import { runNpmRefreshTask } from './lib/npm-refresh-task'
-import { runPluginClassifyTask } from './lib/plugin-classify-task'
-import { runPluginDiscoveryTask } from './lib/plugin-discovery-task'
+import { loadCatalogSnapshot } from './lib/catalog-store'
 import { isPublicApiHost, publicApiNotFound, rewritePublicApiUrl, wwwRedirect } from './public-api'
 import {
   collectionQueryKind,
@@ -17,10 +13,6 @@ import {
 } from './seo'
 
 const STATS_OBJECT_NAME = 'global'
-const INCREMENTAL_DISCOVERY_CRONS = new Set(['7 * * * *', '37 * * * *'])
-const FULL_DISCOVERY_CRON = '17 3 * * SUN'
-const CLASSIFY_CRON = '2,12,22,32,42,52 * * * *'
-const NPM_REFRESH_CRON = '*/5 * * * *'
 const app = createApp()
 
 function isWorkerRoute(pathname: string): boolean {
@@ -90,8 +82,8 @@ function route(
       return new Response(null, { status: 404, headers: { 'Cache-Control': 'no-store' } })
     }
     if (!isHtml) return response
-    // A KV read, fresh or stale — the cron triggers own the rebuild, so SSR
-    // metadata never starts one and never blocks on one.
+    // A KV read, fresh or stale — the catalog-sync endpoint owns the rebuild,
+    // so SSR metadata never starts one and never blocks on one.
     const catalog = await loadCatalogSnapshot(env, ctx)
     const seo = seoCatalog(catalog.snapshot, catalog.source === 'empty')
     // A repository-level address whose plugin now lives in a subdirectory
@@ -138,62 +130,8 @@ const worker = {
     // the 304 this particular caller happens to be entitled to.
     return browserRevalidated(notModifiedFor(request, response) ?? tagged(response, 'miss'))
   },
-  scheduled(controller, env, ctx) {
-    if (controller.cron === FULL_DISCOVERY_CRON) {
-      ctx.waitUntil(runPluginDiscoveryTask(env, 'full', controller.scheduledTime).then(logDiscovery))
-      ctx.waitUntil(cleanupExpiredAuthRows(env.CATALOG_DB, controller.scheduledTime).catch((error) => {
-        console.error(JSON.stringify({
-          message: 'auth_cleanup_failed',
-          error: error instanceof Error ? error.message : String(error),
-        }))
-      }))
-      return
-    }
-    if (INCREMENTAL_DISCOVERY_CRONS.has(controller.cron)) {
-      ctx.waitUntil(runPluginDiscoveryTask(env, undefined, controller.scheduledTime).then(logDiscovery))
-      return
-    }
-    if (controller.cron === CLASSIFY_CRON) {
-      ctx.waitUntil(runPluginClassifyTask(env, controller.scheduledTime)
-        .then(logClassify)
-        .catch((error) => {
-          console.error(JSON.stringify({
-            message: 'plugin_classify_failed',
-            error: error instanceof Error ? error.message : String(error),
-          }))
-        }))
-      return
-    }
-    if (controller.cron === NPM_REFRESH_CRON) {
-      ctx.waitUntil(runNpmRefreshTask(env, controller.scheduledTime)
-        .then(logNpmRefresh)
-        .catch((error) => {
-          console.error(JSON.stringify({
-            message: 'npm_refresh_failed',
-            error: error instanceof Error ? error.message : String(error),
-          }))
-        }))
-      return
-    }
-    ctx.waitUntil(runScheduledCatalogRefresh(env, controller.scheduledTime))
-  },
 } satisfies ExportedHandler<Env>
 
 export { createApp } from './app'
 export { LiveStats } from './live-stats'
 export default worker
-
-function logClassify(result: Awaited<ReturnType<typeof runPluginClassifyTask>>): void {
-  if (result.processed === 0 && !result.budgetExhausted) return
-  console.log(JSON.stringify({ message: 'plugin_classify', ...result }))
-}
-
-function logDiscovery(result: Awaited<ReturnType<typeof runPluginDiscoveryTask>>): void {
-  console.log(JSON.stringify({ message: 'plugin_discovery_completed', ...result }))
-}
-
-function logNpmRefresh(result: Awaited<ReturnType<typeof runNpmRefreshTask>>): void {
-  // A tick that only saw 304s changed nothing; keep the log for the ones that did.
-  if (result.found + result.absent + result.errors + result.downloadsChecked === 0) return
-  console.log(JSON.stringify({ message: 'npm_refresh', ...result }))
-}

@@ -730,12 +730,14 @@ exports.apply = function apply(ctx) {
   fetch('/dsh1024/registry', { cache: 'no-store' })
     .then(responseJson)
     .then(({ status, body }) => {
-      if (status === 200 && body.registry) publishCatalogCount(body.registry.count)
+      // `total` is the full catalog size; the capped API serves at most an
+      // install-ranked head of it in `plugins`, which is all `count` measures.
+      if (status === 200 && body.registry) publishCatalogCount(body.registry.total ?? body.registry.count)
       if (status !== 200 || body.source !== 'cache') return null
       return fetch('/dsh1024/registry?revalidate=1', { cache: 'no-store' })
         .then(responseJson)
         .then(({ status: refreshStatus, body: refreshBody }) => {
-          if (refreshStatus === 200 && refreshBody.registry) publishCatalogCount(refreshBody.registry.count)
+          if (refreshStatus === 200 && refreshBody.registry) publishCatalogCount(refreshBody.registry.total ?? refreshBody.registry.count)
         })
     })
     .catch(() => {})

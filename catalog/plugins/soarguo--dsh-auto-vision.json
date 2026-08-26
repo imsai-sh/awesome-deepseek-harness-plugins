@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "soarguo/dsh-auto-vision",
+  "name": "dsh-auto-vision",
+  "repository": "https://github.com/soarguo/dsh-auto-vision",
+  "category": "model",
+  "description": {
+    "en": "Bridges images into text for non-vision DSH models: pasted screenshots (and images inside tool results) are described by a configurable vision model and stored as folded context rows, keeping the user message untouched. Auto-declares image input on configured models for zero manual setup.",
+    "zh": "为不支持图片的模型桥接识图：粘贴的截图（含工具结果内嵌图片）由配置的视觉模型识别，描述以折叠上下文条目写入会话历史，用户消息保持原样；自动为已配置模型补 image 输入声明，零手动配置。"
+  },
+  "added": "2026-08-24"
+}

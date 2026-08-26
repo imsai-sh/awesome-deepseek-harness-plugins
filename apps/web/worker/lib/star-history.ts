@@ -218,12 +218,3 @@ export async function loadStarGrowth(
     }),
   )
 }
-
-export async function updateStarHistory(
-  db: D1Database,
-  plugins: CatalogPlugin[],
-  capturedAt: number,
-): Promise<Map<string, StarGrowth>> {
-  await recordStarSnapshots(db, plugins, capturedAt)
-  return loadStarGrowth(db, plugins, capturedAt)
-}

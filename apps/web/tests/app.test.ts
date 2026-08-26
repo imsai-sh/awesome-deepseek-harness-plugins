@@ -555,12 +555,14 @@ describe('market API', () => {
       name: string
       updated: string
       count: number
+      total: number
       categories: Array<{ id: string; order: number; label: { en: string; zh: string } }>
       plugins: Array<Record<string, unknown>>
     }
     expect(body.name).toBe('dsh-1024store-catalog')
     expect(body.updated).toBe(testCatalogResult().snapshot.generatedAt)
     expect(body.count).toBe(TEST_PLUGINS.length)
+    expect(body.total).toBe(TEST_PLUGINS.length)
     expect(body.plugins).toHaveLength(body.count)
     expect(body.categories[0]).toEqual({
       id: 'ui',
@@ -590,6 +592,46 @@ describe('market API', () => {
       target: 'github:MAXeaglet/dsh-bash-terminal',
       allowBuild: null,
     })
+  })
+
+  it('caps the registry at its install-ranked head while reporting the full catalog size', async () => {
+    // 600 plugins: the first 300 were never installed (their stars ascend with
+    // the index), the last 300 all have recorded installs but zero stars. The
+    // cap must keep every installed entry — even though they are the
+    // lowest-star plugins in the catalog — and backfill the remaining 200
+    // seats with the highest-star never-installed entries, all in snapshot
+    // order rather than a sorted one.
+    const template = TEST_PLUGINS[0]!
+    const result = testCatalogResult()
+    result.snapshot.plugins = Array.from({ length: 600 }, (_, index) => ({
+      ...template,
+      id: `capowner/plugin-${String(index).padStart(3, '0')}`,
+      name: `plugin-${String(index).padStart(3, '0')}`,
+      owner: 'capowner',
+      url: `https://github.com/capowner/plugin-${String(index).padStart(3, '0')}`,
+      installCount: index < 300 ? 0 : index,
+      installerCount: 0,
+      stars: index < 300 ? index : 0,
+    }))
+    const app = createApp({ catalogLoader: vi.fn(async () => result) })
+
+    const response = await app.request('/api/v1/registry')
+    const body = (await response.json()) as {
+      count: number
+      total: number
+      plugins: Array<{ id: string; stars: number }>
+    }
+
+    expect(body.count).toBe(500)
+    expect(body.total).toBe(600)
+    expect(body.plugins).toHaveLength(500)
+    // The frozen dsh1024 validator requires count === plugins.length.
+    expect(body.count).toBe(body.plugins.length)
+    // Installed entries 300–599 all survive; the 200 backfill seats go to the
+    // highest-star never-installed entries 100–299; snapshot order throughout.
+    expect(body.plugins.map((plugin) => plugin.id)).toEqual(
+      result.snapshot.plugins.slice(100).map((plugin) => plugin.id),
+    )
   })
 
   it('projects a structured npm preference for the in-app installer', async () => {

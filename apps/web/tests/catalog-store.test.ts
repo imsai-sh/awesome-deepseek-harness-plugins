@@ -185,7 +185,7 @@ describe('catalog snapshot storage', () => {
     // The rebuild a read used to schedule was per request and undeduplicated, so
     // a traffic spike arriving on a stale snapshot turned every request into a
     // full catalog rebuild until D1 reported itself overloaded. A read answers
-    // from KV now; the cron triggers own the rebuild.
+    // from KV now; the catalog-sync endpoint owns the rebuild.
     const stale = {
       ...testCatalogResult().snapshot,
       generatedAt: '2026-08-14T00:00:00.000Z',

@@ -6,11 +6,11 @@ import type {
   StoredCatalogSnapshot,
 } from '../types'
 import { categoryLabelMap } from './categories'
-import { loadCatalogSnapshotFromD1, saveCatalogMetrics } from './catalog-db'
-import { fetchGitHubMetrics, metricKey } from './github-metrics'
+import { repositoryName } from './catalog'
+import { loadCatalogSnapshotFromD1 } from './catalog-db'
 import { normalizePluginId } from './plugin-id'
 import { emptyInstallMetrics, loadInstallMetrics } from './install-metrics'
-import { updateStarHistory } from './star-history'
+import { loadStarGrowth } from './star-history'
 
 // v10 drops npm download metrics from repositories that do not own the
 // published package. Starting with a fresh key prevents an old v9 snapshot
@@ -104,6 +104,11 @@ function installMetricKey(plugin: Pick<CatalogPlugin, 'id'>): string {
   return normalizePluginId(plugin.id)
 }
 
+/** Repository facts are shared by monorepo siblings, so carry-over and growth key by repository. */
+function metricKey(plugin: Pick<CatalogPlugin, 'owner' | 'name' | 'url'>): string {
+  return `${plugin.owner}/${repositoryName(plugin)}`.toLocaleLowerCase()
+}
+
 function installMetricsFrom(plugin: CatalogPlugin): InstallMetrics {
   return {
     installCount: plugin.installCount,
@@ -144,7 +149,7 @@ function emptyCatalogSnapshot(capturedAt: number): StoredCatalogSnapshot {
 
 export async function refreshCatalogSnapshot(
   env: Env,
-  fetcher: typeof fetch = fetch,
+  _fetcher: typeof fetch = fetch,
   capturedAt: number = Date.now(),
 ): Promise<CatalogSnapshotResult> {
   const previousSnapshot = await readStoredSnapshot(env)
@@ -153,8 +158,12 @@ export async function refreshCatalogSnapshot(
       const generatedAt = new Date(capturedAt).toISOString()
       const d1Snapshot = await loadCatalogSnapshotFromD1(env.CATALOG_DB, generatedAt)
       if (d1Snapshot) {
-        const token = env.GITHUB_TOKEN?.trim() || undefined
-        const metrics = await fetchGitHubMetrics(d1Snapshot.plugins, token, fetcher)
+        // The rebuild never talks to GitHub. Stars, forks and push dates are
+        // collector-owned D1 columns, and growth comes from the
+        // collector-maintained star history — a request-sized amount of work.
+        // The GraphQL sweep this used to run grew with the catalog until a
+        // synchronous rebuild could no longer finish inside a request.
+        //
         // Two maps, because the two kinds of carry-over have different keys:
         // repository facts are shared by monorepo siblings, install metrics are
         // per plugin and would otherwise be inherited from whichever sibling
@@ -166,27 +175,24 @@ export async function refreshCatalogSnapshot(
           previousSnapshot?.plugins.map((plugin) => [installMetricKey(plugin), plugin]) ?? [],
         )
         let plugins = d1Snapshot.plugins.map((plugin) => {
-          const metric = metrics.get(metricKey(plugin))
           const previous = previousByRepository.get(metricKey(plugin))
           const previousPlugin = previousByPlugin.get(installMetricKey(plugin))
           return {
             ...plugin,
             ...(previousPlugin ? installMetricsFrom(previousPlugin) : emptyInstallMetrics()),
-            stars: metric?.stars ?? plugin.stars ?? previous?.stars ?? null,
-            forks: metric?.forks ?? plugin.forks ?? previous?.forks ?? null,
-            pushedAt: metric?.pushedAt ?? plugin.pushedAt ?? previous?.pushedAt ?? null,
-            updatedAt: metric?.updatedAt ?? plugin.updatedAt ?? previous?.updatedAt ?? null,
-            latestReleaseAt: metric?.latestReleaseAt ?? previous?.latestReleaseAt ?? null,
+            stars: plugin.stars ?? previous?.stars ?? null,
+            forks: plugin.forks ?? previous?.forks ?? null,
+            pushedAt: plugin.pushedAt ?? previous?.pushedAt ?? null,
+            updatedAt: plugin.updatedAt ?? previous?.updatedAt ?? null,
+            latestReleaseAt: previous?.latestReleaseAt ?? null,
             growth24h: previous?.growth24h ?? null,
             growth7d: previous?.growth7d ?? null,
             growth30d: previous?.growth30d ?? null,
           }
         })
-        const freshPlugins = plugins.filter((plugin) => metrics.has(metricKey(plugin)))
-        await saveCatalogMetrics(env.CATALOG_DB, freshPlugins, generatedAt)
         const tracked = plugins.filter((plugin) => plugin.stars !== null)
         if (tracked.length > 0 && env.CATALOG_DB) {
-          const growth = await updateStarHistory(env.CATALOG_DB, tracked, capturedAt)
+          const growth = await loadStarGrowth(env.CATALOG_DB, tracked, capturedAt)
           plugins = plugins.map((plugin) => ({
             ...plugin,
             ...(growth.get(metricKey(plugin)) ?? {}),
@@ -246,7 +252,8 @@ function coldStartSnapshot(env: Env, fetcher: typeof fetch): Promise<CatalogSnap
 /**
  * Read the snapshot. Reading never rebuilds it.
  *
- * The cron triggers own the rebuild. A read used to start one too — inline when
+ * POST /api/v1/catalog/sync owns the rebuild (plus the cold-start path above
+ * for an empty namespace). A read used to start one too — inline when
  * the snapshot was missing, via `ctx.waitUntil` when it was merely stale — and
  * nothing deduplicated those: one per request, each a full catalog read out of
  * D1, a GitHub GraphQL sweep, then batched writes back. That is affordable at
@@ -276,23 +283,3 @@ export async function loadCatalogSnapshot(
   return coldStartSnapshot(env, fetcher)
 }
 
-export async function runScheduledCatalogRefresh(
-  env: Env,
-  capturedAt: number = Date.now(),
-): Promise<void> {
-  try {
-    const result = await refreshCatalogSnapshot(env, fetch, capturedAt)
-    console.log(
-      JSON.stringify({
-        message: 'catalog_refresh_completed',
-        source: result.source,
-        plugins: result.snapshot.plugins.length,
-        metricCoverage: result.snapshot.metricCoverage,
-        generatedAt: result.snapshot.generatedAt,
-      }),
-    )
-  } catch (error) {
-    logRefreshError(error)
-    throw error
-  }
-}

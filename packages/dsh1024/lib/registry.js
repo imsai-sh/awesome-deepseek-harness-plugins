@@ -94,7 +94,13 @@ export function validateRegistry(value) {
             : '<malformed>');
         console.warn(`[dsh1024] skipped ${skipped} invalid registry entr${skipped === 1 ? 'y' : 'ies'}: ${skippedIds.slice(0, 10).join(', ')}${skippedIds.length > 10 ? ', …' : ''}`);
     }
-    return { ...registry, count: plugins.length, plugins };
+    const validated = { ...registry, count: plugins.length, plugins };
+    // The additive full-catalog size is display-only and survives validation
+    // only as a sane number; anything else is dropped rather than trusted.
+    if (!(typeof validated.total === 'number' && Number.isInteger(validated.total) && validated.total >= 0)) {
+        delete validated.total;
+    }
+    return validated;
 }
 /**
  * Parse the only repository URL form accepted by the installer.

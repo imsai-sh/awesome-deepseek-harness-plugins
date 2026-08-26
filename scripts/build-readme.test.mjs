@@ -457,40 +457,184 @@ test('adapts the legacy /plugins.json shape', () => {
   assert.equal(adapted.plugins[0].stars, null)
 })
 
-test('falls back to the legacy endpoint when the v1 registry returns 404', async () => {
+function jsonResponse(body) {
+  return { ok: true, status: 200, async text() { return JSON.stringify(body) } }
+}
+
+function notFoundResponse() {
+  return { ok: false, status: 404, async text() { return 'not found' } }
+}
+
+test('pages through /api/v2/plugins and stitches the sweep into one registry', async () => {
+  const entries = bucketPlugins('tools', 3, 0, 'paged')
   const requested = []
   const registry = await loadRegistry({
     base: 'https://example.test/',
+    retryDelayMs: 0,
     async fetchImplementation(url) {
       requested.push(url)
-      if (url.endsWith('/api/v1/registry')) {
-        return { ok: false, status: 404, async text() { return 'not found' } }
-      }
-      return {
-        ok: true,
-        status: 200,
-        async text() {
-          return JSON.stringify({
-            updated: '2026-08-15',
-            count: 0,
-            categories: {},
-            plugins: [],
-          })
-        },
-      }
+      const page = Number(new URL(url).searchParams.get('page'))
+      const slice = entries.slice((page - 1) * 2, page * 2)
+      return jsonResponse({
+        plugins: slice,
+        page,
+        limit: 2,
+        total: entries.length,
+        totalPages: 2,
+        generatedAt: '2026-08-15T12:00:00Z',
+      })
     },
   })
-  assert.deepEqual(requested, ['https://example.test/api/v1/registry', 'https://example.test/plugins.json'])
+  assert.deepEqual(requested, [
+    'https://example.test/api/v2/plugins?sort=name&limit=200&page=1',
+    'https://example.test/api/v2/plugins?sort=name&limit=200&page=2',
+  ])
+  assert.equal(registry.updated, '2026-08-15')
+  assert.deepEqual(registry.plugins.map(plugin => plugin.id), entries.map(plugin => plugin.id))
+})
+
+test('rejects a sweep whose pages come from different catalog snapshots', async () => {
+  const entries = bucketPlugins('tools', 3, 0, 'rotated')
+  const requested = []
+  await assert.rejects(loadRegistry({
+    base: 'https://example.test',
+    retryDelayMs: 0,
+    async fetchImplementation(url) {
+      requested.push(url)
+      const page = Number(new URL(url).searchParams.get('page'))
+      return jsonResponse({
+        plugins: entries.slice((page - 1) * 2, page * 2),
+        page,
+        limit: 2,
+        total: entries.length,
+        totalPages: 2,
+        // Every page reports a fresh snapshot: the sweep can never settle.
+        generatedAt: `2026-08-15T12:00:0${requested.length}Z`,
+      })
+    },
+  }), /snapshot rotated/)
+  // Three attempts of two pages each — and each retry moved to the next sort
+  // value so it keys past whatever edge-cached pages just failed the check.
+  assert.deepEqual(requested.map(url => new URL(url).searchParams.get('sort')), [
+    'name', 'name', 'active', 'active', 'newest', 'newest',
+  ])
+})
+
+test('a transient page failure retries under the next sort instead of aborting the rebuild', async () => {
+  const entries = bucketPlugins('tools', 3, 0, 'transient')
+  const requested = []
+  const registry = await loadRegistry({
+    base: 'https://example.test',
+    retryDelayMs: 0,
+    async fetchImplementation(url) {
+      requested.push(url)
+      const params = new URL(url).searchParams
+      if (params.get('sort') === 'name' && params.get('page') === '2') {
+        return { ok: false, status: 502, async text() { return 'bad gateway' } }
+      }
+      const page = Number(params.get('page'))
+      return jsonResponse({
+        plugins: entries.slice((page - 1) * 2, page * 2),
+        page,
+        limit: 2,
+        total: entries.length,
+        totalPages: 2,
+        generatedAt: '2026-08-15T12:00:00Z',
+      })
+    },
+  })
+  assert.deepEqual(registry.plugins.map(plugin => plugin.id), entries.map(plugin => plugin.id))
+  assert.deepEqual(requested.map(url => new URL(url).searchParams.get('sort')), [
+    'name', 'name', 'active', 'active',
+  ])
+})
+
+test('falls back to the legacy endpoint when neither v2 nor the v1 registry is deployed', async () => {
+  const requested = []
+  const registry = await loadRegistry({
+    base: 'https://example.test/',
+    retryDelayMs: 0,
+    async fetchImplementation(url) {
+      requested.push(url)
+      if (url.includes('/api/v2/plugins') || url.endsWith('/api/v1/registry')) {
+        return notFoundResponse()
+      }
+      return jsonResponse({
+        updated: '2026-08-15',
+        count: 0,
+        categories: {},
+        plugins: [],
+      })
+    },
+  })
+  assert.deepEqual(requested, [
+    'https://example.test/api/v2/plugins?sort=name&limit=200&page=1',
+    'https://example.test/api/v1/registry',
+    'https://example.test/plugins.json',
+  ])
   assert.deepEqual(registry, { updated: '2026-08-15', plugins: [] })
 })
 
-test('surfaces non-404 registry failures instead of silently falling back', async () => {
+test('a capped registry file is refused by --from-file instead of shrinking the README', async t => {
+  const { directory } = await fixtureRoot()
+  t.after(() => rm(directory, { recursive: true, force: true }))
+
+  const cappedFile = path.join(directory, 'capped-registry.json')
+  await writeFile(cappedFile, `${JSON.stringify({ ...registryFixture, total: 9000 })}\n`)
+  const result = spawnSync(process.execPath, [script, '--root', directory, '--from-file', cappedFile], { encoding: 'utf8' })
+  assert.equal(result.status, 1)
+  assert.match(result.stderr, /capped/)
+})
+
+test('refuses a capped v1 registry fallback instead of shrinking the README to the cap', async () => {
   await assert.rejects(loadRegistry({
     base: 'https://example.test',
+    retryDelayMs: 0,
+    async fetchImplementation(url) {
+      if (url.includes('/api/v2/plugins')) return notFoundResponse()
+      return jsonResponse({
+        name: 'dsh-1024store-catalog',
+        updated: '2026-08-15',
+        count: 2,
+        total: 9000,
+        categories: [],
+        plugins: bucketPlugins('tools', 2, 0, 'capped'),
+      })
+    },
+  }), /capped/)
+})
+
+test('accepts an uncapped v1 registry fallback from a pre-total deployment', async () => {
+  const entries = bucketPlugins('tools', 2, 0, 'legacyv1')
+  const registry = await loadRegistry({
+    base: 'https://example.test',
+    retryDelayMs: 0,
+    async fetchImplementation(url) {
+      if (url.includes('/api/v2/plugins')) return notFoundResponse()
+      return jsonResponse({
+        name: 'dsh-1024store-catalog',
+        updated: '2026-08-15',
+        count: entries.length,
+        categories: [],
+        plugins: entries,
+      })
+    },
+  })
+  assert.deepEqual(registry.plugins.map(plugin => plugin.id), entries.map(plugin => plugin.id))
+})
+
+test('surfaces persistent catalog failures instead of silently falling back', async () => {
+  let calls = 0
+  await assert.rejects(loadRegistry({
+    base: 'https://example.test',
+    retryDelayMs: 0,
     async fetchImplementation() {
+      calls += 1
       return { ok: false, status: 500, async text() { return 'boom' } }
     },
-  }), /api\/v1\/registry failed: HTTP 500/)
+  }), /api\/v2\/plugins failed: HTTP 500/)
+  // A 5xx is retried across every sort before it fails the build.
+  assert.equal(calls, 3)
 })
 
 test('writes deterministic files from --from-file and verifies them with --check', async t => {

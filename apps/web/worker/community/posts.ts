@@ -117,7 +117,14 @@ async function loadPluginRefs(
       ORDER BY pp.post_id, pp.position`,
   ).bind(...chunk).all<PluginRow>()))
 
+  // A plugin identity can be held by more than one catalog row while a
+  // repository rename settles (0013 dropped the UNIQUE constraint), so the
+  // join can repeat a chip; the first row in join order wins.
+  const seen = new Set<string>()
   for (const row of pages.flatMap((page) => page.results)) {
+    const identity = `${row.post_id}:${row.plugin_id.toLowerCase()}`
+    if (seen.has(identity)) continue
+    seen.add(identity)
     const list = byPost.get(row.post_id) ?? []
     // Curated display name first. Failing that, the in-repo subdirectory, which
     // is what distinguishes siblings in a monorepo; a repository-level plugin

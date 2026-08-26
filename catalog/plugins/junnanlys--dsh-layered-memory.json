@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "JunNanLYS/dsh-layered-memory",
+  "name": "dsh-layered-memory",
+  "repository": "https://github.com/JunNanLYS/dsh-layered-memory",
+  "category": "memory",
+  "description": {
+    "en": "Layered long-term memory ported from TencentDB-Agent-Memory's MemoryCore pipeline: conversations are auto-distilled into L1 facts, L2 scene summaries and L3 persona, then recalled and injected before each step. Hybrid retrieval (SQLite FTS5 BM25 + sqlite-vec vectors with optional local embedding models), per-session capture modes (auto/chat/work/off), recall dedupe and recency decay, settings UI with memory browser, and rebuild from the L0 raw-event source.",
+    "zh": "移植自 TencentDB-Agent-Memory MemoryCore 管线的分层长期记忆：对话自动蒸馏为 L1 事实 / L2 场景 / L3 画像三层记忆，并在每一步前召回注入。混合检索（SQLite FTS5 BM25 + sqlite-vec 向量，可选本地嵌入模型）、按会话捕获档位（auto/chat/work/off）、召回去重与时效衰减、设置页记忆浏览器、支持从 L0 原始事件全量重建。"
+  },
+  "added": "2026-08-25"
+}

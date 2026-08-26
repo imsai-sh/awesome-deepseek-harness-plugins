@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "moyuer233/dsh-deepseek-monitor",
+  "name": "dsh-deepseek-monitor",
+  "repository": "https://github.com/moyuer233/dsh-deepseek-monitor",
+  "category": "model",
+  "description": {
+    "en": "A DeepSeek Harness plugin that shows DeepSeek account balance, token usage and cost for today/month/all-time in the chat UI, with draggable panel order settings and an optional local proxy that records API usage.",
+    "zh": "DeepSeek Harness 插件，在聊天界面展示 DeepSeek 账户余额、今日/本月/累计 token 用量与费用，支持拖拽排序面板配置，并提供可选的本地代理记录 API 用量。"
+  },
+  "added": "2026-08-24"
+}

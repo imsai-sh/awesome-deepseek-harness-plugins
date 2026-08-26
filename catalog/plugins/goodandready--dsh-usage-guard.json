@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-usage-guard",
+  "name": "dsh-usage-guard",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-usage-guard",
+  "category": "session",
+  "description": {
+    "en": "Normalizes a malformed token-usage sample to zero before the harness folds session history, so an affected session does not replay as NaN.",
+    "zh": "在会话历史累加前将异常的 token 用量样本归零，使受影响的会话回放不会出现 NaN。"
+  },
+  "added": "2026-08-24"
+}

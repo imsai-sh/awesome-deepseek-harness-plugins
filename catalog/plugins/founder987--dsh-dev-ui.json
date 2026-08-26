@@ -1,0 +1,12 @@
+   {
+     "$schema": "../schema/plugin.schema.json",
+     "id": "founder987/dsh-dev-ui",
+     "name": "dsh-dev-ui",
+     "repository": "https://github.com/founder987/dsh-dev-ui",
+     "category": "ui",
+     "description": {
+       "en": "Integrated development view for DSH Desktop: workspace file tree, Monaco-based multi-tab editor, and embedded multi-session terminal panel.",
+       "zh": "DSH Desktop 一体化开发视图：工作区文件树、Monaco 多标签编辑器、多会话内嵌终端面板，支持 @文件 引用与沙箱授权保存。"
+     },
+     "added": "2026-08-25"
+   }

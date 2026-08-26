@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sunny0826/dsh-plugin-herdr",
+  "name": "dsh-plugin-herdr",
+  "repository": "https://github.com/sunny0826/dsh-plugin-herdr",
+  "category": "workflow",
+  "description": {
+    "en": "Herdr control plane for DeepSeek Harness: observe and drive a local Herdr terminal workspace manager from DSH sessions through herdr_* tools over its Unix-domain socket, with a session-scoped Herdr tab and side panel and a dedicated per-session Herdr mode.",
+    "zh": "DeepSeek Harness 的 Herdr 控制面插件：通过 Unix socket 上的 herdr_* 工具，在 DSH 会话中观察与操作本地 Herdr 终端工作区管理器，并提供会话级 Herdr 标签页/侧面板与独立的会话 Herdr 模式。"
+  },
+  "added": "2026-08-25"
+}

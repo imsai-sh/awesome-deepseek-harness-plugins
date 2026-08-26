@@ -161,6 +161,7 @@ describe('historical response contracts', () => {
       name: body.name,
       updated: body.updated,
       count: body.count,
+      total: body.total,
       firstCategory: body.categories[0],
       firstPlugin: {
         id: body.plugins[0].id,

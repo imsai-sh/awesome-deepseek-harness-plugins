@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Hoemr/dsh-quicklook",
+  "name": "dsh-quicklook",
+  "repository": "https://github.com/Hoemr/dsh-quicklook",
+  "category": "ui",
+  "description": {
+    "en": "QuickLook-style space-key preview overlay for DSH better-sidebar: press Space on the active file tab for a full-size view of images, PDFs, and text files; Space or Escape closes.",
+    "zh": "为 DSH better-sidebar 提供类 QuickLook 的空格键预览：在活动文件标签页按 Space 即可全尺寸查看图片、PDF 与文本文件，Space 或 Escape 关闭。"
+  },
+  "added": "2026-08-24"
+}

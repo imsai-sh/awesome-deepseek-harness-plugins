@@ -23,6 +23,12 @@ export interface Registry {
     name: string;
     updated: string;
     count: number;
+    /**
+     * Full catalog size; absent on older registry responses. The API caps
+     * `plugins` at an install-ranked head of the catalog, so `count` only says
+     * how many entries were served — this is the number the store can display.
+     */
+    total?: number;
     categories: RegistryCategory[];
     plugins: RegistryPlugin[];
 }

@@ -7,6 +7,7 @@
     "name": { "const": "dsh-1024store-catalog" },
     "updated": { "type": "string" },
     "count": { "type": "integer", "minimum": 0 },
+    "total": { "type": "integer", "minimum": 0 },
     "categories": {
       "type": "array",
       "items": {

@@ -31,7 +31,7 @@ import {
   loadRankings,
 } from '../lib/catalog-cache'
 import { publicAsset } from '../lib/assets'
-import { formatDateTime, formatNumber, formatRelativeUpdate } from '../lib/format'
+import { formatDateTime, formatExactNumber, formatNumber, formatRelativeUpdate } from '../lib/format'
 import { useI18n } from '../lib/i18n'
 import { useEmbedBridge } from '../lib/embedBridge'
 import { useLiveStats } from '../lib/useLiveStats'
@@ -148,7 +148,7 @@ function TallyCount({ total, language, animate }: {
   animate: boolean
 }) {
   const value = useCountUp(total, animate)
-  return <>{value === null ? '--' : formatNumber(value, language)}</>
+  return <>{value === null ? '--' : formatExactNumber(value, language)}</>
 }
 
 function CatalogUpdatedAt({ value, language }: { value: string; language: Language }) {
@@ -604,7 +604,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
               />
               {resultCount !== null && (
                 <small>
-                  {resultCount} {t(resultCount === 1 ? 'result' : 'results')}
+                  {formatExactNumber(resultCount, language)} {t(resultCount === 1 ? 'result' : 'results')}
                 </small>
               )}
             </label>
@@ -618,7 +618,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
             <Link to={catalogHref} className={!showInstalled && view === 'catalog' ? 'selected' : undefined} aria-current={!showInstalled && view === 'catalog' ? 'page' : undefined}>
               <ListFilter size={16} aria-hidden="true" />
               <span>
-                {t('catalog')}{catalogTotal !== null ? ` (${formatNumber(catalogTotal, language)})` : ''}
+                {t('catalog')}{catalogTotal !== null ? ` (${formatExactNumber(catalogTotal, language)})` : ''}
               </span>
             </Link>
             {embedded && (
@@ -630,7 +630,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
               >
                 <PackageCheck size={16} aria-hidden="true" />
                 <span>
-                  {t('installed')}{installedPluginIds !== null ? ` (${formatNumber(installedPluginIds.length, language)})` : ''}
+                  {t('installed')}{installedPluginIds !== null ? ` (${formatExactNumber(installedPluginIds.length, language)})` : ''}
                 </span>
               </button>
             )}
@@ -650,7 +650,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                 aria-pressed={!category}
               >
                 {t('allCategories')}
-                <span>{catalogTotal ?? '--'}</span>
+                <span>{catalogTotal === null ? '--' : formatExactNumber(catalogTotal, language)}</span>
               </button>
               {activeCategories.map((item) => (
                 <button
@@ -661,7 +661,7 @@ export function CatalogPage({ view }: CatalogPageProps) {
                   aria-pressed={category === item.id}
                 >
                   {item[language]}
-                  <span>{item.count}</span>
+                  <span>{formatExactNumber(item.count, language)}</span>
                 </button>
               ))}
             </div>
@@ -850,9 +850,9 @@ export function CatalogPage({ view }: CatalogPageProps) {
                       {t(loadingMore ? 'loading' : 'loadMore')}
                     </button>
                     <span className="load-more-count">
-                      {formatNumber(visiblePackages.length, language)}
+                      {formatExactNumber(visiblePackages.length, language)}
                       {' / '}
-                      {formatNumber(directoryTotal, language)}
+                      {formatExactNumber(directoryTotal, language)}
                     </span>
                   </div>
                 )}
