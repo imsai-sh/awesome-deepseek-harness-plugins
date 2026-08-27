@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Adamaik/dsh-git-sidebar",
+  "name": "dsh-git-sidebar",
+  "repository": "https://github.com/Adamaik/dsh-git-sidebar",
+  "category": "ui",
+  "description": {
+    "en": "A draggable right-side Git sidebar for DeepSeek Harness Web: follows the active workspace, lists changed files, generates commit messages with the current model, and runs commit/push/pull.",
+    "zh": "面向 DeepSeek Harness Web 的可拖拽右侧 Git 侧栏：跟随当前工作区、列出变更文件、用当前模型生成提交信息，并支持提交/推送/拉取。"
+  },
+  "added": "2026-08-27"
+}
