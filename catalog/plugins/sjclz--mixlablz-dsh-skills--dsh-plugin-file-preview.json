@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "SJCLZ/MixlabLz-dsh-skills/dsh-plugin-file-preview",
+  "name": "dsh-plugin-file-preview",
+  "repository": "https://github.com/SJCLZ/MixlabLz-dsh-skills",
+  "category": "ui",
+  "description": {
+    "en": "Project-explorer panel for DSH Desktop: pick a directory, browse its file tree, click a file to insert its path into the composer draft.",
+    "zh": "DSH Desktop 的项目文件浏览器面板：选目录、浏览文件树，点击文件把路径插入对话框草稿。"
+  },
+  "added": "2026-08-27"
+}
