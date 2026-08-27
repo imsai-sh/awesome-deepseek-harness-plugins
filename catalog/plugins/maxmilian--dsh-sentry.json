@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "maxmilian/dsh-sentry",
+  "name": "dsh-sentry",
+  "repository": "https://github.com/maxmilian/dsh-sentry",
+  "category": "dev",
+  "description": {
+    "en": "Read-only Sentry tools: project listing, issue search at organization or project scope, single issue detail, and the latest or a specific event with a trimmed stacktrace. Local variables, request headers and bodies, query strings, and secret-looking tags are removed before the event reaches the model.",
+    "zh": "面向 Sentry 的只读工具：项目列表、组织或项目范围的议题搜索、单个议题详情，以及最新或指定 event 的裁剪后堆栈。局部变量、请求头与请求体、查询字符串以及疑似机密的 tag 会在 event 交给模型前移除。"
+  },
+  "added": "2026-08-27"
+}
