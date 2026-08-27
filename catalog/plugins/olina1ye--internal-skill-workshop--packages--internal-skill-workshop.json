@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Olina1Ye/internal-skill-workshop/packages/internal-skill-workshop",
+  "name": "internal-skill-workshop",
+  "repository": "https://github.com/Olina1Ye/internal-skill-workshop",
+  "category": "skill",
+  "description": {
+    "en": "Adds an Internal Skill Workshop panel to DeepSeek Harness for browsing skills from a configured Skill Base server.",
+    "zh": "在 DeepSeek Harness 中增加 Internal Skill Workshop 面板，用于浏览配置的 Skill Base 服务中的 Skill。"
+  },
+  "added": "2026-08-27"
+}
