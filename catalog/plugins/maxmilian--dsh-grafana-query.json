@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "maxmilian/dsh-grafana-query",
+  "name": "dsh-grafana-query",
+  "repository": "https://github.com/maxmilian/dsh-grafana-query",
+  "category": "tools",
+  "description": {
+    "en": "Read-only Grafana tools: instance health, data source listing, instant and range PromQL queries through the data source proxy, current alert state, and provisioned alert rules. Range queries downsample to a point budget, and an explicit step that would exceed it is rejected rather than silently changed.",
+    "zh": "面向 Grafana 的只读工具：实例健康状态、数据源列表、经数据源代理的 instant 与 range PromQL 查询、当前告警状态与已配置的告警规则。range 查询会按点数预算降采样；显式指定的 step 若会超量则直接拒绝，而不是静默改写。"
+  },
+  "added": "2026-08-27"
+}
