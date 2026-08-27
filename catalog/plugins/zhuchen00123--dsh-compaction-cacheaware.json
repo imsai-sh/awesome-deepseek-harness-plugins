@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Zhuchen00123/dsh-compaction-cacheaware",
+  "name": "dsh-compaction-cacheaware",
+  "repository": "https://github.com/Zhuchen00123/dsh-compaction-cacheaware",
+  "category": "session",
+  "description": {
+    "en": "Reasonix-style cache-aware compaction backend for the ctx.compaction seam: a single compact_ratio trigger, one structured summary checkpoint over a stable prefix and recent tail, and a canonical transcript that normal compaction never rewrites.",
+    "zh": "Reasonix 风格缓存感知压缩后端，实现 ctx.compaction seam：唯一 compact_ratio 触发；稳定前缀 + 一条结构化 summary + recent tail 组成检查点；常规压缩永不改写 canonical transcript。"
+  },
+  "added": "2026-08-27"
+}
