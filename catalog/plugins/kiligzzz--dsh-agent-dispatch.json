@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kiligzzz/dsh-agent-dispatch",
+  "name": "dsh-agent-dispatch",
+  "repository": "https://github.com/kiligzzz/dsh-agent-dispatch",
+  "category": "tools",
+  "description": {
+    "en": "Pre-configured expert agents with automatic routing, model failover, and squad orchestration for DeepSeek Harness. Ships five model tools (expert_dispatch / expert_followup / expert_list / expert_squad / expert_import_skill), four built-in experts (requirement analyst, code reviewer, log tracer, SQL analyst), three built-in squads (dev-pipeline serial, debug-squad three-way parallel, review-squad two-way parallel), a native right-tab main panel (Overview / Agents / Squads / History), a floating action ball with eight color tones and eight-segment edge flow, a session-header back button, and a / trigger Agent menu. Subagent lifecycle events are wired for real outcome tracking; dispatches.jsonl rotates at 2000 lines.",
+    "zh": "DeepSeek Harness 预置专家 agent + 自动路由 + 小队编排插件。提供五个模型工具（expert_dispatch / expert_followup / expert_list / expert_squad / expert_import_skill），四个内置专家（需求分析师 / 代码审查员 / 线上排查员 / SQL 分析师），三个内置小队（dev-pipeline 串行 / debug-squad 三路并行 / review-squad 双路并行），原生右 tab「Agent 调度」主面板（总览 / Agent / 小队 / 历史），悬浮活动球（八种色调、八段边缘流光、透明度可调、总开关），会话头部返回按钮，`/` 触发器 Agent 候选菜单。订阅 subagent/end 事件补全真实结局，决策日志 2000 行自动轮转。"
+  },
+  "added": "2026-08-28"
+}
