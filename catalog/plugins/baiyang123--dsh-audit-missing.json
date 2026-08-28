@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "baiyang123/dsh-audit-missing",
+  "name": "dsh-audit-missing",
+  "repository": "https://github.com/baiyang123/dsh-audit-missing",
+  "category": "dev",
+  "description": {
+    "en": "Pre-commit task-omission audit for DSH: scans the current workspace for uncommitted changes, reads a design document, and dispatches a DSH subagent to compare the design document's promised points against the actual implementation, then reports missing or partially-done items; also provides a token cost analysis, cross-session audit history, and a separate client-side view.",
+    "zh": "DSH 提交前任务遗漏审核：扫描当前工作区未提交改动，读取设计文档，派 DSH subagent 将「设计文档承诺的点」与实际实现做差集比对，输出缺失/未完成项；附带 token 成本分析、跨会话审核历史与独立客户端视图。"
+  },
+  "added": "2026-08-28"
+}
