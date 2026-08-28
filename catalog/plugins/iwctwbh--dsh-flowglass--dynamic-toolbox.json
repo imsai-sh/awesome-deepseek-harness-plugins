@@ -5,8 +5,8 @@
   "repository": "https://github.com/Iwctwbh/dsh-flowglass",
   "category": "tools",
   "description": {
-    "en": "Session toolbox framework for DeepSeek Harness with a host-side tool registry and client drawer shell, bundling hot-reloadable tools for Jira, Git history, workspace files, session trace, HTTP debugging, ports, calculator, usage, prompt, context, AI assistant, search, lineage and themes.",
-    "zh": "DeepSeek Harness 会话工具箱框架：Host 工具注册表 + Client 抽屉/面板壳，内置 Jira、Git 历史、工作区文件、会话轨迹、HTTP 调试、端口、计算、用量、提示词、上下文、AI 助手、搜索、血缘与主题等可热重载工具。"
+    "en": "Native-static DeepSeek Harness toolbox bundle with a host tool registry and client drawer shell, bundling Jira, Git history, workspace files, live flowgraph, workflow editing, session trace, HTTP debugging, ports, calculator, usage, prompt and context inspection, AI assistant, tool list, search, lineage, quota, and UI self-view.",
+    "zh": "DeepSeek Harness 原生静态工具箱：提供 Host 工具注册表与 Client 抽屉/面板壳，内置 Jira、Git 历史、工作区文件、实时流镜、工作流编辑、会话轨迹、HTTP 调试、端口、计算、用量、提示词/上下文、AI 助手、工具清单、搜索、血缘、配额与界面自查。"
   },
   "added": "2026-08-19"
 }
