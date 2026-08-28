@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YYfather/dsh-token-vault",
+  "name": "dsh-token-vault",
+  "repository": "https://github.com/YYfather/dsh-token-vault",
+  "category": "security",
+  "description": {
+    "en": "Secure credential vault: store GitHub/npm/API tokens in DSH's credential store (secrets never leave the host); the agent runs gh/npm/npx/node/git with the token injected in the environment via vault_run.",
+    "zh": "凭证库：把 GitHub/npm 等令牌安全保存在 DSH 凭证库（明文不出 Host）；代理通过 vault_run 注入环境变量调用 gh/npm/npx/node/git，密钥永不进入对话或日志。"
+  },
+  "added": "2026-08-24"
+}
