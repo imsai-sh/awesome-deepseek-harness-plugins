@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hongyue0721/dsh-kimicode-swarm",
+  "name": "dsh-kimicode-swarm",
+  "repository": "https://github.com/hongyue0721/dsh-kimicode-swarm",
+  "category": "workflow",
+  "description": {
+    "en": "Kimi Code Swarm-style batch parallel subagent dispatch: a `swarm_batch` tool fans independent subtasks out to real subagents with two-stage adaptive concurrency (ramp-up plus rate-limit backoff with auto shrink/recover), an in-chat live progress stream (SSE), and `resume_agent_ids` resumable runs.",
+    "zh": "Kimi Code Swarm 风格的批量并行子 Agent 调度：`swarm_batch` 工具把互不依赖的子任务批量派发给真实子 Agent，两阶段自适应并发（爬坡 + 撞限流指数退避并自动收缩/恢复），聊天内 SSE 实时进度流，并支持 `resume_agent_ids` 断点续做。"
+  },
+  "added": "2026-08-28"
+}
