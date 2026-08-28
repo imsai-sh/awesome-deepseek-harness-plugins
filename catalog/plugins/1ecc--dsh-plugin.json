@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "1Ecc/dsh-plugin",
+  "name": "dsh-plugin",
+  "repository": "https://github.com/1Ecc/dsh-plugin",
+  "category": "tools",
+  "description": {
+    "en": "Battery health diagnostics for macOS and Windows. Reports design capacity, current full-charge capacity, cycle count and two health figures (the OS-reported percentage and the gas-gauge full-charge/design ratio), renders an SVG capacity-decay chart, and saves the operating system's own battery report. Registers three tools: battery_health_collect, battery_health_trend and battery_health_rules.",
+    "zh": "macOS 与 Windows 的电池健康检测。输出设计容量、当前满充容量、循环次数，以及系统口径和电量计实测（满充/设计）两个健康度数值，渲染 SVG 容量衰减趋势图，并保存操作系统自带的电池报告。注册三个工具：battery_health_collect、battery_health_trend、battery_health_rules。"
+  },
+  "added": "2026-08-28"
+}
