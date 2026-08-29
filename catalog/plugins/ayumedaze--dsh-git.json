@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ayumedaze/dsh-git",
+  "name": "dsh-git",
+  "repository": "https://github.com/ayumedaze/dsh-git",
+  "category": "dev",
+  "description": {
+    "en": "Fork-style Git GUI embedded in DeepSeek Harness: multi-select stage/unstage, diff viewer, commit, branches, stashes, clone and SSH key setup, and a workspace switcher.",
+    "zh": "内嵌于 DeepSeek Harness 的 Fork 风格 Git 图形界面：多选暂存/取消暂存、diff 查看、提交、分支、stash、克隆与 SSH 密钥配置，以及工作区切换。"
+  },
+  "added": "2026-08-29"
+}
