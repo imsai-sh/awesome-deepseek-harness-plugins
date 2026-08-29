@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "cuiyuexin428/dsh-cpp-probe",
+  "name": "dsh-cpp-probe",
+  "repository": "https://github.com/cuiyuexin428/dsh-cpp-probe",
+  "category": "tools",
+  "description": {
+    "en": "C++ runtime probe for DeepSeek Harness: cpp_trace (multi-breakpoint variable printing, replaces print) + cpp_probe (condition-breakpoint call-stack output). Gives the agent live runtime info of a C++ program on Windows/CDB.",
+    "zh": "为 DeepSeek Harness 提供 C++ 程序运行时信息的插件：cpp_trace（一次 cdb 会话多断点打印变量，替换手打 print）+ cpp_probe（条件断点输出调用栈）。在 Windows/CDB 下给 AI 提供 C++ 程序运行时信息。"
+  },
+  "added": "2026-08-30"
+}
