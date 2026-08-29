@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lkdxzhxi/dsh-glass-ui-theme",
+  "name": "dsh-glass-ui-theme",
+  "repository": "https://github.com/lkdxzhxi/dsh-glass-ui-theme",
+  "category": "theme",
+  "description": {
+    "en": "Liquid Glass UI theme for DeepSeek Harness: frosted glass surfaces with edge refraction, tintable colors, custom fonts, background images and dynamic wallpapers, custom CSS, and soft animations.",
+    "zh": "为 DeepSeek Harness 打造的液态玻璃 UI 主题：磨砂玻璃+边缘折射、可调透明度/模糊/色调、自定义字体、背景图与动态壁纸（多图轮播）、自定义 CSS、柔和动画。"
+  },
+  "added": "2026-08-29"
+}
