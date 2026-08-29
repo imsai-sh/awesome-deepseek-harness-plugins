@@ -1,5 +1,9 @@
 # Awesome DeepSeek Harness Plugins
 
+## 生态参考
+
+- [DeepSeek Harness Handbook](https://github.com/sandbaseai/deepseek-harness-handbook) — 从 Agent 运行时边界出发的独立多语言手册：173 篇源码关联指南、202 份多语言文档、58 个机器可读生态资源，覆盖安装、MCP、Skills、Subagents、沙箱、成本与故障排查。它是审计与使用参考，不是可安装插件。
+
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
 面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **12001** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-08-28。
