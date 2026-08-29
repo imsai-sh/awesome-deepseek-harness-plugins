@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Jokasa7/dsh-product-subagent-console",
+  "name": "dsh-product-subagent-console",
+  "repository": "https://github.com/Jokasa7/dsh-product-subagent-console",
+  "category": "workflow",
+  "description": {
+    "en": "Design editable multi-Agent task plans, observe real child sessions, compare planned work with actual attempts, and preview evidence-backed recovery inside DSH conversations.",
+    "zh": "在 DSH 对话中设计可编辑的多 Agent 任务计划、观察真实子会话、对照计划与实际执行，并预览基于证据的恢复方案。"
+  },
+  "added": "2026-08-29"
+}
