@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "N9-Developer-Empowerment/DSH-Vibeify/plugins/dsh-vibeify-experience",
+  "name": "dsh-vibeify-experience",
+  "repository": "https://github.com/N9-Developer-Empowerment/DSH-Vibeify",
+  "category": "ui",
+  "description": {
+    "en": "Turns completed DeepSeek Harness public-content work into a browser-local visual magazine with explicit updates and reviewed one-article sharing.",
+    "zh": "将 DeepSeek Harness 中已完成的公开内容工作整理为浏览器本地的视觉杂志，支持显式更新和经审核的单篇文章分享。"
+  },
+  "added": "2026-08-29"
+}
