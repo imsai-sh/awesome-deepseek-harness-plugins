@@ -1,0 +1,11 @@
+{
+  "id": "soberbiak/amazon-sucareer",
+  "name": "amazon-sucareer",
+  "repository": "https://github.com/soberbiak/amazon-sucareer",
+  "category": "skill",
+  "description": {
+    "en": "Evidence-first Amazon marketplace operations career skill bundle for turning raw work material into a claim ledger, role positioning, resumes, interview practice, and recruiter greetings.",
+    "zh": "面向亚马逊运营求职的证据优先 Skill 套件：将工作素材整理为可核验的证据账本、岗位定位、简历、面试练习和招聘沟通内容。"
+  },
+  "added": "2026-08-30"
+}
