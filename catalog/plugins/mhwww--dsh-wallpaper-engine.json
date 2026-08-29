@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mhwww/DSH-Wallpaper-Engine",
+  "name": "DSH-Wallpaper-Engine",
+  "repository": "https://github.com/mhwww/DSH-Wallpaper-Engine",
+  "category": "theme",
+  "description": {
+    "en": "Applies local Wallpaper Engine workshop wallpapers as the DeepSeek Harness web background from a settings card. Per-type HD pipeline: scene wallpapers unpack scene.pkg via RePKG for native textures, video wallpapers extract native-resolution frames via ffmpeg, scene/web previews fetch the author's original from the Steam CDN; includes playlist pinning, gallery hide/restore and a dim-layer opacity control. RePKG and ffmpeg are optional and fall back to lower-quality previews.",
+    "zh": "在设置卡片中把本机 Wallpaper Engine 创意工坊壁纸设为 DSH Web 背景。按类型走高清链：scene 壁纸经 RePKG 解包 scene.pkg 取原生贴图，视频壁纸用 ffmpeg 抽原生分辨率帧，scene/web 预览取 Steam CDN 作者原图；支持播放列表置顶、画廊隐藏/恢复与遮罩不透明度调节。RePKG 与 ffmpeg 为可选依赖，缺失时回退低清预览。"
+  },
+  "added": "2026-08-30"
+}
