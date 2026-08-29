@@ -1,4 +1,5 @@
 {
+  "$schema": "../schema/plugin.schema.json",
   "id": "soberbiak/amazon-sucareer",
   "name": "amazon-sucareer",
   "repository": "https://github.com/soberbiak/amazon-sucareer",
