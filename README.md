@@ -2782,7 +2782,7 @@ docs/               目录数据模型文档
 - [dsh-canary-decision-proof](https://github.com/dongsheng123132/dsh-canary-decision-proof) — 为金丝雀发布生成决策证据。
 - [dsh-cap-profile](https://github.com/Ansonfishing/dsh-cap-profile) — 将本地会话历史转化为工具使用率与错误率仪表板，支持时间范围筛选。
 - [dsh-capability-inspector](https://github.com/tree201/dsh-capability-inspector) — 对工具、模型、技能、工作区、会话、插件及 MCP 运行诊断，辅助故障排查。
-- [dsh-capability-manager](https://github.com/kiligzzz/dsh-capability-manager) — DeepSeek Harness Desktop 能力管理器：在设置页内统一管理 MCP server（~/.dsh/mcp.json，实时挂载/卸载）与 Skill（~/.dsh/skills，开关/删除/导入/文件夹同步）。官方双面插件（host + 浏览器端），不改 DSH 源码。
+- [dsh-skill-mcp-manager](https://github.com/kiligzzz/dsh-skill-mcp-manager) — DSH Skill MCP Manager 能力管理器：在设置页内统一管理 MCP server（~/.dsh/mcp.json，实时挂载/卸载）与 Skill（~/.dsh/skills，开关/删除/导入/文件夹同步）。官方双面插件（host + 浏览器端），不改 DSH 源码。
 - [dsh-capability-receipt](https://github.com/dongsheng123132/dsh-capability-receipt) — 记录已加载技能的内容寻址收据，实现可验证能力追踪。
 - [dsh-capcheck](https://github.com/heming-gmh/dsh-capcheck) — 静态分析扫描器，检测插件声明的敏感能力，无需执行。
 - [dsh-capsule](https://github.com/2-c-q/dsh-capsule) — 为第三方 DSH 插件提供操作系统隔离的能力胶囊。
