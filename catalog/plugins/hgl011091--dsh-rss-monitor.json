@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hgl011091/dsh-rss-monitor",
+  "name": "dsh-rss-monitor",
+  "repository": "https://github.com/hgl011091/dsh-rss-monitor",
+  "category": "notify",
+  "description": {
+    "en": "Native RSS monitor: multi-source subscription with keyword filtering, scheduled polling that deduplicates seen items, and email notifications for new entries (HTML template with thumbnail cards). SMTP passwords are stored only in the credential store. Installable from npm as dsh-rss-monitor.",
+    "zh": "原生 RSS 订阅监控插件：多源订阅、关键词过滤、定时检查并对已见条目去重，新条目触发邮件通知（缩略图卡片 HTML 模板）。SMTP 密码仅存于凭据库。可通过 npm 包 dsh-rss-monitor 安装。"
+  },
+  "added": "2026-08-29"
+}
