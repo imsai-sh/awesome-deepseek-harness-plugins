@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-vercel-mcp",
+  "name": "dsh-vercel-mcp",
+  "repository": "https://github.com/zhengjy01/dsh-vercel-mcp",
+  "category": "dev",
+  "description": {
+    "en": "Vercel MCP connection for DeepSeek Harness: official OAuth 2.0 flow (dynamic client registration + PKCE) against mcp.vercel.com, Vercel platform tools under mcp__vercel__* in agent sessions, with a web settings panel.",
+    "zh": "DeepSeek Harness 的 Vercel MCP 连接插件：官方 OAuth 2.0 客户端流程（动态客户端注册 + PKCE）对接 mcp.vercel.com，Vercel 平台工具以 mcp__vercel__* 在会话中可用，另有可视化设置面板。"
+  },
+  "added": "2026-08-30"
+}
