@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "warment/deepseek-harness-locale-ru",
+  "name": "deepseek-harness-locale-ru",
+  "repository": "https://github.com/warment/deepseek-harness-locale-ru",
+  "category": "ui",
+  "description": {
+    "en": "Russian (Русский) language pack for the DSH Web UI: 33 namespaces, 1061 strings (100% coverage) registered through the official dsh-client-locale plugin API; also localizes permission preset display names via a config layer.",
+    "zh": "DSH 网页界面的俄语语言包：通过官方 dsh-client-locale 插件 API 注册 33 个命名空间、1061 条界面字符串（100% 覆盖）；并通过配置层本地化权限预设显示名。"
+  },
+  "added": "2026-08-30"
+}
