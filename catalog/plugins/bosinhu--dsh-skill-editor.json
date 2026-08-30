@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bosinHU/dsh-skill-editor",
+  "name": "dsh-skill-editor",
+  "repository": "https://github.com/bosinHU/dsh-skill-editor",
+  "category": "skill",
+  "description": {
+    "en": "Settings-page skill editor for the DeepSeek Harness web UI: edit a skill's SKILL.md body and frontmatter description in place. Local skills (in ~/.dsh/skills, ~/.agents/skills, or the workspace .dsh/skills) are freely editable; bundled/built-in skills are read-only with a warning. Saving writes the SKILL.md to disk immediately and skills are hot-loaded without restarting dsh.",
+    "zh": "在 dsh Web 设置页直接编辑技能 SKILL.md 的正文与 frontmatter 描述：本地技能（~/.dsh/skills、~/.agents/skills、工作区 .dsh/skills）可自由编辑保存，系统/内置技能只读并给出风险提示；保存后立即写盘，技能热加载、无需重启 dsh。"
+  },
+  "added": "2026-08-30"
+}
