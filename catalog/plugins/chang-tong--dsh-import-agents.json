@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Chang-Tong/dsh-import-agents",
+  "name": "dsh-import-agents",
+  "repository": "https://github.com/Chang-Tong/dsh-import-agents",
+  "category": "tools",
+  "description": {
+    "en": "Import sessions, chat history, and agents from pi (pi-coding-agent), opencode, codex, and Claude Code into DeepSeek Harness as real, resumable sessions; agents and mode prompts become discoverable skills. Offers slash commands (/import-all, /import-opencode, ...), a session-start migration prompt, and a Sync button in the composer.",
+    "zh": "把 pi / opencode / codex / Claude Code 的会话、聊天记录与 agent 导入 DeepSeek Harness：成为可浏览、可续聊的真实会话，agent 与模式提示词变为可发现的 skills。提供斜杠命令、会话开始的迁移询问与 composer 内的 Sync 按钮。"
+  },
+  "added": "2026-08-31"
+}
