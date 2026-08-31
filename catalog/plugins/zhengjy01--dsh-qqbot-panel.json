@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-qqbot-panel",
+  "name": "dsh-qqbot-panel",
+  "repository": "https://github.com/zhengjy01/dsh-qqbot-panel",
+  "category": "tools",
+  "description": {
+    "en": "Visual web settings panel for the official @tencent-connect/dsh-qqbot plugin: manage credentials, access modes/allowlists, workspace picker, and scan-to-bind.",
+    "zh": "为官方 @tencent-connect/dsh-qqbot 提供的可视化配置面板：管理凭据、访问模式与白名单、工作区选择、扫码绑定。"
+  },
+  "added": "2026-08-31"
+}
