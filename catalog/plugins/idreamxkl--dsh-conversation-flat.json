@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Idreamxkl/dsh-conversation-flat",
+  "name": "dsh-conversation-flat",
+  "repository": "https://github.com/Idreamxkl/dsh-conversation-flat",
+  "category": "ui",
+  "description": {
+    "en": "Conversation UI adjustments for the DeepSeek Harness web GUI: document-flow layout with full-width column, user message bars, and full-width tables; a conversation minimap with hover previews and click-to-jump; and a personal profile (circular avatar and display name) configured from a settings section, persisted to the host's settings.yaml.",
+    "zh": "对话区 UI 调整：通栏文档式布局（全宽正文列、用户消息条、通栏表格），带悬停预览与点击跳转的会话小地图，以及个人资料功能（圆形头像与显示名称），在设置面板的「个人资料」分区配置，经 settingsScope 持久化到宿主 settings.yaml。"
+  },
+  "added": "2026-08-31"
+}
