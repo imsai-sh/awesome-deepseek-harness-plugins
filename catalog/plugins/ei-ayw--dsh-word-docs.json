@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Ei-Ayw/dsh-word-docs",
+  "name": "dsh-word-docs",
+  "repository": "https://github.com/Ei-Ayw/dsh-word-docs",
+  "category": "tools",
+  "description": {
+    "en": "Word document toolkit for DeepSeek Harness: generate .docx from JSON specs or Markdown, edit existing documents (append, insert, delete, format-preserving replaceText, placeholder fill, format-level changes), extract content, report stats and convert to PDF. Pure Python standard library, zero dependencies; registers the word_docs tool and the word-docs skill.",
+    "zh": "DeepSeek Harness 的 Word 文档工具:从 JSON 规格或 Markdown 生成 .docx,编辑现有文档(追加、插入、删除、保留格式的文本替换、占位符填充、格式级修改),提取内容,输出统计并转换 PDF。纯 Python 标准库实现,零依赖;注册 word_docs 工具与 word-docs 技能。"
+  },
+  "added": "2026-08-31"
+}
