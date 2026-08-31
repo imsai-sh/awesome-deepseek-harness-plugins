@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Ei-Ayw/dsh-upload",
+  "name": "dsh-upload",
+  "repository": "https://github.com/Ei-Ayw/dsh-upload",
+  "category": "tools",
+  "description": {
+    "en": "Adds a real upload button to the DSH web composer: local files land as bytes in <workspace>/.uploads/<sessionId>/ and the absolute path is appended to the draft, visible and editable, so the agent reads the file with its own fs tools. One POST route on the host, a small browser button, zero dependencies.",
+    "zh": "给 DSH Web 增加真正的上传按钮:本地文件以字节落盘到 <工作区>/.uploads/<会话ID>/,绝对路径追加进输入框(可见可编辑),AI 用自带 fs 工具直接读取。Host 一个 POST 路由 + 浏览器一个小按钮,零依赖。"
+  },
+  "added": "2026-08-31"
+}
