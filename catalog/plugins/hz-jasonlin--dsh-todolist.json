@@ -5,8 +5,8 @@
   "repository": "https://github.com/HZ-JasonLin/dsh-todolist",
   "category": "tools",
   "description": {
-    "en": "An independent todo board for DeepSeek Harness: list, board, calendar, week and project views, AI tools (todolist / todolist_suggest), and a self-contained local storage backend.",
-    "zh": "DSH 独立待办看板：列表、看板、日历、周视图与项目视图，提供 todolist / todolist_suggest 两个 AI 工具，使用自建本地存储，不依赖其他插件。"
+    "en": "An independent todo board for DeepSeek Harness: list, today, calendar, week and project views, click-to-edit and drag-to-reschedule/sort, an AI tool (todolist), and a self-contained local storage backend.",
+    "zh": "DSH 独立待办看板：列表、今日、日历、周视图与项目视图，支持点击即编辑、拖拽改期与排序；提供 todolist AI 工具，使用自建本地存储，不依赖其他插件。"
   },
   "added": "2026-08-19"
 }
