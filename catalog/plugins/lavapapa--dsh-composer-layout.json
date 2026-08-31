@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lavapapa/dsh-composer-layout",
+  "name": "dsh-composer-layout",
+  "repository": "https://github.com/lavapapa/dsh-composer-layout",
+  "category": "ui",
+  "description": {
+    "en": "A DSH Web plugin that keeps long answers and detailed prompts side by side with a dockable Composer.",
+    "zh": "让长回答与详细提示词通过可停靠的 Composer 并排显示的 DSH Web 插件。"
+  },
+  "added": "2026-08-31"
+}
