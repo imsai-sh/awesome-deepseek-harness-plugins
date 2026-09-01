@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "axel286137079-dot/dsh-skill-matcher",
+  "name": "dsh-skill-matcher",
+  "repository": "https://github.com/axel286137079-dot/dsh-skill-matcher",
+  "category": "tools",
+  "description": {
+    "en": "Skill and expert matcher for DeepSeek Harness. Reads the user's need and recommends the most relevant local skill, marketplace skill, expert, or open-source entry, with top-N ranking and install guidance.",
+    "zh": "技能与专家匹配器（DeepSeek Harness 插件）。读懂用户需求，从本地技能、市场技能、专家与开源条目中匹配并推荐最相关者，输出 Top-N 排序与安装方式。"
+  },
+  "added": "2026-09-02"
+}
