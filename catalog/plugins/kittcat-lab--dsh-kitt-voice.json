@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kittcat-lab/dsh-kitt-voice",
+  "name": "dsh-kitt-voice",
+  "repository": "https://github.com/kittcat-lab/dsh-kitt-voice",
+  "category": "tools",
+  "description": {
+    "en": "Speak to the agent and hear the reply. Whisper for speech to text, and Piper, neural or system voices for reading it back. A frameless window floats above other applications and shows the state, with global hotkeys that work from outside the browser. Interface in Spanish, English and Simplified Chinese.",
+    "zh": "对智能体说话并听取回复。语音转文字使用 Whisper，朗读则可选 Piper、神经语音或系统语音。一个无边框窗口悬浮于其他应用之上并显示当前状态，全局快捷键在浏览器之外同样有效。界面支持西班牙语、英语和简体中文。"
+  },
+  "added": "2026-09-01"
+}
