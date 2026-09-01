@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "KongFangXun/sofagent",
+  "name": "sofagent",
+  "repository": "https://github.com/KongFangXun/sofagent",
+  "category": "dev",
+  "description": {
+    "en": "Commit-time governance harness for AI coding agents: 24 deterministic audit rules over git diffs (secrets, out-of-scope edits, blind modifications, prompt-injection traces), HMAC-chained audit history, and a 9-plugin DSH family under engine/dsh-plugins.",
+    "zh": "面向 AI 编程 Agent 的提交时治理 harness：24 条确定性规则审查 git diff（密钥、越权改动、盲改、提示注入痕迹），HMAC 链式防篡改审计记录，engine/dsh-plugins 下附 9 插件 DSH 家族。"
+  },
+  "added": "2026-09-01"
+}
