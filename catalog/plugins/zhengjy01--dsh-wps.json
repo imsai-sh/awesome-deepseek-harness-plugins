@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-wps",
+  "name": "dsh-wps",
+  "repository": "https://github.com/zhengjy01/dsh-wps",
+  "category": "tools",
+  "description": {
+    "en": "WPS / 金山文档 cloud-docs MCP integration for DSH (mcp__wps__* tools): cloud-drive operations + text/spreadsheet/presentation/PDF read-write via the official Kingsoft SkillHub MCP",
+    "zh": "WPS / 金山文档云文档集成插件：官方 SkillHub MCP，自定义浏览器授权，云盘操作 + 文字/表格/演示/PDF 内容读写（mcp__wps__*）。"
+  },
+  "added": "2026-09-02"
+}
