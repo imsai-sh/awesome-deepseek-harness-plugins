@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhangxingong/dsh-polish",
+  "name": "dsh-polish",
+  "repository": "https://github.com/zhangxingong/dsh-polish",
+  "category": "ui",
+  "description": {
+    "en": "Adds a four-pointed star button to the chat input toolbar that polishes the current draft via the DeepSeek API and replaces it in place, with the optimization prompt editable in plugin settings.",
+    "zh": "在输入工具栏添加四角星按钮，调用 DeepSeek API 对当前草稿进行优化细化并整体替换；优化提示词可在插件设置中查看与编辑。"
+  },
+  "added": "2026-09-02"
+}
