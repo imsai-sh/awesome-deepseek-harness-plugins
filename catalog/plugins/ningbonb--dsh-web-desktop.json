@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ningbonb/dsh-web-desktop",
+  "name": "dsh-web-desktop",
+  "repository": "https://github.com/ningbonb/dsh-web-desktop",
+  "category": "ui",
+  "description": {
+    "en": "Launches an Electron window for an existing DeepSeek Harness Web profile while sharing its plugins, sessions, and settings.",
+    "zh": "为现有 DeepSeek Harness Web profile 启动 Electron 窗口，并共享插件、会话和设置。"
+  },
+  "added": "2026-09-02"
+}
