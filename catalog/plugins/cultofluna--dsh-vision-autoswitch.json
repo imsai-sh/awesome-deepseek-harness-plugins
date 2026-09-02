@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CultOfLuna/dsh-vision-autoswitch",
+  "name": "dsh-vision-autoswitch",
+  "repository": "https://github.com/CultOfLuna/dsh-vision-autoswitch",
+  "category": "model",
+  "description": {
+    "en": "Routes image-bearing requests to the deepseek-v4-flash-vision-exp vision model, then falls back to the previously selected model when the turn ends.",
+    "zh": "当请求包含图片时，自动将该回合切换到视觉模型 deepseek-v4-flash-vision-exp 处理，回合结束后回落到之前选择的模型。"
+  },
+  "added": "2026-09-02"
+}
