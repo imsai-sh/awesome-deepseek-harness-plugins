@@ -1,7 +1,12 @@
-Add the archived-conversations management plugin for DeepSeek Harness.
-
-- npm (published, installable from the store): dsh-plugin-archived-conversations@0.1.1
-- Declares `dsh.bundle.patch` (`./cordis.patch.yml`) in package.json
-- GitHub topic `dsh-plugin` already added
-- Category `session`: unarchive and permanently delete archived conversations from the Settings UI
-- Single new catalog/plugins entry; nothing outside catalog/plugins/ touched
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "leogottadothebest/DSH-Archived-Delete",
+  "name": "dsh-plugin-archived-conversations",
+  "repository": "https://github.com/leogottadothebest/DSH-Archived-Delete",
+  "category": "session",
+  "description": {
+    "en": "Manage archived conversations in the Settings UI: unarchive them back to the sidebar, or permanently delete them with confirmation.",
+    "zh": "在设置界面管理已归档对话：一键取消归档，或经确认后永久删除。"
+  },
+  "added": "2026-09-02"
+}
