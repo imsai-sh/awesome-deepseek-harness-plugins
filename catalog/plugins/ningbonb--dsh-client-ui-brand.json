@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ningbonb/dsh-client-ui-brand",
+  "name": "dsh-client-ui-brand",
+  "repository": "https://github.com/ningbonb/dsh-client-ui-brand",
+  "category": "ui",
+  "description": {
+    "en": "Customizes the DeepSeek Harness Web product name, logo, favicon, and PWA icons without modifying core.",
+    "zh": "不修改 DeepSeek Harness Core，自定义 Web 端产品名称、Logo、浏览器图标和 PWA 图标。"
+  },
+  "added": "2026-09-02"
+}
