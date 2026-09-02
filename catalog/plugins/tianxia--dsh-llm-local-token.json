@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "tianxia--/dsh-llm-local-token",
+  "name": "dsh-llm-local-token",
+  "repository": "https://github.com/tianxia--/dsh-llm-local-token",
+  "category": "model",
+  "description": {
+    "en": "Registers `openai-codex` and `anthropic` LLM routes from the OAuth credentials the local Codex CLI and Claude Code already hold, refreshing the token near expiry and showing each subscription's remaining quota in a web panel.",
+    "zh": "复用本机 Codex CLI 与 Claude Code 已持有的 OAuth 凭据注册 `openai-codex` 与 `anthropic` LLM 路由，在临近过期时刷新 token，并在 Web 面板中显示各订阅的剩余额度。"
+  },
+  "added": "2026-09-02"
+}
