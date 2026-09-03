@@ -1,0 +1,12 @@
+{
+    "id":  "hongbaiqi/dsh-model-account-login",
+    "name":  "dsh-model-account-login",
+    "repository":  "https://github.com/hongbaiqi/dsh-model-account-login",
+    "description":  {
+                        "en":  "Settings-panel UI that drives the llm-pi-ai model-account login flows (ChatGPT, Claude, and others) in DeepSeek Harness and persists the resulting authorization.",
+                        "zh":  "DeepSeek Harness 的模型账号登录面板插件：在设置页驱动 ChatGPT、Claude 等 llm-pi-ai 登录流程，并持久化授权结果。"
+                    },
+    "added":  "2026-09-04",
+    "category":  "model",
+    "$schema":  "../schema/plugin.schema.json"
+}
