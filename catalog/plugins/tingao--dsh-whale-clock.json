@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "tingao/dsh-whale-clock",
+  "name": "dsh-whale-clock",
+  "repository": "https://github.com/tingao/dsh-whale-clock",
+  "category": "ui",
+  "description": {
+    "en": "Corner widget for the DeepSeek Harness web GUI: an animated DeepSeek whale shows the current local time and a live countdown to the next DeepSeek pricing-window boundary, turning red during peak-price windows (01:00-04:00 and 06:00-10:00 UTC) and green during off-peak windows. Windows are classified in UTC and displayed in the browser's local timezone.",
+    "zh": "DeepSeek Harness Web 界面角落小部件：动画鲸鱼显示当前本地时间，并实时倒计时到下一个 DeepSeek 计费时段边界；高峰计价时段（UTC 01:00-04:00 与 06:00-10:00）变红，低谷时段变绿。按 UTC 判定计价时段，并按浏览器本地时区显示。"
+  },
+  "added": "2026-09-04"
+}
