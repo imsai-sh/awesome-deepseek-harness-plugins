@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "a23842/dsh-waste-market",
+  "name": "dsh-waste-market",
+  "repository": "https://github.com/a23842/dsh-waste-market",
+  "category": "finance",
+  "description": {
+    "en": "A-share market dashboard for DeepSeek Harness: realtime indices, stock screener with technical signals, multi-strategy intersection, 7×24 multi-source news, watchlist, market sentiment thermometer (limit-up ladder, breadth), K-line charts with MA/EXPMA overlays, and sector/limit-up/longhu rankings.",
+    "zh": "DeepSeek Harness A 股行情面板：实时指数、技术选股（13 项信号 + 多策略交叉）、7×24 多源快讯、自选股、市场情绪温度计（连板梯队/涨跌家数）、K 线图（MA/EXPMA 叠加）、板块/涨停/龙虎榜榜单。"
+  },
+  "added": "2026-09-03"
+}
