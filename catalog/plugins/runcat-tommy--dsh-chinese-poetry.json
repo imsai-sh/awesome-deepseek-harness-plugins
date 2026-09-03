@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "runcat-tommy/dsh-chinese-poetry",
+  "name": "dsh-chinese-poetry",
+  "repository": "https://github.com/runcat-tommy/dsh-chinese-poetry",
+  "category": "ui",
+  "description": {
+    "en": "Chinese classical poetry viewer for DeepSeek Harness Web: adds a poetry tab to the conversation view with token-free search over a public 370k-poem API, dynasty and author filters, feihualing prompts, a daily poem, favorites, share cards, and AI explanation through the user's own session.",
+    "zh": "DeepSeek Harness Web 诗词查看插件：会话页新增「诗词」标签页，基于公开免费接口（37 万首）提供免 token 搜索、按朝代/作者筛选、飞花令、每日一首、收藏、分享卡片，AI 解读复用用户自己的会话。"
+  },
+  "added": "2026-09-03"
+}
