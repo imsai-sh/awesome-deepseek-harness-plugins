@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "eternalnight996/agent-teams-pixel",
+  "name": "agent-teams-pixel",
+  "repository": "https://github.com/eternalnight996/agent-teams-pixel",
+  "category": "ui",
+  "description": {
+    "en": "Adds a Working Roles tab and a pixel office overlay to the DSH Web main window: 508 complete role cards (The Agency 255 + agency-agents-zh 253) with section-grouped browser, search and en/zh toggle; Canvas 2D pixel avatars with idle/type/walk states, draggable / foldable / resizable overlay, pick-to-enlist; 20-char Chinese chit-chat can ride on a built-in AI producer (uses dsh's own LLM via /agents-pixe/chat) or an external hook. Requires dsh >= 0.1.1-rc.x; ships a cordis bundle patch and a browser client row that mounts both slots.",
+    "zh": "为 DeepSeek Harness Web 主窗口新增「工作角色」页签与像素办公室浮层：内置 508 张完整角色卡（The Agency 255 + agency-agents-zh 253），支持按章节分部分类浏览、搜索与中英切换；Canvas 2D 像素小人具有站立 / 打字 / 踱步三态，浮层可拖动 / 折叠 / 缩放，选人即入列；闲聊台词可走内置 AI（复用 dsh 自配模型）或外部接口，控制在 20 字内中文。需 dsh ≥ 0.1.1-rc.x；自带 cordis bundle 补丁与浏览器客户端 row，挂载 slots 服务后才渲染 UI。"
+  },
+  "added": "2026-08-28"
+}
