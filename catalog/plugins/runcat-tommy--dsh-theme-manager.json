@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "runcat-tommy/dsh-theme-manager",
+  "name": "dsh-theme-manager",
+  "repository": "https://github.com/runcat-tommy/dsh-theme-manager",
+  "category": "theme",
+  "description": {
+    "en": "Two-level theme manager for DeepSeek Harness Web: pick a culture or scene first, then a style, with 58 built-in themes (Chinese/Japanese culture, festivals, developer palettes, national flags, high-contrast pairs) applied live via the theme service.",
+    "zh": "DeepSeek Harness Web 两级主题管理器：先选文化/场景，再选具体风格；内置 58 套主题（中国/日本文化、节庆、开发者配色、国旗、高对比等），经 theme 服务实时切换生效。"
+  },
+  "added": "2026-09-03"
+}
