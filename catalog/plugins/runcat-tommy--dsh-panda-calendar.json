@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "runcat-tommy/dsh-panda-calendar",
+  "name": "dsh-panda-calendar",
+  "repository": "https://github.com/runcat-tommy/dsh-panda-calendar",
+  "category": "ui",
+  "description": {
+    "en": "Chinese calendar and weather plugin for DeepSeek Harness Web: adds a calendar tab to the conversation view showing solar/lunar dates, ganzhi and zodiac, solar terms, festivals, China public holidays including adjusted workdays, and multi-city weather, from free data sources without an API key.",
+    "zh": "DeepSeek Harness Web 日历与天气插件：会话页新增「熊猫日历」标签页，提供公历/农历、干支/生肖、节气、节日、中国法定节假日（含调休）与多城市天气；数据源免费，无需 API Key。"
+  },
+  "added": "2026-09-03"
+}
