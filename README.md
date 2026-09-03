@@ -1105,7 +1105,7 @@ docs/               目录数据模型文档
 - [dsh-memory-connect](https://github.com/Asher-2000/dsh-memory-connect) — 实现跨会话记忆，支持自动提取、语义召回和定期维护。
 - [dsh-memory-dashboard](https://github.com/perinchiang/dsh-memory-dashboard) — 提供只读仪表盘，展示DeepSeek Harness四层本地记忆，方便查看。
 - [dsh-memory-director](https://github.com/ljsysfurryACE/dsh-memory-director) — 提供 LLM 驱动的记住/忘记管理，实现跨会话持久记忆，填补 Harness 记忆空缺。
-- [dsh-memory-eternal](https://github.com/EternalNight996/dsh-memory-eternal) — 记忆核心（Memory Eternal）：把 boujoy-harness 记忆模块搬进任意 DeepSeek Harness 的独立插件——对话自动沉淀知识卡到本地 Markdown Vault（去重/检索/知识图谱），零人工干预
+- [memory-eternal](https://github.com/EternalNight996/memory-eternal) — 记忆核心（Memory Eternal）：自研 DSH 记忆插件——SQLite 持久存储 + 数据库层审核守卫 + 审计日志，对话结束自动沉淀知识卡，Agent 通过 memory_recall 按需召回，支持 Claude Code / Codex / Cursor 多智能体共享，零人工干预。
 - [dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) — 为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现：五轨记忆 · git 分支感知 · 回合内自我审查 · 技能自我进化与技能管理器 · 四轨待办 · COI 调度 · 会话广播 · 会话搜索 · 提示词管理器 · 临时信息便签——零核心修改、零运行时依赖，随装随用、卸载即净。
 - [dsh-memory-forget](https://github.com/XIAOke8698/dsh-memory-forget) — 为 AI 智能体实现遗忘引擎，支持记忆 TTL、衰减、驱逐和审计。
 - [dsh-memory-ga](https://github.com/DiligenceLai/dsh-memory-ga) — 实现分层的门控记忆系统，通过索引、规则和会话检查点实现持久知识。
