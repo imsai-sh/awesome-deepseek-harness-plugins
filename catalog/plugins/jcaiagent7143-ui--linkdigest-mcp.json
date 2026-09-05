@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jcaiagent7143-ui/linkdigest-mcp",
+  "name": "linkdigest-mcp",
+  "repository": "https://github.com/jcaiagent7143-ui/linkdigest-mcp",
+  "category": "tools",
+  "description": {
+    "en": "Mounts a hosted MCP server that turns a Xiaohongshu, Douyin, TikTok, YouTube or X link into text: transcript with timecodes, on-screen text, a description and OCR of every image, caption and metadata.",
+    "zh": "挂载一个托管的 MCP 服务，把小红书、抖音、TikTok、YouTube 或 X 链接转成文本：带时间戳的转写、屏幕文字、逐图描述与 OCR、正文与元数据。"
+  },
+  "added": "2026-09-05"
+}
