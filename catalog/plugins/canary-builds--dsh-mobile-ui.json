@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Canary-Builds/dsh-mobile-ui",
+  "name": "DSH Mobile UI",
+  "repository": "https://github.com/Canary-Builds/dsh-mobile-ui",
+  "category": "ui",
+  "description": {
+    "en": "Adds touch-friendly navigation and standalone PWA layout improvements inside the existing DeepSeek Harness web interface.",
+    "zh": "在现有 DeepSeek Harness 网页界面中增强触屏导航和独立 PWA 模式布局。"
+  },
+  "added": "2026-09-06"
+}
