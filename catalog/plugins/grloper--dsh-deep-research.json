@@ -1,12 +1,12 @@
 {
-  "$schema": "../schema/plugin.schema.json",
-  "id": "grloper/dsh-deep-research",
-  "name": "dsh-deep-research",
-  "repository": "https://github.com/grloper/dsh-deep-research",
-  "category": "tools",
-  "description": {
-    "en": "Registers verify_text, deep_research, compare_sources, check_source and research_recall. Citations are admitted only when the quoted span is located in the fetched source text by substring match; corroboration is counted in independent origins using MinHash and SCC condensation rather than raw source count. Findings persist in a local SQLite or JSON evidence store with per-claim freshness horizons.",
-    "zh": "注册 verify_text、deep_research、compare_sources、check_source 与 research_recall 五个工具。引用仅在引文片段能通过子串匹配定位到已抓取的原文时才被采纳；佐证按独立来源计数，使用 MinHash 与强连通分量缩点识别转载与改写，而非直接统计来源数量。结论保存在本地 SQLite 或 JSON 证据库中，并按claim 设置新鲜度期限。"
-  },
-  "added": "2026-09-06"
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "grloper/dsh-deep-research",
+    "name":  "dsh-deep-research",
+    "repository":  "https://github.com/grloper/dsh-deep-research",
+    "category":  "tools",
+    "description":  {
+                        "en":  "Kestrel. Registers verify_text, deep_research, compare_sources, check_source and research_recall. Citations are admitted only when the quoted span is located in the fetched source text by substring match; corroboration is counted in independent origins using MinHash and SCC condensation rather than raw source count. Findings persist in a local SQLite or JSON evidence store with per-claim freshness horizons.",
+                        "zh":  "Kestrel。注册 verify_text、deep_research、compare_sources、check_source 与 research_recall 五个工具。引用仅在引文片段能通过子串匹配定位到已抓取的原文时才被采纳；佐证按独立来源计数，使用 MinHash 与强连通分量缩点识别转载与改写，而非直接统计来源数量。结论保存在本地 SQLite 或 JSON 证据库中，并按 claim 设置新鲜度期限。"
+                    },
+    "added":  "2026-09-06"
 }
