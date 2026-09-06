@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "chenxiachan/thoughtdag/dsh",
+  "name": "dsh-thoughtdag",
+  "repository": "https://github.com/chenxiachan/thoughtdag",
+  "category": "tools",
+  "description": {
+    "en": "Adds an editable context canvas to the DeepSeek Harness web UI. Open local agent sessions as graphs, connect selected material to a question, and run canvas questions with the harness's models or agent. Includes local conversation lookup tools.",
+    "zh": "在 DeepSeek Harness Web 界面中加入可编辑的上下文画布。将本地 Agent 会话打开为图，把选定材料连入问题，并使用 Harness 的模型或 Agent 在画布上提问。附带本地会话检索工具。"
+  },
+  "added": "2026-09-06"
+}
