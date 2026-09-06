@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "grloper/dsh-claude-oauth",
+  "name": "dsh-claude-oauth",
+  "repository": "https://github.com/grloper/dsh-claude-oauth",
+  "category": "model",
+  "description": {
+    "en": "Adds a Claude section to Web Settings that runs a PKCE OAuth flow over an ephemeral dual-stack loopback callback server, so a Claude Pro or Max subscription can be used as a model provider without pasting tokens. Exchanged credentials are written to ~/.claude/.credentials.json and ~/.dsh/.credentials.yaml, the model list is read from the /v1/models endpoint, and 5-hour and 7-day subscription quota usage is shown with reset countdowns.",
+    "zh": "在 Web 设置中新增 Claude 板块，通过临时的双栈回环回调服务器执行 PKCE OAuth 流程，使 Claude Pro 或 Max 订阅可作为模型提供方使用，无需手动粘贴令牌。交换所得凭据写入 ~/.claude/.credentials.json 与 ~/.dsh/.credentials.yaml，模型列表读取自 /v1/models 接口，并展示 5 小时与 7 天订阅额度用量及重置倒计时。"
+  },
+  "added": "2026-09-06"
+}
