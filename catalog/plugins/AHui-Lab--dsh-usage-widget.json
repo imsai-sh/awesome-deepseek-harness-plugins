@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "AHui-Lab/dsh-usage-widget",
+  "name": "dsh-usage-widget",
+  "repository": "https://github.com/AHui-Lab/dsh-usage-widget",
+  "category": "tools",
+  "description": {
+    "en": "In-sidebar usage widget for DeepSeek Harness Web: shows DeepSeek account balance and Kimi Code quota (5-hour window and weekly window).",
+    "zh": "DeepSeek Harness Web 侧栏用量小部件：实时显示 DeepSeek 余额与 Kimi Code 用量（5 小时窗口与每周配额）。"
+  },
+  "added": "2026-09-07"
+}
