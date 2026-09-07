@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "JNNarrator/dsh-deckseek",
+  "name": "dsh-deckseek",
+  "repository": "https://github.com/JNNarrator/dsh-deckseek",
+  "category": "ui",
+  "description": {
+    "en": "Reading-view enhancement for the DeepSeek Harness web client: auto-collapsing execution process, a message navigation rail, in-page search, unified failure cards, and generative MCP Apps (SEP-1865) rendered in sandboxed iframes.",
+    "zh": "DeepSeek Harness Web 客户端阅读视图增强：执行过程自动收起、消息导航导轨、页内查找、统一失败卡片，并支持在沙箱 iframe 中渲染生成式 MCP Apps（SEP-1865）。"
+  },
+  "added": "2026-09-07"
+}
