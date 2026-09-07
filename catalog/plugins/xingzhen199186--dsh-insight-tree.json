@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xingzhen199186/dsh-insight-tree",
+  "name": "dsh-insight-tree",
+  "repository": "https://github.com/xingzhen199186/dsh-insight-tree",
+  "category": "dev",
+  "description": {
+    "en": "Explainable DSH plugin observability and diagnostics: Profile and Loader state, DSH and companion-package compatibility, session activity, upstream release metadata, standalone startup-failure diagnosis, and guarded plugin operations.",
+    "zh": "可解释的 DSH 插件观测与诊断：Profile 与 Loader 状态、DSH 本体及配套包兼容性、会话活动、上游版本信息、独立启动失败诊断，以及带保护的插件操作。"
+  },
+  "added": "2026-09-07"
+}
