@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "scwlkq/dsh-second-opinion",
+  "name": "dsh-second-opinion",
+  "repository": "https://github.com/scwlkq/dsh-second-opinion",
+  "category": "session",
+  "description": {
+    "en": "Asynchronously reviews each committed assistant message with a second model, shows quote-anchored concerns in DSH Web, and supports manual or bounded automatic reconsideration.",
+    "zh": "使用第二模型异步审阅每条已提交的 assistant 消息，在 DSH Web 中展示带原文引用的意见，并支持人工复议或有次数上限的自动复议。"
+  },
+  "added": "2026-09-07"
+}
