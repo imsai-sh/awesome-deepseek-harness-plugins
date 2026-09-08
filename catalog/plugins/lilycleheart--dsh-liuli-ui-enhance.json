@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LilycleHeart/dsh-liuli-ui-enhance",
+  "name": "dsh-liuli-ui-enhance",
+  "repository": "https://github.com/LilycleHeart/dsh-liuli-ui-enhance",
+  "category": "theme",
+  "description": {
+    "en": "A DeepSeek Harness UI theme plugin: dynamic Material 3 color extraction, wallpaper frosted-glass material, voice-wave visualization, and day/night switching.",
+    "zh": "DeepSeek Harness 界面主题插件：动态 Material 3 取色、壁纸磨砂材质、声纹可视化与日夜切换。"
+  },
+  "added": "2026-09-08"
+}
