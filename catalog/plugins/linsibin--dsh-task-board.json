@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "linsibin/dsh-task-board",
+  "name": "dsh-task-board",
+  "repository": "https://github.com/linsibin/dsh-task-board",
+  "category": "ui",
+  "description": {
+    "en": "Adds a Tasks kanban tab next to Chat and Trajectory in the DSH Desktop conversation header, with drag-to-execute task cards that create real agent sessions bound to each task working directory.",
+    "zh": "在 DSH Desktop 会话头部新增与对话、轨迹并列的任务看板页签，支持三栏 Kanban 与拖拽触发、按工作目录创建真实 Agent 会话执行任务。"
+  },
+  "added": "2026-09-08"
+}
