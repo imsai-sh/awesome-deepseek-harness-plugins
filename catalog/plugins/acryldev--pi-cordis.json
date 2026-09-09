@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "acryldev/pi-cordis",
+  "name": "pi-cordis",
+  "repository": "https://github.com/acryldev/pi-cordis",
+  "category": "dev",
+  "description": {
+    "en": "Cordis plugin that adapts the Pi coding-agent SDK as a lifecycle-owned runtime engine, with an explicit session API and Loader-managed replacement boundary.",
+    "zh": "将 Pi 编码代理 SDK 适配为生命周期受 Cordis 管理的运行时引擎插件，提供明确的会话 API 和由 Loader 管理的替换边界。"
+  },
+  "added": "2026-09-09"
+}
