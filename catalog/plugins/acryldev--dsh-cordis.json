@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "acryldev/dsh-cordis",
+  "name": "dsh-cordis",
+  "repository": "https://github.com/acryldev/dsh-cordis",
+  "category": "dev",
+  "description": {
+    "en": "Cordis plugin that mounts the DeepSeek Harness coding engine into a host Loader, with native sessions, agents, tools, goals, plan mode, and packaged presets.",
+    "zh": "将 DeepSeek Harness 编码引擎挂载到宿主 Loader 的 Cordis 插件，提供原生会话、代理、工具、目标、计划模式和预设。"
+  },
+  "added": "2026-09-09"
+}
