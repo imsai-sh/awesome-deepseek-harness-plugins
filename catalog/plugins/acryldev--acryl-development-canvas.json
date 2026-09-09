@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "acryldev/acryl-development-canvas",
+  "name": "acryl-development-canvas",
+  "repository": "https://github.com/acryldev/acryl-development-canvas",
+  "category": "dev",
+  "description": {
+    "en": "ACRYL Host and Client Cordis plugin for a PTY-backed development workspace with terminal, file, browser, and chat tiles.",
+    "zh": "ACRYL Host 和 Client Cordis 插件，提供由 PTY 驱动的开发工作区，包含终端、文件、浏览器和聊天标签。"
+  },
+  "added": "2026-09-09"
+}
