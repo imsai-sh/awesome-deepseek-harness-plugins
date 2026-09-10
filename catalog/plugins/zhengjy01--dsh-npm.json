@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-npm",
+  "name": "dsh-npm",
+  "repository": "https://github.com/zhengjy01/dsh-npm",
+  "category": "dev",
+  "description": {
+    "en": "NPM registry management for DeepSeek Harness: query package info, list versions, search packages, and publish/deprecate with optional token injection, plus a web settings panel.",
+    "zh": "DeepSeek Harness 的 NPM 包管理：查询包信息 / 版本列表 / 搜索包，并用本机或注入的 token 发布与弃用，附 Web 设置面板。"
+  },
+  "added": "2026-09-11"
+}
