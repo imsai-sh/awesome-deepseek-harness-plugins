@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-backup-migrator",
+  "name": "dsh-backup-migrator",
+  "repository": "https://github.com/zhengjy01/dsh-backup-migrator",
+  "category": "dev",
+  "description": {
+    "en": "Plugin environment backup and migration for DeepSeek Harness: backs up every profile's plugin list, plugin configs and local-source plugin tarballs into a git repo, and restores them on a new machine.",
+    "zh": "DeepSeek Harness 插件环境备份与迁移：把各 profile 的插件清单、插件配置与本地源插件打包进 git 仓库，换机一键恢复。"
+  },
+  "added": "2026-09-11"
+}
