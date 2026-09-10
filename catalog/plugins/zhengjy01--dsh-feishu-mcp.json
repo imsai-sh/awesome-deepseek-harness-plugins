@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-feishu-mcp",
+  "name": "dsh-feishu-mcp",
+  "repository": "https://github.com/zhengjy01/dsh-feishu-mcp",
+  "category": "notify",
+  "description": {
+    "en": "Feishu (Lark) OpenAPI MCP connection for DeepSeek Harness: bridges the official @larksuiteoapi/lark-mcp server, exposing IM, Bitable, Docs, Calendar and Drive APIs as mcp__feishu__* tools with OAuth user-token support.",
+    "zh": "DeepSeek Harness 的飞书（Lark）OpenAPI MCP 连接：桥接官方 @larksuiteoapi/lark-mcp，把 IM / 多维表格 / 云文档 / 日历 / 云盘 API 暴露为 mcp__feishu__* 工具，支持用户令牌 OAuth。"
+  },
+  "added": "2026-09-11"
+}
