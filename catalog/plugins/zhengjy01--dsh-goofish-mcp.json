@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-goofish-mcp",
+  "name": "dsh-goofish-mcp",
+  "repository": "https://github.com/zhengjy01/dsh-goofish-mcp",
+  "category": "tools",
+  "description": {
+    "en": "Xianyu (Goofish 闲鱼) read-only monitoring for DeepSeek Harness: drives the goofish-cli MCP server and exposes read-only tools (search, item detail, listings, chat history, category) with all write actions filtered out.",
+    "zh": "DeepSeek Harness 的闲鱼只读监控：驱动 goofish-cli MCP 服务器，暴露搜索 / 商品详情 / 在售列表 / 会话历史 / 类目识别等只读工具，写操作一律过滤。"
+  },
+  "added": "2026-09-11"
+}
