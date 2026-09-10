@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wcnm8888/dsh-plugin-update-audit",
+  "name": "dsh-plugin-update-audit",
+  "repository": "https://github.com/wcnm8888/dsh-plugin-update-audit",
+  "category": "tools",
+  "description": {
+    "en": "Audits direct DeepSeek Harness Profile plugin dependencies against npm and GitHub while marking local package sources for manual review.",
+    "zh": "只读审计 DeepSeek Harness Profile 的直接插件依赖，对比 npm 与 GitHub 上游，并标记需要人工复核的本地包来源。"
+  },
+  "added": "2026-09-10"
+}
