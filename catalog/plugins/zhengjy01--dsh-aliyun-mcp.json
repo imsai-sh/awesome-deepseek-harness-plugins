@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-aliyun-mcp",
+  "name": "dsh-aliyun-mcp",
+  "repository": "https://github.com/zhengjy01/dsh-aliyun-mcp",
+  "category": "dev",
+  "description": {
+    "en": "Alibaba Cloud OpenAPI MCP connection for DeepSeek Harness: static-credential mode through the official OpenAPI MCP proxy, exposing ECS / OSS / DNS / Function Compute APIs as mcp__aliyun__* tools.",
+    "zh": "DeepSeek Harness 的阿里云 OpenAPI MCP 连接：静态凭证 + 官方 MCP Proxy，把 ECS / OSS / 域名 / DNS / 函数计算等 OpenAPI 暴露为 mcp__aliyun__* 工具。"
+  },
+  "added": "2026-09-11"
+}
