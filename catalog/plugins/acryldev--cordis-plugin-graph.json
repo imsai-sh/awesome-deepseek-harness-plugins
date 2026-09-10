@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "acryldev/cordis-plugin-graph",
+  "name": "cordis-plugin-graph",
+  "repository": "https://github.com/acryldev/cordis-plugin-graph",
+  "category": "dev",
+  "description": {
+    "en": "Adds a 'Plugin graph' tab to Settings, rendering a live zoomable Cytoscape graph of the running Cordis context: plugin fibers as phase-coloured nodes, with toggleable inject-dependency, resolved-provider, and Loader-tree-nesting edges.",
+    "zh": "在设置中新增“插件关系图”标签页，用 Cytoscape 实时渲染可缩放的 Cordis 上下文关系图：插件 fiber 作为按生命周期状态着色的节点，可切换显示 inject 依赖、已解析的 provider、以及 Loader 树的嵌套关系。"
+  },
+  "added": "2026-09-10"
+}
