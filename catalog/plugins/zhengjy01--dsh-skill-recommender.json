@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-skill-recommender",
+  "name": "dsh-skill-recommender",
+  "repository": "https://github.com/zhengjy01/dsh-skill-recommender",
+  "category": "skill",
+  "description": {
+    "en": "Session-profile driven open-source skill recommender for DeepSeek Harness: scans local DSH / Codex / Claude sessions, builds a weighted profile (topics, tools, tasks, projects) and recommends matching skills with a tunable match index.",
+    "zh": "DeepSeek Harness 的会话画像 skill 推荐器：扫描本地 DSH/Codex/Claude 会话建立加权画像（主题/工具/任务/项目），按可调匹配指数推荐开源 skill。"
+  },
+  "added": "2026-09-11"
+}
