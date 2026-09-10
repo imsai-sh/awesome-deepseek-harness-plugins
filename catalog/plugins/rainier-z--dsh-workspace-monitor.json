@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Rainier-Z/dsh-workspace-monitor",
+  "name": "dsh-workspace-monitor",
+  "repository": "https://github.com/Rainier-Z/dsh-workspace-monitor",
+  "category": "workflow",
+  "description": {
+    "en": "A DeepSeek Harness plugin that periodically detects added, modified, and deleted files in a workspace and reports the changes.",
+    "zh": "一个适配 DeepSeek Harness 的工作区监测插件，按周期检测并报告文件的新增、修改和删除。"
+  },
+  "added": "2026-09-10"
+}
