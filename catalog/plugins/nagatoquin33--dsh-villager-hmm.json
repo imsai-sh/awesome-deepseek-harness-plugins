@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "nagatoquin33/dsh-villager-hmm",
+  "name": "dsh-villager-hmm",
+  "repository": "https://github.com/nagatoquin33/dsh-villager-hmm",
+  "category": "fun",
+  "description": {
+    "en": "Plays a Minecraft villager sound each time a hmm-like interjection appears in the model reasoning stream or reply. Ships a draggable panel showing the hit count, with a pause toggle and an editable matcher.",
+    "zh": "模型的思维链或回复里出现 hmm、嗯、唔 等哼声时，播放一次 Minecraft 村民音效。附带可拖动面板，显示命中次数，可暂停监听，并可编辑匹配式。"
+  },
+  "added": "2026-09-11"
+}
