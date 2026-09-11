@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yis94744/dsh-darkplus-code",
+  "name": "dsh-darkplus-code",
+  "repository": "https://github.com/yis94744/dsh-darkplus-code",
+  "category": "theme",
+  "description": {
+    "en": "VS Code Dark+ syntax colors and font-size control for DeepSeek Harness code blocks. Recolors chat code blocks with the Dark+ token palette for both light and dark schemes, and puts the code-block font size on the same --dsh-content-font-delta mechanism DSH uses for its other content fonts so code blocks grow and shrink with the content font size instead of staying fixed at 11px. Adds a Settings -> General row with follow/ratio/fixed modes, px presets, a type-teal vs function-yellow variant toggle since shiki assigns both to one variable, and a palette switch. Settings persist to ~/.dsh-darkplus-code/config.json. Only --shiki-* token variables and the code-block font tokens are written; no other interface token is touched.",
+    "zh": "为 DeepSeek Harness 代码块提供 VS Code Dark+ 语法配色与字号控制。用 Dark+ token 配色重绘聊天代码块（明暗两套），并让代码块字号接入 DSH 自身用于其他内容字号的 --dsh-content-font-delta 机制，使其随字号设置同步增减，而不是固定 11px。在「设置 → 通用」新增一行，提供跟随字号/比例/固定三种模式、像素预设、类型青与函数黄变体切换（shiki 把类型名与函数名归到同一变量）以及配色开关。设置持久化在 ~/.dsh-darkplus-code/config.json。仅写入 --shiki-* 系列 token 变量与代码块字号 token，不触碰任何其他界面 token。"
+  },
+  "added": "2026-09-11"
+}
