@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hutao562/dsh-remote-dsh",
+  "name": "dsh-remote-dsh",
+  "repository": "https://github.com/hutao562/dsh-remote-dsh",
+  "category": "ui",
+  "description": {
+    "en": "Adds a row at the top of the sidebar that switches the whole Web GUI to another DSH host reached over a loopback port, and shows that host's session state on the row (running, unread activity, or waiting for your answer).",
+    "zh": "在侧边栏顶部加一行，点击后整页切换成另一台 DSH 主机的 Web GUI（通过回环端口访问），并在该行显示那台主机的会话状态（运行中、有新活动、正等你回答）。"
+  },
+  "added": "2026-09-11"
+}
