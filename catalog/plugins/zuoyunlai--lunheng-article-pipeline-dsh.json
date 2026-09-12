@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zuoyunlai/lunheng-article-pipeline-dsh",
+  "name": "lunheng-article-pipeline-dsh",
+  "repository": "https://github.com/zuoyunlai/lunheng-article-pipeline-dsh",
+  "category": "workflow",
+  "description": {
+    "en": "Registers one long-form writing skill that runs a 9-role pipeline across 6 phases — T1 literature / T2 data / T3 case retrieval, T4 analysis, T5 drafting, T6 critique, T7 audit, T8 final check (run by the coordinator), T9 peer review — with 4 human checkpoints, triangular evidence verification, a 23-check mechanical final gate, a G0-G14 audit, and peer-review scoring with journal matching. Installs with `dsh plugin add lunheng-article-pipeline`.",
+    "zh": "注册一个深度长文写作技能：9 个独立角色跨 6 个阶段（T1 文献 / T2 数据 / T3 案例检索、T4 分析、T5 写作、T6 批判、T7 审计、T8 终检（主控亲执行）、T9 同行评审），含 4 个人在环节点、三角验证、M 门 23 项机械终检、G0-G14 独立审计与审稿评分/期刊匹配。`dsh plugin add lunheng-article-pipeline` 即装。"
+  },
+  "added": "2026-09-11"
+}
