@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "cjm-m/dsh-paste-code-block",
+  "name": "dsh-paste-code-block",
+  "repository": "https://github.com/cjm-m/dsh-paste-code-block",
+  "category": "ui",
+  "description": {
+    "en": "Renders long text and code pasted into the DSH Web composer as collapsible cards with language tags and independent line numbering; the original fenced code block is restored when the message is sent.",
+    "zh": "将粘贴到 DSH Web 输入框的长文本或代码渲染为可折叠卡片，带语言标签与独立行号编号，发送消息时自动还原为围栏代码块。"
+  },
+  "added": "2026-09-12"
+}
