@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "new-Beginner/dsh-thought-fold",
+  "name": "dsh-thought-fold",
+  "repository": "https://github.com/new-Beginner/dsh-thought-fold",
+  "category": "ui",
+  "description": {
+    "en": "Codex-style progress reporting and native turn-process compact transcript folding enhancement for DeepSeek Harness.",
+    "zh": "DeepSeek Harness 的 Codex 风格执行进度规范与原生会话过程折叠增强插件。"
+  },
+  "added": "2026-09-12"
+}
