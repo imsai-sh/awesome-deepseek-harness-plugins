@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MichengAI/dsh-codex-pet",
+  "name": "dsh-codex-pet",
+  "repository": "https://github.com/MichengAI/dsh-codex-pet",
+  "category": "fun",
+  "description": {
+    "en": "Adds an interactive pet to DSH Web with multi-task status notifications and Skill-based custom pet creation.",
+    "zh": "在 DSH Web 中显示可交互宠物，汇总多任务状态与提醒，并支持通过 Skill 创建自定义宠物。"
+  },
+  "added": "2026-09-13"
+}
