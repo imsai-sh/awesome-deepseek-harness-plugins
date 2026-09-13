@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MichengAI/dsh-simplify",
+  "name": "dsh-simplify",
+  "repository": "https://github.com/MichengAI/dsh-simplify",
+  "category": "dev",
+  "description": {
+    "en": "Adds /simplify to request code simplification within a selected Git change scope, including untracked files, staged changes, commits, and paths.",
+    "zh": "通过 /simplify 在选定的 Git 变更范围内请求代码简化，支持未跟踪文件、暂存区、提交和指定路径。"
+  },
+  "added": "2026-09-13"
+}
