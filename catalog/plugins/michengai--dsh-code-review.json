@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MichengAI/dsh-code-review",
+  "name": "dsh-code-review",
+  "repository": "https://github.com/MichengAI/dsh-code-review",
+  "category": "dev",
+  "description": {
+    "en": "Starts native independent subagents with /review to inspect branches, commits, or uncommitted changes and return English or Chinese findings with file locations.",
+    "zh": "通过 /review 启动原生独立子 Agent，按分支、提交或未提交变更范围审查代码，并返回带文件位置的中英文报告。"
+  },
+  "added": "2026-09-13"
+}
