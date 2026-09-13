@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Astervolans/dsh-literature-search",
+  "name": "dsh-literature-search",
+  "repository": "https://github.com/Astervolans/dsh-literature-search",
+  "category": "tools",
+  "description": {
+    "en": "Adds five literature-search tools to DeepSeek Harness: pubmed_search, pubmed_paper and pubmed_related query the official NCBI E-utilities API; scholar_search and scholar_cite cover Google Scholar through the SerpApi engine or direct HTML parsing. Both backends return a shared paper shape, and a settings page manages credentials, backend selection and rate limits.",
+    "zh": "为 DeepSeek Harness 增加五个文献检索工具：pubmed_search、pubmed_paper、pubmed_related 走 NCBI 官方 E-utilities API，scholar_search、scholar_cite 通过 SerpApi 引擎或直接解析 HTML 覆盖 Google Scholar。两条后端返回统一的 paper 结构，并提供设置页管理密钥、后端选择与速率限制。"
+  },
+  "added": "2026-09-13"
+}
