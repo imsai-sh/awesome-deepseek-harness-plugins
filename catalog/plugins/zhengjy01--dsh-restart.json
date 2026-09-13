@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-restart",
+  "name": "dsh-restart",
+  "repository": "https://github.com/zhengjy01/dsh-restart",
+  "category": "dev",
+  "description": {
+    "en": "One-click restart for DeepSeek Harness: a web button and a dsh_restart agent tool hand the relaunch to a detached helper that waits for the port to free, relaunches the same command, auto-reconnects the page, and shows boot errors in a recovery console when the new host fails.",
+    "zh": "DeepSeek Harness 一键重启：网页按钮与 dsh_restart Agent 工具把重启交给独立 helper，等端口释放后以相同命令拉起新宿主，页面自动重连；新宿主启动失败时由恢复控制台显示启动错误。"
+  },
+  "added": "2026-09-13"
+}
