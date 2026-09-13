@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MichengAI/dsh-pua",
+  "name": "dsh-pua",
+  "repository": "https://github.com/MichengAI/dsh-pua",
+  "category": "workflow",
+  "description": {
+    "en": "Provides task-persistence prompts, persona styles, global and per-session configuration, and loops that continue work based on verification results.",
+    "zh": "为 Agent 提供任务推进提示、角色风格、全局与会话配置，以及基于验收结果继续执行的 Loop。"
+  },
+  "added": "2026-09-13"
+}
