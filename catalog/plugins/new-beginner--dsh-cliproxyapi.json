@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "new-Beginner/dsh-cliproxyapi",
+  "name": "dsh-cliproxyapi",
+  "repository": "https://github.com/new-Beginner/dsh-cliproxyapi",
+  "category": "model",
+  "description": {
+    "en": "Native Codex and Antigravity subscription accounts inside DeepSeek Harness, based on CLIProxyAPI.",
+    "zh": "基于 CLIProxyAPI，在 DeepSeek Harness 内免独立后台直接使用 Codex 与 Antigravity 订阅账号。"
+  },
+  "added": "2026-09-14"
+}
