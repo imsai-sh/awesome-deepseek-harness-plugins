@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wild-river2016/dsh-xiaohe-canvas",
+  "name": "@xiaohe-store/dsh-canvas",
+  "repository": "https://github.com/wild-river2016/dsh-xiaohe-canvas",
+  "category": "tools",
+  "description": {
+    "en": "Xiaohe Canvas AI creation assistant - control canvas for e-commerce content creation (images, videos, workflows).",
+    "zh": "小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。"
+  },
+  "added": "2026-09-14"
+}
