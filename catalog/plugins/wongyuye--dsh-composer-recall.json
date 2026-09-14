@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "WongYuYe/dsh-composer-recall",
+  "name": "dsh-composer-recall",
+  "repository": "https://github.com/WongYuYe/dsh-composer-recall",
+  "category": "ui",
+  "description": {
+    "en": "Arrow-key input history for DSH Desktop: press ↑ in an empty composer to recall this session's prompts, ↓ to go forward, Esc to restore the draft.",
+    "zh": "给 DSH Desktop 输入框用的方向键历史：空输入框按 ↑ 召回当前会话刚发过的话，↓ 前进，Esc 还原正在打的草稿。"
+  },
+  "added": "2026-09-08"
+}
