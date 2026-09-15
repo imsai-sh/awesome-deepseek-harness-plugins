@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "duanyunlun/dsh-conversation-link",
+  "name": "dsh-conversation-link",
+  "repository": "https://github.com/duanyunlun/dsh-conversation-link",
+  "category": "session",
+  "description": {
+    "en": "Peer communication between conversations open in the same DeepSeek Harness process: a conversation lists the peers the workspace shows, links one under a nickname, sends it a message without waiting for its turn to end, reads its progress without waking it, and declares standing rules for its own tool calls.",
+    "zh": "同一 DeepSeek Harness 进程内对话之间的对等通信：列出一个工作区里可见的对话、用昵称连接对方、给对方发消息且不必等它当前一轮结束、不唤醒对方地查看进度，并给自己声明常驻的工具调用规则。"
+  },
+  "added": "2026-09-15"
+}
