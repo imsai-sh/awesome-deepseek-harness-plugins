@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "duanyunlun/dsh-session-actions",
+  "name": "dsh-session-actions",
+  "repository": "https://github.com/duanyunlun/dsh-session-actions",
+  "category": "session",
+  "description": {
+    "en": "Sidebar Conversation actions for DeepSeek Harness: open the row menu on right-click, rename a Conversation by double-click, copy its session id, and permanently delete it together with its storage after a confirmation.",
+    "zh": "DeepSeek Harness 侧边栏会话操作：右键打开行菜单、双击重命名、复制会话 ID，以及二次确认后连同存储一起永久删除会话。"
+  },
+  "added": "2026-09-15"
+}
