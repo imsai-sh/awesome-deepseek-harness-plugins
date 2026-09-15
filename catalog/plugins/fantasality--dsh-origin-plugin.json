@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Fantasality/dsh-origin-plugin",
+  "name": "dsh-origin-plugin",
+  "repository": "https://github.com/Fantasality/dsh-origin-plugin",
+  "category": "tools",
+  "description": {
+    "en": "Drive OriginLab Origin from DSH chat via MCP: 35 tools for scientific plotting and analysis - local data file import (CSV/TXT/XLSX, CJK path safe), plot plan-and-confirm flow, domain templates (stacked spectra, XRD triple with phase ticks, dual-Y, forest, multi-panel), editable OPJU delivery with deterministic object readback verification, inline image preview for the model, journal-style typesetting with CVD-safe palettes, statistics batch (t-test/ANOVA/PCA/Kaplan-Meier), Origin version capability handshake and stable error codes. Windows with a local Origin installation required.",
+    "zh": "在 DSH 对话中通过 MCP 驱动本机 OriginLab Origin 画图与分析：35 个工具 —— 本地数据文件导入（CSV/TXT/XLSX，中文路径与编码安全）、绘图计划确认流、领域模板（多谱线堆叠偏移 / XRD 三件套含相刻线 / 双 Y 轴 / 森林图 / 多面板）、可编辑 OPJU 交付与确定性对象反读验证、模型可直读的内联图片预览、期刊级排版与色盲安全调色板、统计批（t 检验 / ANOVA / PCA / Kaplan-Meier 生存分析）、Origin 版本能力握手与稳定错误码。需 Windows 且本机已安装 Origin。"
+  },
+  "added": "2026-09-15"
+}
