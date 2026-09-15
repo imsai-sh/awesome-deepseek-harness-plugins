@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Rapheal-Y7/dsh-desktop-statusbar",
+  "name": "dsh-desktop-statusbar",
+  "repository": "https://github.com/Rapheal-Y7/dsh-desktop-statusbar",
+  "category": "ui",
+  "description": {
+    "en": "Replaces the DSH desktop stats line under the composer with a configurable status bar. Ten optional fields - status, turn and step counts, cache hit rate, first-token latency, tokens per second, session duration, last-turn cost, session cost, account balance and token totals - can be shown, hidden and reordered. Costs are estimated per call from official peak/off-peak rates, and per-model prices plus the account balance are maintained in the settings page.",
+    "zh": "把 DSH 桌面端输入框下方的统计行换成可配置状态栏。状态、轮次与步数、缓存命中率、首字延迟、生成速度、会话时长、本轮费用、本次会话费用、账户余额、Token 合计共 10 个字段可显示、隐藏与排序。费用按每次调用各自的时间戳与官方峰谷单价估算，模型单价与账户余额在设置页维护。"
+  },
+  "added": "2026-09-15"
+}
