@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ChadCSong/dsh-cliproxyapi-provider",
+  "name": "dsh-cliproxyapi-provider",
+  "repository": "https://github.com/ChadCSong/dsh-cliproxyapi-provider",
+  "category": "model",
+  "description": {
+    "en": "Discovers local CLIProxyAPI services and synchronizes models, reasoning settings, and native image-input capabilities into DeepSeek Harness.",
+    "zh": "自动发现本地 CLIProxyAPI 服务，将模型目录、推理设置和原生图片输入能力同步到 DeepSeek Harness。"
+  },
+  "added": "2026-09-17"
+}
