@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CroissanTTs/dsh-voice-mini",
+  "name": "dsh-voice-mini",
+  "repository": "https://github.com/CroissanTTs/dsh-voice-mini",
+  "category": "notify",
+  "description": {
+    "en": "Voice-feedback plugin for DeepSeek Harness: a speak tool where the model decides what to say aloud, readReplies verbatim narration, an LLM verbalizer pass that summarizes each reply with emotional framing, per-session voice assignment, chimes, a monitoring panel, and a native macOS floating pet. zh/en i18n.",
+    "zh": "语音反馈插件:speak 工具(模型自主决定说什么)+ readReplies 逐字朗读 + LLM 情绪化口播(verbalizer,流式逐句)+ 按会话分配音色 + 提示音 + 监控面板 + 原生 macOS 悬浮宠物,中英双语。"
+  },
+  "added": "2026-09-16"
+}
