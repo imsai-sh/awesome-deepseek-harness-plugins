@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "youdotcom-oss/dsh-plugin-youcom",
+  "name": "dsh-plugin-youcom",
+  "repository": "https://github.com/youdotcom-oss/dsh-plugin-youcom",
+  "category": "tools",
+  "description": {
+    "en": "You.com web search and URL content provider plugin for the ctx.web seam: registers WebSearchProvider (/v1/search) and WebFetchProvider (/v1/contents), configured with YDC_API_KEY.",
+    "zh": "面向 ctx.web 接缝的 You.com 网页搜索与 URL 内容提供方插件：注册 WebSearchProvider（/v1/search）与 WebFetchProvider（/v1/contents），通过 YDC_API_KEY 配置。"
+  },
+  "added": "2026-09-16"
+}
