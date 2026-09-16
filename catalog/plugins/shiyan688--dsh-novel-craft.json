@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "shiyan688/dsh-novel-craft",
+  "name": "dsh-novel-craft",
+  "repository": "https://github.com/shiyan688/dsh-novel-craft",
+  "category": "workflow",
+  "description": {
+    "en": "Taste-calibration workbench for fiction writing: while reading a batch of draft variants the author marks passages thumbs up/down, and one auxiliary model call distills those marks into reusable writing rules. Raw quotes stay in a separate evidence file, so only the rules ever enter a model context.",
+    "zh": "面向小说创作的品味校准工作台：读候选批稿时只点好/坏，再由一次辅助模型调用把标注提炼成可复用的写作规律。原文留在单独的证据文件里，进模型上下文的只有规律。"
+  },
+  "added": "2026-09-16"
+}
