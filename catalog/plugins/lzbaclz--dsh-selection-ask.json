@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lzbaclz/dsh-selection-ask",
+  "name": "dsh-selection-ask",
+  "repository": "https://github.com/lzbaclz/dsh-selection-ask",
+  "category": "ui",
+  "description": {
+    "en": "ChatGPT-style selection assistant for the chat flow: selecting text inside the conversation shows an Ask DeepSeek button that writes the selection into the composer as a Markdown quote and focuses it.",
+    "zh": "聊天流里的 ChatGPT 式选区助手：在会话中选中文字后浮出「询问 DeepSeek」按钮，点击即以 Markdown 引用写入输入框并聚焦，可直接追问。"
+  },
+  "added": "2026-09-17"
+}
