@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lzbaclz/dsh-conversation-outline",
+  "name": "dsh-conversation-outline",
+  "repository": "https://github.com/lzbaclz/dsh-conversation-outline",
+  "category": "ui",
+  "description": {
+    "en": "Right-edge question rail for the Web GUI: one tick per user message of the current session, a hover panel listing truncated question openings, and click-to-jump that scrolls to the message and flashes it.",
+    "zh": "Web GUI 右侧提问刻度条：当前会话的每条用户消息对应一根横条，悬停展开截断摘要面板，点击跳转到对应消息并高亮闪烁。"
+  },
+  "added": "2026-09-17"
+}
