@@ -5,8 +5,8 @@
   "repository": "https://github.com/oneirictouch/dsh-explorer-editor",
   "category": "tools",
   "description": {
-    "en": "A DSH's VS Code-style file manager: browse the current conversation workspace files in the sidebar, edit with the Monaco editor. Tab-based switching, perfect for those who hate having their desktop over-split.",
-    "zh": "DSH 的 VS Code 风格文件管理器：在侧边栏浏览当前对话工作区文件，用 Monaco 编辑器编辑。页签式切换，适合讨厌桌面被过度分割的人。"
+    "en": "A VS Code-style file explorer and editor for DeepSeek Harness Web: browse the current conversation's workspace in the sidebar, then edit files in the center column with a Monaco editor. Files open as tabs; Markdown preview, .abap syntax highlighting, and editor themes are supported.",
+    "zh": "DeepSeek Harness Web 的 VS Code 风格文件管理器与编辑器：在侧边栏浏览当前对话的工作区文件，在中间列用 Monaco 编辑器打开编辑。文件以页签切换，支持 Markdown 预览、.abap 语法高亮与编辑器主题。"
   },
   "added": "2026-08-22"
 }
