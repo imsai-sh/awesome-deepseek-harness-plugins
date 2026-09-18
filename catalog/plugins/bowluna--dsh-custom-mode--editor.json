@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "BOWLUNA/dsh-custom-mode/editor",
+  "name": "dsh-custom-mode",
+  "repository": "https://github.com/BOWLUNA/dsh-custom-mode",
+  "category": "dev",
+  "description": {
+    "en": "A settings page that builds and manages dsh agent modes. Each mode starts from an official composition (standard, PTC, minimal or Cordis) and can be adjusted row by row: the plugin rows a mode mounts are switched individually, rows left untouched stay byte-identical to the shipped ones, and the mode can be renamed. The mode's system prompt is a plain file that the agent loop re-reads before every model step, so an edit applies to the running session on its next step. Several modes are managed from the same page, each with its own prompt.",
+    "zh": "在设置页里构建并管理 dsh 模式：每个模式以官方组成（standard、PTC、极简或 Cordis）为底子，并可逐行调整——逐行开关该模式挂载哪些插件，未触碰的行与出厂行逐字节相同，模式名可改。模式的系统提示词是普通文件，agent 循环会在每次模型调用前重新读取，因此改动对正在运行的会话下一步生效。同一个页面可管理多个模式，各自的提示词互相独立。"
+  },
+  "added": "2026-09-18"
+}
