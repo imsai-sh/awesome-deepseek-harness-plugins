@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-wechat-clawbot",
+  "name": "dsh-wechat-clawbot",
+  "repository": "https://github.com/zhengjy01/dsh-wechat-clawbot",
+  "category": "notify",
+  "description": {
+    "en": "WeChat ClawBot bridge for DeepSeek Harness: a QR-login floating ball relays messages to agent sessions and reuses context tokens for out-of-window proactive push (maintained fork of lubaiUwU/DSH-WeChatClawBot).",
+    "zh": "DeepSeek Harness 的微信 ClawBot 桥接：扫码登录悬浮球把消息桥接到 agent 会话，并复用 context_token 支持窗口外主动推送（lubaiUwU/DSH-WeChatClawBot 的维护分支）。"
+  },
+  "added": "2026-09-19"
+}
