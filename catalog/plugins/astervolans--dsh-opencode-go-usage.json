@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Astervolans/dsh-opencode-go-usage",
+  "name": "dsh-opencode-go-usage",
+  "repository": "https://github.com/Astervolans/dsh-opencode-go-usage",
+  "category": "tools",
+  "description": {
+    "en": "Fork of yumusb/dsh-opencode-go-usage that monitors OpenCode GO plan quota through a widget pinned to the bottom of the DSH web sidebar. It shows the rolling 5-hour, weekly and monthly windows as usage bars, each with a countdown to its reset, and adds a time bar under every usage bar: gray on the left is the share of the window already elapsed and blue on the right is the share remaining, so quota burn can be compared against the clock. A /opencode-go chat command prints the same three windows as text, and a same-origin host route proxies the official gateway so the API key never reaches the browser.",
+    "zh": "yumusb/dsh-opencode-go-usage 的 fork，通过常驻 DSH Web 侧边栏底部的小组件监控 OpenCode GO 套餐额度。以进度条展示滚动 5 小时、每周、每月三个窗口，每条带重置倒计时；并在每条用量条下方增加一条时间条：左侧灰色为窗口已流逝时间占比，右侧蓝色为剩余时间占比，便于把额度消耗与时间进度对照。/opencode-go 聊天命令以文本输出同样的三个窗口，host 端同源路由代理官方网关，API key 不进入浏览器。"
+  },
+  "added": "2026-09-20"
+}
