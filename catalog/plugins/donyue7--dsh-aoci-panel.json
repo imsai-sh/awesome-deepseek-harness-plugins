@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "donyue7/dsh-aoci-panel",
+  "name": "dsh-aoci-panel",
+  "repository": "https://github.com/donyue7/dsh-aoci-panel",
+  "category": "dev",
+  "description": {
+    "en": "Adds an AOCI tab to the conversation view tab strip that shows the current project's AOCI index overview, governance status, and an entry browser. Requires the AOCI CLI to be installed.",
+    "zh": "在会话视图标签中新增 AOCI 标签页，展示当前项目的 AOCI 索引概览、治理状态与条目浏览。需先安装 AOCI CLI。"
+  },
+  "added": "2026-09-21"
+}
