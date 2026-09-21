@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "goodddGrades/dsh-behuman",
+  "name": "dsh-behuman",
+  "repository": "https://github.com/goodddGrades/dsh-behuman",
+  "category": "memory",
+  "description": {
+    "en": "Cross-session memory and self-evolution for DeepSeek Harness: memories are Markdown files on disk, a one-line-per-memory catalog is carried in the prompt instead of retrieved, and a background pass reviews tool calls for writes the main agent missed.",
+    "zh": "DeepSeek Harness 的跨会话记忆与自进化：记忆以 Markdown 文件存储在磁盘上，目录（每条记忆一行）随提示词携带而非检索；另有一轮后台复审，检查主 agent 漏写的部分。"
+  },
+  "added": "2026-09-21"
+}
