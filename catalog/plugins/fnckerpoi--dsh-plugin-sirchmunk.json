@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Fnckerpoi/dsh-plugin-sirchmunk",
+  "name": "dsh-plugin-sirchmunk",
+  "repository": "https://github.com/Fnckerpoi/dsh-plugin-sirchmunk",
+  "category": "tools",
+  "description": {
+    "en": "DSH-native settings plugin that adds a Sirchunk management section to the DSH settings interface: inspect and export the knowledge graph, manage clusters, review shared history, monitor runtime metrics, and configure privacy masking and write-permission controls. Also bundles the sirchmunk-search agent skill for querying local documents across 100+ formats.",
+    "zh": "DSH 原生设置插件，在 DSH 设置中注册 Sirchunk 管理区域：查看并导出知识图谱、管理知识聚类、查看共享历史与审计记录、监控运行指标，以及配置敏感信息脱敏与全局写权限。内置 sirchmunk-search 技能，支持对本地文档与知识库进行 100+ 种格式的检索。"
+  },
+  "added": "2026-09-21"
+}
