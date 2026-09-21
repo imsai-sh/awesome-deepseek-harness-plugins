@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YLL-KB/dsh-video-to-notes",
+  "name": "dsh-video-to-notes",
+  "repository": "https://github.com/YLL-KB/dsh-video-to-notes",
+  "category": "skill",
+  "description": {
+    "en": "Agent skill bundle that turns course, lecture, tutorial, meeting, and talk videos into structured study notes, chaining ffmpeg audio extraction and Whisper transcription into a note-writing workflow with a chapter outline, emphasis markers, and a quick-reference card.",
+    "zh": "把课程、讲座、教程、会议、演讲等视频整理成结构化学习笔记的技能包：用 ffmpeg 提取音轨、Whisper 语音转文字，再生成带分段大纲、重点标记和速查卡的笔记。"
+  },
+  "added": "2026-09-21"
+}
