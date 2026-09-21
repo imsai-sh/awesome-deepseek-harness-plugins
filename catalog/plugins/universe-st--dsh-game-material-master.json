@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "universe-st/dsh-game-material-master",
+  "name": "dsh-game-material-master",
+  "repository": "https://github.com/universe-st/dsh-game-material-master",
+  "category": "tools",
+  "description": {
+    "en": "Generates game art from reference images via Volcengine Seedream image generation and MiniMax image-to-video, then assembles eight-direction sprites, sequence frames, and skeleton animations with local green-screen keying. Registers the generation pipeline as agent-callable tools.",
+    "zh": "基于火山方舟 Seedream 生图与 MiniMax 图生视频生成游戏素材，支持八方向精灵图、单图、序列帧与骨骼动画四个模块，本地完成绿幕抠像与合成，并将生成流水线注册为可被 agent 调用的工具。"
+  },
+  "added": "2026-09-21"
+}
