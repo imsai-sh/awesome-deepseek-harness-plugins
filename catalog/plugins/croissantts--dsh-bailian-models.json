@@ -5,8 +5,8 @@
   "repository": "https://github.com/CroissanTTs/dsh-bailian-models",
   "category": "model",
   "description": {
-    "en": "Alibaba Bailian (DashScope) model catalog preset for DeepSeek Harness — 36 models with per-family reasoning effort adaptation, context windows, and auto-adaptation of existing Bailian routes.",
-    "zh": "百炼（DashScope）模型目录预置插件。内置 36 个主流文本模型（Qwen / DeepSeek / GLM / Kimi / MiniMax），按百炼官方文档适配推理强度（等级型 / 预算型 / 开关型 / 仅思考型）、上下文窗口与输出上限。自动识别已有百炼路由并补齐缺失的方言声明。"
+    "en": "Alibaba Bailian (DashScope) model catalog preset for DeepSeek Harness — 37 models with per-family reasoning effort adaptation, context windows, and auto-adaptation of existing Bailian routes. Includes DeepSeek V4.1 Flash.",
+    "zh": "百炼（DashScope）模型目录预置插件。内置 37 个主流文本模型（Qwen / DeepSeek / GLM / Kimi / MiniMax），按百炼官方文档适配推理强度（等级型 / 预算型 / 开关型 / 仅思考型）、上下文窗口与输出上限。自动识别已有百炼路由并补齐缺失的方言声明。已适配 DeepSeek V4.1 Flash。"
   },
   "added": "2026-09-13"
 }
