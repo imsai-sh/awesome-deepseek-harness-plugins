@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "979569650/dsh-typesafe",
+  "name": "dsh-typesafe",
+  "repository": "https://github.com/979569650/dsh-typesafe",
+  "category": "tools",
+  "description": {
+    "en": "Adds three tools over the TypeSafe Jev decision model: ask typed questions with probabilities, route content to one of a fixed set with a confidence, and screen untrusted text for prompt injection. Also screens results from fetch-like tools before the model reads them, and reports session cost.",
+    "zh": "接入 TypeSafe Jev 决策模型，提供三个工具：以带概率的类型化问题做判断、把内容路由到固定选项之一并给出置信度、筛查不可信文本中的提示注入。同时会在模型读取之前筛查抓取类工具的结果，并统计会话成本。"
+  },
+  "added": "2026-09-22"
+}
