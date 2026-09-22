@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "shenA2024/whale-persona",
+  "name": "whale-persona",
+  "repository": "https://github.com/shenA2024/whale-persona",
+  "category": "identity",
+  "description": {
+    "en": "A persona engine. One config.json drives the AI's self-name (per model, falling back to two tiers), how it addresses you, stance, character text, per-item work contracts, thinking-chain language, style fields for appearance and reply tone (both opt-in and per-model), and long-term memory. Memory writes are code-gated: the AI can only append entries marked proposed, and only a human confirm line activates one. The log is append-only and replayed in line order to build the injected view. Confirmed entries are injected as a quoted block declared data rather than instructions; entries carrying a kind can instead be routed into other files on confirmation, never reaching the prompt. Persona presets are shareable JSON snapshots carrying no memory; they import and export SillyTavern character cards (v2/v3 read, v2 written, unmappable fields reported rather than faked). Zero dependencies, no network, no subprocesses; errors degrade to an empty section instead of a broken session.",
+    "zh": "一个人设引擎。一份 config.json 管住 AI 的自称（可按具体模型指定，未命中回落两个档位）、对你的称呼、关系立场、性格正文、逐条可开关的工作契约、思维链语言、形象与回复语气（两者均为可选开启、均可按模型覆盖），以及长期记忆。记忆写入由代码把关：AI 只能追加标记为 proposed 的候选，且只有人追加一行 confirm 后该条目才生效；日志物理只追加，读取时按行序重放得到注入视图。已确认条目以引号块注入，并声明为数据而非指令；带 kind 的条目改为在确认时按路由追加进指定文件，永不进入提示词。三段提示词在每次装配时都从磁盘重新求值，因此改配置后下一步即生效、无需重启。人设预设是可分享的 JSON 快照，刻意不携带记忆；可导入与导出酒馆角色卡（读 v2 与 v3，写 v2，无法映射的字段如实报告而不假装成功）。零运行时依赖、不联网、不执行子进程；任何异常都降级为空段，而不是让会话坏掉。出厂空白：不写任何内容则不改变行为。"
+  },
+  "added": "2026-09-22"
+}
