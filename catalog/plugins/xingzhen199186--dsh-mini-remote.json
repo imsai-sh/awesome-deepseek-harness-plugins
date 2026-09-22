@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xingzhen199186/dsh-mini-remote",
+  "name": "dsh-mini-remote",
+  "repository": "https://github.com/xingzhen199186/dsh-mini-remote",
+  "category": "tools",
+  "description": {
+    "en": "A minimal phone remote control for DeepSeek Harness: the phone page carries only the instruction you send and the AI's final conclusion, while tool calls, file reads and writes, sub-agent dispatch, and reasoning traces stay on the computer. Three connection routes coexist — LAN, Tailscale, and a Cloudflare public tunnel — each with its own QR code, link, and password on the plugin's settings page.",
+    "zh": "给 DeepSeek Harness 用的极简手机遥控器：手机页面上只有你发出的指令和 AI 最后的结论，工具调用、文件读写、子 Agent 调度与思考过程全部留在电脑上。内网、Tailscale、Cloudflare 公网隧道三条连接路径并存，插件的设置页上各配一个二维码、一条链接和一个密码。"
+  },
+  "added": "2026-09-23"
+}
