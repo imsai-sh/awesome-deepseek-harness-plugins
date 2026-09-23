@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Breeze136/dsh-kb-rag",
+  "name": "dsh-kb-rag",
+  "repository": "https://github.com/Breeze136/dsh-kb-rag",
+  "category": "tools",
+  "description": {
+    "en": "Indexes local PDFs and Zotero libraries into a SQLite knowledge base, retrieves with hybrid BM25 + vector search and cross-encoder reranking, and returns cited passages with section- and page-level provenance through ten kb_* tools (ingest, search, cited Q&A, Zotero import, DOI fetch, scope, stats, job status, dedup, clear).",
+    "zh": "把本地 PDF 与 Zotero 库索引进 SQLite 知识库，用 BM25 + 向量混合检索与交叉编码器精排，通过十个 kb_* 工具（入库、检索、带引用问答、Zotero 导入、DOI 补库、范围、统计、任务状态、去重、清库）返回带章节与页码出处的引用片段。"
+  },
+  "added": "2026-09-23"
+}
