@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "exoticknight/dsh-just-chat",
+  "name": "dsh-just-chat",
+  "repository": "https://github.com/exoticknight/dsh-just-chat",
+  "category": "ui",
+  "description": {
+    "en": "One-click native conversations with independent workspaces for DeepSeek Harness.",
+    "zh": "为 DeepSeek Harness 提供一键原生对话和独立工作区。"
+  },
+  "added": "2026-09-23"
+}
