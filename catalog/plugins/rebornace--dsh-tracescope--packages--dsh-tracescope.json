@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "rebornace/dsh-tracescope/packages/dsh-tracescope",
+  "name": "dsh-tracescope",
+  "repository": "https://github.com/rebornace/dsh-tracescope",
+  "category": "tools",
+  "description": {
+    "en": "Change-impact scope plugin: turns a stable baseline to under-test commit pair into a checklist of direct changes and reverse-dependency ripple for mobile and web languages, with per-item status, screenshots, attachments, issue submission and Markdown/CSV export.",
+    "zh": "改动影响面插件：把“稳定基线 → 待测提交”转成清单，包含直接变更与反向依赖波及（覆盖常用移动端与 Web 语言），支持逐项标注、截图、附件、提交 issue 以及导出 Markdown/CSV。"
+  },
+  "added": "2026-09-24"
+}
