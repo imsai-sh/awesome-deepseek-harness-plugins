@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "minivv/dsh-activity-bell",
+  "name": "dsh-activity-bell",
+  "repository": "https://github.com/minivv/dsh-activity-bell",
+  "category": "ui",
+  "description": {
+    "en": "Adds an activity bell beside the sidebar search control: a red badge counts sessions that finished, and clicking it swaps the sidebar list from workspace grouping to a day-grouped recent-activity list with a green dot on completions that have not been opened yet.",
+    "zh": "在侧边栏搜索按钮旁增加一个活动铃铛：会话跑完后显示红色角标，点击后把侧边栏列表从按工作区分组切换成按天分组的最近活动列表，尚未打开过的完成项带绿点。"
+  },
+  "added": "2026-09-23"
+}
