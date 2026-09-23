@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "1420079678-ctrl/agent-body",
+  "name": "agent-body",
+  "repository": "https://github.com/1420079678-ctrl/agent-body",
+  "category": "dev",
+  "description": {
+    "en": "Organ-based plugin layer for DeepSeek Harness. Plugins declare themselves organs with capabilities, senses and reflexes: nerve impulses route a command to the organ that owns it, a heartbeat circulates state, reflex arcs fire without model calls, and sleep-time consolidation turns run history into memory cards. Tool schemas are gated by intent to reduce prompt tokens.",
+    "zh": "面向 DeepSeek Harness 的器官化插件层。插件以「器官」声明能力、感知与反射：神经冲动把命令路由给负责它的器官，心跳在全身循环状态，反射弧无需模型调用即可命中执行，睡眠期巩固把运行经历写成记忆卡。工具 schema 按意图显影，以减少提示词 token。"
+  },
+  "added": "2026-09-23"
+}
