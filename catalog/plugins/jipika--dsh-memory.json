@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jipika/dsh-memory",
+  "name": "dsh-memory",
+  "repository": "https://github.com/jipika/dsh-memory",
+  "category": "memory",
+  "description": {
+    "en": "Two-layer long-term memory for DeepSeek Harness: a global markdown file plus per-project files, injected as a prompt section on every assembly, with a Settings panel to toggle each layer and read its content.",
+    "zh": "给 DeepSeek Harness 的两层长期记忆：一个全局 markdown 文件加按项目分级的文件，每次提示词组装时作为提示词段注入，并在设置面板里为每层提供开关与正文查看。"
+  },
+  "added": "2026-09-23"
+}
