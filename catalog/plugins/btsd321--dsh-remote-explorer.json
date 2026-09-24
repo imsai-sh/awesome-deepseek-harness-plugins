@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "btsd321/dsh-remote-explorer",
+  "name": "dsh-remote-explorer",
+  "repository": "https://github.com/btsd321/dsh-remote-explorer",
+  "category": "dev",
+  "description": {
+    "en": "Remote development launcher: install dsh on a remote host and use it from the local browser, with LLM credentials never leaving the machine.",
+    "zh": "远程开发启动器：把 dsh 装到远程主机并在本机浏览器中使用，凭据不离开本机。"
+  },
+  "added": "2026-09-24"
+}
