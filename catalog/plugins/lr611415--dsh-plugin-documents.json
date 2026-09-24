@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LR611415/dsh-plugin-documents",
+  "name": "dsh-plugin-documents",
+  "repository": "https://github.com/LR611415/dsh-plugin-documents",
+  "category": "tools",
+  "description": {
+    "en": "Provides tools to read and write Word (.docx), PDF, and plain-text files.",
+    "zh": "提供读写 Word (.docx)、PDF 与纯文本文件的工具。"
+  },
+  "added": "2026-09-24"
+}
