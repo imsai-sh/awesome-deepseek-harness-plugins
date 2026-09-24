@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "btsd321/dsh-oh-my-terminal",
+  "name": "dsh-oh-my-terminal",
+  "repository": "https://github.com/btsd321/dsh-oh-my-terminal",
+  "category": "ui",
+  "description": {
+    "en": "Bottom terminal panel plugin for the DSH Web GUI, providing multi-tab interactive terminals powered by node-pty (Windows ConPTY / POSIX openpty) with split panes, a side terminal list, and dropdown actions.",
+    "zh": "DSH Web GUI 底部终端面板插件，基于 node-pty 提供多标签交互式终端（Windows ConPTY / POSIX openpty），支持拆分面板、右侧终端列表与下拉菜单操作。"
+  },
+  "added": "2026-09-24"
+}
