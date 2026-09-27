@@ -2,7 +2,7 @@
   "$schema": "../schema/plugin.schema.json",
   "id": "croissantts/dsh-harness-jarvis",
   "name": "dsh-harness-jarvis",
-  "repository": "https://github.com/CroissantTTs/dsh-harness-jarvis",
+  "repository": "https://github.com/croissantts/dsh-harness-jarvis",
   "category": "ui",
   "description": {
     "en": "Floating-window assistant for DSH Desktop: a macOS particle-orb panel for quick permission approvals, hotkey floating chat, and spoken greetings.",
