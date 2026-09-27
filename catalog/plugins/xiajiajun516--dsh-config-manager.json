@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xiajiajun516/dsh-config-manager",
+  "name": "dsh-config-manager",
+  "repository": "https://github.com/xiajiajun516/dsh-config-manager",
+  "category": "tools",
+  "description": {
+    "en": "Backup, restore, export, import, migrate and sync a DSH configuration (settings, plugins, MCP servers, skills, agent presets, workspaces) with a preview before anything is written, cross-machine path remapping and an optional encrypted credential payload.",
+    "zh": "DSH 配置的备份、恢复、导出、导入、迁移与同步：覆盖设置、插件、MCP、技能、Agent 预设与工作区；写盘前先预览，跨机自动重映射路径，可选加密快照携带凭据。"
+  },
+  "added": "2026-09-27"
+}
