@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "rajpaulsingh6-stack/dsh-genoffice-captain",
+  "name": "dsh-genoffice-captain",
+  "repository": "https://github.com/rajpaulsingh6-stack/dsh-genoffice-captain",
+  "category": "workflow",
+  "description": {
+    "en": "When a session invokes the GenOffice task-list skills (GenOffice_XLSX_Tasklist, /GenOfficeXLSXTasklistOrchestration), launches GenOffice for solo work or opens a DESIGNATE THE CAPTAIN pane with a No Orchestration switch and a session dropdown; designating stars that session, tells it it is the Captain and launches GenOffice. Bundles both skills.",
+    "zh": "当会话调用 GenOffice 任务清单技能（GenOffice_XLSX_Tasklist、/GenOfficeXLSXTasklistOrchestration）时，单会话工作直接启动 GenOffice，否则打开 DESIGNATE THE CAPTAIN 面板，提供“无编排”开关和会话下拉框；指定后为该会话标注星标、告知其为 Captain 并启动 GenOffice。内置两项技能。"
+  },
+  "added": "2026-09-27"
+}
