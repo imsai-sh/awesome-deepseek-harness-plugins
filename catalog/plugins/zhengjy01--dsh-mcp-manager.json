@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhengjy01/dsh-mcp-manager",
+  "name": "dsh-mcp-manager",
+  "repository": "https://github.com/zhengjy01/dsh-mcp-manager",
+  "category": "tools",
+  "description": {
+    "en": "Add, edit, enable and test MCP servers from the Web settings page or from eight mcp_manager_* agent tools. It connects and disconnects stdio and Streamable HTTP servers at runtime through the harness's own MCP bridge, so no DSH restart is needed.",
+    "zh": "在 Web 设置页或通过 8 个 mcp_manager_* Agent 工具增删改查 MCP 服务器。它通过 harness 自带的 MCP 桥在运行时连接与断开 stdio / Streamable HTTP 服务器，不需要重启 DSH。"
+  },
+  "added": "2026-09-27"
+}
