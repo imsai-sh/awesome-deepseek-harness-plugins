@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "knopki/dsh-prompt-profiles",
+  "name": "dsh-prompt-profiles",
+  "repository": "https://github.com/knopki/dsh-prompt-profiles",
+  "category": "session",
+  "description": {
+    "en": "Per-session prompt profiles for DeepSeek Harness: reusable system-prompt sections, grouped into named profiles, sealed into the session prompt.",
+    "zh": "面向 DeepSeek Harness 的按会话提示词配置档：可复用的系统提示词分节组成具名配置档，并在会话开始时固化进会话提示词。"
+  },
+  "added": "2026-09-28"
+}
