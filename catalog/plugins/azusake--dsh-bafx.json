@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "AzusaKe/dsh-bafx",
+  "name": "dsh-bafx",
+  "repository": "https://github.com/AzusaKe/dsh-bafx",
+  "category": "fun",
+  "description": {
+    "en": "Click effect and cursor trail for DeepSeek Harness, ported from the Blue Archive FX_Touch effect through the ba-click-fx library: clicking draws a dissolving ring, a centre disk and flying shards, and moving the pointer leaves a trail. The effect renders on a full-screen overlay canvas and does not touch page layout. A vertical sidebar entry opens a dialog with ten live settings (enable, click, trail, trail-always, click size, trail length, scale, opacity, compositing mode, theme colour) plus a reset-to-defaults action. No build step and no runtime dependencies.",
+    "zh": "为 DeepSeek Harness 添加点击特效与光标拖尾，效果经 ba-click-fx 库移植自《蔚蓝档案》的 FX_Touch：点击出现溶解圆环、中心光盘与碎片飞散，移动鼠标留下拖尾。特效绘制在全屏覆盖层画布上，不影响页面布局。左侧边栏竖排入口打开设置对话框，提供十项实时设置（启用、点击、拖尾、拖尾常显、点击大小、拖尾长度、缩放、不透明度、混合模式、主题色）以及恢复默认值。无需构建，无运行时依赖。"
+  },
+  "added": "2026-09-29"
+}
