@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yh4922/dsh-workspace",
+  "name": "dsh-workspace",
+  "repository": "https://github.com/yh4922/dsh-workspace",
+  "category": "tools",
+  "description": {
+    "en": "Remote workspace plugin: stores SSH hosts in a local encrypted vault (groups, jump hosts, SOCKS5/HTTP proxy), provides an interactive SSH terminal, browses and edits remote files over SFTP, shows remote Git changes and history, and binds a remote directory as a workspace so the agent's read/write/glob/grep/bash tools run on the remote host.",
+    "zh": "远程工作区插件：SSH 主机保存在本机加密保险箱（分组、跳板机、SOCKS5/HTTP 代理），提供交互式 SSH 终端、SFTP 远程文件浏览与编辑、远程 Git 改动与历史，并可将远程目录绑定为工作区，使 Agent 的 read/write/glob/grep/bash 都作用在远程主机上。"
+  },
+  "added": "2026-09-29"
+}
