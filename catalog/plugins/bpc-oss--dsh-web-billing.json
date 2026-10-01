@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bpc-oss/dsh-web-billing",
+  "name": "dsh-web-billing",
+  "repository": "https://github.com/bpc-oss/dsh-web-billing",
+  "category": "billing",
+  "description": {
+    "en": "RMB/USD token billing for the DSH web: official DeepSeek pricing auto-follow (incl. peak/off-peak hours), per-provider billing (usage / subscription / free-ride / local), source-grouped cost page with time ranges, budget, account balance, CSV/JSON export.",
+    "zh": "DeepSeek Harness Web 的 RMB/USD 计费插件：官方价格自动跟随（含峰谷时段）、按 Provider 计费（按量/订阅/白嫖/本地）、来源分组费用页（时间段筛选）、预算、账号余额、CSV/JSON 导出。"
+  },
+  "added": "2026-08-20"
+}
