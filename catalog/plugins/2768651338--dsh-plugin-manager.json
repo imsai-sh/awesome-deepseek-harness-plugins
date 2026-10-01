@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "2768651338/dsh-plugin-manager",
+  "name": "dsh-plugin-manager",
+  "repository": "https://github.com/2768651338/dsh-plugin-manager",
+  "category": "dev",
+  "description": {
+    "en": "Adds a Plugin Manager tab to Settings that catalogs installed DSH plugins with Chinese names, plain-language descriptions and categories; toggles plugins with one click by editing the global cordis.patch.yml (hot-reloaded in about a second), with system rows locked and !!js-expression rows labeled; supports per-plugin custom notes edited in the UI, search and category filters, and backup/restore of notes and toggle state. Compatible with DSH 0.1.x and 0.2.0.",
+    "zh": "在设置中新增插件管理标签页：为已安装插件提供中文名、通俗说明与分类目录；一键启停（写入全局 cordis.patch.yml，约 1 秒热生效），系统行锁定保护、!!js 表达式控制行明确标注；支持在界面内为插件编辑自定义备注，提供搜索、分类筛选与备注/启停状态的备份恢复。兼容 DSH 0.1.x 与 0.2.0。"
+  },
+  "added": "2026-10-01"
+}
