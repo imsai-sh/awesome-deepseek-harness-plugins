@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "orphiczhou/dsh-session-tree",
+  "name": "dsh-session-tree",
+  "repository": "https://github.com/orphiczhou/dsh-session-tree",
+  "category": "ui",
+  "description": {
+    "en": "Renders every session and its nested subagent descendants as a tree in the left sidebar, occupying the sidebar.workspaces slot, with click-through to each conversation's multi-turn history and a tree_send host tool for messaging any continuable session in the tree. Plain ESM, no build step, no runtime dependencies, and no network access.",
+    "zh": "在左侧栏以树形渲染全部会话及其多层子智能体，占用 sidebar.workspaces 席位；点击节点即可进入该会话的多轮对话，并提供 tree_send 宿主工具，可向树中任意可续接的子会话投递消息。纯 ESM、无需构建、无运行时依赖，也不发起任何网络请求。"
+  },
+  "added": "2026-10-01"
+}
