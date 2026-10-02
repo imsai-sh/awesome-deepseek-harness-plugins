@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "orphiczhou/dsh-region-probe",
+  "name": "dsh-region-probe",
+  "repository": "https://github.com/orphiczhou/dsh-region-probe",
+  "category": "ui",
+  "description": {
+    "en": "Read-only Cordis Inspect provider that lets an agent read which UI regions the running Harness shell actually rendered: outline() lists every region with its occupancy, geometry and current or past failure state, snapshot() returns one region's rendered node tree (tag, role, aria-label, own text, geometry, computed styles) addressed by slot key or CSS selector, and failures() keeps a per-page history of regions that failed to render and whether they recovered. Regions are addressed through the anchor the shell already writes for every slot, so it needs no list of regions and works for regions added by later DSH versions or contributed by other plugins. No UI, no tools, no dependencies, no network access; every answer is bounded and read-only.",
+    "zh": "只读的 Cordis Inspect provider：让 agent 读到运行中的 Harness 壳实际渲染了哪些 UI 区域——outline() 列出每个区域的占用情况、几何与当前/历史失败状态，snapshot() 按 slot key 或 CSS 选择器返回某个区域的渲染节点树（标签、角色、aria-label、自身文本、几何、计算样式），failures() 维护本页的失败历史（哪些区域渲染失败过、失败几次、是否已恢复）。寻址用的是壳为每个 slot 已经写好的锚点，因此不需要区域清单，对以后 DSH 新增的区域或其他插件贡献的区域同样有效。无界面、无工具、无依赖、不发网络请求；每个回答都有界且只读。"
+  },
+  "added": "2026-10-02"
+}
