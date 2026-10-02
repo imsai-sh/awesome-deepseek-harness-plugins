@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "nijika-boyfriend/dsh-macos-notify",
+  "name": "dsh-macos-notify",
+  "repository": "https://github.com/nijika-boyfriend/dsh-macos-notify",
+  "category": "notify",
+  "description": {
+    "en": "Trigger macOS native system notifications with sound on task completion, execution error, or approval request.",
+    "zh": "在任务完成、执行出错或等待审批时触发带提示音的 macOS 原生系统通知。"
+  },
+  "added": "2026-10-02"
+}
