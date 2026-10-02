@@ -1,12 +1,12 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "CroissanTTs/dsh-effort-slider",
-  "name": "dsh-effort-slider",
+  "name": "dsh-reasoning-effort-slider",
   "repository": "https://github.com/CroissanTTs/dsh-effort-slider",
   "category": "ui",
   "description": {
-    "en": "Reasoning effort slider for DeepSeek Harness — a per-session UI that lets users adjust reasoning intensity with a polished slider, shown for any model that declares reasoning efforts.",
-    "zh": "推理强度滑动调节插件。在会话输入区显示彩色档位名 icon，点击弹出精致滑动条（胶囊轨道 + 光泽蓝色拇指 + 档位点 + 平滑颜色过渡），最高档带四角星流光动画。Provider 无关，适配任何声明了 reasoning.efforts 的模型。"
+    "en": "Reasoning effort slider for DeepSeek Harness — a per-session UI that lets users adjust reasoning intensity with a polished slider, shown for any model that declares reasoning efforts. Remembers the level picked per model and carries it over when switching models, clamped to the levels the target model supports.",
+    "zh": "推理强度滑动调节插件。在会话输入区显示彩色档位名 icon，点击弹出精致滑动条（胶囊轨道 + 光泽蓝色拇指 + 档位点 + 平滑颜色过渡），最高档带四角星流光动画。Provider 无关，适配任何声明了 reasoning.efforts 的模型。按模型记住所选档位，切换模型时自动沿用并钳制到目标模型支持的档位。"
   },
   "added": "2026-09-13"
 }
