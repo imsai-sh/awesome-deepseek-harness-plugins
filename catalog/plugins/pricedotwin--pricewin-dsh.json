@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PriceDotWin/pricewin-dsh",
+  "name": "pricewin-dsh",
+  "repository": "https://github.com/PriceDotWin/pricewin-dsh",
+  "category": "tools",
+  "description": {
+    "en": "Live hotel and flight prices in USD across Booking.com, Agoda, Trip.com and Traveloka, through the remote PriceWin MCP server (no account or API key), with a bundled travel-search skill.",
+    "zh": "通过 PriceWin 远程 MCP 服务实时比较 Booking.com、Agoda、Trip.com 和 Traveloka 的酒店与机票价格（美元），无需账号或 API Key，附带搜索 Skill。"
+  },
+  "added": "2026-10-02"
+}
