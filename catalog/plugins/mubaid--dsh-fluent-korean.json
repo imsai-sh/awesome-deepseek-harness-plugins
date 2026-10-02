@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mubaid/dsh-fluent-korean",
+  "name": "dsh-fluent-korean",
+  "repository": "https://github.com/mubaid/dsh-fluent-korean",
+  "category": "tools",
+  "description": {
+    "en": "Switchable Korean output styles: the plugin registers its own system-prompt section asking the model for natural Korean prose, plus a second style that drops the coding guidance. The rules are snflkd/fluent-korean, carried over byte-identically under MIT. Verified against dsh 0.2.0-rc.2.",
+    "zh": "可切换的韩语输出风格：插件注册自己的系统提示段落，要求模型写出自然的韩语，并提供另一种不带编码指引的风格。规则文本来自 snflkd/fluent-korean，在 MIT 下逐字节保留。已在 dsh 0.2.0-rc.2 上验证。"
+  },
+  "added": "2026-10-02"
+}
