@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mubaid/dsh-opencode-freeaccess",
+  "name": "dsh-opencode-freeaccess",
+  "repository": "https://github.com/mubaid/dsh-opencode-freeaccess",
+  "category": "session",
+  "description": {
+    "en": "Puts the DSH conversation session id on outgoing model requests so OpenCode's free tier accepts them: listens on the llm/stream waterfall and injects the session header family onto requests to opencode hosts. No API key needed. Verified against dsh 0.2.0-rc.2.",
+    "zh": "把 DSH 会话 id 放到出站的模型请求上，使 OpenCode 免费额度接受这些请求：监听 llm/stream waterfall，并向 opencode 主机注入会话头族。无需 API key。已在 dsh 0.2.0-rc.2 上验证。"
+  },
+  "added": "2026-10-02"
+}
