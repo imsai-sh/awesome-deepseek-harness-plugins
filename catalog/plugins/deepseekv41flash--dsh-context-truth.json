@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "deepseekv41flash/dsh-context-truth",
+  "name": "dsh-context-truth",
+  "repository": "https://github.com/deepseekv41flash/dsh-context-truth",
+  "category": "session",
+  "description": {
+    "en": "Host-side plugin that writes the host-measured context-occupancy reading into the agent's runtime context every turn, and appends two rules to the compaction prompt so generated checkpoints do not restate claims about the remaining token budget.",
+    "zh": "宿主侧插件：每轮把宿主实测的上下文占用写入运行时上下文，并向压缩提示词追加两条规则，使生成的检查点不再复述关于剩余 token 预算的说法。"
+  },
+  "added": "2026-10-03"
+}
