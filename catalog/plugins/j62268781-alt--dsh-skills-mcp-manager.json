@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "j62268781-alt/dsh-skills-mcp-manager",
+  "name": "dsh-skills-mcp-manager",
+  "repository": "https://github.com/j62268781-alt/dsh-skills-mcp-manager",
+  "category": "ui",
+  "description": {
+    "en": "Skills and MCP servers in one DSH settings panel. Skills are handled on disk: browse, search, preview, create, edit, rename and delete, with a backup directory kept on delete. Global MCP servers are written back as real rows in the profile's cordis.patch.yml; per-project servers mount only for that project. Existing configurations can be imported from 26 MCP clients after a scan and preview.",
+    "zh": "在 DSH 设置面板里管理技能与 MCP 服务器。技能以磁盘为准：浏览、搜索、预览、新建、编辑、重命名、删除，删除前先备份目录。全局 MCP 服务器写回 profile 的 cordis.patch.yml 真实行，项目级服务器只在该项目里挂载。既有配置可从 26 个 MCP 客户端扫描预览后导入。"
+  },
+  "added": "2026-10-03"
+}
