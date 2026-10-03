@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "liwei9745/dsh-genbox-plugin",
+  "name": "dsh-genbox-plugin",
+  "repository": "https://github.com/liwei9745/dsh-genbox-plugin",
+  "category": "tools",
+  "description": {
+    "en": "Adds GenBox image generation, editing, inpainting, upscaling and video tools to the agent, with a zero-key mock provider for tests.",
+    "zh": "把 GenBox 的生图、改图、局部重绘、超分与视频能力接入 agent，并附带零 Key 的 mock provider 供测试。"
+  },
+  "added": "2026-10-03"
+}
