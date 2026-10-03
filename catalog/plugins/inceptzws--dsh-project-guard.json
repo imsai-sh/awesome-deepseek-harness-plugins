@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Inceptzws/dsh-project-guard",
+  "name": "dsh-project-guard",
+  "repository": "https://github.com/Inceptzws/dsh-project-guard",
+  "category": "dev",
+  "description": {
+    "en": "Host bundle that leaves work inside the workspace untouched and judges only the extra permission a call asks for: reads, network traffic, temp files, package caches and project writes pass; system state changes and writes outside the project ask once, with a deterministic impact analysis; machine- or session-destroying actions are refused; at most one confirmation is outstanding at a time.",
+    "zh": "Host bundle：工作区内的操作完全不参与，只判定调用额外申请的权限——读取、网络通信、临时文件、包缓存与项目内写入放行；改动系统状态或写入项目之外时确认一次，并附确定性影响分析；会毁机器或断会话的动作直接拒绝；同一时刻只有一个确认。"
+  },
+  "added": "2026-10-03"
+}
