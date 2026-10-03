@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "asun-labs/dsh-plugin-agent-deck",
-  "name": "Agent Deck",
+  "name": "dsh-plugin-agent-deck",
   "repository": "https://github.com/asun-labs/dsh-plugin-agent-deck",
   "category": "ui",
   "description": {
