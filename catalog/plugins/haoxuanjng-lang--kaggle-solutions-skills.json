@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "haoxuanjng-lang/kaggle-solutions-skills",
+  "name": "kaggle-solutions-skills",
+  "repository": "https://github.com/haoxuanjng-lang/kaggle-solutions-skills",
+  "category": "tools",
+  "description": {
+    "en": "Search pinned Kaggle solution archives and source-backed decision cards offline, and generate five-role research task packets for historical competition scenarios. Includes a native Harness tool bundle; training and submissions remain with the selected competition workflow.",
+    "zh": "离线检索固定版本的 Kaggle 解法档案与有出处的方法卡，并为真实历史比赛场景生成五角色研究任务包。提供原生 Harness 工具 bundle；训练与提交沿用已有比赛工作流。"
+  },
+  "added": "2026-10-04"
+}
