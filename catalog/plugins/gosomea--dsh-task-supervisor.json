@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gosomea/dsh-task-supervisor",
+  "name": "dsh-task-supervisor",
+  "repository": "https://github.com/gosomea/dsh-task-supervisor",
+  "category": "workflow",
+  "description": {
+    "en": "Persistent task supervision for DSH with plan coverage review, DAG progress, sidebar consultation, and stage/completion checks. Published on npm as a development preview.",
+    "zh": "为 DSH 提供持久任务督导、计划覆盖审查、DAG 进度、督导对话和阶段／完成验收；已发布 npm 开发预览版。"
+  },
+  "added": "2026-10-05"
+}
