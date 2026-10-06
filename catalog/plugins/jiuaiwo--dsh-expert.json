@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jiuaiwo/dsh-expert",
+  "name": "dsh-expert",
+  "repository": "https://github.com/jiuaiwo/dsh-expert",
+  "category": "tools",
+  "description": {
+    "en": "An expert roster for DeepSeek Harness: 623 experts across 22 divisions, with Chinese names and bios for every one. Experts are summoned as subagents from the @ menu or by the model through the list_t_experts / summon_t_expert / summon_t_experts tools; users can also define their own experts and switch individual skills on or off.",
+    "zh": "给 DeepSeek Harness 用的专家名册：22 个分类、623 位专家，每位都有中文名与简介。从 @ 菜单或由模型经 list_t_experts / summon_t_expert / summon_t_experts 三个工具召唤为子代理；也可以自建专家，并逐个开关技能。"
+  },
+  "added": "2026-10-06"
+}
