@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jiuaiwo/dsh-helper",
+  "name": "dsh-helper",
+  "repository": "https://github.com/jiuaiwo/dsh-helper",
+  "category": "notify",
+  "description": {
+    "en": "Sends a local file to WeChat from any DSH session by reusing an already installed IM plugin. Also runs cron-scheduled tasks in fresh sessions, marks workspace activity with a glow, shows an activity indicator in the session header, plays a chime when a reply finishes, toggles the macOS sidebar vibrancy, and offers a one-click host restart. Files reach WeChat through the IM plugin's own login; this plugin stores no credentials of its own.",
+    "zh": "在任意 DSH 会话把本机文件投递到微信（复用已装的 IM 插件）。另可按 cron 在全新会话里跑定时任务、用光晕标记工作区活动、在会话标题栏显示活跃指示、回复完成时响提示音、开关 macOS 侧栏毛玻璃，以及一键重启宿主。微信登录走 IM 插件自身，本插件不保存任何凭据。"
+  },
+  "added": "2026-10-06"
+}
