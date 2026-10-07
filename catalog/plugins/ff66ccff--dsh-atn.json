@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ff66ccff/dsh-ATN",
+  "name": "dsh-ATN",
+  "repository": "https://github.com/ff66ccff/dsh-ATN",
+  "category": "workflow",
+  "description": {
+    "en": "Adaptive topology multi-agent preset for DeepSeek Harness with peer messaging, a shared board, task handoff and live network visualization.",
+    "zh": "面向 DeepSeek Harness 的自适应拓扑多智能体预设，提供点对点通信、共享白板、任务交接和实时网络可视化。"
+  },
+  "added": "2026-10-07"
+}
