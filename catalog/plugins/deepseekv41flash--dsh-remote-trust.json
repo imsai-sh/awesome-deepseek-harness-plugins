@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "deepseekv41flash/dsh-remote-trust",
+  "name": "dsh-remote-trust",
+  "repository": "https://github.com/deepseekv41flash/dsh-remote-trust",
+  "category": "ui",
+  "description": {
+    "en": "Injects the client-side trusted-host declaration into the served index, so a page reached through a reverse proxy on a domain loads the Settings surface instead of reporting that settings are unavailable in this browser. The injection is idempotent and dependency-free, and it fails soft when the index-tap API is unavailable.",
+    "zh": "向被服务的 index 注入客户端可信主机声明，使经域名反向代理访问（非 loopback）的页面能加载设置界面，而不再报 settings are unavailable in this browser；注入幂等、无依赖，index 变换 API 不可用时静默降级。"
+  },
+  "added": "2026-10-08"
+}
