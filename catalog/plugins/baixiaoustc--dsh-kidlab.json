@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "baixiaoustc/dsh-kidlab",
+  "name": "dsh-kidlab",
+  "repository": "https://github.com/baixiaoustc/dsh-kidlab",
+  "category": "tools",
+  "description": {
+    "en": "A series of seven educational DeepSeek Harness plugins that introduce children to computers and programming, covering running code, memory, network, storage, security, processes and system monitoring.",
+    "zh": "给小朋友的电脑启蒙插件系列：7 个插件，用模型工具与 Web 卡片讲代码运行、内存、网络、存储、安全、进程与系统监控。"
+  },
+  "added": "2026-10-08"
+}
