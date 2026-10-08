@@ -1,12 +1,12 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "asun-labs/dsh-plugin-agent-deck",
-  "name": "Agent Deck",
+  "name": "dsh-plugin-agent-deck",
   "repository": "https://github.com/asun-labs/dsh-plugin-agent-deck",
   "category": "ui",
   "description": {
-    "en": "Adds a right-side panel with independent interactive agent-switch terminals for coding CLIs, with tab and grid layouts.",
-    "zh": "在右侧面板中通过 agent-switch 运行多个独立的编程 CLI 交互终端，并支持页签和网格布局。"
+    "en": "Delegates Codex tasks from DSH conversations with live task cards, a native right-side output panel, saved CLI history, and configurable accounts and models. Also includes interactive agent-switch terminals with tab and grid layouts.",
+    "zh": "在 DSH 会话中委派 Codex 子任务，显示实时任务卡片，并在原生右侧面板查看 CLI 输出与历史；可配置账号和模型，也保留支持页签和网格布局的 agent-switch 交互终端。"
   },
   "added": "2026-09-29"
 }
