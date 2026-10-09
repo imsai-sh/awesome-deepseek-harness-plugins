@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "frederico-kluser/dsh-orquestrator",
+  "name": "dsh-orquestrator",
+  "repository": "https://github.com/frederico-kluser/dsh-orquestrator",
+  "category": "model",
+  "description": {
+    "en": "Pick the model your subagents run on — with a reasoning-effort ceiling and an output-token cap — enforced in code on every child DSH starts, whichever tool starts it.",
+    "zh": "为子代理选择运行模型——附带推理努力度上限与输出 token 上限——在代码层面对 DSH 启动的每一个子代理强制执行，无论由哪个工具启动。"
+  },
+  "added": "2026-10-09"
+}
