@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "FenZhenHua/dsh-balance-meter",
+  "name": "dsh-balance-meter",
+  "repository": "https://github.com/FenZhenHua/dsh-balance-meter",
+  "category": "tools",
+  "description": {
+    "en": "Show DeepSeek API balance and this session's estimated cost (official per-request billing) in the composer stats strip.",
+    "zh": "在会话底部统计条显示 DeepSeek API 余额与本次会话估算费用（按官方计费方式逐请求精确累计）。"
+  },
+  "added": "2026-10-09"
+}
