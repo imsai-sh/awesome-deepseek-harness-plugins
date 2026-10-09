@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xyrrrrr-r/dsh-eval-control",
+  "name": "dsh-eval-control",
+  "repository": "https://github.com/xyrrrrr-r/dsh-eval-control",
+  "category": "dev",
+  "description": {
+    "en": "Host-side control plugin for the aeval evaluation harness. When an aeval trial starts, it injects the whole experiment configuration once (variables, gateway-lease budgets, fork lineage), binds those facts to a config digest and a runtime lock so a finished run cannot be re-explained with different parameters, refuses auxiliary model calls by policy, caps model calls through a gateway lease, and writes a verifiable bundle descriptor per trial. Ships a read-only self-check command and a web status chip. With no configuration it activates standalone: it mounts nothing and redirects no model call.",
+    "zh": "aeval 评测框架的宿主侧控制插件。一次评测试次开始时一次性注入全部实验事实（变量、网关租约预算、fork 血统），并把它们与配置摘要、运行时锁互相绑定，使已完成的运行无法事后换参数解释；按策略拒绝辅助模型调用、经网关租约封顶模型调用，并为每个试次写出可校验的 bundle descriptor。附带只读自检命令与网页端状态胶囊。未提供配置时进入 standalone：什么都不挂载，也不重定向任何模型调用。"
+  },
+  "added": "2026-10-09"
+}
