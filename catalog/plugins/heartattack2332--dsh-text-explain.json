@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "HEArtattaCK2332/dsh-text-explain",
+  "name": "dsh-text-explain",
+  "repository": "https://github.com/HEArtattaCK2332/dsh-text-explain",
+  "category": "ui",
+  "description": {
+    "en": "Select a passage in a conversation and get a plain-language explanation in a floating popup, carrying the surrounding message as context. Offers four explanation depths (plain, general, pro, expert) that re-explain the current question when switched, optional web search and local file reading, and a button that hands the whole exchange to a new session in standby mode. Settings are stored on the host in settings.json behind a draft-style save/refresh panel.",
+    "zh": "在对话里划选一段文字，即在浮窗中得到大白话解释，并自动带上这段话所在的那条完整消息作为语境。四档讲解深度（小白、通识、专业、深研），切换后当场重讲当前问题；可选的联网搜索与本地文件读取；以及把整段问答「待命式」交接给新会话的按钮。设置存在宿主侧的 settings.json，采用草稿式保存 / 刷新。"
+  },
+  "added": "2026-10-09"
+}
