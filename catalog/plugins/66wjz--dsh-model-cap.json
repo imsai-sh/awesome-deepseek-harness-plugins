@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "66wjz/dsh-model-cap",
+    "name":  "dsh-model-cap",
+    "repository":  "https://github.com/66wjz/dsh-model-cap",
+    "category":  "model",
+    "description":  {
+                        "en":  "Adds a standalone Provider Config settings page for managing model providers and their models: create, edit, and delete providers (base URL, protocol, optional API key); create, edit, delete, and drag-reorder models; pull the model list from a gateway; declare reasoning-effort levels and image input support per model; run single or bulk connectivity tests; and archive a provider while keeping its configuration. Changes are written to the llm-pi-ai namespace and take effect without a restart.",
+                        "zh":  "在设置中新增独立「提供商配置」页，用于管理模型提供商与其模型：新增、编辑、删除提供商（地址、协议，API Key 可留空）；新增、编辑、删除与拖动排序模型；从网关拉取模型列表；按模型声明推理档位与图像输入支持；单个或全量连通测试；临时禁用提供商并保留其配置。变更写入 llm-pi-ai 命名空间，保存即生效，无需重启。"
+                    },
+    "added":  "2026-10-10"
+}
