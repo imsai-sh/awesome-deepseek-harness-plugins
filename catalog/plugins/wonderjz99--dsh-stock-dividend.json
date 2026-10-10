@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wonderjz99/dsh-stock-dividend",
+  "name": "dsh-stock-dividend",
+  "repository": "https://github.com/wonderjz99/dsh-stock-dividend",
+  "category": "tools",
+  "description": {
+    "en": "A-share dividend ledger: record which stocks you hold, since when, and how many shares; the plugin computes how much cash dividend each holding should have received from published dividend plans, plus portfolio-level yield on cost and dividend yield. A zero-dependency Python core (standard library only, Python 3.11+) sits behind a thin TypeScript DSH adapter, exposing four conversation tools, a right-side browser panel with stock search and holdings editing, and the HTTP routes that panel uses. Dividends are summed by payment date, falling back to the ex-dividend date because public A-share sources do not expose payment dates. Announced-but-unpaid dividends are kept in a separate block, never added to the historical total. Repeated imports are idempotent. Money and ratios are decimal strings in JSON; missing inputs are null, never zero. Live data requires the westock CLI. It does not connect to brokerage accounts, read credentials, extrapolate future dividends, or schedule tasks.",
+    "zh": "A 股分红账本。你记录持有哪些股票、从哪天开始持有、多少股，插件按已公开的分红方案算出每只持仓应得多少现金分红，并给出组合层面的成本收益率与股息率。核心是零第三方依赖的 Python 包（仅标准库，Python 3.11+），外层是薄的 TypeScript DSH 适配层。提供 4 个对话工具、一个带股票搜索与持仓编辑的右侧浏览器面板，以及该面板使用的 HTTP 路由。按到账日汇总之，因公开 A 股数据源不提供派息到账日而回退到除权除息日。已公告未实施的待收分红单列成独立区块，绝不计入历史累计。同一除权除息日存在多条方案时按（代码、除权日、方案序号）区分，重复导入幂等。JSON 中的金额与比例均为十进制字符串，缺失输入为 null 而非 0。联网取数需要另行安装的 westock CLI，离线功能不依赖它。不连接券商账户，不读取 Cookie 或凭据，不依据历史规律外推未来分红，不执行定时任务。"
+  },
+  "added": "2026-10-10"
+}
