@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "liaosiliangCodeLife/harness-mate-dsh",
+  "name": "harness-mate-dsh",
+  "repository": "https://github.com/liaosiliangCodeLife/harness-mate-dsh",
+  "category": "notify",
+  "description": {
+    "en": "Connects the DeepSeek Harness agent running on your own computer to the HarnessMate platform, so it can be used from a phone or a browser: chat, files and tool approvals.",
+    "zh": "把跑在本机的 DeepSeek Harness 智能体接入 HarnessMate 平台，手机 / 浏览器即可对话、收发文件与审批工具调用。"
+  },
+  "added": "2026-10-10"
+}
