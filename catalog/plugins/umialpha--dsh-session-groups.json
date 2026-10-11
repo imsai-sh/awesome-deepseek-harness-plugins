@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "umialpha/dsh-session-groups",
+  "name": "dsh-session-groups",
+  "repository": "https://github.com/umialpha/dsh-session-groups",
+  "category": "session",
+  "description": {
+    "en": "Alpha source preview for DSH Web 0.2.1-alpha.2: adds collapsible cross-project pinned Session groups alongside Workspace. Reuses native pins without changing project ownership or cwd. npm publication and real mouse drag-and-drop acceptance are pending.",
+    "zh": "适用于 DSH Web 0.2.1-alpha.2 的 alpha 源码预览：在工作区同级区域提供可折叠的跨项目置顶 Session 分组，复用原生置顶，不改变项目归属或 cwd。npm 发布和真实鼠标拖放验收尚未完成。"
+  },
+  "added": "2026-10-11"
+}
