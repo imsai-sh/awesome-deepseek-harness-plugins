@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wjh-ux/dsh-mcp-tavily",
+  "name": "dsh-mcp-tavily",
+  "repository": "https://github.com/wjh-ux/dsh-mcp-tavily",
+  "category": "tools",
+  "description": {
+    "en": "Adds Tavily's hosted remote MCP server (Streamable HTTP) to DeepSeek Harness as a patch-only bundle with no runtime code and no dependencies, registering the mcp__tavily__tavily-search, tavily-extract, tavily-map, tavily-crawl and tavily-research tools. The API key is read from the TAVILY_API_KEY environment variable, and a rate-limited keyless mode is documented for users without a key.",
+    "zh": "以 patch-only 插件包的形式把 Tavily 托管的远程 MCP 服务器（Streamable HTTP）接入 DeepSeek Harness，无运行时代码、无依赖，注册 mcp__tavily__tavily-search、tavily-extract、tavily-map、tavily-crawl、tavily-research 五个工具。API Key 从环境变量 TAVILY_API_KEY 读取，文档中也给出了无需 Key 的限速 keyless 模式。"
+  },
+  "added": "2026-10-11"
+}
