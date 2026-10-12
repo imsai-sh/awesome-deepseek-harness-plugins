@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wjh-ux/dsh-mcp-tavily",
+  "name": "dsh-mcp-tavily",
+  "repository": "https://github.com/wjh-ux/dsh-mcp-tavily",
+  "category": "tools",
+  "description": {
+    "en": "Adds Tavily to DeepSeek Harness: registers a `tavily` web-search provider (so the built-in `web_search` runs on Tavily) with an API-key card on the Plugins page that keeps the key on the credentials plane, and bridges Tavily's hosted remote MCP server, adding mcp__tavily__tavily-search, tavily-extract, tavily-map, tavily-crawl and tavily-research. The key may also come from the TAVILY_API_KEY environment variable; with neither, Tavily's rate-limited keyless mode is used.",
+    "zh": "把 Tavily 接入 DeepSeek Harness：注册 `tavily` 搜索 provider（内置 `web_search` 改由 Tavily 供货），并在插件页提供 API Key 卡片（密钥存凭证平面）；同时桥接 Tavily 托管的远程 MCP 服务器，新增 mcp__tavily__tavily-search、tavily-extract、tavily-map、tavily-crawl、tavily-research 五个工具。Key 也可从环境变量 TAVILY_API_KEY 读取；两者都没有时使用 Tavily 的限速 keyless 模式。"
+  },
+  "added": "2026-10-11"
+}
