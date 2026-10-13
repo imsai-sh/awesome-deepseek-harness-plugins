@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xingzhen199186/dsh-subagent-custom",
+  "name": "dsh-subagent-custom",
+  "repository": "https://github.com/xingzhen199186/dsh-subagent-custom",
+  "category": "model",
+  "description": {
+    "en": "Subagent model control for DeepSeek Harness. A Jev classifier labels each turn (task class, effort, blast radius, risky flags), and the subagent's own request is rewritten to the provider, model and reasoning effort that label maps to, enforced on the agent/request waterfall. Also: a per-session inherit/auto/manual selector with a status badge, one prompt per role injected as a message ahead of the task, a right-sidebar tab listing each role's model and recent dispatches, credential-shaped text redacted before it leaves the machine, and an offline replay tool for past verdicts.",
+    "zh": "DSH 的子代理模型管控。由 Jev 对本轮任务做结构化判定（任务类别、工作量、爆炸半径、高危属性），再把子代理自身的请求改写为该类别对应的 provider、model 与推理强度，在 agent/request 层强制执行。另有：会话内继承/自动/手动三模选择器与状态徽章；每个角色一条前置提示词，以一条消息先于任务注入；右侧边栏标签页列出各角色所用模型与最近派发流水；上送判定服务的文本先自动脱敏；并提供离线回放工具，用历史判定日志评估策略变更。"
+  },
+  "added": "2026-10-13"
+}
