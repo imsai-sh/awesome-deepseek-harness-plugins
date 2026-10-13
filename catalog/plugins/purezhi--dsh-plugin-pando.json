@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "purezhi/dsh-plugin-pando",
+  "name": "@purezhi/dsh-plugin-pando",
+  "repository": "https://github.com/purezhi/dsh-plugin-pando",
+  "category": "ui",
+  "description": {
+    "en": "A desktop pet for the DSH Web UI. Sprites come from the plugin's local sprite directory (or the bundled QPanda default), plus community sheets from sprites.confirmo.love (8x7 magenta chroma-key grids). Drag to move, click for reactions, right-click to switch sprites.",
+    "zh": "在 DSH Web UI 里放一只桌面宠物。形象来自插件配置的本地精灵目录（或内置默认 QPanda），并支持 sprites.confirmo.love 社区精灵图（8x7 品红抠图雪碧图）。可拖拽移动、单击播放反应动画、右键切换形象。"
+  },
+  "added": "2026-10-06"
+}
