@@ -1,12 +1,12 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "soarguo/dsh-auto-vision",
-  "name": "dsh-auto-vision",
+  "name": "dsh-auto-image",
   "repository": "https://github.com/soarguo/dsh-auto-vision",
-  "category": "model",
+  "category": "tools",
   "description": {
-    "en": "Bridges images into text for non-vision DSH models: pasted screenshots (and images inside tool results) are described by a configurable vision model and stored as folded context rows, keeping the user message untouched. Auto-declares image input on configured models for zero manual setup.",
-    "zh": "为不支持图片的模型桥接识图：粘贴的截图（含工具结果内嵌图片）由配置的视觉模型识别，描述以折叠上下文条目写入会话历史，用户消息保持原样；自动为已配置模型补 image 输入声明，零手动配置。"
+    "en": "Lets models without image input (e.g. deepseek-v4-pro, deepseek-v4-flash) receive screenshots: a configured vision model describes pasted images, stored as folded context rows while your message stays untouched. Auto-configures model declarations, zero manual setup.",
+    "zh": "让不支持图片输入的模型（如 deepseek-v4-pro、deepseek-v4-flash）也能接收截图：粘贴的图片由配置的视觉模型自动识别，描述以折叠上下文条目写入会话历史，你的消息保持原样；自动补齐模型配置，零手动设置。"
   },
   "added": "2026-08-24"
 }
