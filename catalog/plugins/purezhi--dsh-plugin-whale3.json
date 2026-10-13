@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "purezhi/dsh-plugin-whale3",
-  "name": "dsh-plugin-whale3",
+  "name": "@purezhi/dsh-plugin-whale3",
   "repository": "https://github.com/purezhi/dsh-plugin-whale3",
   "category": "ui",
   "description": {
