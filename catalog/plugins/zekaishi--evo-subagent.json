@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "ZekaiShi/smart-subagent",
-  "name": "smart-subagent",
-  "repository": "https://github.com/ZekaiShi/smart-subagent",
+  "id": "ZekaiShi/evo-subagent",
+  "name": "evo-subagent",
+  "repository": "https://github.com/ZekaiShi/evo-subagent",
   "category": "model",
   "description": {
     "en": "Maps a stable agent_key to an exact provider/model pair declared in role Markdown files, with per-workspace evolution of prefercmd and memory files.",
