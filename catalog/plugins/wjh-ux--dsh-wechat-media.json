@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wjh-ux/dsh-wechat-media",
+  "name": "dsh-wechat-media",
+  "repository": "https://github.com/wjh-ux/dsh-wechat-media",
+  "category": "notify",
+  "description": {
+    "en": "Personal WeChat bridge for DeepSeek Harness: pair one or more WeChat accounts by scanning a QR code in the Plugins panel, then talk to your agent from WeChat with one DSH conversation per contact or group. Text, images, video, documents and archives travel both ways; inbound media is decrypted to $DSH_HOME/wechat-inbox and handed to the model as a path, and the agent sends files back through its wechat_send_file tool. Accounts, receive cursors and session routes persist under $DSH_HOME, so restarting dsh keeps the login and one click re-pairs. No OpenClaw install, no external service and no runtime dependencies.",
+    "zh": "给 DeepSeek Harness 的个人微信桥：在插件面板扫码配对（支持多个微信号，如小号+大号同时在线），之后在微信里和 agent 对话，每个联系人/群各自一个独立 DSH 会话。文字、图片、视频、文档、压缩包双向互通；收到的媒体解密落盘到 $DSH_HOME/wechat-inbox 并以路径交给模型，agent 可通过 wechat_send_file 工具把文件发回微信。账号、收消息游标与会话路由都持久化在 $DSH_HOME，重启 dsh 保留登录、一键可重新配对。不需要安装 OpenClaw、不需要外部服务、无运行时依赖。"
+  },
+  "added": "2026-10-13"
+}
