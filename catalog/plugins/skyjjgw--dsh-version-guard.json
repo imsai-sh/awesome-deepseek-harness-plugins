@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "skyjjgw/dsh-version-guard",
+  "name": "dsh-version-guard",
+  "repository": "https://github.com/skyjjgw/dsh-version-guard",
+  "category": "dev",
+  "description": {
+    "en": "Snapshots plugin versions and profile configuration, with an independent recovery page to restore a known-good configuration when DSH cannot start.",
+    "zh": "记录插件版本与 profile 配置快照，在 DSH 无法启动时通过独立恢复页回退到已知可用配置。"
+  },
+  "added": "2026-10-13"
+}
