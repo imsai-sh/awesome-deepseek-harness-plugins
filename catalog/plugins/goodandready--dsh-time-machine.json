@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "GooDAnDReaDY/dsh-time-machine",
+  "name": "dsh-time-machine",
+  "repository": "https://github.com/GooDAnDReaDY/dsh-time-machine",
+  "category": "tools",
+  "description": {
+    "en": "Creates named workspace checkpoints before destructive operations and rolls back to any snapshot instantly, with safety guards that intercept risky agent actions.",
+    "zh": "在破坏性操作前创建命名工作区检查点，可立即回滚到任意快照，并通过安全守卫拦截高风险的 Agent 操作。"
+  },
+  "added": "2026-09-01"
+}
