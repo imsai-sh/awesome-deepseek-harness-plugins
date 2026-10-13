@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "EternalNight996/dsh-memory-eternal",
+  "name": "dsh-memory-eternal",
+  "repository": "https://github.com/EternalNight996/dsh-memory-eternal",
+  "category": "agent",
+  "description": {
+    "en": "A DeepSeek Harness memory plugin: auto-distills conversation into knowledge cards in a local Markdown vault, with a human-in-the-loop audit center (pending/approved/rejected) and a 30-day recycle bin; agents recall via memory_recall.",
+    "zh": "DeepSeek Harness 记忆插件：对话结束自动沉淀知识卡到本地 Markdown Vault，带人机协同审核中心（待审/已审/驳回）与 30 天回收中心；Agent 经 memory_recall 按需召回。"
+  },
+  "added": "2026-08-30"
+}
