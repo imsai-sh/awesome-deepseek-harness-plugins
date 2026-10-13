@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lanhui1942/dsh-agent-preset-branch",
+  "name": "dsh-agent-preset-branch",
+  "repository": "https://github.com/lanhui1942/dsh-agent-preset-branch",
+  "category": "session",
+  "description": {
+    "en": "Branch a session into another Agent preset from any completed turn. The Agent preset label in the session header becomes a menu, and a Branch mode pill is added beside the built-in branch button under each completed reply; either entry creates a new session composed in the chosen preset and copies the conversation's event-log prefix up to the chosen turn, leaving the source session unmodified. A session that has not run yet switches preset in place. It uses create-plus-migrate rather than fork because DSH locks the preset after the first turn and its built-in fork inherits the parent preset.",
+    "zh": "从任意已完成轮次把会话分支到另一个 Agent 模式。会话标题栏的 Agent 模式标签变成菜单，每轮完成回复下方、自带分支按钮旁新增「分支模式」胶囊；两个入口都以所选模式新建会话，并把对话到所选轮次为止的事件日志前缀复制过去，源会话不被改动。尚未运行过任何轮次的会话改为就地为该模式。它走「新建 + 迁移」而不是分叉：DSH 在首轮之后锁定模式，自带分叉又必然继承父会话的模式。"
+  },
+  "added": "2026-10-13"
+}
