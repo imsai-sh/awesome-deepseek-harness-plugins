@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "charliesbyte/dsh-workspace-activity",
+  "name": "dsh-workspace-activity",
+  "repository": "https://github.com/charliesbyte/dsh-workspace-activity",
+  "category": "ui",
+  "description": {
+    "en": "Marks a sidebar workspace row with a spinner while any of its sessions are running, and a short-lived finished dot after they stop.",
+    "zh": "侧边栏的工作区行在其下会话运行时显示转圈标记，会话停止后短暂保留一个已完成圆点。"
+  },
+  "added": "2026-10-13"
+}
