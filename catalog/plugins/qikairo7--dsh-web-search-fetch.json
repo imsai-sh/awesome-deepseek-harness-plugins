@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "qikairo7/dsh-web-search-fetch",
+  "name": "dsh-web-search-fetch",
+  "repository": "https://github.com/qikairo7/dsh-web-search-fetch",
+  "category": "tools",
+  "description": {
+    "en": "Multi-source search and webpage text organization for native web_search and web_fetch, with RRF ranking, deduplication, complementary content and source-labelled differences.",
+    "zh": "为原生 web_search 与 web_fetch 提供多来源搜索融合和网页正文整理，支持 RRF 排名、正文去重互补及带来源的文本差异记录。"
+  },
+  "added": "2026-10-14"
+}
