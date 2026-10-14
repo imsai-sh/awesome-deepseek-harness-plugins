@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ljwzhaoxiaoniu/DLR",
+  "name": "dsh-tsm-agent",
+  "repository": "https://github.com/ljwzhaoxiaoniu/DLR",
+  "category": "tools",
+  "description": {
+    "en": "A dsh bundle for TSM (Three-Level Semantic Modeling) and DLR: mounts the tsm-core-dlr semantic service as MCP tools over LanceDB vectors and a graph backend, ships the scenario-independent paradigm skill and a status overlay, and works with scenario packages such as tsm-scenario-birdmini.",
+    "zh": "TSM（三级语义建模）与 DLR 的 dsh 组合包：把 tsm-core-dlr 语义服务挂为 MCP 工具（基于 LanceDB 向量与图后端），携带与场景无关的范式技能和状态浮层，可配合 tsm-scenario-birdmini 等场景包使用。"
+  },
+  "added": "2026-10-14"
+}
