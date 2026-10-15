@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mili1360/dsh-session-vacuum",
+  "name": "dsh-session-vacuum",
+  "repository": "https://github.com/mili1360/dsh-session-vacuum",
+  "category": "session",
+  "description": {
+    "en": "Deletes the write-only streaming fragment rows (assistant/chunk plus the packed text-chunks, reasoning-chunks and tool-call-chunks) from DSH session logs on disk, so a long session expands into fewer objects when it is loaded. The pruned log is checked against the loader contract before the file is replaced, the previous file is kept as .orig, and sessions written in the last two minutes are skipped.",
+    "zh": "在磁盘上删除 DSH 会话日志中只写不读的流式碎片行（assistant/chunk 以及打包的 text-chunks、reasoning-chunks、tool-call-chunks），使长会话加载时展开的对象数变少。替换文件前会按加载器契约自校验，原文件保留为 .orig，最近两分钟内被写入的会话会被跳过。"
+  },
+  "added": "2026-10-15"
+}
