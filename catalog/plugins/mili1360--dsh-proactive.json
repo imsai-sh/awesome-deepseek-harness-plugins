@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mili1360/dsh-proactive",
+  "name": "dsh-proactive",
+  "repository": "https://github.com/mili1360/dsh-proactive",
+  "category": "workflow",
+  "description": {
+    "en": "Lets the model schedule its own wake-ups (once, interval, or cron with random jitter) and wakes a cold session when a long background task finishes after the turn has ended, so the result is reported without the user asking again. Model-initiated follow-ups pass through quiet hours and a daily budget.",
+    "zh": "让模型自己安排唤醒（一次、固定间隔或带随机抖动的 cron），并在长任务于回合结束之后跑完时唤醒已闲置的会话，使结果不必等用户再问一次就能汇报。模型主动发起的跟进会经过静默时段与每日预算的限制。"
+  },
+  "added": "2026-10-15"
+}
