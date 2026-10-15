@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "exoticknight/dsh-system1",
+  "name": "dsh-system1",
+  "repository": "https://github.com/exoticknight/dsh-system1",
+  "category": "tools",
+  "description": {
+    "en": "A typed System One decision service and agent tool for yes/no checks, classification, and scoring in DeepSeek Harness.",
+    "zh": "面向 DeepSeek Harness 的类型安全 System One 判断服务与 Agent 工具，支持是非判断、分类和评分。"
+  },
+  "added": "2026-10-15"
+}
