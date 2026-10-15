@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mili1360/dsh-history-fold",
+  "name": "dsh-history-fold",
+  "repository": "https://github.com/mili1360/dsh-history-fold",
+  "category": "session",
+  "description": {
+    "en": "Replaces the oldest span of a session's visible history with one message that carries an extractive one-line index and the path of a lossless local archive, so each request sends fewer tokens. The full text is archived before the fold is committed, the index is built by slicing each message's own text (no model is called and no summary is written), and each fold also writes its unsampled index to disk so older spans stay reachable through a chain of paths.",
+    "zh": "把会话可见历史里最老的一段替换成一条消息，消息中带抽取式的一行索引以及无损本地归档的路径，使每轮请求携带的 token 变少。全文在折叠提交之前先落盘；索引由每条消息自身文本切片得到（不调用模型、不生成摘要）；每次折叠还会把未抽样的完整索引写到磁盘，使更早的内容能沿路径链继续找到。"
+  },
+  "added": "2026-10-15"
+}
