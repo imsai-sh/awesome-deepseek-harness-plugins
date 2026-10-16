@@ -1,5 +1,5 @@
 {
-  "": "../schema/plugin.schema.json",
+  "$schema": "../schema/plugin.schema.json",
   "id": "ls-open/dsh-git-composer",
   "name": "dsh-git-composer",
   "repository": "https://github.com/ls-open/dsh-git-composer",
