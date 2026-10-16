@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "joyboy-yy/dsh-windows-monitor",
+  "name": "dsh-windows-monitor",
+  "repository": "https://github.com/joyboy-yy/dsh-windows-monitor",
+  "category": "ui",
+  "description": {
+    "en": "Adds a draggable status panel to the DeepSeek Harness overlay showing live CPU and memory, disk activity and throughput, per-volume capacity, network state, uptime and battery. Windows only: readings are collected through CIM/WMI by a single read-only host route.",
+    "zh": "在 DeepSeek Harness 浮层中加入可拖动的本机状态面板，显示实时的 CPU 与内存占用、磁盘活动与读写吞吐、各磁盘容量、网络状态、运行时长与电池。仅支持 Windows：数据由一条只读 host 路由通过 CIM/WMI 采集。"
+  },
+  "added": "2026-10-16"
+}
