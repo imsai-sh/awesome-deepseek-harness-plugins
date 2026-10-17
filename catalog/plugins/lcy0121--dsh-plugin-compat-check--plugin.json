@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lcy0121/dsh-plugin-compat-check/plugin",
+  "name": "dsh-plugin-compat-check",
+  "repository": "https://github.com/lcy0121/dsh-plugin-compat-check",
+  "category": "dev",
+  "description": {
+    "en": "Checks installed DSH plugins against the running host and reports each missing service or method with its file:line, a certainty of certain or suspected, and the basis for the claimed impact, plus coverage limits; adds a verdict badge and a per-plugin findings section to the plugin detail page, a compat_check agent tool and a skill provider.",
+    "zh": "检查已安装 DSH 插件与当前宿主是否兼容，逐条报出缺失的服务或方法及其 file:line、确定度（certain 或 suspected）与影响依据，并给出覆盖限制；在插件详情页提供结论角标与逐项发现，另有 compat_check 对话工具与 skill provider。"
+  },
+  "added": "2026-10-17"
+}
