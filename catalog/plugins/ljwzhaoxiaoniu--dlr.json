@@ -5,8 +5,8 @@
   "repository": "https://github.com/ljwzhaoxiaoniu/DLR",
   "category": "tools",
   "description": {
-    "en": "A dsh bundle for TSM (Three-Level Semantic Modeling) and DLR: mounts the tsm-core-dlr semantic service as MCP tools over LanceDB vectors and a graph backend, ships the scenario-independent paradigm skill and a status overlay, and works with scenario packages such as tsm-scenario-birdmini.",
-    "zh": "TSM（三级语义建模）与 DLR 的 dsh 组合包：把 tsm-core-dlr 语义服务挂为 MCP 工具（基于 LanceDB 向量与图后端），携带与场景无关的范式技能和状态浮层，可配合 tsm-scenario-birdmini 等场景包使用。"
+    "en": "A dsh bundle for TSM (Three-Level Semantic Modeling) and DLR: mounts the tsm-core-dlr semantic service (LanceDB vectors + graph) as MCP tools, and ships the scenario-independent paradigm skill and a status overlay. Hard dependency: tsm-core-dlr — installed automatically; its service must be running before the bundle activates. Optional companions: scenario packages tsm-scenario-birdmini / tsm-scenario-cloudopsbench (the content the service serves — or bring your own scenario) and the benchmark harness dsh-tsm-eval.",
+    "zh": "TSM（三级语义建模）与 DLR 的 dsh 组合包：把 tsm-core-dlr 语义服务（LanceDB 向量 + 图）挂为 MCP 工具，携带与场景无关的范式技能与状态浮层。硬依赖：tsm-core-dlr（随包自动安装；服务需先运行，bundle 才能激活）。可选配套：场景包 tsm-scenario-birdmini / tsm-scenario-cloudopsbench（服务所提供的内容，也可自带场景）与评测工具 dsh-tsm-eval。"
   },
   "added": "2026-10-14"
 }
