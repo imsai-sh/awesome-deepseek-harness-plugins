@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pidongqianqian/dsh-mermaid-plus",
+  "name": "dsh-mermaid-plus",
+  "repository": "https://github.com/pidongqianqian/dsh-mermaid-plus",
+  "category": "ui",
+  "description": {
+    "en": "Renders mermaid code blocks in the conversation and Markdown previews as diagrams. Nothing renders by default: the bundled Mermaid 11.17.0 runtime and per-diagram layout wait for a click, with scroll-into-view and always modes available as alternatives. Diagram colours follow the app's light and dark design tokens, and a rendered diagram can be opened in a fullscreen viewer with zoom and pan.",
+    "zh": "把对话和 Markdown 预览中的 mermaid 代码块渲染成图表。默认不渲染：内置的 Mermaid 11.17.0 运行时与每张图的布局都等到点击后才发生，另提供滚动可见与立即两种模式。配色跟随应用的明暗设计令牌，渲染后的图表可在全屏查看器中缩放和平移。"
+  },
+  "added": "2026-10-17"
+}
