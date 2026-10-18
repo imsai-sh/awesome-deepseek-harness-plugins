@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LISHUANGXI1412/dsh-memory-local",
+  "name": "dsh-memory-local",
+  "repository": "https://github.com/LISHUANGXI1412/dsh-memory-local",
+  "category": "memory",
+  "description": {
+    "en": "Local-only cross-session memory for DSH with remember/recall/forget tools, system-prompt injection, and a Settings page for project and global memories.",
+    "zh": "DSH 的本地跨会话记忆：remember/recall/forget 工具、系统提示词注入，以及管理项目级与全局记忆的设置页。"
+  },
+  "added": "2026-10-18"
+}
