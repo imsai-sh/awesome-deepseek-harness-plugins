@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xiaolizi0v0/dsh-web-search-serper",
+  "name": "dsh-web-search-serper",
+  "repository": "https://github.com/xiaolizi0v0/dsh-web-search-serper",
+  "category": "tools",
+  "description": {
+    "en": "Registers a Serper (google.serper.dev) search provider on the DSH web capability seam (ctx.web), and adds a serper_search tool that calls the same provider directly without a searchProvider pin. Configurable endpoint, locale, page size and credential reference, with a settings form rendered on the plugin row.",
+    "zh": "在 DSH 的 web 能力 seam（ctx.web）上注册 Serper（google.serper.dev）搜索提供方，并另外注册一个不依赖 searchProvider 选择、直连同一提供方的 serper_search 工具；可配置接口地址、语言、单次结果数与凭据引用，插件行上有对应的设置表单。"
+  },
+  "added": "2026-10-19"
+}
