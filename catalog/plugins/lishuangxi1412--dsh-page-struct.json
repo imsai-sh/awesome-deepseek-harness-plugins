@@ -5,8 +5,8 @@
   "repository": "https://github.com/LISHUANGXI1412/dsh-page-struct",
   "category": "tools",
   "description": {
-    "en": "Read-only page structure reader for DSH. Returns table coordinates, shadow DOM fields, code blocks, and confidence labels; attaches to the CUA browser.",
-    "zh": "面向 DSH 的只读页面结构读取器。返回表格坐标、shadow DOM 字段、代码块与可信度标注，依附 CUA 浏览器工作。"
+    "en": "Read-only page structure reader for DSH. Returns table coordinates, shadow DOM fields, code blocks, and confidence labels; attaches to the CUA browser. Published on npm as dsh-page-struct.",
+    "zh": "面向 DSH 的只读页面结构读取器。返回表格坐标、shadow DOM 字段、代码块与可信度标注，依附 CUA 浏览器工作。已发布到 npm：dsh-page-struct。"
   },
   "added": "2026-10-18"
 }
