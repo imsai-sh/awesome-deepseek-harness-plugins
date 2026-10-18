@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "zhangchenyuan21-create/dsh-ths-dashboard",
+    "name":  "dsh-ths-dashboard",
+    "repository":  "https://github.com/zhangchenyuan21-create/dsh-ths-dashboard",
+    "category":  "ui",
+    "description":  {
+                        "en":  "Adds DSH sidebar panels for a Tonghuashun simulated account and local backtest replay, with positions, minute and daily K-lines, MA5/MA10, MACD, money flow, an order book and historical trade records.",
+                        "zh":  "在 DSH 左侧栏增加同花顺模拟账户持仓与回测回放面板，支持持仓、分钟与日线 K 线、MA5/MA10、MACD、资金流、五档盘口和历史交易记录。"
+                    },
+    "added":  "2026-10-18"
+}
