@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "WongYuYe/dsh-diff-card",
+  "name": "dsh-diff-card",
+  "repository": "https://github.com/WongYuYe/dsh-diff-card",
+  "category": "ui",
+  "description": {
+    "en": "Per-turn file-change card for DSH Desktop: +N −M badges, aligned diffs, and Mac/Windows file open (system app, Finder/Explorer, VS Code).",
+    "zh": "给 DSH Desktop 用的轮末改动卡：编辑/写入行内 +N −M 徽标、对齐 diff，以及 macOS/Windows 下的系统打开、文件夹定位和 VS Code 打开。"
+  },
+  "added": "2026-09-08"
+}
