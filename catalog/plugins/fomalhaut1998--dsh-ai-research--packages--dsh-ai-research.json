@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "fomalhaut1998/dsh-ai-research",
+  "id": "fomalhaut1998/dsh-ai-research/packages/dsh-ai-research",
   "name": "dsh-ai-research",
   "repository": "https://github.com/fomalhaut1998/dsh-ai-research",
   "category": "tools",
