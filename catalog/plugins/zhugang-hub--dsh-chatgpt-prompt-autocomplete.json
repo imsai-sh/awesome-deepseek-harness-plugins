@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhugang-hub/dsh-chatgpt-prompt-autocomplete",
+  "name": "dsh-chatgpt-prompt-autocomplete",
+  "repository": "https://github.com/zhugang-hub/dsh-chatgpt-prompt-autocomplete",
+  "category": "ui",
+  "description": {
+    "en": "ChatGPT-style prompt autocomplete for the DeepSeek Harness composer: a candidate panel follows your typing, Tab accepts the selected candidate, ArrowUp/ArrowDown switches, and Escape closes it. Rule-based and browser-local, with no model request.",
+    "zh": "DeepSeek Harness 输入框的提示词自动补全：候选面板随输入更新，Tab 采纳当前候选，↑/↓ 切换，Esc 关闭；规则补全在浏览器内完成，不发起模型请求。"
+  },
+  "added": "2026-10-19"
+}
