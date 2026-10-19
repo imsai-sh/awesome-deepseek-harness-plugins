@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "JeffTsuiCUG/dsh-connect-minimaxcode",
+  "name": "dsh-connect-minimaxcode",
+  "repository": "https://github.com/JeffTsuiCUG/dsh-connect-minimaxcode",
+  "category": "model",
+  "description": {
+    "en": "Connects the models of a locally signed-in MiniMax Code desktop app to DeepSeek Harness: zero-config with no API key, Anthropic Messages-compatible access, and a model catalog read live from the upstream API. Shows the remaining credit balance and the credits that expire soon in the composer and on the plugin page. Reads the desktop app's sign-in state; the only write is renewing an expired one, in the client's own format, and it never starts a login. Unofficial plugin, not affiliated with MiniMax or DeepSeek; depends on the client's non-public APIs and is for study and research use only.",
+    "zh": "把本机已登录的 MiniMax Code 桌面 App 的模型接入 DeepSeek Harness：零配置、无需 API Key，Anthropic Messages 兼容接入，模型目录实时取自上游接口。在对话框底部和插件页显示剩余积分余额与即将到期的积分。只读复用桌面 App 的登录态，唯一写入是按客户端原格式续期已过期的登录态，不启动登录动作。非官方插件，与 MiniMax、DeepSeek 均无关联；依赖客户端的非公开接口，仅供学习与研究使用。"
+  },
+  "added": "2026-10-19"
+}
