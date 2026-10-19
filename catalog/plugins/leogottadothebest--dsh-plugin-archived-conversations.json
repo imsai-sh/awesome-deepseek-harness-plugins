@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "leogottadothebest/DSH-Archived-Delete",
+  "id": "leogottadothebest/dsh-plugin-archived-conversations",
   "name": "dsh-plugin-archived-conversations",
-  "repository": "https://github.com/leogottadothebest/DSH-Archived-Delete",
+  "repository": "https://github.com/leogottadothebest/dsh-plugin-archived-conversations",
   "category": "session",
   "description": {
     "en": "Manage archived conversations in the Settings UI: unarchive them back to the sidebar, or permanently delete them with confirmation.",
