@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "0xnirlin/dsh-plugin-ziztu",
+  "name": "dsh-plugin-ziztu",
+  "repository": "https://github.com/0xnirlin/dsh-plugin-ziztu",
+  "category": "tools",
+  "description": {
+    "en": "Connects Ziztu's hosted MCP server to DeepSeek Harness with an API key and adds a Ziztu settings page. Registers 30 tools for planning, scripting, pricing and making micro dramas and anime episodes. Requires a Ziztu account.",
+    "zh": "通过 API 密钥将 Ziztu 的托管 MCP 服务器接入 DeepSeek Harness，并添加 Ziztu 设置页。注册 30 个工具，用于策划、编写剧本、报价和制作微短剧与动漫剧集。需要 Ziztu 账号。"
+  },
+  "added": "2026-10-20"
+}
