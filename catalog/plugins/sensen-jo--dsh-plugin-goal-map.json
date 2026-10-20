@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sensen-jo/dsh-plugin-goal-map",
+  "name": "dsh-plugin-goal-map",
+  "repository": "https://github.com/sensen-jo/dsh-plugin-goal-map",
+  "category": "session",
+  "description": {
+    "en": "Read-only goal-to-plan route and session mindmap showing reported plan progress. Plan completion does not establish goal acceptance; no new task execution or model calls.",
+    "zh": "只读目标到计划的进展路线与会话思维导图，展示已报告的计划进度。计划完成不代表目标已验收；不新增任务执行或模型调用。"
+  },
+  "added": "2026-10-20"
+}
