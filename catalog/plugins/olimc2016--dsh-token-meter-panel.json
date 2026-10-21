@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "olimc2016/dsh-token-meter-panel",
+  "name": "dsh-token-meter-panel",
+  "repository": "https://github.com/olimc2016/dsh-token-meter-panel",
+  "category": "usage",
+  "description": {
+    "en": "A DeepSeek Harness sidebar panel for token usage and cost: today's spend, budget progress, 7-day and 30-day trends, cost breakdown, cache-hit savings, and a per-session breakdown.",
+    "zh": "DeepSeek Harness 侧栏 Token 用量与花费面板：今日消费、预算进度、7 天与 30 天趋势、成本构成、缓存命中省下的钱，以及按会话明细。"
+  },
+  "added": "2026-09-20"
+}
