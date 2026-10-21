@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "device1999/dsh-session-archive-delete",
+  "name": "dsh-session-archive-delete",
+  "repository": "https://github.com/device1999/dsh-session-archive-delete",
+  "category": "session",
+  "description": {
+    "en": "Adds a delete entry to the session row menu. Sessions are copied to a local backup folder with per-file verification before the originals are removed, and the workspace ledger is cleaned before and after deletion. Sub-agent sessions are collected through parentSession and handled together. Supports a backup-free mode, a configurable backup location, and four backup folder naming styles.",
+    "zh": "在会话行菜单中加入删除入口。删除前先把会话复制到本地备份文件夹并逐文件校验，校验通过才移除原文件，同时清理工作区记账。通过 parentSession 递归收集子代理会话一并处理。支持不备份模式、自定义备份位置，以及四种备份文件夹命名方式。"
+  },
+  "added": "2026-10-20"
+}
