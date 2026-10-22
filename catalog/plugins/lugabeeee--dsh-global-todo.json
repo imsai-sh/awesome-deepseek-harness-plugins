@@ -5,8 +5,8 @@
   "repository": "https://github.com/LUgABeEEE/dsh-global-todo",
   "category": "tools",
   "description": {
-    "en": "Global, cross-session todo list where a person and an agent write to the same items: each entry records when it was added, accepts attached documents and links, and can be handed to an agent session. Ships as a sidebar panel plus ten agent tools, stored as one JSON file.",
-    "zh": "全局待办：人与 Agent 共用同一份跨会话清单，每条记录加入时间，可挂文档与地址，并可一键交给 Agent 会话继续处理；提供侧边栏面板与十个 agent 工具，数据存为一个 JSON 文件。"
+    "en": "Cross-session todos for DeepSeek Harness. One JSON file you own; a person and an agent write the same records. Every item keeps when it was added, attached documents and links, an optional plan of steps, and the sentence it came from. Hand it to a conversation in one click - the steps travel as a numbered plan - then read back what that conversation last said; an agent's done stays a claim until a person confirms it. Ships as a sidebar panel plus ten agent tools.",
+    "zh": "DeepSeek Harness 的跨会话待办清单。一份属于你的 JSON 文件，人和 Agent 读写同一条记录：每条记下加入时间、可挂文档与地址、可选的步骤计划，以及它来自哪句原话。一键交给某个对话继续干（步骤作为编号计划一起交出去），随时回读那边最后说了什么；Agent 标的「完成」只是声明，人确认之后才算数。提供侧边栏面板与十个 agent 工具。"
   },
   "added": "2026-10-20"
 }
