@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "taotao7/dsh-pretty-cool",
+  "name": "DSH Pretty Cool",
+  "repository": "https://github.com/taotao7/dsh-pretty-cool",
+  "category": "ui",
+  "description": {
+    "en": "An OMP-inspired compact UI for DSH 0.2.1-rc.2, with light/dark themes, plain messages, model and reasoning controls, context usage and native task controls. Distributed as a prebuilt GitHub release bundle.",
+    "zh": "适配 DSH 0.2.1-rc.2 的 OMP 风格紧凑界面，提供深浅色主题、无边框消息、模型与推理等级切换、上下文占用和原生任务入口，通过 GitHub Release 分发预构建 bundle。"
+  },
+  "added": "2026-10-23"
+}
