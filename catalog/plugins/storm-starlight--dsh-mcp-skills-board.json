@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Storm-Starlight/dsh-mcp-skills-board",
+  "name": "dsh-mcp-skills-board",
+  "repository": "https://github.com/Storm-Starlight/dsh-mcp-skills-board",
+  "category": "ui",
+  "description": {
+    "en": "Adds a sidebar panel and a plugin-page section for managing MCP servers and skills, with status lights, per-row enable switches, an add-server form for stdio and streamable HTTP, and four-state skill switches.",
+    "zh": "在侧栏面板和插件页里管理 MCP 服务器与技能：状态灯、逐行启停开关、支持 stdio 与 streamable HTTP 的添加服务器表单，以及技能四态切换。"
+  },
+  "added": "2026-10-23"
+}
