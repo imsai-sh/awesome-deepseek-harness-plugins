@@ -1,0 +1,12 @@
+{
+    "$schema":  "../schema/plugin.schema.json",
+    "id":  "studentlanily/dsh-context-dial",
+    "name":  "dsh-context-dial",
+    "repository":  "https://github.com/studentlanily/dsh-context-dial",
+    "category":  "model",
+    "description":  {
+                        "en":  "Adds a DSH settings page for setting a model\u0027s context window; the new value is applied on the next DSH start.",
+                        "zh":  "在 DSH 设置中新增页面用于设置模型的上下文窗口，新值在下次启动 DSH 时生效。"
+                    },
+    "added":  "2026-10-23"
+}
