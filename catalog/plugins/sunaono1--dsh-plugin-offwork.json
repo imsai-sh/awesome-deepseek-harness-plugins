@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sunaono1/dsh-plugin-offwork",
+  "name": "dsh-plugin-offwork",
+  "repository": "https://github.com/sunaono1/dsh-plugin-offwork",
+  "category": "ui",
+  "description": {
+    "en": "Sidebar cards for DeepSeek Harness showing a live countdown to the end of the workday and today's earnings accrued from a configurable daily salary.",
+    "zh": "DSH 侧边栏卡片：下班倒计时与按日薪线性累计的今日已赚，上班/下班时间、日薪、工作日均可配置。"
+  },
+  "added": "2026-10-23"
+}
