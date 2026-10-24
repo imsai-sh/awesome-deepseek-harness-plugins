@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "NethielChou/dsh-reasoning-effort-sniffer",
+  "name": "dsh-reasoning-effort-sniffer",
+  "repository": "https://github.com/NethielChou/dsh-reasoning-effort-sniffer",
+  "category": "model",
+  "description": {
+    "en": "Probes the reasoning-effort levels a third-party OpenAI-compatible pi-ai provider actually accepts (a low and a max request per undeclared chat model) and declares the detected levels in the llm-pi-ai settings namespace, so the composer model picker offers a reasoning-strength switch. A sidebar panel switches reasoning declaration and sniffing per provider, and routes that declare levels but lack compat.supportsReasoningEffort are given that flag automatically. The concrete level is chosen in the native composer picker.",
+    "zh": "为第三方 OpenAI 兼容的 pi-ai 供应商探测其实际接受的推理档位（对每个未声明的对话模型各发一条 low 与 max 探测请求），并把探测结果声明到 llm-pi-ai 设置命名空间，使输入框右下角的模型选择器出现推理强度选项；侧栏面板按供应商开关「思考强度」与「嗅探」，并为声明了档位但缺少 compat.supportsReasoningEffort 的路由自动补上该标记。具体强度在这个原生选择器里选择。"
+  },
+  "added": "2026-10-24"
+}
