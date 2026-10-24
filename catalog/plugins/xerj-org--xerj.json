@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xerj-org/xerj",
+  "name": "xerj",
+  "repository": "https://github.com/xerj-org/xerj",
+  "category": "tools",
+  "description": {
+    "en": "xerj search engine MCP server for DeepSeek Harness: full-text, semantic and code search over local indexes via `xerj mcp`. The profile bundle lives in `dsh/` and requires the xerj binary on `PATH` and a running xerj node.",
+    "zh": "面向 DeepSeek Harness 的 xerj 搜索引擎 MCP 服务器：通过 `xerj mcp` 对本地索引进行全文、语义和代码搜索。Profile bundle 位于 `dsh/` 目录，需要 `PATH` 中有 xerj 可执行文件，并有一个正在运行的 xerj 节点。"
+  },
+  "added": "2026-10-23"
+}
