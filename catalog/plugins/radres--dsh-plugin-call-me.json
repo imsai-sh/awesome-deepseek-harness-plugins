@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "radres/dsh-plugin-call-me",
+  "name": "dsh-plugin-call-me",
+  "repository": "https://github.com/radres/dsh-plugin-call-me",
+  "category": "notify",
+  "description": {
+    "en": "Rings the user's iPhone through the /call-me app when a run needs an answer: the agent's question is read aloud and the spoken reply goes back into the run as text. The iPhone app is a paid subscription.",
+    "zh": "当运行需要回答时，通过 /call-me 应用给用户的 iPhone 打电话：Agent 的提问被朗读出来，口头回答以文字形式回到运行中。该 iPhone 应用为付费订阅。"
+  },
+  "added": "2026-10-25"
+}
