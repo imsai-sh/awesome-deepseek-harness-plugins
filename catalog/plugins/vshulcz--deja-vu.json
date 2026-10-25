@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "vshulcz/deja-vu",
+  "name": "deja-vu",
+  "repository": "https://github.com/vshulcz/deja-vu",
+  "category": "memory",
+  "description": {
+    "en": "Searches the session history that 42 other coding agents on the machine already wrote to disk (Claude Code, Codex, Cursor, opencode, Kimi, Cline, Zed and more), including sessions from before it was installed, and recalls it inside dsh. Six tools (deja_recall, deja_session, deja_blame, deja_fix, deja_how, deja_remember), a /deja command and optional recall before each step. Local BM25 index, no LLM, no embeddings, no network.",
+    "zh": "检索本机其他 42 个编程智能体（Claude Code、Codex、Cursor、opencode、Kimi、Cline、Zed 等）已经写在磁盘上的会话记录，包括安装之前的历史，并在 dsh 里召回。提供 deja_recall、deja_session、deja_blame、deja_fix、deja_how、deja_remember 六个工具和 /deja 命令，可选在每一步之前自动召回。本地 BM25 索引，不调用大模型，不用向量嵌入，不联网。"
+  },
+  "added": "2026-10-25"
+}
