@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "NethielChou/dsh-llm-keypool",
+  "name": "dsh-llm-keypool",
+  "repository": "https://github.com/NethielChou/dsh-llm-keypool",
+  "category": "model",
+  "description": {
+    "en": "Lets you pick already-configured provider/model routes into an ordered rotation pool and fail over to the next healthy route in the same turn when the current one reports exhausted quota (optionally also on 401/403 auth errors); a sidebar panel orders the pool and shows the live route, cooling providers and recent switches.",
+    "zh": "把已配置的供应商/模型手动加入有顺序的轮换池：当前路由额度用尽时，同一轮内自动切到下一条可用路由（可选在 401/403 认证失败时也切换）；侧边栏面板可调整顺序，并显示当前路由、冷却中的供应商与最近切换记录。"
+  },
+  "added": "2026-10-25"
+}
