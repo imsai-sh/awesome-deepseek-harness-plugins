@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gulagala001/dsh-persona-plugin",
+  "name": "dsh-persona-plugin",
+  "repository": "https://github.com/gulagala001/dsh-persona-plugin",
+  "category": "session",
+  "description": {
+    "en": "Create and manage personality presets with global and per-conversation choices.",
+    "zh": "创建、导入和管理人格预设，支持全局与单会话选择。"
+  },
+  "added": "2026-10-22"
+}
