@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "seaison/dsh-plugin-eva-theme",
+  "name": "dsh-plugin-eva-theme",
+  "repository": "https://github.com/seaison/dsh-plugin-eva-theme",
+  "category": "theme",
+  "description": {
+    "en": "EVA-inspired Asuka dark and Rei light themes with pilot-selection startup animations, character voices, clock and TPS widgets, and macOS system music controls.",
+    "zh": "明日香暗色与绫波丽亮色双主题，提供驾驶员选择启动动画、角色语音、时钟与 TPS 仪表，并支持 macOS 系统音乐控制。"
+  },
+  "added": "2026-10-25"
+}
