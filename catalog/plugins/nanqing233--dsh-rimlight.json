@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "NanQing233/dsh-rimlight",
+  "name": "dsh-rimlight",
+  "repository": "https://github.com/NanQing233/dsh-rimlight",
+  "category": "ui",
+  "description": {
+    "en": "Draws a moving light band along the DeepSeek Harness window edge while sessions are working: up to four bands, one per running session, each colored by that session's model palette.",
+    "zh": "会话进行时沿 DeepSeek Harness 窗口边缘绘制流动光带：最多四条，每条对应一个运行中的会话，并按该会话所用模型的配色着色。"
+  },
+  "added": "2026-10-25"
+}
