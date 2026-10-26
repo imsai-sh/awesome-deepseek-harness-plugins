@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gongfpp/dsh-novel-fish",
+  "name": "dsh-novel-fish",
+  "repository": "https://github.com/gongfpp/dsh-novel-fish",
+  "category": "fun",
+  "description": {
+    "en": "Read local EPUB, TXT and Markdown novels below selected native DSH chat regions when explicitly expanded. Preserves real reasoning and tool output, stores per-book progress locally, and sends no novel text to the model.",
+    "zh": "主动展开选中的 DSH 原生聊天区域时，在保留真实思考和工具输出的下方阅读本地 EPUB、TXT、Markdown 小说；各书进度保存在本地，小说不发送给模型。"
+  },
+  "added": "2026-10-26"
+}
