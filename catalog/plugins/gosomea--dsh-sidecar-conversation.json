@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gosomea/dsh-sidecar-conversation",
+  "name": "dsh-sidecar-conversation",
+  "repository": "https://github.com/gosomea/dsh-sidecar-conversation",
+  "category": "session",
+  "description": {
+    "en": "Side conversations in the native DSH Web sidebar: fork a turn or start with selected references, keep follow-up messages separate from the main session, and navigate citations back to their source. Uses native composer and session logs; version 0.2.8 tested with unmodified DSH 0.2.1-rc.3.",
+    "zh": "在 DSH Web 原生右侧栏展开侧问：从回合 Fork 或仅带选文新建，追问消息不写回主会话，点击引用可定位原文。复用原生输入框与会话日志；0.2.8 已在未修改的 DSH 0.2.1-rc.3 上测试。"
+  },
+  "added": "2026-10-27"
+}
