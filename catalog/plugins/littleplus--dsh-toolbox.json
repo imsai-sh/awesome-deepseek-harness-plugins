@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "littleplus/dsh-toolbox",
+  "name": "dsh-toolbox",
+  "repository": "https://github.com/littleplus/dsh-toolbox",
+  "category": "tools",
+  "description": {
+    "en": "Groups globally registered tools by regular expression and applies one of three states per group: leave the tools untouched, hide them from the session's tool list, or keep them behind a single on-demand gateway tool. A sidebar panel adds, edits, reorders, and deletes groups, writing them back to the profile's cordis.patch.yml.",
+    "zh": "按正则把全局注册的工具分组，每组可选一种状态：不处理、从会话工具列表中隐藏、或收在一个按需入口工具后面。左侧栏面板支持增删改分组并调整顺序，配置写回 profile 的 cordis.patch.yml。"
+  },
+  "added": "2026-10-27"
+}
