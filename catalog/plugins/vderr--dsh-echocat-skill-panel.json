@@ -1,12 +1,12 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "VDERR/echocat-skill-panel-3.0",
-  "name": "echocat-skill-panel-3.0",
-  "repository": "https://github.com/VDERR/echocat-skill-panel-3.0",
+  "id": "VDERR/dsh-echocat-skill-panel",
+  "name": "dsh-echocat-skill-panel",
+  "repository": "https://github.com/VDERR/dsh-echocat-skill-panel",
   "category": "skill",
   "description": {
     "en": "Per-turn skill-usage audit: a strip above the composer, a sidebar glyph and a centre panel report which skills each turn invoked (loaded by the model or typed as /name) or that it invoked none. Also manages the local skill directory: install from a pasted repository, folder, SKILL.md or zip address, write a Chinese display name into the skill's meta.yaml, and remove a skill while keeping a backup.",
     "zh": "每轮对话的 skill 调用审计：输入框上方横栏、左栏图标与中栏面板报告本轮用到了哪些 skill（模型自动加载或用户 /name 调用），或一个都没用。同时管理本机 skill 目录：粘贴仓库、文件夹、SKILL.md 或 zip 地址即可安装，中文显示名写入该 skill 的 meta.yaml，删除时保留备份。"
   },
-  "added": "2026-09-18"
+  "added": "2026-09-22"
 }
