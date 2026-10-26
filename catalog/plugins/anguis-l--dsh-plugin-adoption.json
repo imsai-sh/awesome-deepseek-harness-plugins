@@ -3,7 +3,7 @@
   "id": "Anguis-L/dsh-plugin-adoption",
   "name": "dsh-plugin-adoption",
   "repository": "https://github.com/Anguis-L/dsh-plugin-adoption",
-  "category": "dev",
+  "category": "tools",
   "description": {
     "en": "Ranks DSH plugins by real monthly npm downloads instead of GitHub stars, and flags the plugins that star ordering under-rates. Reads the plugin list from the public 1024Store catalog API and the numbers from npm's public downloads API; GET only, and it registers no HTTP route of its own. Quota-aware by design: the catalog API allows 50 anonymous requests a day, so a default run samples 12 candidates, paces requests 1.2 seconds apart, backs off on 429, and reports every request failure in the output rather than rendering a network fault as zero plugins.",
     "zh": "按真实 npm 月下载量给 DSH 插件排名，而不是按 GitHub 星数，并标出被星数排序低估的插件。插件列表来自 1024Store catalog 公开接口，数字来自 npm 公开下载量接口；只发只读 GET，自身不注册任何 HTTP 路由。按配额意识设计：catalog 接口匿名限额为每天 50 次，因此默认只采样 12 个候选、请求间隔 1.2 秒、遇到 429 退避重试，并把每次请求失败写进输出，而不是把网络故障显示成「0 个插件」。"
