@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "shin4/inkpond-dsh",
+  "name": "dsh-inkpond",
+  "repository": "https://github.com/shin4/inkpond-dsh",
+  "category": "theme",
+  "description": {
+    "en": "Interactive Chinese glyph ink-wash backgrounds for DSH conversations, with lotus, hills and Qingming scenes.",
+    "zh": "为 DSH 会话提供可交互的汉字水墨背景，包含莲池、山水和清明上河三个场景。"
+  },
+  "added": "2026-10-26"
+}
