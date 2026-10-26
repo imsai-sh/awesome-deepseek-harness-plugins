@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LumiDesk/dsh-wallet-pill",
+  "name": "dsh-wallet-pill",
+  "repository": "https://github.com/LumiDesk/dsh-wallet-pill",
+  "category": "ui",
+  "description": {
+    "en": "A composer-dock wallet pill for DeepSeek Harness: it shows the balance of the account behind DEEPSEEK_API_KEY and opens a panel with top-up and granted balances, the current peak/off-peak billing window with a live switch countdown, and per-model token prices. Read-only, zero configuration, no files written.",
+    "zh": "DeepSeek Harness 的余额胶囊：在输入框下方显示 DEEPSEEK_API_KEY 对应账户的余额，点开可查看充值/赠送余额、当前峰谷计费时段与切换倒计时，以及各模型每百万 token 的价目表。只读、零配置、不落盘。"
+  },
+  "added": "2026-10-26"
+}
