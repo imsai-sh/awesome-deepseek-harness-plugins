@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jerryxff26-alt/dsh-delivery-board",
+  "name": "dsh-delivery-board",
+  "repository": "https://github.com/jerryxff26-alt/dsh-delivery-board",
+  "category": "workflow",
+  "description": {
+    "en": "Codebase-native delivery board with stage pipeline, handoff audit trail, soft WIP limits, weekly Markdown report, and a local kanban + calendar Timeline UI. Works as a DSH plugin or standalone via npx.",
+    "zh": "写在代码仓库里的交付看板：阶段流水线、交接审计、软 WIP、周报 Markdown，以及本地看板与日历 Timeline。可作为 DSH 插件，也可通过 npx 独立运行。"
+  },
+  "added": "2026-10-28"
+}
