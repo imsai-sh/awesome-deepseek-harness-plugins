@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "seanliii/dsh-plugin-legion",
+  "name": "dsh-plugin-legion",
+  "repository": "https://github.com/seanliii/dsh-plugin-legion",
+  "category": "tools",
+  "description": {
+    "en": "Finds DSH and GitHub projects, reads repository source, and packages author-adapted code as DSH plugin bundles. Supports native tool calls and explicit task messages with a user-authorized Legion service. Backend not included.",
+    "zh": "发现 DSH 与 GitHub 项目、读取仓库源码，并将作者已适配的代码包装为 DSH 插件包；支持原生工具调用和向用户获授权的 Legion 服务显式发送任务消息，不包含后端。"
+  },
+  "added": "2026-10-28"
+}
