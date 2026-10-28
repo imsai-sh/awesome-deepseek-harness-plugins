@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YeChenglin8888/harness2-lessons-bridge",
+  "name": "harness2-lessons-bridge",
+  "repository": "https://github.com/YeChenglin8888/harness2-lessons-bridge",
+  "category": "memory",
+  "description": {
+    "en": "Adds an h2_lessons tool for Pi and DeepSeek Harness that reads and ranks project-local pi-harness2 lessons.",
+    "zh": "为 Pi 和 DeepSeek Harness 添加 h2_lessons 工具，读取并按相关性排序项目内的 pi-harness2 经验。"
+  },
+  "added": "2026-10-28"
+}
