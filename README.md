@@ -767,6 +767,7 @@ docs/               目录数据模型文档
 - [dsh-assembly.resume](https://github.com/kanchengw/dsh-assembly.resume) — 将本地Codex和Claude会话记录导入框架，实现统一访问。
 - [dsh-assistant-message-forge](https://github.com/anweat/dsh-assistant-message-forge) — 创建、修改和注入测试助手消息，并导入会话日志。
 - [dsh-at-mention](https://github.com/Lan-zk/dsh-at-mention) — 支持在编辑器中通过@提及引用工作区文件和跨会话上下文。
+- [dsh-atlas](https://github.com/jameswatt139240-crypto/dsh-ATLAS) — 在 DSH 输入框里用 @ 引用文件（支持行区间 @src/a.ts:12-40）、Skill、插件和任意 git 仓库，并在发送前显示每条引用要花多少 token。
 - [dsh-attachments](https://github.com/CocoSgt/dsh-attachments) — 管理对话中的附件，可能支持文件的存储和检索。
 - [dsh-auth](https://github.com/hxy91819/dsh-auth) — 增加基于 Caddy 前置的管理员认证，使用 Argon2id 哈希及可撤销会话，增强安全性。
 - [dsh-auth-gate](https://github.com/TecFancy/dsh-auth-gate) — 为网页版添加登录门，支持口令/令牌认证、限速和用户管理。
