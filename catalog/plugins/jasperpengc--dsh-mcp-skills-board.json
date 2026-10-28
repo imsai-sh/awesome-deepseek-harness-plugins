@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "Storm-Starlight/dsh-mcp-skills-board",
+  "id": "JasperPengC/dsh-mcp-skills-board",
   "name": "dsh-mcp-skills-board",
-  "repository": "https://github.com/Storm-Starlight/dsh-mcp-skills-board",
+  "repository": "https://github.com/JasperPengC/dsh-mcp-skills-board",
   "category": "ui",
   "description": {
     "en": "Adds a sidebar panel and a plugin-page section for managing MCP servers and skills, with status lights, per-row enable switches, an add-server form for stdio and streamable HTTP, and four-state skill switches.",
