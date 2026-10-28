@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "scarf1985566475-cloud/dsh-voice",
+  "name": "dsh-voice",
+  "repository": "https://github.com/scarf1985566475-cloud/dsh-voice",
+  "category": "tools",
+  "description": {
+    "en": "Local English-to-Chinese simultaneous interpretation for DSH. Qwen3-ASR runs on-device (MLX, Qwen3-ASR-0.6B-4bit) to transcribe accented English and Chinese with automatic language detection; stable sentences are translated to Chinese by DeepSeek and shown as bilingual live captions. Sessions are archived as crash-safe meeting records with transcripts, generated minutes and Obsidian export. The bundle declares dsh.bundle.patch and supervises the local Python service.",
+    "zh": "本机英译中同声传译插件：由 Qwen3-ASR（MLX，Qwen3-ASR-0.6B-4bit）在本机识别中英文口音并自动判断语言，稳定句子交给 DeepSeek 译成中文，以双语字幕实时显示。会话自动存档为崩溃安全的会议记录（全文、纪要、Obsidian 导出）。插件包声明 dsh.bundle.patch，并守护本地 Python 服务。"
+  },
+  "added": "2026-10-28"
+}
