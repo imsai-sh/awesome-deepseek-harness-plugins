@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sdiwenchen-lang/DeepSeek-Usage",
+  "name": "DeepSeek-Usage",
+  "repository": "https://github.com/sdiwenchen-lang/DeepSeek-Usage",
+  "category": "model",
+  "description": {
+    "en": "DeepSeek balance and token usage panel for DSH: official account billing, a daily usage calendar, and local session-log estimates across providers with editable per-model USD pricing.",
+    "zh": "DSH 的 DeepSeek 用量面板：官方账户余额与账单、用量日历，以及按可编辑的逐模型美元费率估算全部 Provider 的本地会话日志用量。"
+  },
+  "added": "2026-10-29"
+}
