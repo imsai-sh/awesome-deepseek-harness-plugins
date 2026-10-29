@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zztdandan/dsh-opencode-go-quota",
+  "name": "dsh-opencode-go-quota",
+  "repository": "https://github.com/zztdandan/dsh-opencode-go-quota",
+  "category": "tools",
+  "description": {
+    "en": "Shows OpenCode GO plan quota (rolling 5-hour, weekly, monthly) on a DSH Settings page and reads the official usage API through a same-origin proxy. Registers no sidebar widget.",
+    "zh": "在 DSH 设置页显示 OpenCode GO 套餐额度（5 小时滚动、每周、每月），通过同源代理读取官方用量接口；不注册侧栏组件。"
+  },
+  "added": "2026-10-29"
+}
