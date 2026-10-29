@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "y258dd/dsh-hormone",
+  "name": "dsh-hormone",
+  "repository": "https://github.com/y258dd/dsh-hormone",
+  "category": "session",
+  "description": {
+    "en": "Three state values (stress, energy, reward) rise on real session events and decay over time; one short line is written into the system prompt only when a value crosses a threshold.",
+    "zh": "压力、精力、爽度三个状态随真实会话事件涨落、随时间衰减，只在越界时往系统提示里写一句话。"
+  },
+  "added": "2026-10-29"
+}
