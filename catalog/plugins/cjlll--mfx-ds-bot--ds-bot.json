@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CJLLL/mfx-ds-bot/ds-bot",
+  "name": "mfx-ds-bot",
+  "repository": "https://github.com/CJLLL/mfx-ds-bot",
+  "category": "workflow",
+  "description": {
+    "en": "A DS Bot fork with Maofuxing sidebar navigation, persistent agent teams, direct messages and group chats.",
+    "zh": "适配茂福星客户端导航的 DS Bot 分支，提供智能体团队、长期 Bot 会话、Bot 间消息与群聊。"
+  },
+  "added": "2026-10-29"
+}
