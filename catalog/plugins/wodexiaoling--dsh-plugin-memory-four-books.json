@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wodexiaoling/dsh-plugin-memory-four-books",
+  "name": "dsh-plugin-memory-four-books",
+  "repository": "https://github.com/wodexiaoling/dsh-plugin-memory-four-books",
+  "category": "tools",
+  "description": {
+    "en": "Layered long-term memory for DeepSeek Harness: five tiers (red lines, today, in progress, common sense, archive) with tiered prompt injection, BM25 recall with a 120-day decay floor, automatic capture of user messages, and timed consolidation. Zero dependencies; memory is plain Markdown and JSONL under $DSH_HOME. It records conversation locally in plain text and makes no network requests. GitHub install only — not published to npm.",
+    "zh": "DeepSeek Harness 的分层长期记忆：红线 / 当天 / 进行中 / 常识 / 档案五层，分层注入提示词，BM25 召回带 120 天半衰期衰减，自动记录用户消息并定时归纳。零依赖，记忆以纯 Markdown 和 JSONL 存在 $DSH_HOME 下，只记录到本机明文文件，不发起任何网络请求。仅支持 GitHub 安装，未发布到 npm。"
+  },
+  "added": "2026-10-29"
+}
