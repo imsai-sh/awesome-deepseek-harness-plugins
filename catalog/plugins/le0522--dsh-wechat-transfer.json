@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "le0522/dsh-wechat-transfer",
+  "name": "dsh-wechat-transfer",
+  "repository": "https://github.com/le0522/dsh-wechat-transfer",
+  "category": "tools",
+  "description": {
+    "en": "Send local files to WeChat from inside DeepSeek Harness. Ships a left-sidebar panel, the wechat_send_file model tool and a send button on every DSH deliverable card, all defaulting to the File Transfer chat. The transfer is treated as a two-phase action: the currently open chat is read with Windows OCR and the run refuses to paste when it is not the requested chat, so a file cannot land in the wrong conversation; files are picked through WeChat's own file dialog because WeChat 4.1.15.13 ignores clipboard file pastes, and the outcome is confirmed by file name plus size label, or by a structural change of the composer and message pane for images. If WeChat is not running the plugin starts it and clicks the 进入微信 consent button; a QR-only login screen is reported instead of guessed. Windows only; MIT.",
+    "zh": "在 DeepSeek Harness 里把本地文件发到微信，默认目标是「文件传输助手」。提供左侧栏面板、wechat_send_file 模型工具，以及每张 DSH 产物卡片上的「发微信」按钮。发送按两步处理：先用 Windows OCR 读出当前打开的聊天，不是目标聊天就拒绝粘贴，避免文件发错会话；文件通过微信自己的「选择文件」对话框选取，因为微信 4.1.15.13 不认剪贴板里的文件；发送结果按文件名加大小标签确认，图片则按输入框与聊天区的结构变化确认。微信没在运行时插件会自己拉起，并在登录窗上点「进入微信」；只出现二维码时如实报告、不猜。仅支持 Windows，MIT。"
+  },
+  "added": "2026-10-29"
+}
