@@ -5,8 +5,8 @@
   "repository": "https://github.com/seanliii/dsh-plugin-legion",
   "category": "tools",
   "description": {
-    "en": "A native DSH team for multi-harness collaboration and ongoing improvement: team setup, automatic first-run and weekly workflows, public-tool sharing and reuse, pause controls, and results in the original session. Actual members, the Legion core and models require separate configuration and remain subject to existing permissions. Scheduling or delivery does not establish successful evolution.",
-    "zh": "DSH 原生多 Harness 协同进化战队：原生组队后自动安排首次和每周工作，支持公开工具互用、暂停及原会话核对。实际成员、军团核心与模型需另行配置，沿用原有权限；任务安排或投递不等于成功进化。"
+    "en": "A native DSH collaboration workbench for user-configured harness teams: member and author configuration views, shared-capability discovery, task continuation, paginated recovery records and native scheduled work. Includes a supervised DSH-to-Codex review and DSH repair case. Technical preview; members and models require separate setup, and universal autonomy or automatic improvement propagation is not established.",
+    "zh": "面向用户自配 Harness 战队的 DSH 原生协作工作台：分别展示作者与成员配置，支持共享能力发现、任务接续、恢复记录分页和原生定时工作。包含一次有监督的 DSH 委托 Codex 审查并由 DSH 修复的案例。技术预览；成员与模型需另配，不宣称全团自治或改进自动传播。"
   },
   "added": "2026-10-28"
 }
