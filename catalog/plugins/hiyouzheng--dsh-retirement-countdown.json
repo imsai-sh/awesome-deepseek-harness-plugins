@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hiyouzheng/dsh-retirement-countdown",
+  "name": "dsh-retirement-countdown",
+  "repository": "https://github.com/hiyouzheng/dsh-retirement-countdown",
+  "category": "ui",
+  "description": {
+    "en": "Retirement countdown above the DSH composer: always-visible days, hours, minutes and seconds; click the pencil to pick the target date, stored locally in the browser.",
+    "zh": "在 DSH 输入框上方常驻的退休倒计时：显示天/时/分/秒，点铅笔改目标日期，日期存在浏览器本地。"
+  },
+  "added": "2026-10-30"
+}
