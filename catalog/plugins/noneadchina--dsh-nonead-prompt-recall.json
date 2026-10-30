@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "NoneadChina/dsh-nonead-prompt-recall",
+  "name": "dsh-nonead-prompt-recall",
+  "repository": "https://github.com/NoneadChina/dsh-nonead-prompt-recall",
+  "category": "ui",
+  "description": {
+    "en": "Shell-style prompt history for the composer: press Up in an empty input to load the last prompt you sent, keep pressing Up to walk further back, and press Down to return to the draft. History is isolated per workspace, persisted on disk across restarts, and managed from Settings or the /prompt-recall command.",
+    "zh": "给输入框加上 shell 风格的提示词历史召回：输入框为空时按 ↑ 载入上一条已提交的提示词，继续按 ↑ 可向前回溯，按 ↓ 回到空白草稿。历史按工作区隔离并落盘保存，重启后仍然可用，可在设置页或 /prompt-recall 命令中管理。"
+  },
+  "added": "2026-10-30"
+}
