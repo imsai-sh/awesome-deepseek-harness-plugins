@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Blueteemo/dsh-smart-namer",
+  "name": "dsh-smart-namer",
+  "repository": "https://github.com/Blueteemo/dsh-smart-namer",
+  "category": "session",
+  "description": {
+    "en": "Smart naming for sessions and workspaces: one click sends the item's own content to the profile's default model, offers short name candidates, and renames in place.",
+    "zh": "会话与工作区的智能命名：点一下把内容交给当前 profile 的默认模型，给出几个短名候选，选中即原地改名。"
+  },
+  "added": "2026-10-31"
+}
