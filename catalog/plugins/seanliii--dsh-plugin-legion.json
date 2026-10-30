@@ -5,8 +5,8 @@
   "repository": "https://github.com/seanliii/dsh-plugin-legion",
   "category": "tools",
   "description": {
-    "en": "A five-page native DSH workbench to choose Legion members, discover session tools and Skills, search configured plugin indexes and public GitHub, and explicitly install or enable native capability bundles. Includes connection settings, task details, and separate run, artifact and download status. Source adaptation and collaboration use a separately configured, user-authorized Legion core; no core, external harnesses, models or credentials are bundled.",
-    "zh": "DSH 原生五页军团工作台：选择成员、查找会话工具与 Skill、搜索已配置插件索引和公开 GitHub，并明确安装或启停原生能力包；提供连接配置、任务详情，分别呈现运行、成果和下载状态。源码适配与协作交给另行配置并获授权的军团核心，不捆绑核心、外部 Harness、模型或凭据。"
+    "en": "A five-page native DSH workbench to discover tools, Skills, plugin indexes and GitHub projects, select members, and install reviewed capability bundles. Connect the separately installable open-source Legion core for reference-driven research, collaboration, source-informed revisions, continuation and formal artifact downloads. Includes connection settings, separate run/export status, fixed Git releases and a DSH Discover index. Models and external harnesses are configured on demand.",
+    "zh": "DSH 原生五页军团工作台：发现工具、Skill、插件索引和 GitHub 项目，选择成员并安装已审查的能力包。连接可独立安装的开源军团核心，开展对标研究、协作、源码互学返工、续作和正式成果下载；提供连接配置、运行与导出分别呈现、固定 Git 版本及 DSH Discover 索引。模型和外部 Harness 按需配置，不会自动全部安装。"
   },
   "added": "2026-10-28"
 }
