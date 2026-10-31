@@ -8,7 +8,7 @@ The **DSH 1024Store** community catalog for [DeepSeek Harness](https://github.co
 
 **This project is more than an awesome list.** It also ships a hosted plugin marketplace, a plugin that puts that marketplace inside `dsh` itself, and a free public query API — that application code lives in the sibling repository [dsh-1024store](https://github.com/imsai-sh/dsh-1024store); this repository is the catalog itself: a statically validated PR submission pipeline and the generated directory READMEs, with an automated collection service feeding the data. Everything is MIT licensed, so you can fork it and run your own marketplace.
 
-[![The DSH 1024Store plugin marketplace homepage](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.en.png?v=e32c65c8b260)](https://deepseek1024.com/)
+[![The DSH 1024Store plugin marketplace homepage](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.en.png?v=397f536542b1)](https://deepseek1024.com/)
 
 [Live website](https://deepseek1024.com/) · [API reference](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [中文目录](../README.md) · [Submit a plugin](../CONTRIBUTING.md) · [Site & CLI source](https://github.com/imsai-sh/dsh-1024store)
 
@@ -41,9 +41,9 @@ Monorepo subpackage plugins publish and install their own npm packages, and each
 
 Groups are collapsed by default. GitHub renders only so much of a single file, so the largest categories list a subset — each summary says how many — while smaller ones are complete. Search the [live website](https://deepseek1024.com/) for the full catalog.
 
-- [UI Enhancements](#ui) (2664)
+- [UI Enhancements](#ui) (2665)
 - [Themes & Appearance](#theme) (503)
-- [Sessions & Messages](#session) (889)
+- [Sessions & Messages](#session) (888)
 - [Memory](#memory) (443)
 - [Tools & Capabilities](#tools) (4039)
 - [Skills](#skill) (1050)
@@ -56,7 +56,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 <a id="ui"></a>
 
 <details>
-<summary><strong>UI Enhancements</strong> · showing 230 of 2664</summary>
+<summary><strong>UI Enhancements</strong> · showing 230 of 2665</summary>
 
 - [01_content](https://github.com/Aisland-SJL/dsh-worktable/tree/HEAD/01_content) — Adds a sidebar app drawer and dockable split workspace to the harness, creating a live control room for projects.
 - [a2ui-render-in-dsh](https://github.com/baihui-ai/a2ui-render-in-dsh) — Interactive A2UI cards for the dsh web UI — quizzes, forms, charts and diagrams rendered inline in the conversation, with a full action loop back to the agent.
@@ -288,7 +288,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh-aionui-panel](https://github.com/jiuge2467/DSH-WhaleDeck/tree/HEAD/plugins/dsh-aionui-panel) — Provides a desktop panel for the DeepSeek Harness workspace, integrating a mascot pet, MCP debugging sandbox, persistent terminal, and dashboard.
 - [dsh-aionui-panel](https://github.com/ningbainb/deepseek-harness-desktop/tree/HEAD/packages/dsh-aionui-panel) — Provides the AionUI panel for DeepSeek Harness desktop client, enhancing the user interface with a dedicated panel.
 - [dsh-aionui-panel](https://github.com/springbrand-lab/dsh-skin-universe/tree/HEAD/packages/dsh-aionui-panel) — Adds a task board panel to the DSH web GUI, showing tasks and progress in a visual board.
-- *GitHub only renders so much of one file, so 2434 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
+- *GitHub only renders so much of one file, so 2435 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
 
 </details>
 
@@ -546,7 +546,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 <a id="session"></a>
 
 <details>
-<summary><strong>Sessions &amp; Messages</strong> · showing 225 of 889</summary>
+<summary><strong>Sessions &amp; Messages</strong> · showing 225 of 888</summary>
 
 - [agent-board](https://github.com/meisam2236/agent-board) — Track and manage AI agents with a durable per-workspace board for the DeepSeek Harness web profile.
 - [agent-mode-switcher](https://github.com/my-dsh-plugin/agent-mode-switcher) — Switch the current session's agent preset (mode) after the model answers and keep chatting. DeepSeek Harness 插件：模型回答后切换模式，继续当前对话。
@@ -773,7 +773,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh-conversation-landmarks](https://github.com/mantonlove/dsh-conversation-landmarks) — Conversation Landmarks (对话地标) for DeepSeek Harness — fixed navigation and hover previews for long agent conversations.
 - [dsh-conversation-language](https://github.com/Dingpenghui-good/dsh-conversation-language) — DSH plugin for switching conversation language between Chinese and English
 - [dsh-conversation-link](https://github.com/duanyunlun/dsh-conversation-link) — Peer communication between conversations open in the same DeepSeek Harness process: a conversation lists the peers the workspace shows, links one under a nickname, sends it a message without waiting for its turn to end, reads its progress without waking it, and declares standing rules for its own tool calls.
-- *GitHub only renders so much of one file, so 664 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
+- *GitHub only renders so much of one file, so 663 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
 
 </details>
 
