@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bugtakue/dsh-ronge-gongzhonghao",
+  "name": "dsh-ronge-gongzhonghao",
+  "repository": "https://github.com/bugtakue/dsh-ronge-gongzhonghao",
+  "category": "tools",
+  "description": {
+    "en": "DSH plugin plus a bundled skill for Chinese WeChat long-form writing: AI-flavor linter with score and line-level suggestions, de-AI writing rules, 750px mobile figure guidance, and a self-contained WeChat-safe HTML builder.",
+    "zh": "面向微信公众号长文写作的 DSH 插件与内置技能：AI 味扫描（分数、命中词、行号与替换建议）、去 AI 味写作规则、750px 移动图规范，以及可直接粘贴进公众号编辑器的自包含 HTML 生成器。"
+  },
+  "added": "2026-10-31"
+}
