@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Jesseovo/last30days-skill-cn",
+  "name": "last30days-skill-cn",
+  "repository": "https://github.com/Jesseovo/last30days-skill-cn",
+  "category": "skill",
+  "description": {
+    "en": "Research skill for the Chinese internet: searches the last 30 days of discussion across Weibo, Xiaohongshu, Bilibili, Zhihu, Douyin, WeChat public accounts, Baidu and Toutiao, ranks by engagement and freshness with cross-platform clustering, and returns cited Markdown, JSON or offline HTML reports. Also ships a daily cross-platform hot-search board and optional Hacker News, GitHub and Reddit sources.",
+    "zh": "面向中文互联网的研究技能：检索微博、小红书、B站、知乎、抖音、微信公众号、百度、今日头条最近 30 天的讨论，按互动与时效加权排序并跨平台聚类，输出附原始来源的 Markdown、JSON 或离线 HTML 报告；另含每日全网热榜与可选的 Hacker News、GitHub、Reddit 海外源。"
+  },
+  "added": "2026-11-01"
+}
