@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "919703505hackiv-boop/dsh-session-dispatch",
+  "name": "dsh-session-dispatch",
+  "repository": "https://github.com/919703505hackiv-boop/dsh-session-dispatch",
+  "category": "tools",
+  "description": {
+    "en": "Model-facing tools that create a workspace conversation, send a prompt into it, wait for the turn to finish, and read the reply, so a lead agent can dispatch work into real standalone sessions instead of subagents.",
+    "zh": "给主代理用的会话派发工具：新建工作区会话、把指令发进去、等这一轮结束、读它的回复，把子任务放进真正独立的主会话里跑，而不是子代理。"
+  },
+  "added": "2026-11-01"
+}
