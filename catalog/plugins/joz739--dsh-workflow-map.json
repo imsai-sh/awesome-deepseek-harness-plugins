@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Joz739/dsh-workflow-map",
+  "name": "dsh-workflow-map",
+  "repository": "https://github.com/Joz739/dsh-workflow-map",
+  "category": "workflow",
+  "description": {
+    "en": "Folds the current session into a step-by-step workflow map: one card per step, the tools and file types it used listed either side, and a detail page on click. Each step's percentage is labelled with its source (todo table, model self-report, time baseline, or plan step ordinal); when none of the four applies no number is shown, and an unfinished step never reads 100%. A prompt can be queued for the next step of the current turn via agent.steer() and revoked before it is claimed. No network calls, no subprocesses, nothing written outside the session; the only file read is the read-only PAE plan under .pae/. DSH >=0.2.1-rc.1 <0.3.0-0, Node >=20, MIT.",
+    "zh": "把当前会话折叠成一张分步工作流地图：每步一张卡片，卡片两侧列出该步用过的工具与文件类型，点开是分步详情。每步的百分比标注来源（待办表实测、模型自报、时间基线、计划步序）；四者都不可用时不出数字，未结束的步也不显示 100%。可用 agent.steer() 把一句提示词排入当前轮次的下一步，被取用前可撤回。不发起网络请求、不启动子进程、不写会话之外的位置；唯一的文件读取是 .pae/ 下只读的计划文件。DSH >=0.2.1-rc.1 <0.3.0-0，Node >=20，MIT。"
+  },
+  "added": "2026-11-01"
+}
