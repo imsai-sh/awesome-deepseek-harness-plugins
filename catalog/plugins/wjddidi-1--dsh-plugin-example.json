@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "WJDdidi-1/dsh-plugin-example",
+  "name": "dsh-plugin-example",
+  "repository": "https://github.com/WJDdidi-1/dsh-plugin-example",
+  "category": "dev",
+  "description": {
+    "en": "A ~70-line plugin to copy from: one sidebar tab, a host half, a bundle manifest and a preflight that passes. Useful as a reference when starting a plugin rather than reading the docs.",
+    "zh": "约 70 行、可直接抄的插件示例：一个侧栏标签、宿主半、bundle 清单，以及能通过的安装前检查。适合在动手写插件时当参照，而不是去读文档。"
+  },
+  "added": "2026-11-01"
+}
