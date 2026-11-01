@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "WJDdidi-1/dsh-plugin-toolkit",
+  "name": "dsh-plugin-toolkit",
+  "repository": "https://github.com/WJDdidi-1/dsh-plugin-toolkit",
+  "category": "dev",
+  "description": {
+    "en": "Preflight for plugin authors: packs the plugin the way npm would, installs the tarball, imports the root export the loader mounts and mounts the panel, so a `files` list that forgets `client.js` or a bundle the host would drop fails before release. Also ships `init`, `dev` and `release`.",
+    "zh": "插件作者的安装前检查：按 npm 的方式打包、安装 tarball、import 加载器真正会 import 的根导出并挂载面板，所以「`files` 漏了 `client.js`」或「宿主会丢掉的 bundle」在发布前就会失败。另含 `init`、`dev` 与 `release`。"
+  },
+  "added": "2026-11-01"
+}
