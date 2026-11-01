@@ -2,13 +2,13 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **13919** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-01。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **13920** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-01。
 
 > 📦 **仓库拆分公告**：自 2026-08-25 起，deepseek1024.com 网站与 `dsh1024` CLI 的源码已拆分至独立仓库 [imsai-sh/dsh-1024store](https://github.com/imsai-sh/dsh-1024store)。本仓库从此专注插件目录（awesome 清单）与收录流程；网站与 CLI 相关的 issue / PR 请移步新仓库，插件收录照旧在这里提交。
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=2f1cd65dac31)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=418471e6b41d)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -138,7 +138,7 @@ docs/               目录数据模型文档
 
 - [UI 增强](#ui) (2666)
 - [主题与外观](#theme) (503)
-- [会话与消息](#session) (888)
+- [会话与消息](#session) (889)
 - [记忆](#memory) (443)
 - [工具与能力](#tools) (4041)
 - [技能包](#skill) (1050)
@@ -655,7 +655,7 @@ docs/               目录数据模型文档
 <a id="session"></a>
 
 <details>
-<summary><strong>会话与消息</strong> · 显示 244 / 共 888 个</summary>
+<summary><strong>会话与消息</strong> · 显示 244 / 共 889 个</summary>
 
 - [agent-board](https://github.com/meisam2236/agent-board) — 使用持久化的工作区看板跟踪和管理 DeepSeek Harness 中的 AI 代理。
 - [agent-mode-switcher](https://github.com/my-dsh-plugin/agent-mode-switcher) — 在模型回答后切换当前会话的代理预设，以不同模式继续对话。
@@ -723,6 +723,7 @@ docs/               目录数据模型文档
 - [dsh-agent-replay](https://github.com/forrestsweet/dsh-agent-replay) — DeepSeek Harness 会话回放与脱敏分享插件：将真实 Agent 轨迹导出为独立交互 HTML，用于文档、演示和问题反馈。
 - [dsh-agent-sticky-note](https://github.com/alanpaul1969/dsh-agent-sticky-note) — 在 Web GUI 中以便签形式显示代理通知和待处理决策。
 - [dsh-agent-team-room](https://github.com/ishuowang/dsh-agent-team-room) — 在原生 DSH 房间中连接独立会话与 AI 成员，无需预设角色。
+- [dsh-aiignore](https://github.com/WJDdidi-1/ai-context-doctor/tree/HEAD/plugin) — 给仓库与过往会话的实际读取打分，在淹没上下文窗口之前给出提醒，并写出挡住最糟那部分的 `.aiignore` 规则。侧栏面板跟随当前对话，只显示一个当前评分，而不是前后对比。
 - [dsh-aischat](https://github.com/Coprexist/AIsChat/tree/HEAD/dsh-aischat) — AI陪伴空间，代理拥有状态、记忆和节奏，支持群聊。
 - [dsh-anno](https://github.com/An0range/dsh-plugins/tree/HEAD/packages/dsh-anno) — 在选中文本上添加批示和追问功能。
 - [dsh-annotator](https://github.com/cw1999mm/dsh-annotator) — 为对话或消息添加注释，便于后续查阅和整理。
@@ -900,8 +901,7 @@ docs/               目录数据模型文档
 - [dsh-cross-session-messaging](https://github.com/Weiyang742/dsh-cross-session-messaging) — 通过节点发现，在多个DeepSeek Harness进程间转发文本消息。
 - [dsh-crosstalk](https://github.com/Jesse-njx/dsh-crosstalk) — 跨会话消息：本机任意会话都可像 Claude Code 一样列出并互发消息，基于本地心跳注册表与收件箱。
 - [dsh-cue-plugin](https://github.com/unnnnoooo/dsh-cue-plugin) — DeepSeek Harness 的跨会话引用(cue)插件
-- [dsh-custom-instructions](https://github.com/huanghai-lab/dsh-custom-instructions) — DSH Web GUI 自定义指令编辑器插件：在设置页直接编辑 ~/.dsh/AGENTS.md 全局指令（类似 ChatGPT Custom Instructions），对所有聊天生效。热插拔安装，无需改动 DSH 源码。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 644 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 645 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
