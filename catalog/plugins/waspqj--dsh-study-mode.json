@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "waspqj/dsh-study-mode",
+  "name": "dsh-study-mode",
+  "repository": "https://github.com/waspqj/dsh-study-mode",
+  "category": "session",
+  "description": {
+    "en": "An agent preset plus a sidebar knowledge-base panel for DeepSeek Harness. The preset makes the model look up a local topic knowledge base before it answers, marks whether an answer came from a card, and can ask the model to verify a claim online when the card is not verified yet. Cards are plain JSONL files under ~/.dsh/learn, retrieval is local computation, and nothing is uploaded. Published on npm as dsh-study-mode, MIT licensed.",
+    "zh": "给 DeepSeek Harness 的 agent 预设 + 侧边栏知识库面板。预设让模型先查本地的主题知识库再回答，并标出答案是否来自卡片；卡片尚未核实时可让模型联网核实。卡片是 ~/.dsh/learn 下的普通 JSONL 文件，检索为本地计算，不上传任何数据。npm 包名 dsh-study-mode，MIT 许可。"
+  },
+  "added": "2026-11-01"
+}
