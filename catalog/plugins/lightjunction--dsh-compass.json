@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-compass",
+  "name": "dsh-compass",
+  "repository": "https://github.com/LIghtJUNction/dsh-compass",
+  "category": "dev",
+  "description": {
+    "en": "Builds bounded repository maps and declaration-line tours for local code navigation.",
+    "zh": "为本地仓库生成有范围限制的代码地图和声明行导览。"
+  },
+  "added": "2026-11-02"
+}
