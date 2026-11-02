@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ggxx001/dsh-whale-widget",
+  "name": "dsh-whale-widget",
+  "repository": "https://github.com/ggxx001/dsh-whale-widget",
+  "category": "dev",
+  "description": {
+    "en": "DSH Web 界面右下角的 DeepSeek 余额小鲸鱼挂件:余额/今日已用/峰谷定价、自定义泡泡点击序列(文本/余额/今日/峰谷/图片/随机语句与并列加权选择)、逐行样式与字体、悬浮快捷编辑、音效与每轮消耗、自定义角色/动图/音效、吸附与翻转自定义",
+    "zh": "DSH Web 界面右下角的 DeepSeek 余额小鲸鱼挂件:余额/今日已用/峰谷定价、自定义泡泡点击序列(文本/余额/今日/峰谷/图片/随机语句与并列加权选择)、逐行样式与字体、悬浮快捷编辑、音效与每轮消耗、自定义角色/动图/音效、吸附与翻转自定义"
+  },
+  "added": "2026-11-02"
+}
