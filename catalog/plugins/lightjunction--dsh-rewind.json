@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-rewind",
+  "name": "dsh-rewind",
+  "repository": "https://github.com/LIghtJUNction/dsh-rewind",
+  "category": "dev",
+  "description": {
+    "en": "Creates Git-backed checkpoints for selected files, with preview tokens and redo snapshots for restore.",
+    "zh": "为选定文件创建 Git 检查点，恢复前提供预览令牌并保存可重做快照。"
+  },
+  "added": "2026-11-02"
+}
