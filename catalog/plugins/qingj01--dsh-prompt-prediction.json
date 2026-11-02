@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "QingJ01/dsh-prompt-prediction",
+  "name": "dsh-prompt-prediction",
+  "repository": "https://github.com/QingJ01/dsh-prompt-prediction",
+  "category": "ui",
+  "description": {
+    "en": "Predicts your next message after an agent reply and shows it as ghost text in the empty composer; Tab or ArrowRight turns it into an editable draft without sending.",
+    "zh": "Agent 完成一轮回复后预测你的下一句话，以灰字显示在空输入框；按 Tab 或 → 填入可编辑草稿，不会自动发送。"
+  },
+  "added": "2026-11-02"
+}
