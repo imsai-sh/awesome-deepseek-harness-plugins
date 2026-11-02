@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-dotenv",
+  "name": "dsh-dotenv",
+  "repository": "https://github.com/LIghtJUNction/dsh-dotenv",
+  "category": "dev",
+  "description": {
+    "en": "Loads one explicitly configured dotenv file without overwriting inherited environment variables.",
+    "zh": "加载显式配置的 dotenv 文件，并保留已继承的环境变量。"
+  },
+  "added": "2026-11-02"
+}
