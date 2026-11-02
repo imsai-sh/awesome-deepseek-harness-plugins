@@ -1,8 +1,8 @@
 {
     "$schema":  "../schema/plugin.schema.json",
-    "id":  "Alexliwenhao/shell-desktop/shell-desktop",
+    "id":  "Alexliwenhao/ai-shell-desktop/shell-desktop",
     "name":  "AI Shell Desktop",
-    "repository":  "https://github.com/Alexliwenhao/shell-desktop",
+    "repository":  "https://github.com/Alexliwenhao/ai-shell-desktop",
     "category":  "dev",
     "description":  {
                         "en":  "AI Shell Desktop: an Electron shell composed as a DeepSeek Harness Cordis plugin, combining terminal, files, and AI chat in one window.",
