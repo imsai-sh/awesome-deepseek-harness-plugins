@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "peng456/dsh-plugin-mesh",
+  "name": "dsh-plugin-mesh",
+  "repository": "https://github.com/peng456/dsh-plugin-mesh",
+  "category": "tools",
+  "description": {
+    "en": "Discovers other DeepSeek Harness instances on the same LAN (UDP multicast plus an on-start subnet scan) and lists each peer with its OS, installed runtimes and GPU summary in a sidebar page. Tasks can be dispatched from one machine to another: the receiving DSH opens a session, runs the task with its own agent, and sends the result back to the sender. An optional user-space Tailscale sidecar adds links across networks.",
+    "zh": "通过 UDP 组播与启动时的网段扫描发现同一局域网内的其他 DeepSeek Harness 实例，在侧栏页面列出对端机器的系统、已装运行时与 GPU 摘要。支持跨机派发任务：对端收到后新建会话、由本机 agent 执行，再把结果派回发起方。可选启用用户态 Tailscale sidecar 用于跨网段互联。"
+  },
+  "added": "2026-11-03"
+}
