@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LiDu-china/dsh-dafeiyu-emotion",
+  "name": "dsh-dafeiyu-emotion",
+  "repository": "https://github.com/LiDu-china/dsh-dafeiyu-emotion",
+  "category": "tools",
+  "description": {
+    "en": "Voice-emotion input for the DSH composer: records one utterance, transcribes it locally, estimates tone and emotion from prosody and text cues, and sends a constrained emotion-aware prompt. Uses DSH Voice Input in lightweight mode or an optional VoiceSense + emotion2vec backend.",
+    "zh": "DSH 输入框语音情绪插件：录制一段语音，在本机转写，并根据韵律与文字线索估计语气和情绪，发送带受控情绪上下文的提示词。轻量模式复用 DSH Voice Input，也可选配 VoiceSense + emotion2vec 增强后端。"
+  },
+  "added": "2026-11-04"
+}
