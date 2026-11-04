@@ -4,6 +4,11 @@
 
 The **DSH 1024Store** community catalog for [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) plugins: **13950** plugins, updated 2026-11-04.
 
+> [!TIP]
+> **New open-source project: [Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
+>
+> Run DeepSeek Harness on iPhone and iPad, wherever you are. Star it to follow along; contributions welcome.
+
 > 📦 **Repository split**: as of 2026-08-25, the deepseek1024.com site and the `dsh1024` CLI live in their own repository, [imsai-sh/dsh-1024store](https://github.com/imsai-sh/dsh-1024store). This repository is now the plugin catalog (the awesome list) and its submission pipeline only; file site/CLI issues and PRs over there — plugin submissions still happen here.
 
 **This project is more than an awesome list.** It also ships a hosted plugin marketplace, a plugin that puts that marketplace inside `dsh` itself, and a free public query API — that application code lives in the sibling repository [dsh-1024store](https://github.com/imsai-sh/dsh-1024store); this repository is the catalog itself: a statically validated PR submission pipeline and the generated directory READMEs, with an automated collection service feeding the data. Everything is MIT licensed, so you can fork it and run your own marketplace.
