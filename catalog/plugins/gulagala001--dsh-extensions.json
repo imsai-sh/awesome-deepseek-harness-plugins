@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gulagala001/dsh-extensions",
+  "name": "dsh-extensions",
+  "repository": "https://github.com/gulagala001/dsh-extensions",
+  "category": "skill",
+  "description": {
+    "en": "Manage skills, MCP servers, instruction files, custom commands and hooks.",
+    "zh": "在 DSH 插件页管理 Skill、MCP 服务器、指令文件、自定义命令和 Hooks。"
+  },
+  "added": "2026-10-22"
+}
