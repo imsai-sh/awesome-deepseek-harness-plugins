@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "QingJ01/dsh-side-tasks/packages/plugins/side-tasks",
+  "name": "dsh-side-tasks",
+  "repository": "https://github.com/QingJ01/dsh-side-tasks",
+  "category": "session",
+  "description": {
+    "en": "Temporary, context-inheriting side chats in the right sidebar: opens an independent root session with the current conversation's completed turns as read-only prompt context, keeps its own transcript, model, permissions and usage, hides it from the ordinary session list, and stops and archives it when its tab closes.",
+    "zh": "右侧栏的临时、上下文继承侧边聊天：以当前会话已完成回合作为只读提示上下文创建独立根会话，拥有自己的对话、模型、权限与用量，不出现在普通会话列表，关闭标签时停止并归档。"
+  },
+  "added": "2026-11-04"
+}
