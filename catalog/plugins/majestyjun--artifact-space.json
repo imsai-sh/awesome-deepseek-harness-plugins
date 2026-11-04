@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "majestyjun/artifact-space",
+  "name": "Artifact Space",
+  "repository": "https://github.com/majestyjun/artifact-space",
+  "category": "tools",
+  "description": {
+    "en": "Sidebar panel that lists the final effective artifacts of every DSH session, grouped by workspace and session, with an editor-style preview, search, favorites and provenance. Zero runtime dependencies.",
+    "zh": "侧栏面板，按工作区与会话列出每个会话的最终有效产物，支持编辑器风格预览、搜索、收藏与来源追溯。零运行时依赖。"
+  },
+  "added": "2026-11-04"
+}
