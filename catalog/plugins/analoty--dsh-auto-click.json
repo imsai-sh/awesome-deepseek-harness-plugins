@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Analoty/dsh-auto-click",
+  "name": "dsh-auto-click",
+  "repository": "https://github.com/Analoty/dsh-auto-click",
+  "category": "ui",
+  "description": {
+    "en": "Mouse gestures for files in the DSH Web GUI sidebar: Ctrl+click opens a file with the desktop default application, and right-click opens a menu with open, the operating system Open With chooser, save a copy, copy the absolute path, copy the file contents and reveal in the file manager. A plain click keeps the host sidebar preview. Open and reveal go through DSH own session controller, and the Open With chooser is the operating system dialog rather than an application list kept by the plugin.",
+    "zh": "DSH Web GUI 侧边栏文件的鼠标手势：Ctrl+左键用系统默认应用打开，右键弹出菜单，可打开文件、调用操作系统自带的「打开方式」、另存为、复制绝对路径、复制文件内容与在文件管理器中定位。左键单击仍交给 DSH 自己的侧栏预览。打开与定位走 DSH 自己的会话控制器，「打开方式」是操作系统的选择框而不是插件维护的应用列表。"
+  },
+  "added": "2026-11-04"
+}
