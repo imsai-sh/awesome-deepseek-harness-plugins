@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hxlog/dsh-skills-tools",
+  "name": "Skills管理器",
+  "repository": "https://github.com/hxlog/dsh-skills-tools",
+  "category": "skill",
+  "description": {
+    "en": "Skills manager for DeepSeek Harness settings: import Agent Skills from Git repositories, group them by repository, enable or disable each skill, and preview SKILL.md content. Disabled skills are not registered with the model.",
+    "zh": "DeepSeek Harness 的 Skills 管理器：在设置里从 Git 仓库导入 Agent Skills，按仓库分组管理，逐项启用或停用，并可展开查看 SKILL.md 正文；停用的技能不会注册进模型。"
+  },
+  "added": "2026-11-04"
+}
