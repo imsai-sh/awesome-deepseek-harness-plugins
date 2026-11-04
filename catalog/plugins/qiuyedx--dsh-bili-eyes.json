@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "QiuYeDx/dsh-bili-eyes",
+  "name": "dsh-bili-eyes",
+  "repository": "https://github.com/QiuYeDx/dsh-bili-eyes",
+  "category": "tools",
+  "description": {
+    "en": "Lets the model watch Bilibili videos (storyboard frames, captions, hot comments, danmaku), search and browse Bilibili, check the inbox and watch comments under the owner's uploads. Write actions are off by default and set per action and audience.",
+    "zh": "让模型看 B站视频（分镜图、台词、热评、弹幕热词），搜视频、逛 B站、看收件箱、守主人投稿的评论区。点赞、评论等写操作默认关闭，按操作和对象分别设置。"
+  },
+  "added": "2026-11-04"
+}
