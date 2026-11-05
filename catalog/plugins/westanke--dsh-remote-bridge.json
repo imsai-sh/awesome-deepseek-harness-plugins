@@ -5,8 +5,8 @@
   "repository": "https://github.com/westanke/dsh-remote-bridge",
   "category": "tools",
   "description": {
-    "en": "Translates DSH's private remote protocol into a versioned REST API (chat, sessions, files, devices) so trusted clients such as the Android app dsh-companion can reach this machine from outside it, and adds a Phone-settings panel with seven inline cards (roots, remote access, devices, image reading, trash, plugins, app download) to the DSH WebUI.",
-    "zh": "把 DSH 内核的私有 remote 协议翻译成版本化 REST 接口（聊天、会话、文件、设备），让 dsh-companion 等受信任客户端在离开电脑后仍能使用这台机器；同时在 DSH 设置里增加「手机设置」面板，内联七张折叠卡片（根目录 / 远程访问 / 设备 / 识图 / 回收站 / 插件 / App 下载）。"
+    "en": "Translates DSH's private remote protocol into a versioned REST API (chat, sessions, files, devices) so trusted clients such as the Android app dsh-companion can reach this machine from outside it, and adds a Phone-settings panel to the DSH WebUI with five cards in the main list (remote access, public tunnel, devices, trash, app download) plus an Advanced settings group holding authorized roots, image reading and plugins.",
+    "zh": "把 DSH 内核的私有 remote 协议翻译成版本化 REST 接口（聊天、会话、文件、设备），让 dsh-companion 等受信任客户端在离开电脑后仍能使用这台机器；同时在 DSH 设置里增加「手机设置」面板，主列表五张卡（远程访问 / 外网隧道 / 设备 / 回收站 / App 下载），另有「高级设置」组收纳授权根目录、识图与插件三项。"
   },
   "added": "2026-10-30"
 }
