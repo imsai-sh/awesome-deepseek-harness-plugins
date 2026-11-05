@@ -5,8 +5,8 @@
   "repository": "https://github.com/pidongqianqian/dsh-mermaid-plus",
   "category": "ui",
   "description": {
-    "en": "Renders mermaid code blocks in the conversation and Markdown previews as diagrams. Nothing renders by default: the bundled Mermaid 11.17.0 runtime and per-diagram layout wait for a click, with scroll-into-view and always modes available as alternatives. Diagram colours follow the app's light and dark design tokens, and a rendered diagram can be opened in a fullscreen viewer with zoom and pan.",
-    "zh": "把对话和 Markdown 预览中的 mermaid 代码块渲染成图表。默认不渲染：内置的 Mermaid 11.17.0 运行时与每张图的布局都等到点击后才发生，另提供滚动可见与立即两种模式。配色跟随应用的明暗设计令牌，渲染后的图表可在全屏查看器中缩放和平移。"
+    "en": "Renders mermaid code blocks in the conversation and in Markdown previews as diagrams, with a compact ELK layout by default: wide diagrams stay narrow enough to read in a message column (31-79% narrower than dagre in our benchmark). Nothing renders until you ask — the bundled Mermaid 12.2.0 runtime waits for a click, with scroll-into-view and always modes as alternatives. Colours follow the app's light and dark design tokens, a rendered diagram opens in a fullscreen viewer with zoom and pan, and the --dsw-* themed card can copy the source or switch back to it.",
+    "zh": "把对话和 Markdown 预览中的 mermaid 代码块渲染成图表，默认使用 ELK 紧凑布局：宽图在消息栏里也保持可读（基准中比 dagre 窄 31–79%）。默认不渲染——内置的 Mermaid 12.2.0 运行时等到点击后才加载，另提供「滚动可见」与「立即」模式。配色跟随应用的明暗设计令牌，渲染后的图表可在全屏查看器中缩放、平移，卡片支持复制源码与切回代码。"
   },
   "added": "2026-10-17"
 }
