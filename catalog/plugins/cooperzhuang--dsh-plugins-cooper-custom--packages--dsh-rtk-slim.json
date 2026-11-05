@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CooperZhuang/dsh-plugins-cooper-custom/packages/dsh-rtk-slim",
+  "name": "dsh-rtk-slim",
+  "repository": "https://github.com/CooperZhuang/dsh-plugins-cooper-custom",
+  "category": "tools",
+  "description": {
+    "en": "Shrinks oversized bash and job_output text by piping it through the external rtk binary, keeps the original in a spill file and lets the model fetch it back on demand; keeps the original text when rtk is missing or fails.",
+    "zh": "把超大 bash / job_output 文本交给外部 rtk 二进制压缩，原文写入 spill 文件供模型按需取回；rtk 缺失或失败时保留原文。"
+  },
+  "added": "2026-11-05"
+}
