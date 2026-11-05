@@ -13,7 +13,7 @@ The **DSH 1024Store** community catalog for [DeepSeek Harness](https://github.co
 
 **This project is more than an awesome list.** It also ships a hosted plugin marketplace, a plugin that puts that marketplace inside `dsh` itself, and a free public query API — that application code lives in the sibling repository [dsh-1024store](https://github.com/imsai-sh/dsh-1024store); this repository is the catalog itself: a statically validated PR submission pipeline and the generated directory READMEs, with an automated collection service feeding the data. Everything is MIT licensed, so you can fork it and run your own marketplace.
 
-[![The DSH 1024Store plugin marketplace homepage](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.en.png?v=6922ca7c4ef2)](https://deepseek1024.com/)
+[![The DSH 1024Store plugin marketplace homepage](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.en.png?v=04132e7c6158)](https://deepseek1024.com/)
 
 [Live website](https://deepseek1024.com/) · [API reference](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [中文目录](../README.md) · [Submit a plugin](../CONTRIBUTING.md) · [Site & CLI source](https://github.com/imsai-sh/dsh-1024store)
 
@@ -50,12 +50,12 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [Themes & Appearance](#theme) (504)
 - [Sessions & Messages](#session) (891)
 - [Memory](#memory) (445)
-- [Tools & Capabilities](#tools) (4048)
+- [Tools & Capabilities](#tools) (4047)
 - [Skills](#skill) (1051)
 - [Workflow & Automation](#workflow) (784)
 - [Notifications & Integrations](#notify) (505)
 - [Models & Providers](#model) (832)
-- [Development & Runtime](#dev) (1654)
+- [Development & Runtime](#dev) (1655)
 - [Just for Fun](#fun) (564)
 
 <a id="ui"></a>
@@ -1016,7 +1016,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 <a id="tools"></a>
 
 <details>
-<summary><strong>Tools &amp; Capabilities</strong> · showing 227 of 4048</summary>
+<summary><strong>Tools &amp; Capabilities</strong> · showing 227 of 4047</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — One-command installer for the 53-plugin PerryLink compliance suite: installs every checker and inserts all 53 Cordis rows through one bundle layer.
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — Xiaohe Canvas AI creation assistant - control canvas for e-commerce content creation (images, videos, workflows).
@@ -1117,7 +1117,6 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [bundle](https://github.com/alex04130/dsh-forge/tree/HEAD/bundle) — Adds runtime injectors, subagent dispatch, model routing, plugin management, and browser bridge.
 - [bundle](https://github.com/anht3889/dsh-mcp-management/tree/HEAD/packages/bundle) — Manages MCP servers and tools in a bundle for the harness.
 - [bundle](https://github.com/anht3889/dsh-web-search/tree/HEAD/packages/bundle) — Bundles web search tools for DeepSeek Harness, enabling direct search and result retrieval within sessions.
-- [bundle](https://github.com/CC19990113/dsh-plugin-codegraph/tree/HEAD/packages/bundle) — Provides codegraph tools that locate symbol declarations, callers, and impact scope from a tree-sitter index.
 - [bundle](https://github.com/chaojixinren/dsh-reviewer-bot/tree/HEAD/bundle) — A code review bot in native DSH plugin form, supporting multiple code platforms, pluggable rules, and local replay of review sessions.
 - [bundle](https://github.com/hejielijob-commits/dsh-data-agent/tree/HEAD/packages/bundle) — Adds a pluggable data agent that enables AI-driven data querying and analysis within the harness environment.
 - [bundle](https://github.com/LongSir0419/dsh-mcp-manager/tree/HEAD/bundle) — Manages MCP servers via a visual web interface, allowing creation, editing, deletion, and connection testing.
@@ -1245,7 +1244,8 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh-0-tools](https://github.com/ai-yukin/dsh-0-tools) — Provides a collection of tools for terminal users within the harness.
 - [dsh-3d-model-viewer](https://github.com/lishLRF/dsh-3d-model-viewer) — Views OBJ/STL/STEP 3D models and converts them to LLM-readable JSON for AI analysis.
 - [dsh-a-share-screener](https://github.com/Gaines-cz/dsh-a-share-screener) — A-share stock screening plugin for DeepSeek Harness (dsh): pluggable strategies, Tushare token via credentials ref, free Eastmoney/Tencent fallback.
-- *GitHub only renders so much of one file, so 3821 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
+- [dsh-a11y-audit](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-a11y-audit) — Performs accessibility audits for web content, likely providing reports and fixes.
+- *GitHub only renders so much of one file, so 3820 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
 
 </details>
 
@@ -2253,7 +2253,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 <a id="dev"></a>
 
 <details>
-<summary><strong>Development &amp; Runtime</strong> · showing 227 of 1654</summary>
+<summary><strong>Development &amp; Runtime</strong> · showing 227 of 1655</summary>
 
 - [_template](https://github.com/messiahyl/dsh-plugins/tree/HEAD/packages/_template) — Provides a monorepo template for developing DSH plugins, with installation sources and third-party directory.
 - [_template](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/_template) — Provides a template for creating new dsh plugins.
@@ -2482,7 +2482,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh-aux-state](https://github.com/dsh-plugins/dsh-loader/tree/HEAD/examples/dsh-aux-state) — Example subpackage demonstrating aux state loading via the adapter registry, for plugin developers.
 - [dsh-backup-migrator](https://github.com/zhengjy01/dsh-backup-migrator) — Plugin environment backup and migration for DeepSeek Harness: backs up every profile's plugin list, plugin configs and local-source plugin tarballs into a git repo, and restores them on a new machine.
 - [dsh-balance](https://github.com/GeekRicardo/dsh-balance) — Shows provider balance and usage in the input bar, updating every two seconds.
-- *GitHub only renders so much of one file, so 1427 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
+- *GitHub only renders so much of one file, so 1428 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
 
 </details>
 

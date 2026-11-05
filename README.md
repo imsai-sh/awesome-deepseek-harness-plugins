@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=6922ca7c4ef2)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=04132e7c6158)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,12 +145,12 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (504)
 - [会话与消息](#session) (891)
 - [记忆](#memory) (445)
-- [工具与能力](#tools) (4048)
+- [工具与能力](#tools) (4047)
 - [技能包](#skill) (1051)
 - [工作流与自动化](#workflow) (784)
 - [通知与集成](#notify) (505)
 - [模型与账号接入](#model) (832)
-- [开发与运行时](#dev) (1654)
+- [开发与运行时](#dev) (1655)
 - [娱乐](#fun) (564)
 
 <a id="ui"></a>
@@ -1166,7 +1166,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 250 / 共 4048 个</summary>
+<summary><strong>工具与能力</strong> · 显示 250 / 共 4047 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1267,7 +1267,6 @@ docs/               目录数据模型文档
 - [bundle](https://github.com/alex04130/dsh-forge/tree/HEAD/bundle) — 提供运行时注入、子代理派发、模型路由、插件管理与浏览器桥接。
 - [bundle](https://github.com/anht3889/dsh-mcp-management/tree/HEAD/packages/bundle) — 管理Harness中的MCP服务器和工具集合。
 - [bundle](https://github.com/anht3889/dsh-web-search/tree/HEAD/packages/bundle) — 为 DeepSeek Harness 打包网络搜索工具，支持在会话内直接搜索并获取结果。
-- [bundle](https://github.com/CC19990113/dsh-plugin-codegraph/tree/HEAD/packages/bundle) — 提供代码图工具，从索引中定位符号声明、调用方和影响范围。
 - [bundle](https://github.com/chaojixinren/dsh-reviewer-bot/tree/HEAD/bundle) — 原生DSH插件形态的代码评审机器人，支持多平台、可插拔规则和本地重放。
 - [bundle](https://github.com/hejielijob-commits/dsh-data-agent/tree/HEAD/packages/bundle) — 接入可插拔的数据代理，让 AI 在环境中直接查询和分析数据。
 - [bundle](https://github.com/LongSir0419/dsh-mcp-manager/tree/HEAD/bundle) — 通过可视化网页界面管理 MCP 服务器，支持增删改查及连接测试。
@@ -1418,7 +1417,8 @@ docs/               目录数据模型文档
 - [dsh-acre2ha](https://github.com/uckkk/dsh-acre2ha) — 英亩转公顷
 - [dsh-ad-bid](https://github.com/uckkk/dsh-ad-bid) — 广告出价上限
 - [dsh-ad-roi](https://github.com/uckkk/dsh-ad-roi) — 广告ROI计算
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3798 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- [dsh-adapter-qq](https://github.com/jixishi/dsh-adapter-qq) — 集成QQ作为适配器，支持通过QQ平台进行对话交互。
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3797 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
@@ -2510,7 +2510,7 @@ docs/               目录数据模型文档
 <a id="dev"></a>
 
 <details>
-<summary><strong>开发与运行时</strong> · 显示 254 / 共 1654 个</summary>
+<summary><strong>开发与运行时</strong> · 显示 254 / 共 1655 个</summary>
 
 - [_template](https://github.com/messiahyl/dsh-plugins/tree/HEAD/packages/_template) — 提供 DSH 插件开发的 monorepo 模板，包含安装源和第三方目录。
 - [_template](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/_template) — 提供创建新dsh插件的模板。
@@ -2766,7 +2766,7 @@ docs/               目录数据模型文档
 - [dsh-ca-ref](https://github.com/Ansonfishing/dsh-ca-ref) — 提供固定仓库引用、全文搜索与审查记录的整洁架构参考库。
 - [dsh-cache-cost-monitor](https://github.com/eurt-nano/dsh-cache-cost-monitor) — 监控DeepSeek API前缀缓存命中率、Token消耗，并估算运行成本。
 - [dsh-cache-stabilizer](https://github.com/dongsheng123132/dsh-cache-stabilizer) — 稳定缓存前缀，并提供基于实证的缓存性能指标。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 1400 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 1401 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
