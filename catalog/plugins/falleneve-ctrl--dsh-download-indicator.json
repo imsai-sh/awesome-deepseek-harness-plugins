@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "falleneve-ctrl/dsh-download-indicator",
+  "name": "dsh-download-indicator",
+  "repository": "https://github.com/falleneve-ctrl/dsh-download-indicator",
+  "category": "ui",
+  "description": {
+    "en": "Draggable semi-transparent download-progress widget that appears only while files are still growing, showing live speed and remembering its position.",
+    "zh": "半透明可拖动的下载进度浮窗，只在文件正在增长时出现，显示实时速度并记住位置。"
+  },
+  "added": "2026-11-05"
+}
