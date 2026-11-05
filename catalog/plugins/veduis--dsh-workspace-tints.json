@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Veduis/dsh-workspace-tints",
+  "name": "dsh-workspace-tints",
+  "repository": "https://github.com/Veduis/dsh-workspace-tints",
+  "category": "ui",
+  "description": {
+    "en": "Gives every Workspace a stable tint from one warm-to-cool ramp of whites, sets its name as a section heading above indented Sessions, and turns the row of a finished unread chat green.",
+    "zh": "为每个工作区从同一条由暖到冷的白色渐变中取一个固定色调，把工作区名设为分组标题并把会话缩进其下，已完成但未读的会话整行染绿。"
+  },
+  "added": "2026-11-04"
+}
