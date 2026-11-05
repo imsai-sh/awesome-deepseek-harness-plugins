@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CC19990113/dsh-plugin-dbgraph/packages/bundle",
+  "name": "dsh-plugin-dbgraph",
+  "repository": "https://github.com/CC19990113/dsh-plugin-dbgraph",
+  "category": "dev",
+  "description": {
+    "en": "Database structure the agent already knows: dbgraph indexes a remote database catalog (tables, columns, comments, keys, indexes, bounded enum samples) into a local SQLite index and puts a digest in the system prompt, so structural questions are answered offline and row values are fetched with exactly one query.",
+    "zh": "把数据库结构提前索引好：dbgraph 将远端库的 catalog（表、字段、注释、键、索引与有限的枚举样本）索引到本地 SQLite，并把摘要注入系统提示，结构问题本地答、取数只发一次查询。"
+  },
+  "added": "2026-11-05"
+}
