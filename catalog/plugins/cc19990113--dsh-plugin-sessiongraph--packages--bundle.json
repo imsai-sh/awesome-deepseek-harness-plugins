@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CC19990113/dsh-plugin-sessiongraph/packages/bundle",
+  "name": "dsh-plugin-sessiongraph",
+  "repository": "https://github.com/CC19990113/dsh-plugin-sessiongraph",
+  "category": "session",
+  "description": {
+    "en": "Full-text index of every local DSH session: sessiongraph searches conversations across all workspaces, with a CJK bigram tokenizer so two-character Chinese terms match, and sessiongraph_index builds or refreshes the on-disk index.",
+    "zh": "本机全部 DSH 会话的全文索引：sessiongraph 跨工作区检索对话，用 CJK 双字分词让中文两字词也能命中；sessiongraph_index 负责构建与刷新磁盘索引。"
+  },
+  "added": "2026-11-05"
+}
