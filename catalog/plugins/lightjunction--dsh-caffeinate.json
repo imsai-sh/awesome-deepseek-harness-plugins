@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-caffeinate",
+  "name": "dsh-caffeinate",
+  "repository": "https://github.com/LIghtJUNction/dsh-caffeinate",
+  "category": "dev",
+  "description": {
+    "en": "Shares a host sleep-inhibitor process across running agents and releases it when the last agent stops.",
+    "zh": "让运行中的 agent 共享宿主机防休眠进程，并在最后一个 agent 停止后释放。"
+  },
+  "added": "2026-11-02"
+}
