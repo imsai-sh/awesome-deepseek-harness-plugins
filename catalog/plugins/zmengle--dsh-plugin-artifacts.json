@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zmengle/dsh-plugin-artifacts",
+  "name": "dsh-plugin-artifacts",
+  "repository": "https://github.com/zmengle/dsh-plugin-artifacts",
+  "category": "session",
+  "description": {
+    "en": "Artifact manager for DSH: every file is classified as product / scratch / memory / asset so the default view is just your deliverables. Grid and list, 12 file types, year/month/day time axis, preview, rename, trash with restore, zip archive, multiple workspace roots, and optional manual sync to Tencent COS (off by default).",
+    "zh": "会话产物的管理工作台：按「产物 / 过程 / 记忆 / 素材」分层，默认只看交付物。网格与列表、12 类文件类型、按年/月/日分组的时间轴、预览与重命名、带恢复的回收站、zip 归档、多工作区，以及可选的腾讯 COS 手动上传（默认关闭，无后台自动上传）。"
+  },
+  "added": "2026-11-06"
+}
