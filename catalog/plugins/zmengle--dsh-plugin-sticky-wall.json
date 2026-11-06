@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zmengle/dsh-plugin-sticky-wall",
+  "name": "dsh-plugin-sticky-wall",
+  "repository": "https://github.com/zmengle/dsh-plugin-sticky-wall",
+  "category": "ui",
+  "description": {
+    "en": "Sidebar sticky-note wall: freely placed colour-coded notes, checklists, one-click folding, a trash drawer that restores deleted notes, drag and resize, per-note persistence across sessions, and five sticky_wall_* model tools for writing and restoring notes from chat.",
+    "zh": "侧栏便签墙：可自由摆放的彩色便签、待办勾选、一键折叠、可恢复的回收站抽屉、拖拽与改尺寸、跨会话保持摆放，并给模型 5 个 sticky_wall_* 工具，从对话里记便签和恢复便签。"
+  },
+  "added": "2026-11-06"
+}
