@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gongfpp/dsh-thanks-carl",
+  "name": "dsh-thanks-carl",
+  "repository": "https://github.com/gongfpp/dsh-thanks-carl",
+  "category": "fun",
+  "description": {
+    "en": "Shows quiet Carl the hedgehog easter eggs after completed DSH turns and local water, meal and rest reminders. Runs locally without sending chat messages or calling a model.",
+    "zh": "DSH 任务完成后，偶尔让刺猬卡尔从屏幕边缘探头，并提供喝水、吃饭、休息提醒；完全本地调度，不发送聊天消息、不调用模型。"
+  },
+  "added": "2026-11-06"
+}
