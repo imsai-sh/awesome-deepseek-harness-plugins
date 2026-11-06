@@ -5,8 +5,8 @@
   "repository": "https://github.com/chromoany/dsh-notify-me",
   "category": "notify",
   "description": {
-    "en": "Desktop notifications, sounds and a tab-title marker when the agent needs your input (approval, plan review, question) or a reply finishes in the background; toggleable in Settings with zh/en notification language.",
-    "zh": "模型需要你操作（审批、方案确认、提问）或后台回复完成时，弹出系统通知、提示音并标记标签页标题；可在设置页开关并切换通知语言。"
+    "en": "Desktop notifications, sounds and a tab-title marker when the agent needs your input (approval, plan review, question) or a reply finishes in the background, so message alerts reach you even when the DSH page is not in front. Clicking a notification returns to the conversation that needs you and, on Desktop, also tries to bring the window back to the front. Reminders can be pushed to external channels as well: custom webhook, Discord, Bark, Gotify, Feishu, ServerChan and WxPusher, with retries, per-target delivery health and message templates. When to alert, idle detection, auto-dismiss timing, per-kind sound and volume, quiet periods and zh/en notification language are configurable. Works in both DSH Web and Desktop.",
+    "zh": "模型需要你操作（审批、方案确认、提问）或后台回复完成时，弹出桌面通知、提示音并标记标签页标题——不在 DSH 页面上也能收到消息提醒。点击通知回到需要你的对话，桌面版还会尝试把窗口抬到前台。提醒也能推送到外部通道：自定义 Webhook、Discord、Bark、Gotify、飞书、Server酱、WxPusher，带失败重试、每个目标的投递状态与消息模板。什么时候提醒、闲置离开判定、通知自动消失、按类型选音效与音量、静默时段、中英文通知语言均可配置。Web 版与桌面版均可用。"
   },
   "added": "2026-09-09"
 }
