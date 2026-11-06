@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bowmark-ai/dsh-bowmark",
+  "name": "dsh-bowmark",
+  "repository": "https://github.com/bowmark-ai/dsh-bowmark",
+  "category": "tools",
+  "description": {
+    "en": "Connects Bowmark's remote MCP server (api.bowmark.ai/mcp) to DSH. Bowmark exposes typed functions for live websites; the plugin registers its tools and reads the API key from the BOWMARK_API_KEY credential reference.",
+    "zh": "将 Bowmark 的远程 MCP 服务（api.bowmark.ai/mcp）接入 DSH。Bowmark 为在线网站提供带类型的函数；插件注册其工具，并从 BOWMARK_API_KEY 凭据引用中读取 API 密钥。"
+  },
+  "added": "2026-11-06"
+}
