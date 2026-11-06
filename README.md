@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **13965** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-06。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **13966** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-06。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=b2a14d01226c)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=f74f421bd7f9)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -143,7 +143,7 @@ docs/               目录数据模型文档
 
 - [UI 增强](#ui) (2674)
 - [主题与外观](#theme) (504)
-- [会话与消息](#session) (894)
+- [会话与消息](#session) (895)
 - [记忆](#memory) (446)
 - [工具与能力](#tools) (4052)
 - [技能包](#skill) (1051)
@@ -660,7 +660,7 @@ docs/               目录数据模型文档
 <a id="session"></a>
 
 <details>
-<summary><strong>会话与消息</strong> · 显示 244 / 共 894 个</summary>
+<summary><strong>会话与消息</strong> · 显示 242 / 共 895 个</summary>
 
 - [agent-board](https://github.com/meisam2236/agent-board) — 使用持久化的工作区看板跟踪和管理 DeepSeek Harness 中的 AI 代理。
 - [agent-mode-switcher](https://github.com/my-dsh-plugin/agent-mode-switcher) — 在模型回答后切换当前会话的代理预设，以不同模式继续对话。
@@ -860,6 +860,7 @@ docs/               目录数据模型文档
 - [dsh-compactor](https://github.com/lionwill/dsh-compactor) — DSH上下文压缩插件
 - [dsh-composer-history](https://github.com/baisama-cloud/dsh-composer-history) — 为输入框添加命令历史导航，可用方向键循环浏览过往指令。
 - [dsh-config-export](https://github.com/sunchendd/dsh-config-export) — DSH 配置备份插件：侧边栏一键导出/导入 ~/.dsh 配置（设置/profile/SSH/预设/皮肤/看板），支持敏感字段脱敏与恢复前安全快照
+- [dsh-content-search](https://github.com/appthin/dsh-content-search) — 在对话头部加一个搜索按钮，命中结果展示在右侧栏：检索走宿主日志，能搜整段会话历史而不只是已加载的消息，命中关键词在用户消息与 AI 回复里都标黄，点结果可跳转到对话中的位置；全文索引被关闭时同样可用。
 - [dsh-context-budget](https://github.com/d3vmeh/dsh-context-guard) — 监控并管理本地模型上下文大小，保持在 GPU 友好范围内，含预填充速度测量和早期压缩。
 - [dsh-context-compactor](https://github.com/kusesad-1122/dsh-context-compactor) — DSH 上下文压缩/总结插件：80% 自动全局详细总结压缩（保留核心任务/决策/待解决问题/重要文件位置，删除调试细节与已解决错误），压缩后验保证 totalTokens 必须真实下降，context-overflow 自动恢复，/compact + /context-status，输入框上方一键按钮
 - [dsh-context-compass](https://github.com/NinjaSln-labs/dsh-context-compass) — DeepSeek Harness 会话健康插件：真实数据的「继续 vs 新开」上下文罗盘——头部徽章 / /compass / context_compass 工具 / 多会话一览面板
@@ -903,10 +904,7 @@ docs/               目录数据模型文档
 - [dsh-credential-handoff](https://github.com/xiaohj233/dsh-credential-handoff) — 通过凭据服务安全传递会话级凭据，避免秘密泄露。
 - [dsh-cross-session](https://github.com/Wha1eChai/dsh-cross-session) — 在统一运行时内发现并连接多个会话，实现跨会话通讯。
 - [dsh-cross-session-bridge](https://github.com/red000000/dsh-cross-session-bridge) — 适用于deepseek harness的根会话桥插件，可令根会话间双向通信
-- [dsh-cross-session-messaging](https://github.com/Weiyang742/dsh-cross-session-messaging) — 通过节点发现，在多个DeepSeek Harness进程间转发文本消息。
-- [dsh-crosstalk](https://github.com/Jesse-njx/dsh-crosstalk) — 跨会话消息：本机任意会话都可像 Claude Code 一样列出并互发消息，基于本地心跳注册表与收件箱。
-- [dsh-cue-plugin](https://github.com/unnnnoooo/dsh-cue-plugin) — DeepSeek Harness 的跨会话引用(cue)插件
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 650 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 653 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
