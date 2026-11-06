@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "zztdandan/dsh-opencode-go-quota",
-  "name": "dsh-opencode-go-quota",
-  "repository": "https://github.com/zztdandan/dsh-opencode-go-quota",
+  "id": "zztdandan/dsh-opencode-go-quota-settings",
+  "name": "dsh-opencode-go-quota-settings",
+  "repository": "https://github.com/zztdandan/dsh-opencode-go-quota-settings",
   "category": "tools",
   "description": {
     "en": "Shows OpenCode GO plan quota (rolling 5-hour, weekly, monthly) on a DSH Settings page and reads the official usage API through a same-origin proxy. Registers no sidebar widget.",
