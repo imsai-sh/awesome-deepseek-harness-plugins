@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zmengle/dsh-plugin-ark-image-gen",
+  "name": "dsh-plugin-ark-image-gen",
+  "repository": "https://github.com/zmengle/dsh-plugin-ark-image-gen",
+  "category": "vision",
+  "description": {
+    "en": "Image generation through the Volcano Ark / Doubao Seedream API: ark_generate_image handles text-to-image, image-to-image with reference images and fixed-seed batches, ark_image_gen_status checks the key, model and output directory, and a bundled skill explains both.",
+    "zh": "火山方舟 / 豆包 Seedream 生图：ark_generate_image 支持文生图、带参考图的图生图和固定 seed 批量出图，ark_image_gen_status 检查密钥、模型与输出目录，并内置一份用法说明。"
+  },
+  "added": "2026-11-06"
+}
