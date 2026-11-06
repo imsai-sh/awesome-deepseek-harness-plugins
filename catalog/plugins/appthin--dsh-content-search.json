@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "appthin/dsh-content-search",
+  "name": "dsh-content-search",
+  "repository": "https://github.com/appthin/dsh-content-search",
+  "category": "session",
+  "description": {
+    "en": "Adds a search button to the conversation header and shows the matches in the right sidebar: it searches the whole session history through the host log rather than only the messages already loaded, highlights every keyword in both user messages and replies, and jumps the conversation to a chosen hit. It keeps working when the full-text index is disabled.",
+    "zh": "在对话头部加一个搜索按钮，命中结果展示在右侧栏：检索走宿主日志，能搜整段会话历史而不只是已加载的消息，命中关键词在用户消息与 AI 回复里都标黄，点结果可跳转到对话中的位置；全文索引被关闭时同样可用。"
+  },
+  "added": "2026-11-06"
+}
