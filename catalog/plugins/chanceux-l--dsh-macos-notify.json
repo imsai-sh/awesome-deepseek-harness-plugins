@@ -2,7 +2,7 @@
   "$schema": "../schema/plugin.schema.json",
   "id": "chanceux-l/dsh-macos-notify",
   "name": "dsh-macos-notify",
-  "repository": "https://github.com/Chanceux-L/dsh-macos-notify",
+  "repository": "https://github.com/chanceux-l/dsh-macos-notify",
   "category": "notify",
   "description": {
     "en": "Emit macOS native notifications as the DeepSeek Harness app itself, bypassing silent drops of osascript notifications by signature checks; clicking a notification opens the related session, with sound fallback when the page is closed.",
