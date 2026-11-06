@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Li-Jiaquan/dsh-web-annotator",
+  "name": "dsh-web-annotator",
+  "repository": "https://github.com/Li-Jiaquan/dsh-web-annotator",
+  "category": "ui",
+  "description": {
+    "en": "Provides an in-app web annotation view for selecting page elements, regions, or text, adding comments, and writing structured notes with an optional annotated screenshot to the conversation draft.",
+    "zh": "在 DSH 会话中提供网页批注视图，支持选择页面元素、区域或文字，添加评论，并将结构化说明与可选的标注截图写入对话草稿。"
+  },
+  "added": "2026-11-07"
+}
