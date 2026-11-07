@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "irerc/dsh-deepseek-web",
+  "name": "dsh-deepseek-web",
+  "repository": "https://github.com/irerc/dsh-deepseek-web",
+  "category": "model",
+  "description": {
+    "en": "Exposes chat.deepseek.com (DeepSeek Web) as an OpenAI-compatible provider for DSH: a multi-account pool with mute/expiry tracking, per-account device identity, automatic token refresh with saved credentials, streaming chat completions, and a settings section for accounts, login and usage. No API key required. Ships a host plugin and a web client UI; MIT.",
+    "zh": "把 chat.deepseek.com 网页版封成 OpenAI 兼容 provider：多账号池（含禁言/失效状态与到期时间）、账号级设备身份、用保存的密码自动续期 token、流式 chat completions，以及账号/登录/用量设置分区；无需 API key。含宿主插件与 Web 客户端界面，MIT。"
+  },
+  "added": "2026-11-07"
+}
