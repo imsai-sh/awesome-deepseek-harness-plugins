@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Roland0511/dsh-marktext",
+  "name": "dsh-marktext",
+  "repository": "https://github.com/Roland0511/dsh-marktext",
+  "category": "tools",
+  "description": {
+    "en": "WYSIWYG Markdown editor for the DSH right sidebar, built on MarkText's muya engine. Files opened from the sidebar are edited as rendered documents and saved back through a version guard; tables, math, Mermaid / Vega / PlantUML diagrams, relative images and links between files are supported.",
+    "zh": "基于 MarkText 的 muya 引擎的 DSH 右侧栏所见即所得 Markdown 编辑器：从侧边栏打开的 .md 以渲染结果直接编辑并写回，保存带版本校验；支持表格、数学公式、Mermaid / Vega / PlantUML 图表、相对路径图片与文件间链接。"
+  },
+  "added": "2026-11-07"
+}
