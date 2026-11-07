@@ -13,7 +13,7 @@ The **DSH 1024Store** community catalog for [DeepSeek Harness](https://github.co
 
 **This project is more than an awesome list.** It also ships a hosted plugin marketplace, a plugin that puts that marketplace inside `dsh` itself, and a free public query API — that application code lives in the sibling repository [dsh-1024store](https://github.com/imsai-sh/dsh-1024store); this repository is the catalog itself: a statically validated PR submission pipeline and the generated directory READMEs, with an automated collection service feeding the data. Everything is MIT licensed, so you can fork it and run your own marketplace.
 
-[![The DSH 1024Store plugin marketplace homepage](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.en.png?v=1978854b673d)](https://deepseek1024.com/)
+[![The DSH 1024Store plugin marketplace homepage](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.en.png?v=22df2afadaa6)](https://deepseek1024.com/)
 
 [Live website](https://deepseek1024.com/) · [API reference](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [中文目录](../README.md) · [Submit a plugin](../CONTRIBUTING.md) · [Site & CLI source](https://github.com/imsai-sh/dsh-1024store)
 
@@ -50,8 +50,8 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [Themes & Appearance](#theme) (504)
 - [Sessions & Messages](#session) (897)
 - [Memory](#memory) (446)
-- [Tools & Capabilities](#tools) (4058)
-- [Skills](#skill) (1051)
+- [Tools & Capabilities](#tools) (4057)
+- [Skills](#skill) (1052)
 - [Workflow & Automation](#workflow) (784)
 - [Notifications & Integrations](#notify) (507)
 - [Models & Providers](#model) (834)
@@ -1014,7 +1014,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 <a id="tools"></a>
 
 <details>
-<summary><strong>Tools &amp; Capabilities</strong> · showing 227 of 4058</summary>
+<summary><strong>Tools &amp; Capabilities</strong> · showing 227 of 4057</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — One-command installer for the 53-plugin PerryLink compliance suite: installs every checker and inserts all 53 Cordis rows through one bundle layer.
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — Xiaohe Canvas AI creation assistant - control canvas for e-commerce content creation (images, videos, workflows).
@@ -1232,7 +1232,6 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh](https://github.com/littleblakew/msds-chain-mcp/tree/HEAD/plugins/dsh) — Integrates MSDS chain functionality, likely for material safety data sheet operations.
 - [dsh](https://github.com/philmingdao/anno/tree/HEAD/adapters/dsh) — Enables local-first HTML review and annotation for AI coding agents.
 - [dsh](https://github.com/possible055/agentshim/tree/HEAD/adapters/dsh) — Offers a small, capability-scoped toolset for Codex, likely providing specific utilities or functions.
-- [dsh](https://github.com/Vladimir-Human/ru-marketplace-mcp/tree/HEAD/dsh) — Exposes Russian and Chinese marketplaces as MCP servers for price comparison and search.
 - [dsh](https://github.com/Weaxs/stock-analysis-plugin/tree/HEAD/dsh) — Provides lightweight market data tools and strategy skills for stock analysis.
 - [dsh](https://github.com/wuliLiuyue/wxpilot/tree/HEAD/packages/dsh) — Automates WeChat Mini Programs by letting AI agents drive DevTools for navigation and interaction.
 - [dsh_design](https://github.com/xbyzzZ/dsh_design) — Clickable HTML prototype canvas for DeepSeek Harness. Chat describes a screen; design_* tools write HTML under .dsh-design/; Prototype preview is a scaled artboard with zoom, pan, pins, and a prototype list.
@@ -1243,14 +1242,15 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh-3d-model-viewer](https://github.com/lishLRF/dsh-3d-model-viewer) — Views OBJ/STL/STEP 3D models and converts them to LLM-readable JSON for AI analysis.
 - [dsh-a-share-screener](https://github.com/Gaines-cz/dsh-a-share-screener) — A-share stock screening plugin for DeepSeek Harness (dsh): pluggable strategies, Tushare token via credentials ref, free Eastmoney/Tencent fallback.
 - [dsh-a11y-audit](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-a11y-audit) — Performs accessibility audits for web content, likely providing reports and fixes.
-- *GitHub only renders so much of one file, so 3831 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
+- [dsh-a11y-audit](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-a11y-audit) — Audits web interfaces for accessibility issues and suggests improvements.
+- *GitHub only renders so much of one file, so 3830 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
 
 </details>
 
 <a id="skill"></a>
 
 <details>
-<summary><strong>Skills</strong> · showing 264 of 1051</summary>
+<summary><strong>Skills</strong> · showing 264 of 1052</summary>
 
 - [.dsh-plugin](https://github.com/kongyecn-wq/dsh-okx-skill-hub/tree/HEAD/.dsh-plugin) — Adapts OKX official market data skills, including prices, candlesticks, and technical indicators, for DeepSeek Harness.
 - [academic-research-graph](https://github.com/watericetangcw/academic-research-graph) — A SKILL that turns one paper into a living research map.
@@ -1516,7 +1516,7 @@ Groups are collapsed by default. GitHub renders only so much of a single file, s
 - [dsh-croatia](https://github.com/uckkk/dsh-croatia) — Shares knowledge about Croatia as a country.
 - [dsh-crochet](https://github.com/uckkk/dsh-crochet) — Teaches basic crochet techniques for beginners.
 - [dsh-cross-team](https://github.com/uckkk/dsh-cross-team) — Offers guidance for cross-team collaboration.
-- *GitHub only renders so much of one file, so 787 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
+- *GitHub only renders so much of one file, so 788 more plugins in this category did not fit here — search or browse the full catalog on the [live website](https://deepseek1024.com/).*
 
 </details>
 

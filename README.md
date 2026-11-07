@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=1978854b673d)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=22df2afadaa6)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,8 +145,8 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (504)
 - [会话与消息](#session) (897)
 - [记忆](#memory) (446)
-- [工具与能力](#tools) (4058)
-- [技能包](#skill) (1051)
+- [工具与能力](#tools) (4057)
+- [技能包](#skill) (1052)
 - [工作流与自动化](#workflow) (784)
 - [通知与集成](#notify) (507)
 - [模型与账号接入](#model) (834)
@@ -1164,7 +1164,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 250 / 共 4058 个</summary>
+<summary><strong>工具与能力</strong> · 显示 250 / 共 4057 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1382,7 +1382,6 @@ docs/               目录数据模型文档
 - [dsh](https://github.com/littleblakew/msds-chain-mcp/tree/HEAD/plugins/dsh) — 集成 MSDS 链功能，可能用于材料安全数据表操作。
 - [dsh](https://github.com/philmingdao/anno/tree/HEAD/adapters/dsh) — 实现本地优先的 HTML 审查和注释，供 AI 编码代理使用。
 - [dsh](https://github.com/possible055/agentshim/tree/HEAD/adapters/dsh) — 为 Codex 提供小型、能力范围的工具集，可能包含特定实用功能。
-- [dsh](https://github.com/Vladimir-Human/ru-marketplace-mcp/tree/HEAD/dsh) — 将俄罗斯及中国电商平台封装为 MCP 服务器，支持比价与搜索。
 - [dsh](https://github.com/Weaxs/stock-analysis-plugin/tree/HEAD/dsh) — 提供轻量级行情数据工具和策略技能，辅助股票分析。
 - [dsh](https://github.com/wuliLiuyue/wxpilot/tree/HEAD/packages/dsh) — 让 AI 代理像操作浏览器一样驱动微信开发者工具，自动化小程序导航与交互。
 - [dsh_design](https://github.com/xbyzzZ/dsh_design) — DeepSeek Harness 的可点击 HTML 原型画布。聊天描述界面后，design_* 工具把 HTML 写到 .dsh-design/；原型预览按平台尺寸缩放，支持缩放、平移、批注和多份原型切换。
@@ -1416,14 +1415,15 @@ docs/               目录数据模型文档
 - [dsh-ad-bid](https://github.com/uckkk/dsh-ad-bid) — 广告出价上限
 - [dsh-ad-roi](https://github.com/uckkk/dsh-ad-roi) — 广告ROI计算
 - [dsh-adapter-qq](https://github.com/jixishi/dsh-adapter-qq) — 集成QQ作为适配器，支持通过QQ平台进行对话交互。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3808 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- [dsh-adb](https://github.com/SamXiaBing/dsh-adb) — ADB 设备·台架运维工具集：设备发现、结构化 logcat（后台采集）、apk 安装、文件 pull/push、性能快照。
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3807 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
 <a id="skill"></a>
 
 <details>
-<summary><strong>技能包</strong> · 显示 297 / 共 1051 个</summary>
+<summary><strong>技能包</strong> · 显示 297 / 共 1052 个</summary>
 
 - [.dsh-plugin](https://github.com/kongyecn-wq/dsh-okx-skill-hub/tree/HEAD/.dsh-plugin) — 将 OKX 官方行情技能（价格、K线、技术指标）适配到 DeepSeek Harness 生态中。
 - [academic-research-graph](https://github.com/watericetangcw/academic-research-graph) — 将单篇学术论文转化为可探索的研究地图。
@@ -1722,7 +1722,7 @@ docs/               目录数据模型文档
 - [dsh-dev-http-tools](https://github.com/uckkk/dsh-dev-http-tools) — Web 技术
 - [dsh-dev-paradigms](https://github.com/uckkk/dsh-dev-paradigms) — 编程范式
 - [dsh-diagram-design](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-diagram-design) — 提供设计图表的技能包，指导创建可视化表示。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 754 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 755 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
