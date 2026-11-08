@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "spyfighting/deepseek-science",
+  "name": "deepseek-science",
+  "repository": "https://github.com/SPYfighting/deepseek-science",
+  "category": "tools",
+  "description": {
+    "en": "Science workbench that turns a session into a research team: the main agent dispatches work to nine specialist roles (literature scout, topic designer, data analyst, simulator, model trainer, figure expert, writer, reviewer, presentation expert) and tracks it on a shared task board. Work is organised around a paper blueprint — a core claim supported by three to five Results, each backed by tasks and registered figures; a result marked negative triggers blueprint reassessment and a falsification warning when no supported result remains. Includes SQLite/PostgreSQL/MySQL query tools with a read-only guard and approval-gated writes, an SSH job engine (probe, submit, poll, harvest; Slurm or detached process, survives disconnects), publication figure conventions for Python and R with figure registration and version history, a transcript reviewer that checks number traceability, claim-execution consistency, figure-code agreement and citation validity, and a role-scoped skill menu that clones curated GitHub skill repositories per role without touching the global skill registry. Right sidebar shows the task-flow DAG with dependency edges and the article framework graph. MIT.",
+    "zh": "把会话变成科研小队的工作台：主智能体把工作派给九个专业角色（文献调研、课题设计、数据分析、计算模拟、模型训练、科研绘图、文章撰写、科研审查、汇报 PPT），并在共享任务板上跟踪进度。全部工作围绕文章蓝图组织——一个核心主张由三到五个 Results 支撑，每个 Result 再挂任务与已登记图表；某个 Result 被标记为负面结果时触发蓝图重评，若无任何受支持的 Result 则给出证伪提示。内置 SQLite/PostgreSQL/MySQL 查询工具（只读守卫 + 写操作审批）、SSH 作业引擎（探测、提交、轮询、收割；支持 Slurm 或后台进程，断连不丢作业）、Python 与 R 的出版级绘图规范与图表登记版本链、逐轮结果审查（数字溯源、断言与执行一致、图文一致、引用有效性），以及按角色隔离的技能菜单（按角色克隆精选 GitHub 技能仓库，不写入全局技能注册表）。右侧边栏显示带依赖边的任务流 DAG 与文章框架图。MIT。"
+  },
+  "added": "2026-11-08"
+}
