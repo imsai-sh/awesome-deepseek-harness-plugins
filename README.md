@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **13984** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-08。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **13985** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-08。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=22899f4c3286)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=e030aa65d951)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,7 +145,7 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (504)
 - [会话与消息](#session) (897)
 - [记忆](#memory) (447)
-- [工具与能力](#tools) (4059)
+- [工具与能力](#tools) (4060)
 - [技能包](#skill) (1052)
 - [工作流与自动化](#workflow) (784)
 - [通知与集成](#notify) (507)
@@ -1164,7 +1164,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 250 / 共 4059 个</summary>
+<summary><strong>工具与能力</strong> · 显示 242 / 共 4060 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1356,6 +1356,7 @@ docs/               目录数据模型文档
 - [deepseek-mcp-plugin](https://github.com/YNM10086/deepseek-mcp-plugin) — DSH 宿主级图片理解插件：vision_describe 工具，MiniMax → 智谱 → Ollama 三层后端自动降级，随 DSH 启动自动挂载
 - [deepseek-peak-blocker](https://github.com/zisekongling/deepseek-peak-blocker) — 高峰时段，对发往 DeepSeek 官方 API 的新请求进行友好拦截与询问
 - [deepseek-plugin](https://github.com/Wlain/kling-ai-deepseek-plugin) — 将 Kling AI 集成为 DeepSeek Harness 的远程 MCP 服务器。
+- [deepseek-science](https://github.com/spyfighting/deepseek-science) — 把会话变成科研小队的工作台：主智能体把工作派给九个专业角色（文献调研、课题设计、数据分析、计算模拟、模型训练、科研绘图、文章撰写、科研审查、汇报 PPT），并在共享任务板上跟踪进度。全部工作围绕文章蓝图组织——一个核心主张由三到五个 Results 支撑，每个 Result 再挂任务与已登记图表；某个 Result 被标记为负面结果时触发蓝图重评，若无任何受支持的 Result 则给出证伪提示。内置 SQLite/PostgreSQL/MySQL 查询工具（只读守卫 + 写操作审批）、SSH 作业引擎（探测、提交、轮询、收割；支持 Slurm 或后台进程，断连不丢作业）、Python 与 R 的出版级绘图规范与图表登记版本链、逐轮结果审查（数字溯源、断言与执行一致、图文一致、引用有效性），以及按角色隔离的技能菜单（按角色克隆精选 GitHub 技能仓库，不写入全局技能注册表）。右侧边栏显示带依赖边的任务流 DAG 与文章框架图。MIT。
 - [deepseek-vl-support](https://github.com/limccn/deepseek-vl-support) — 将图像文件路由到兼容 OpenAI 的视觉端点，为纯文本模型赋予视觉能力。
 - [deepseekeyes](https://github.com/dttxorg/deepseekeyes) — 提供可审计的视觉和跨平台计算机使用运行时，含严格证据、健康检查和令牌记账。
 - [DeepSeekHarness-MCP-Manager](https://github.com/xxxyz/DeepSeekHarness-MCP-Manager) — 持久化的 MCP 服务器管理器，提供设置界面、HTTP API 及跨平台安装程序。
@@ -1407,16 +1408,7 @@ docs/               目录数据模型文档
 - [dsh-accounting-cert](https://github.com/uckkk/dsh-accounting-cert) — 会计证书要求
 - [dsh-acne-care](https://github.com/uckkk/dsh-acne-care) — 痘痘护理
 - [dsh-acne-mark](https://github.com/uckkk/dsh-acne-mark) — 痘印淡化
-- [dsh-acp](https://github.com/cnctem/dsh-acp) — 通过 ACP 服务器桥接 Zed 等 IDE 与 DeepSeek Harness agents，实现 IDE 集成。
-- [dsh-acp](https://github.com/dushaobindoudou/dsh-acp) — 运行 ACP 服务器，允许从 Zed 等兼容客户端驱动 DSH 智能体。
-- [dsh-acp-adapter](https://github.com/zaimokuza-yoshiteru/dsh-acp-adapter) — 在会话界面中直接启动外部 AI 代理，将其集成到工作流中。
-- [dsh-acp-paseo](https://github.com/Pheobe-Southwood/dsh-acp-paseo/tree/HEAD/packages/dsh-acp-paseo) — 将dsh与Paseo ACP集成，提供模型目录、计划/执行模式和斜杠命令。
-- [dsh-acre2ha](https://github.com/uckkk/dsh-acre2ha) — 英亩转公顷
-- [dsh-ad-bid](https://github.com/uckkk/dsh-ad-bid) — 广告出价上限
-- [dsh-ad-roi](https://github.com/uckkk/dsh-ad-roi) — 广告ROI计算
-- [dsh-adapter-qq](https://github.com/jixishi/dsh-adapter-qq) — 集成QQ作为适配器，支持通过QQ平台进行对话交互。
-- [dsh-adb](https://github.com/SamXiaBing/dsh-adb) — ADB 设备·台架运维工具集：设备发现、结构化 logcat（后台采集）、apk 安装、文件 pull/push、性能快照。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3809 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3818 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
