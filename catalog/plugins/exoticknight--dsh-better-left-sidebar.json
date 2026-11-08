@@ -5,8 +5,8 @@
   "repository": "https://github.com/exoticknight/dsh-better-left-sidebar",
   "category": "ui",
   "description": {
-    "zh": "更清爽、更合理的 DeepSeek Harness 左边栏，支持插件自定义多个小组件。",
-    "en": "A cleaner, better-organized DeepSeek Harness sidebar with support for multiple plugin-defined widgets."
+    "zh": "分区更清晰的 DeepSeek Harness 左侧栏，内置时钟、余额等小组件。",
+    "en": "A clearer DeepSeek Harness sidebar with separate navigation and conversation regions and built-in widgets."
   },
   "added": "2026-11-01"
 }
