@@ -3,7 +3,7 @@
   "id": "klaus-2/dsh-nextsteps",
   "name": "dsh-nextsteps",
   "repository": "https://github.com/klaus-2/dsh-nextsteps",
-  "category": "input",
+  "category": "ui",
   "description": {
     "en": "One-click next steps for every finished agent turn: the model calls a native suggest_followups tool right before its final answer, the turn renders its own clickable followup cards, and a click sends the prompt verbatim as the next message; cards persist across restarts with their clicked state, and a settings page controls the generation language (15 languages or Auto), suggestions per turn, an optional generator model and an in-app updater.",
     "zh": "每个智能体回合的一键下一步：模型在最终回答前调用原生 suggest_followups 工具，该回合渲染出自己的可点击后续卡片，点击即原样作为下一条消息发送；卡片跨重启持久化（含已点击状态），设置页可控制生成语言（15 种或自动）、每回合数量、可选的生成模型和应用内更新。"
