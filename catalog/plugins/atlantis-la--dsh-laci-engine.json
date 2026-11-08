@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Atlantis-LA/dsh-laci-engine",
+  "name": "dsh-laci-engine",
+  "repository": "https://github.com/Atlantis-LA/dsh-laci-engine",
+  "category": "model",
+  "description": {
+    "en": "LACI local model scheduler for DSH: sidebar entry plus a bundled console for engine and model import, VRAM estimation, load and close, and an OpenAI-compatible gateway at 127.0.0.1:8096/v1.",
+    "zh": "面向 DSH 的本地模型调度插件：左侧栏入口与内置控制台，支持引擎/模型导入、显存预估、加载与关闭，并在 127.0.0.1:8096/v1 提供 OpenAI 兼容网关。"
+  },
+  "added": "2026-11-08"
+}
