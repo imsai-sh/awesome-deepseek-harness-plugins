@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wuke-luke/DSH-PaperReading",
+  "name": "DSH-PaperReading",
+  "repository": "https://github.com/wuke-luke/DSH-PaperReading",
+  "category": "tools",
+  "description": {
+    "en": "Paper-reading workspace inside DeepSeek Harness: imports local PDFs, arXiv IDs or links, shows a page-by-page bilingual view (translated page next to the original, layout preserved), translates whatever you drag over next to the cursor, and answers questions about the paper with clickable [p.12] page citations. Notes, diagrams, cloud sync and per-paper token usage included; everything stays on your machine.",
+    "zh": "DeepSeek Harness 里的论文阅读工作台：支持本地 PDF、arXiv 编号或链接导入；中英整页对照（左中文页、右原版页，版式保留）；拖选任意文字即在光标旁出译文；提问会得到带 [p.12] 页码引用的回答，点一下跳回原文。另有笔记、框架图、云同步与按论文统计的 token 消耗，数据全部留在本机。"
+  },
+  "added": "2026-11-06"
+}
