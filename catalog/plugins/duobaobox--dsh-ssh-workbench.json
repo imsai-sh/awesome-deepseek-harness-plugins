@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "duobaobox/dsh-ssh-workbench",
+  "name": "dsh-ssh-workbench",
+  "repository": "https://github.com/duobaobox/dsh-ssh-workbench",
+  "category": "tools",
+  "description": {
+    "en": "SSH workbench for DeepSeek Harness: remote terminal, local and remote file manager, and @server command execution, with Windows host/target support and a self-contained package.",
+    "zh": "DeepSeek Harness 的 SSH 工作台：远程终端、本地与远程文件管理、@服务器 对话执行，支持 Windows 宿主与目标，安装包自包含。"
+  },
+  "added": "2026-11-09"
+}
