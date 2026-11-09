@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Blueteemo/dsh-audio-rail-macos",
+  "name": "dsh-audio-rail-macos",
+  "repository": "https://github.com/Blueteemo/dsh-audio-rail-macos",
+  "category": "ui",
+  "description": {
+    "en": "macOS only: turns the DSH conversation rail into a 12-band spectrum analyzer for whatever the Mac is playing. Bar length only; host state colours and lengths are preserved. Requires the Audio Recording permission on first run.",
+    "zh": "macOS 专享：把 DSH 会话页右侧锚点变成 12 段真实频谱，跟着 Mac 播放的音乐律动。只改长度，保留宿主的状态颜色与长度。首次运行需授予「音频录制」权限。"
+  },
+  "added": "2026-11-03"
+}

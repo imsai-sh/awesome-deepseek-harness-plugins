@@ -1,0 +1,12 @@
+{
+  "id": "0imzero/dsh-workspace-menu",
+  "description": {
+    "zh": "为 DSH 工作区和会话提供右键菜单，支持置顶、重命名、归档等操作。",
+    "en": "Context menus for DSH workspaces and chats, with pinning, renaming, archiving and other actions."
+  },
+  "name": "dsh-workspace-menu",
+  "$schema": "../schema/plugin.schema.json",
+  "added": "2026-10-31",
+  "category": "ui",
+  "repository": "https://github.com/0imzero/dsh-workspace-menu"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "exoticknight/dsh-better-left-sidebar",
+  "name": "dsh-better-left-sidebar",
+  "repository": "https://github.com/exoticknight/dsh-better-left-sidebar",
+  "category": "ui",
+  "description": {
+    "zh": "重新整理 DeepSeek Harness 左边栏导航，并支持插件注册多个收起栏小组件。",
+    "en": "Reorganizes DeepSeek Harness sidebar navigation and supports multiple plugin-defined compact-rail widgets."
+  },
+  "added": "2026-11-01"
+}

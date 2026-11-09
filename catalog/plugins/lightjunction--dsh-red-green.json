@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-red-green",
+  "name": "dsh-red-green",
+  "repository": "https://github.com/LIghtJUNction/dsh-red-green",
+  "category": "workflow",
+  "description": {
+    "en": "Runs an explicitly started RED, GREEN and REFACTOR cycle using test results and file fingerprints.",
+    "zh": "显式启动后，以测试结果和文件指纹推进 RED、GREEN、REFACTOR 流程。"
+  },
+  "added": "2026-11-02"
+}

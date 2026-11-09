@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-rtk-optimizer",
+  "name": "dsh-rtk-optimizer",
+  "repository": "https://github.com/LIghtJUNction/dsh-rtk-optimizer",
+  "category": "dev",
+  "description": {
+    "en": "Compresses model-visible shell output and offers explicit RTK command rewrite suggestions.",
+    "zh": "压缩模型可见的终端输出，并提供显式 RTK 命令改写建议。"
+  },
+  "added": "2026-11-02"
+}

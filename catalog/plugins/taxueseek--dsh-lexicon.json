@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "taxueseek/dsh-lexicon",
+  "name": "dsh-lexicon",
+  "repository": "https://github.com/taxueseek/dsh-lexicon",
+  "category": "tools",
+  "description": {
+    "en": "Bundled-engine IME lexicon manager for DeepSeek Harness: ships the ime_lexicon.py Python engine in-package and exposes it as model tools for Doubao and WeType personal word libraries — detect library status and used slots, export TSV snapshots, timestamped backups, industry terminology search (plan-first, opt-in run), word-list building, cross-source optimize/dedupe/correct, and budgeted staging import. apply is deliberately not exposed as a tool: staged changes never touch a live IME without the user's manual, confirmed step. Requires python3 on PATH; the engine is pure-stdlib Python with no pip installs. npm: @taxueseek/dsh-lexicon.",
+    "zh": "自带引擎的输入法词库管家：随包分发 ime_lexicon.py 引擎，为 DeepSeek Harness 提供豆包 / 微信输入法个人词库的模型工具——检测词库状态与槽位、导出 TSV 快照、时间戳备份、行业术语搜索（默认出计划、显式才执行）、词表构建、跨来源合并去重纠错、带预算的 staging 导入。apply 刻意不作为工具暴露：staging 改动绝不触碰正在使用的输入法，始终由用户手动确认。要求 PATH 有 python3，引擎纯标准库、无需 pip。npm 包名 @taxueseek/dsh-lexicon。"
+  },
+  "added": "2026-11-08"
+}

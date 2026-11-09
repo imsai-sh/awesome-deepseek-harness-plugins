@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mdl233/dsh-staging-guard",
+  "name": "dsh-staging-guard",
+  "repository": "https://github.com/mdl233/dsh-staging-guard",
+  "category": "tools",
+  "description": {
+    "en": "Pre-execute hook that denies writes under a read-only result zone of protected roots; every other path passes through. State directory and zone names are configurable via environment variables.",
+    "zh": "pre-execute 钩子：拒绝写入受保护根下只读的成果区，其余路径放行。状态目录与目录名可用环境变量覆盖。"
+  },
+  "added": "2026-11-01"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Lionad-Morotar/dsh-jump",
+  "name": "dsh-jump",
+  "repository": "https://github.com/Lionad-Morotar/dsh-jump",
+  "category": "ui",
+  "description": {
+    "en": "Press a chord to surface letter labels over every visible interactive target in the DSH web GUI, then type a label to click or focus that target; label length is derived per round from the candidate count, and the chord is remappable in settings.",
+    "zh": "按下组合键后，DSH Web 界面里每个可见的可交互目标都会浮出一个字母标签，敲标签即可点击或聚焦它；标签长度按候选数量每轮推导，组合键可在设置中修改。"
+  },
+  "added": "2026-10-31"
+}

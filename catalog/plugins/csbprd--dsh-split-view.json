@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "CsBpRd/dsh-split-view",
+  "name": "dsh-split-view",
+  "repository": "https://github.com/CsBpRd/dsh-split-view",
+  "category": "ui",
+  "description": {
+    "en": "Splits the DSH web client's main area into vertical columns, one live conversation per parallel task. Up to four columns fit on screen and the mouse wheel pages through the rest; dividers resize columns, a toggle in the session list adds or removes a pane, and a compact view shows only each session's current step and last activity.",
+    "zh": "把 DSH 主区域竖着分成多列，每个并行任务一列实时对话。4 列以内并排显示，超过 4 列用鼠标滚轮整页翻；分隔线可拖拽调宽，侧边栏会话行可直接加入或移出分屏，另有只显示当前步骤与最近活动的极简视图。"
+  },
+  "added": "2026-11-04"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Hesitate-P/dsh-sidebar-browser-agent",
+  "name": "dsh-sidebar-browser-agent",
+  "repository": "https://github.com/Hesitate-P/dsh-sidebar-browser-agent",
+  "category": "tools",
+  "description": {
+    "en": "Native agent control for the DSH right-sidebar browser. Registers sidebar_browser for tab management (status, list, open, navigate, reload, focus, close) and sidebar_page for page work (read text, interactive elements or HTML, click, type, press, scroll, wait, run JavaScript, screenshot). Operates the Electron webview directly, without Playwright, Puppeteer or a proxy.",
+    "zh": "为 DSH 右侧栏原生浏览器提供 Agent 操作能力。注册 sidebar_browser 管理标签页（status、list、open、navigate、reload、focus、close），sidebar_page 读取文本、交互元素或 HTML，并支持点击、输入、按键、滚动、等待、执行 JavaScript 与截图。直接操作 Electron webview，不使用 Playwright、Puppeteer 或代理。"
+  },
+  "added": "2026-11-06"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhibo0502/dsh-zipfix/dist/dsh-zipfix",
+  "name": "dsh-zipfix",
+  "repository": "https://github.com/zhibo0502/dsh-zipfix",
+  "category": "tools",
+  "description": {
+    "en": "Repairs mojibake Chinese filenames in ZIP archives and extracted folders: sniffs GBK/GB18030/Big5 entry-name bytes from the central directory, extracts with correct names and per-entry CRC32 verification, writes a repaired ZIP with the UTF-8 filename flag set, pairs irreversible U+FFFD damage against a source ZIP by (size, CRC32), and verifies reconstructed names by encoding fingerprint. Provides five agent tools plus a sidebar upload panel (inspect, download the repaired ZIP, or extract with correct names). Zero runtime dependencies; never deletes or overwrites the originals. MIT. Repository install only; not yet published to npm.",
+    "zh": "修复 ZIP 压缩包与已解压目录中的中文文件名乱码：读取中央目录原始文件名字节嗅探 GBK/GB18030/Big5 编码，按正确名字解压并逐条校验 CRC32，生成置位 UTF-8 文件名标志的修复版 ZIP；对字节已销毁的 U+FFFD 乱码按源包 (size, CRC32) 唯一配对还原，并用编码指纹验证内容反推的名字。提供 5 个 agent 工具和侧边栏上传面板（体检、下载修复版 ZIP、按正确文件名解压）。零运行时依赖，绝不删除或覆盖原文件。MIT。仅支持仓库安装，尚未发布 npm。"
+  },
+  "added": "2026-11-06"
+}

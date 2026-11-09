@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xingbei437/dsh-cbm-autorefresh",
+  "name": "dsh-cbm-autorefresh",
+  "repository": "https://github.com/xingbei437/dsh-cbm-autorefresh",
+  "category": "tools",
+  "description": {
+    "en": "Refreshes a Session's codebase-memory index for its own working directory when the Session starts and whenever its working directory changes.",
+    "zh": "会话开始或切换工作目录时，自动刷新该会话所对应仓库的 codebase-memory 索引。"
+  },
+  "added": "2026-11-06"
+}

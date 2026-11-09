@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-recall",
+  "name": "dsh-recall",
+  "repository": "https://github.com/LIghtJUNction/dsh-recall",
+  "category": "memory",
+  "description": {
+    "en": "Saves explicit project conversation excerpts with persistent search and revision-checked deletion.",
+    "zh": "显式保存项目对话摘录，支持持久检索和修订校验后删除。"
+  },
+  "added": "2026-11-02"
+}

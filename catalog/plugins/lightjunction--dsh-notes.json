@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-notes",
+  "name": "dsh-notes",
+  "repository": "https://github.com/LIghtJUNction/dsh-notes",
+  "category": "memory",
+  "description": {
+    "en": "Manages local Markdown notes and templates with revision-checked updates and deletion.",
+    "zh": "管理本地 Markdown 笔记与模板，更新和删除前校验修订。"
+  },
+  "added": "2026-11-02"
+}

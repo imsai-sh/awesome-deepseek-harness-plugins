@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gongfpp/dsh-cost-voice",
+  "name": "dsh-cost-voice",
+  "repository": "https://github.com/gongfpp/dsh-cost-voice",
+  "category": "notify",
+  "description": {
+    "en": "Announces per-turn spend using bundled Alipay or Dabaifan voice clips after a DSH conversation turn finishes. Uses dsh-cost-meter amounts when available, otherwise estimates from model pricing.",
+    "zh": "DSH 每轮会话结束后，用内置的支付宝或大白饭音频片段播报本轮花费；优先使用 dsh-cost-meter 金额，否则按模型单价估算。"
+  },
+  "added": "2026-11-06"
+}

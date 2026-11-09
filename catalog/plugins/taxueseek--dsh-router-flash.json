@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "taxueseek/dsh-router-flash",
+  "name": "dsh-router-flash",
+  "repository": "https://github.com/taxueseek/dsh-router-flash",
+  "category": "session",
+  "description": {
+    "en": "Agent preset distribution plugin delivering an \"探索模式\" (Explorer) preset as a bundle-patch @deepseek-ai/dsh-agent-preset declaration line: installing it adds the preset to the picker, with no disk sync. Routing is keyed by model id, not by channel — DeepSeek V4 Flash sessions get a weak persona branch (classification, review, anti-drift, deep-thinking and decision-closure guidance) and a narrowed first-turn tool face (read/write/edit plus the platform shell); after the first tool/call the full 28-row catalog is exposed. The deepseek, longcat and third-party families keep the full catalog from the first turn; third-party guidance is configurable (classify or neutral).",
+    "zh": "以 bundle 补丁层交付的 agent preset「探索模式」：安装即声明 @deepseek-ai/dsh-agent-preset 行，预设进入选择器，无任何落盘同步。按模型 id 命中、渠道无关——DeepSeek V4 Flash 走 weak persona 分支（分类、回顾、反跑题、深度思考、决策闭环），首轮工具面收窄为 read/write/edit 加平台 shell，首次 tool/call 后放开 28 行全目录；deepseek / longcat / 第三方家族首轮不收窄，第三方引导方式可配置（classify 或 neutral）。"
+  },
+  "added": "2026-11-06"
+}

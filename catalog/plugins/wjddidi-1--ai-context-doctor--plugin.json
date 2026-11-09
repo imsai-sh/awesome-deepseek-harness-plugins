@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "WJDdidi-1/ai-context-doctor/plugin",
+  "name": "dsh-aiignore",
+  "repository": "https://github.com/WJDdidi-1/ai-context-doctor",
+  "category": "session",
+  "description": {
+    "en": "Grades what a repository or a past session actually read, warns before it floods the context window, and writes the `.aiignore` rules that stop the worst of it. The sidebar panel follows the current conversation and shows one current score rather than a before/after pair.",
+    "zh": "给仓库与过往会话的实际读取打分，在淹没上下文窗口之前给出提醒，并写出挡住最糟那部分的 `.aiignore` 规则。侧栏面板跟随当前对话，只显示一个当前评分，而不是前后对比。"
+  },
+  "added": "2026-11-01"
+}

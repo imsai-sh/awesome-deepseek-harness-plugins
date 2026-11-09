@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "hato-24/dsh-codex-handoff",
+  "name": "dsh-codex-handoff",
+  "repository": "https://github.com/hato-24/dsh-codex-handoff",
+  "category": "tools",
+  "description": {
+    "en": "Bridge to the local Codex CLI: hand a task to GPT from any DSH model and keep multi-turn continuity on the same Codex thread. Lists every exchange in a sidebar panel or a right-side drawer, reads back turns that were continued inside Codex, keeps sessions in the Codex session store so they can be resumed, and switches model and reasoning effort per conversation. Requires a logged-in local Codex CLI; each call consumes Codex quota.",
+    "zh": "本机 Codex CLI 桥：DSH 上任意模型都能把任务交给 GPT，并在同一个 Codex 会话上多轮续接。侧栏面板与右侧抽屉可查看每一轮往来，也能回读在 Codex 里继续的轮次；会话写入 Codex 会话库，可用 resume 继续；支持按会话切换模型与推理强度。需要本机已登录的 Codex CLI，每次调用消耗 Codex 额度。"
+  },
+  "added": "2026-11-06"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Orliba/dsh-context-keeper",
+  "name": "dsh-context-keeper",
+  "repository": "https://github.com/Orliba/dsh-context-keeper",
+  "category": "tools",
+  "description": {
+    "en": "Watches the context budget of a DeepSeek Harness session (colour dot per turn, reminder plus one-click new-session handoff at orange/red, /context-watch and /handoff commands), reading local session files only.",
+    "zh": "看护 DeepSeek Harness 会话的上下文预算（每轮颜色点、橙/红档提醒与一键开新会话交接、/context-watch 与 /handoff 命令），只读本地会话文件。"
+  },
+  "added": "2026-10-30"
+}

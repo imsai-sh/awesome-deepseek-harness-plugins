@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "19952730389/dsh-app-updater",
+  "name": "dsh-app-updater",
+  "repository": "https://github.com/19952730389/dsh-app-updater",
+  "category": "tools",
+  "description": {
+    "en": "Detects which installed applications have a newer version and updates them with one click by downloading each vendor's full installer from the URL recorded in the winget manifest, verifying its SHA-256 before execution, and running the publisher's own silent switches, then re-reading the installed version to confirm the update actually landed. Windows uses winget plus the registry Uninstall keys; macOS enumerates .app bundles and matches them against the Homebrew cask catalog. Installers that need administrator rights run in an elevated copy via UAC. All plugin routes are deny-by-default through the host connection admission gate, write operations require explicit confirm:true, and machine-wide installs need system permissions — the README lists every command executed.",
+    "zh": "检测本机已安装应用中哪些有可用新版本，一键从 winget 清单记录的官网地址下载完整安装包，执行前按清单复核 SHA-256，使用发布方自带的静默参数安装，安装后再读取版本号复核更新是否真正生效。Windows 走 winget + 注册表 Uninstall 键，macOS 枚举 .app 并匹配 Homebrew cask 目录，均按本机 ARM64/x64 架构选包。需要管理员权限的安装包经 UAC 提权执行。所有插件路由默认拒绝并经宿主 connection 准入，写操作必须显式 confirm:true；因涉及系统级安装权限，README 完整列出插件执行的每一条命令。"
+  },
+  "added": "2026-11-02"
+}

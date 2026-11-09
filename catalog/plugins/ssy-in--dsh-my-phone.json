@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ssy-in/dsh-my-phone",
+  "name": "dsh-my-phone",
+  "repository": "https://github.com/ssy-in/dsh-my-phone",
+  "category": "notify",
+  "description": {
+    "en": "Serves a QR pairing page from the desktop; after the phone scans it, a mobile web UI opens over the home LAN or a Cloudflare quick tunnel and shows the live session feed, approval prompts and a floating desktop widget.",
+    "zh": "在电脑端生成扫码配对页，手机扫码后通过局域网或 Cloudflare 隧道打开移动端界面，查看实时消息与授权提醒，桌面端带悬浮球。"
+  },
+  "added": "2026-11-02"
+}

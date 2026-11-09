@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lijiaqi-AI-Product-Manager/dsh-agent-compare",
+  "name": "AgentCompare",
+  "repository": "https://github.com/lijiaqi-AI-Product-Manager/dsh-agent-compare",
+  "category": "workflow",
+  "description": {
+    "en": "Compare two running Vite builds inside DSH conversations, choose blind, and review adoption against current project edits.",
+    "zh": "在 DSH 主对话中体验两版 Vite 应用、盲选，并结合项目当前改动审查采用结果。"
+  },
+  "added": "2026-11-04"
+}

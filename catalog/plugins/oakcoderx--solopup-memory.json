@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "OakcoderX/solopup-memory",
+  "name": "SoloPup Memory",
+  "repository": "https://github.com/OakcoderX/solopup-memory",
+  "category": "memory",
+  "description": {
+    "en": "Source-linked text memory for DSH with project scopes and revision history (public beta).",
+    "zh": "保留原话来源、项目归属与修订历史的 DSH 文字记忆插件（公开测试版）。"
+  },
+  "added": "2026-10-31"
+}
