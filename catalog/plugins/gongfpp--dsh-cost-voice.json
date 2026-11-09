@@ -5,8 +5,8 @@
   "repository": "https://github.com/gongfpp/dsh-cost-voice",
   "category": "notify",
   "description": {
-    "en": "Announces the estimated spend per turn with bundled Dabaifan audio by default, with optional Alipay clips. Uses dsh-cost-meter when available, otherwise model-price estimates. All audio is bundled; no runtime speech synthesis.",
-    "zh": "每轮会话结束默认用内置的大白饭音频播报本轮估算花费，可选支付宝音色；优先取 dsh-cost-meter 金额，否则按模型单价估算。音频全部内置，运行时无需联网合成。"
+    "en": "Announces the estimated spend per turn with bundled Dabaifan audio by default, with optional Alipay clips. Uses dsh-cost-meter when available, otherwise model-price estimates. All audio is bundled; no runtime speech synthesis. Code is MIT; the bundled Alipay clips come from Reathin/XVoice (no licence), the Dabaifan voice is a MiMo clone and the icon is a fan-made meme, all for personal, non-commercial use with this plugin only.",
+    "zh": "每轮会话结束默认用内置的大白饭音频播报本轮估算花费，可选支付宝音色；优先取 dsh-cost-meter 金额，否则按模型单价估算。音频全部内置，运行时无需联网合成。代码 MIT；随包支付宝片段来自无许可证的 Reathin/XVoice、大白饭音色为 MiMo 克隆、图标为网友二创梗图，这些素材仅限随本插件个人非商用。"
   },
   "added": "2026-11-06"
 }
