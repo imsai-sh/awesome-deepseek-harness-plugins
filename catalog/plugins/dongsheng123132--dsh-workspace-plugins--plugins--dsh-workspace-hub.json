@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "dongsheng123132/dsh-workspace-plugins/plugins/dsh-workspace-hub",
+  "name": "dsh-workspace-hub",
+  "repository": "https://github.com/dongsheng123132/dsh-workspace-plugins",
+  "category": "tools",
+  "description": {
+    "en": "Scans the project directories recorded by other local AI tools (Codex, Claude Code, Cursor, Trae, WorkBuddy, Kimi) and adds the missing ones to the DeepSeek Harness sidebar through the official workspace registry. Only adds entries; it never renames, deletes or reorders existing workspaces.",
+    "zh": "扫描本机其它 AI 工具（Codex、Claude Code、Cursor、Trae、WorkBuddy、Kimi 等）记录的项目目录，把缺少的通过官方 workspace 注册表补进 DeepSeek Harness 侧栏。只新增，不改名、不删除、不调整已有工作区顺序。"
+  },
+  "added": "2026-11-09"
+}
