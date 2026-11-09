@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "NoneadChina/dsh-nonead-prompt-rewind",
+  "name": "dsh-nonead-prompt-rewind",
+  "repository": "https://github.com/NoneadChina/dsh-nonead-prompt-rewind",
+  "category": "session",
+  "description": {
+    "en": "Rewinds a conversation to an earlier user message in place: the target message and everything after it are masked from both the model context and the rendered thread, and the target text is refilled into the composer, without starting a new branch. Optionally restores workspace files from lightweight pre-write backups, and keeps a per-workspace rewind history that can undo the latest file restore.",
+    "zh": "就地回退对话到任意更早的用户消息：目标消息及其之后的内容同时从模型上下文与渲染对话中撤回，目标文本回填输入框，不新建会话分支。可选一并还原工作区文件（写前轻量备份），并保留按工作区记录的回退历史，可对最近一次回退做文件撤销。"
+  },
+  "added": "2026-11-09"
+}
