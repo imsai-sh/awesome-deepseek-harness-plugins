@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "TacitSay/dsh-compact-arsenal",
+  "name": "dsh-compact-arsenal",
+  "repository": "https://github.com/TacitSay/dsh-compact-arsenal",
+  "category": "memory",
+  "description": {
+    "en": "Configurable context compaction with three independently switchable sections: whole-context checkpoint, reasoning compression and tool-output pruning. Each section has its own pressure threshold and method (mechanical or model-backed, with configurable provider, prompt and output budget). A left-sidebar panel exposes switches, method cards and editable parameters that save without a restart, and every rewrite is archived under the runtime-resolved DSH home directory with its original text.",
+    "zh": "可配置的上下文压缩插件，三个板块各自独立开关：总压缩（整段检查点）、思考压缩、工具输出压缩。每个板块有自己的触发阈值与方式（机械或模型，模型方式可配置提供方、模型与提示词）。左栏面板提供开关、方式卡片与可编辑参数，保存后无需重启即生效；每次改写都会把原文与结果归档到运行时解析的 DSH 目录。"
+  },
+  "added": "2026-11-09"
+}
