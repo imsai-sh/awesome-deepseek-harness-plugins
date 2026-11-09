@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhiquanchi/dsh-mac-notifications",
+  "name": "dsh-mac-notifications",
+  "repository": "https://github.com/zhiquanchi/dsh-mac-notifications",
+  "category": "tools",
+  "description": {
+    "en": "Native macOS Notification Center alerts for DeepSeek Harness when the agent asks for your choice, a task completes, or a task fails. Notifications are posted by the app's own renderer, so they carry the DeepSeek Harness name and icon; clicking a notification opens the corresponding session.",
+    "zh": "为 DeepSeek Harness 提供原生 macOS 通知中心提醒：智能体需要你做出选择、任务完成或任务失败时弹出通知。通知由应用自身渲染进程发出，显示 DeepSeek Harness 的名称与图标；点击通知可直接跳回对应会话。"
+  },
+  "added": "2026-11-09"
+}
