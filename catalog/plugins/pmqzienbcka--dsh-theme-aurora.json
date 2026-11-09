@@ -5,8 +5,8 @@
   "repository": "https://github.com/pmqzienbcka/dsh-theme-aurora",
   "category": "theme",
   "description": {
-    "en": "Aurora theme: background pictures for the conversation and sidebar (five fit modes), dimming down to pure black, background blur, frosted glass on the sidebar and conversation header, font family, size and colour, global corner-radius scaling, and freely placed pictures that render between the background and the chat.",
-    "zh": "极光主题：为会话页与侧边栏分别设置背景图片（填充/适应/拉伸/平铺/居中），可压暗至纯黑、单独模糊背景、为侧边栏与顶栏开启毛玻璃，并可切换字体、字号与文字颜色、整体缩放圆角，还能添加自由摆放的图片层（位于背景之上、会话内容之下）。"
+    "en": "Separate background pictures for the conversation and the sidebar (five fit modes), dimming to pure black, background blur, frosted glass on the sidebar and header, font family, size and colour, and global corner-radius scaling; placed pictures drag, resize, rotate and mirror, follow the conversation column, and stay pinned to the right edge when placed there.",
+    "zh": "会话页与侧边栏可分别设置背景图（填充/适应/拉伸/平铺/居中），支持压暗至纯黑、背景模糊、侧栏与顶栏毛玻璃、字体字号颜色、圆角整体缩放；图片层可拖动、缩放、旋转、水平翻转，位置随会话列联动，贴右边界的图片保持右对齐。"
   },
   "added": "2026-11-03"
 }
