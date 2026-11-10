@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lichufeng123/dsh-test-workbench",
+  "name": "dsh-test-workbench",
+  "repository": "https://github.com/lichufeng123/dsh-test-workbench",
+  "category": "tools",
+  "description": {
+    "en": "Manage manual and AI test results, step evidence, execution attempts, and Markdown reports in the DSH sidebar.",
+    "zh": "在 DSH 侧栏管理人工与 AI 测试结果、步骤证据、执行历史和 Markdown 报告。"
+  },
+  "added": "2026-11-10"
+}
