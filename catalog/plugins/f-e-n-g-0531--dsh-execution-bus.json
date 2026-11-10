@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "f-e-n-g-0531/dsh-execution-bus",
+  "name": "Xiao He",
+  "repository": "https://github.com/f-e-n-g-0531/dsh-execution-bus",
+  "category": "dev",
+  "description": {
+    "en": "Declarative DAG runtime for DSH agent tool plans with bounded parallel execution, read-only retries, per-step checkpoints, cancellation, and conservative crash recovery.",
+    "zh": "DSH 工具计划的声明式 DAG 运行时：有界并行执行、只读重试、逐步检查点、取消与保守的崩溃恢复。"
+  },
+  "added": "2026-11-10"
+}
