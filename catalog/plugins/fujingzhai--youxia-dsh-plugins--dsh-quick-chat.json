@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fujingzhai/youxia-dsh-plugins/dsh-quick-chat",
+  "name": "dsh-quick-chat",
+  "repository": "https://github.com/fujingzhai/youxia-dsh-plugins",
+  "category": "ui",
+  "description": {
+    "en": "Opens the official chat.deepseek.com page in the DSH main panel through the desktop app's native browser, so the login survives restarts; no iframe and no request proxying. A fork of JaMoLpE88/dsh-desktop-chat with the changes listed in its NOTICE.",
+    "zh": "在 DSH 主面板里用桌面端原生浏览器打开 chat.deepseek.com 官方网页，登录可跨重启恢复，不用 iframe、不代理请求；基于 JaMoLpE88/dsh-desktop-chat 的 fork，改动见 NOTICE。"
+  },
+  "added": "2026-11-10"
+}
