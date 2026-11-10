@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fiu-ai/mcp-server/plugins/fiu-finance-mcp-dsh",
+  "name": "fiu-finance-mcp-dsh",
+  "repository": "https://github.com/fiu-ai/mcp-server",
+  "category": "tools",
+  "description": {
+    "en": "Connects DeepSeek Harness to the hosted FIU Finance MCP service through an MCP stdio bundle for Hong Kong, US, A-share, Japan, IPO and bond market data; requires FIU_API_KEY and Node.js with npx.",
+    "zh": "通过 MCP stdio Bundle 接入托管的 FIU Finance MCP，提供港股、美股、A 股、日本、IPO 和债券等金融数据查询；需要配置 FIU_API_KEY，并安装 Node.js（npx）。"
+  },
+  "added": "2026-11-10"
+}
