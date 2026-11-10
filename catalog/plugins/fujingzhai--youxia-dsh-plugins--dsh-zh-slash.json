@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fujingzhai/youxia-dsh-plugins/dsh-zh-slash",
+  "name": "dsh-zh-slash",
+  "repository": "https://github.com/fujingzhai/youxia-dsh-plugins",
+  "category": "ui",
+  "description": {
+    "en": "Typing the Chinese enumeration comma 、 at the start of the DSH input box opens the native / command menu; the existing Chinese and English filtering, keyboard and mouse handling, and argument panels are unchanged, and 、 used mid-sentence is left alone.",
+    "zh": "在 DSH 输入框开头输入顿号「、」即弹出原生 `/` 命令菜单；原有中英文筛选、方向键与鼠标操作、参数面板均沿用原生行为，句中顿号与输入法组合过程不改写。"
+  },
+  "added": "2026-11-10"
+}
