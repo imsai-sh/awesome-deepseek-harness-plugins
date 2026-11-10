@@ -3,7 +3,7 @@
   "id": "fujingzhai/youxia-dsh-plugins/dsh-speed-pair",
   "name": "dsh-speed-pair",
   "repository": "https://github.com/fujingzhai/youxia-dsh-plugins",
-  "category": "session",
+  "category": "ui",
   "description": {
     "en": "Replaces the status-bar output speed with two figures, e.g. 207(122) tok/s: outside the parentheses the decoding speed after the first token, inside it the speed over the whole request including first-token latency. Clicking the item opens a breakdown with turns, steps, TTFT and per-phase timings; DSH's own figure returns when the plugin is not loaded.",
     "zh": "把底栏输出速度改成双口径，如 `207(122) tok/s`：括号外是首字之后的解码速度，括号内是含首字延迟的整段速度。点一下弹出轮次、步数、首字延迟与各阶段用时明细；插件未载入时仍显示 DSH 自带那颗。"
