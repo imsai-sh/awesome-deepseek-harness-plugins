@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "f-e-n-g-0531/dsh-code-report",
+  "name": "DSH Code Report",
+  "repository": "https://github.com/f-e-n-g-0531/dsh-code-report",
+  "category": "dev",
+  "description": {
+    "en": "Compare Git and SVN versions across up to 12 repositories and export Chinese Markdown release reports. Optional model analysis requires explicit approval and human review. Non-commercial source-available license; commercial use requires written authorization.",
+    "zh": "比较最多 12 个 Git/SVN 项目的版本差异，并导出中文 Markdown 发布报告。模型分析需明确授权并人工复核。采用非商业源码公开许可证，商业用途需书面授权。"
+  },
+  "added": "2026-11-10"
+}
