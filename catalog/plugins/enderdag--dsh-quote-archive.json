@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "EnderDAG/dsh-quote-archive",
+  "name": "dsh-quote-archive",
+  "repository": "https://github.com/EnderDAG/dsh-quote-archive",
+  "category": "tools",
+  "description": {
+    "en": "Archives, searches, and recalls group-chat quotes locally, with an AstrBot-style management page and an optional SnowLuma / OneBot v11 QQ channel (Node.js 22.13+; gateway settings are discovered from local SnowLuma or qq-bridge configs).",
+    "zh": "本地归档、检索并随机回放群聊语录，自带 AstrBot 风格管理页，可选通过 SnowLuma / OneBot v11 通道采集与回发（需 Node.js 22.13+，会从本机 SnowLuma 或 qq-bridge 配置自动发现网关地址与令牌）。"
+  },
+  "added": "2026-11-11"
+}
