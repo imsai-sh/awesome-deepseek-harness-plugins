@@ -5,8 +5,8 @@
   "repository": "https://github.com/seanliii/dsh-plugin-legion",
   "category": "tools",
   "description": {
-    "en": "Finds DSH and GitHub projects, reads repository source, and packages author-adapted code as DSH plugin bundles. Supports native tool calls and explicit task messages with a user-authorized Legion service. Backend not included.",
-    "zh": "发现 DSH 与 GitHub 项目、读取仓库源码，并将作者已适配的代码包装为 DSH 插件包；支持原生工具调用和向用户获授权的 Legion 服务显式发送任务消息，不包含后端。"
+    "en": "A native DSH collaboration workbench for user-configured harness teams: member and author configuration views, shared-capability discovery, task continuation, paginated recovery records and native scheduled work. Includes a supervised DSH-to-Codex review and DSH repair case. Technical preview; members and models require separate setup, and universal autonomy or automatic improvement propagation is not established.",
+    "zh": "面向用户自配 Harness 战队的 DSH 原生协作工作台：分别展示作者与成员配置，支持共享能力发现、任务接续、恢复记录分页和原生定时工作。包含一次有监督的 DSH 委托 Codex 审查并由 DSH 修复的案例。技术预览；成员与模型需另配，不宣称全团自治或改进自动传播。"
   },
   "added": "2026-10-28"
 }
