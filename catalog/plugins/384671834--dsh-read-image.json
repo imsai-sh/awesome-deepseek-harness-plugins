@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "384671834/dsh-read-image",
+  "name": "dsh-read-image",
+  "repository": "https://github.com/384671834/dsh-read-image",
+  "category": "tools",
+  "description": {
+    "en": "Adds a vision_read tool, a composer switch and a model picker that send an image file to a separate multimodal model and return only its text description, so a session whose model declares text-only input can still read images without switching models. Models are enumerated at runtime with ctx.llm.listModels; openai-completions and anthropic-messages request shapes are both supported.",
+    "zh": "提供 vision_read 工具、输入框旁开关与模型选择，把图片发给独立的多模态模型并只回传文字描述，使声明为纯文本输入的会话模型无需切换模型也能读图。模型经 ctx.llm.listModels 在运行时枚举，同时支持 openai-completions 与 anthropic-messages 两种请求格式。"
+  },
+  "added": "2026-11-11"
+}
