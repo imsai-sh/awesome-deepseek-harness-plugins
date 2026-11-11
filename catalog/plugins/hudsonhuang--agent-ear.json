@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "HudsonHuang/agent-ear",
+  "name": "agent-ear",
+  "repository": "https://github.com/HudsonHuang/agent-ear",
+  "category": "skill",
+  "description": {
+    "en": "Text-only agents get a timestamped audio timeline for offline audio/video: speech, sound events, music/BPM/downbeats, plus SRT/EDL export, ranked highlights, mixcheck and A/B compare. Requires the Qwen Omni API for basic analysis.",
+    "zh": "给文本 Agent 一副耳朵：把离线音视频变成带时间戳的音频时间轴（语音、声音事件、音乐/BPM/downbeat），支持 SRT/EDL 导出、高光、mixcheck 和 A/B 对比。basic 分析需要 Qwen Omni API。"
+  },
+  "added": "2026-11-12"
+}
