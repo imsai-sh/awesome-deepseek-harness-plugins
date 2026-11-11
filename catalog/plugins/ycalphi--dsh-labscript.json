@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ycAlphi/dsh-labscript",
+  "name": "dsh-labscript",
+  "repository": "https://github.com/ycAlphi/dsh-labscript",
+  "category": "dev",
+  "description": {
+    "en": "Control labscript-suite experiments from DeepSeek Harness: runmanager panel globals and scans, submit and wait, YAML fixed-operation protocols with postprocess write-back, panel snapshots and selective restore, an event log, a hardware-free mock backend, a read-only doctor and a settings page. Uses only the stock runmanager remote interface and shot HDF5; no BLACS/lyse patches required.",
+    "zh": "在 DSH 里控制 labscript-suite 实验：runmanager 面板 globals 与扫描、提交与等待、带后处理写回和面板恢复的 YAML 固定操作协议、写前快照与选择性恢复、事件日志、无硬件模拟后端、只读诊断工具和插件页配置。只用 stock runmanager remote 与 shot HDF5，不需要改 BLACS/lyse。"
+  },
+  "added": "2026-11-11"
+}
