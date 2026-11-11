@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kun111-web/dsh-youhua/dsh-usage-stats",
+  "name": "dsh-usage-stats",
+  "repository": "https://github.com/kun111-web/dsh-youhua",
+  "category": "model",
+  "description": {
+    "en": "Shows local session token usage in the DSH settings, with input, output and cache breakdowns, activity heatmaps, and per-model trends.",
+    "zh": "在 DSH 设置中展示本机会话的 Token 用量，提供输入、输出及缓存明细、活动热力图和按模型统计的趋势。"
+  },
+  "added": "2026-11-11"
+}
