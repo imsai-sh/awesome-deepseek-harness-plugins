@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "strangeyu911-tech/dsh-composer-autocomplete",
+  "name": "dsh-composer-autocomplete",
+  "repository": "https://github.com/strangeyu911-tech/dsh-composer-autocomplete",
+  "category": "ui",
+  "description": {
+    "en": "Inline ghost-text next-word prediction for the DeepSeek Harness composer: suggests your next words from the conversation and current draft (including the likely reply or chosen option when the assistant asks a question), shown as grey text at the end of the input; Tab accepts, Esc dismisses.",
+    "zh": "DeepSeek Harness 输入框内联续写预测：根据对话上下文和当前草稿，用灰色幽灵字预测你接下来要打的字（含助手提问时对下一条回复/选项的预测），显示在输入框最后一个字符后面；Tab 采纳，Esc 忽略。"
+  },
+  "added": "2026-11-13"
+}
