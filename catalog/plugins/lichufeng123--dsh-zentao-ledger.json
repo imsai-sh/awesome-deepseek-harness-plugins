@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lichufeng123/dsh-zentao-ledger",
+  "name": "dsh-zentao-ledger",
+  "repository": "https://github.com/lichufeng123/dsh-zentao-ledger",
+  "category": "tools",
+  "description": {
+    "en": "A configurable ZenTao Bug ledger with lists, assignee grouping, details and history, local text/media drafts, expected/actual screenshots, and explicit write confirmation with readback.",
+    "zh": "可配置站点的禅道 Bug 台账，提供列表、责任人分组、详情与历史、本地文字及媒体草稿、预期与实际截图整理，以及明确确认和写后回读。"
+  },
+  "added": "2026-11-12"
+}
