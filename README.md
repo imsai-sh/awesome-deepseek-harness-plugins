@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14039** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-12。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14040** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-12。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=6ed0ca83f880)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=f36ce5f5e2a9)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -144,7 +144,7 @@ docs/               目录数据模型文档
 - [UI 增强](#ui) (2690)
 - [主题与外观](#theme) (504)
 - [会话与消息](#session) (901)
-- [记忆](#memory) (449)
+- [记忆](#memory) (450)
 - [工具与能力](#tools) (4080)
 - [技能包](#skill) (1054)
 - [工作流与自动化](#workflow) (785)
@@ -910,7 +910,7 @@ docs/               目录数据模型文档
 <a id="memory"></a>
 
 <details>
-<summary><strong>记忆</strong> · 显示 242 / 共 449 个</summary>
+<summary><strong>记忆</strong> · 显示 243 / 共 450 个</summary>
 
 - [adapter](https://github.com/DecarbonizedGlucose/dsh-memory-note/tree/HEAD/adapter) — 在本地存储轻量笔记，帮助代理跨会话保留信息。
 - [agent-guard](https://github.com/hr98w/dsh-memory/tree/HEAD/benchmark/locomo/agent-guard) — 作为守护机制，确保跨会话长期记忆一致且高效，借鉴 Claude Code 的自动记忆设计。
@@ -953,6 +953,7 @@ docs/               目录数据模型文档
 - [dsh-animation-principles](https://github.com/uckkk/dsh-animation-principles) — 迪士尼动画12法则知识库
 - [dsh-appserver](https://github.com/text2future/flowix/tree/HEAD/dsh-appserver) — 为智能体提供持久化笔记与记忆存储，增强办公、写作和编码场景下的跨会话上下文。
 - [dsh-areas](https://github.com/shynloc/acks-dsh-plugins/tree/HEAD/knowledge/dsh-areas) — 整理并持久化主题领域，便于知识留存与检索。
+- [dsh-attune](https://github.com/shiyan688/dsh-attune) — 按情境生成问题，保存经用户确认且可编辑、删除的协作偏好。
 - [dsh-auto-memory](https://github.com/1304836815/dsh-auto-memory) — DSH 会话级记忆插件：收尾提醒 + MEMORY.md 记忆索引维护 + 实时对话日志 + LLM 摘要压缩，配置面板在 设置→插件。Session memory for DeepSeek Harness.
 - [dsh-auto-memory](https://github.com/Aik358/dsh-auto-memory) — 实现三层自动记忆系统，含主动日历提醒、温馨问候与跨工具记忆继承。
 - [dsh-behuman](https://github.com/goodddGrades/dsh-behuman) — DeepSeek Harness 的跨会话记忆与自进化：记忆以 Markdown 文件存储在磁盘上，目录（每条记忆一行）随提示词携带而非检索；另有一轮后台复审，检查主 agent 漏写的部分。
