@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kun111-web/dsh-wuthering-waves-intro",
+  "name": "dsh-wuthering-waves-intro",
+  "repository": "https://github.com/kun111-web/dsh-wuthering-waves-intro",
+  "category": "fun",
+  "description": {
+    "en": "Adds silent Wuthering Waves character intro animations to DSH, with 20 selectable characters, 3840×1488 at 60 fps, full and quick playback, and skippable line-art and particle transitions.",
+    "zh": "为 DSH 添加静音鸣潮角色声痕开场动画，提供 20 个可选角色、3840×1488/60 帧素材、完整与快速播放，以及可跳过的线稿入场和粒子退场。"
+  },
+  "added": "2026-11-12"
+}
