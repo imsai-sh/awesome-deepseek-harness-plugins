@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "yeweiliang7063/dsh-qihuangjingfang",
+  "name": "dsh-qihuangjingfang",
+  "repository": "https://github.com/yeweiliang7063/dsh-qihuangjingfang",
+  "category": "memory",
+  "description": {
+    "en": "A traditional Chinese medicine agent preset for DeepSeek Harness: bundles nine classical texts with an auto-generated knowledge-base index, runs a structured consultation before prescribing in seven sections (herbal and acupuncture in one prescription, with prescription sheet, rationale and textual cross-check), and archives answers as case records.",
+    "zh": "DeepSeek Harness 的中医经方预设：随包九部经典并自动生成资料库索引，先按寒热、出汗、二便、睡眠、舌象与六部脉动态问诊，再按七段出方（方药与针灸同列处方，附处方笺、方义与条文校证），回答自动归档为医案。"
+  },
+  "added": "2026-11-12"
+}
