@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "nanxfu/dsh-our-imagen",
+  "name": "dsh-our-imagen",
+  "repository": "https://github.com/nanxfu/dsh-our-imagen",
+  "category": "tools",
+  "description": {
+    "en": "Image generation workbench and agent tools for DeepSeek Harness. Runs open text-to-image models (SDXL families, FLUX.2, Animagine, Anima and others) on Kaggle GPU kernels, provides a full-page studio UI and chat-callable agent tools, and saves generated images to the local workspace.",
+    "zh": "面向 DeepSeek Harness 的文生图工作台与 Agent 工具：在 Kaggle GPU 上运行 SDXL 系列、FLUX.2、Animagine、Anima 等开源文生图模型，提供整页工作台与对话调用能力，生成的图片保存到本地工作区。"
+  },
+  "added": "2026-11-12"
+}
