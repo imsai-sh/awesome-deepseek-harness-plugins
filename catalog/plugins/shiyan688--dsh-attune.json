@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "shiyan688/dsh-attune",
+  "name": "dsh-attune",
+  "repository": "https://github.com/shiyan688/dsh-attune",
+  "category": "memory",
+  "description": {
+    "en": "Generates contextual questions and saves user-confirmed collaboration preferences that can be edited or deleted.",
+    "zh": "按情境生成问题，保存经用户确认且可编辑、删除的协作偏好。"
+  },
+  "added": "2026-11-13"
+}
