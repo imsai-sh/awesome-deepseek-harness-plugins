@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YONAN1269/dsh-sidebar-suite",
+  "name": "dsh-sidebar-suite",
+  "repository": "https://github.com/YONAN1269/dsh-sidebar-suite",
+  "category": "ui",
+  "description": {
+    "en": "Adds one control bar to the DSH left sidebar: arrange the workspaces and sessions groups as tabs or as an overlay, or switch back to the official default layout that changes nothing; the session list stays fully expanded by default. Also manages temporary sessions — deleted when DSH quits by default, optionally swept on a daily schedule from the plugin detail page, and a right-click menu keeps one as a regular session or deletes it at once. All nine config keys have graphical switches, and config file edits apply in about three seconds without a restart.",
+    "zh": "给 DSH 左侧栏加一条控制栏：把「工作区」和「会话」两组排成标签页或浮层，也可以切回完全不改动布局的官方默认；会话列表默认全部展开。同时管理临时会话——默认在退出 DSH 时删除，可在插件详情页改成每天定时清理，右键可以把单个临时会话保留为正式会话或立即删除。9 项配置在详情页都有图形开关，改配置文件约 3 秒生效、不用重启。"
+  },
+  "added": "2026-11-12"
+}
