@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "taxueseek/dsh-suggestion-chips",
+  "name": "dsh-suggestion-chips",
+  "repository": "https://github.com/taxueseek/dsh-suggestion-chips",
+  "category": "ui",
+  "description": {
+    "en": "Clickable suggestion chips under every DeepSeek Harness reply: registers the suggest_actions tool (1-5 stance-classified chips with recommended pinning and turn conclusion via concludeTurn), falls back to Level 0 deterministic extraction from reply text when the tool is not called, gates irreversible/dangerous actions into draft-edit mode, marks adopted suggestions, and supports opensNewSession handoff drafts. npm: dsh-suggestion-chips.",
+    "zh": "为 DeepSeek Harness 每条回复下方添加可点击建议按钮：注册 suggest_actions 工具（支持 1-5 条带立场分类、推荐置顶与 concludeTurn 结束本轮），模型未调工具时自动降级为 L0 确定性文本提取；高危不可逆操作强制先填输入框确认，支持已采纳状态标记与 opensNewSession 新建会话交接草稿。npm 包名 dsh-suggestion-chips。"
+  },
+  "added": "2026-11-13"
+}
