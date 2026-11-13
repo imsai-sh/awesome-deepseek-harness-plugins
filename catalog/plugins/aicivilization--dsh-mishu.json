@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "AIcivilization/dsh-mishu",
+  "name": "dsh-mishu",
+  "repository": "https://github.com/AIcivilization/dsh-mishu",
+  "category": "notify",
+  "description": {
+    "en": "A secretary panel that reads your unread GitHub notifications, works out per notification which ones are already resolved, and closes them for you; it also keeps the dated things you tell it — bills, renewals, document expiries, birthdays — and reminds you when they come due. The inbox is read-only and secrets stay in the system keychain. Requires a GitHub login for the notification half; manual entries work without it.",
+    "zh": "小秘书面板：读取未读 GitHub 通知，逐条判断哪些事情已经结束并替你关掉；也记住你交代的账单、续费、证件到期与生日，到点提醒。邮件只读，密钥只进系统钥匙串。通知部分需登录 GitHub，手动交代的事项不需要。"
+  },
+  "added": "2026-11-12"
+}
