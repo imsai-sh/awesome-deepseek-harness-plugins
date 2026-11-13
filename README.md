@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14043** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-13。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14044** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-13。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=6cf0be002a1a)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=dfe97a94f86a)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -150,7 +150,7 @@ docs/               目录数据模型文档
 - [工作流与自动化](#workflow) (785)
 - [通知与集成](#notify) (514)
 - [模型与账号接入](#model) (836)
-- [开发与运行时](#dev) (1660)
+- [开发与运行时](#dev) (1661)
 - [娱乐](#fun) (567)
 
 <a id="ui"></a>
@@ -2483,7 +2483,7 @@ docs/               目录数据模型文档
 <a id="dev"></a>
 
 <details>
-<summary><strong>开发与运行时</strong> · 显示 253 / 共 1660 个</summary>
+<summary><strong>开发与运行时</strong> · 显示 253 / 共 1661 个</summary>
 
 - [_template](https://github.com/messiahyl/dsh-plugins/tree/HEAD/packages/_template) — 提供 DSH 插件开发的 monorepo 模板，包含安装源和第三方目录。
 - [_template](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/_template) — 提供创建新dsh插件的模板。
@@ -2738,7 +2738,7 @@ docs/               目录数据模型文档
 - [dsh-build-hermeticity-proof](https://github.com/dongsheng123132/dsh-build-hermeticity-proof) — 提供离线哈希证明，验证构建访问未超出声明范围。
 - [dsh-bundle-dedup-guard](https://github.com/Lstalu/dsh-bundle-dedup-guard) — 防止插件加载时因重复条目 ID 导致启动崩溃。
 - [dsh-ca-ref](https://github.com/Ansonfishing/dsh-ca-ref) — 提供固定仓库引用、全文搜索与审查记录的整洁架构参考库。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 1407 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 1408 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
