@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sannikovis-creator/dsh-bs-focus",
+  "name": "dsh-bs-focus",
+  "repository": "https://github.com/sannikovis-creator/dsh-bs-focus",
+  "category": "session",
+  "description": {
+    "en": "Adds an activity-focused sidebar session list with time filters, newest-first Workspace grouping, project labels, live status colors, and unread completion markers.",
+    "zh": "在侧栏中添加按活动时间聚焦的会话列表，支持时间筛选、按最新会话排序 Workspace、项目标签、实时状态颜色和未读完成标记。"
+  },
+  "added": "2026-11-14"
+}
