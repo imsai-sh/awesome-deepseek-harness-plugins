@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LittleChenLiya/dsh-superagent",
+  "name": "dsh-superagent",
+  "repository": "https://github.com/LittleChenLiya/dsh-superagent",
+  "category": "workflow",
+  "description": {
+    "en": "Runs one goal as model-planned parallel subtasks and merges the reports into one answer. Run state is written to disk, so a host restart keeps the work and resume continues only the unfinished subtasks; call and token caps are enforced and the run's cost is printed.",
+    "zh": "把一个目标交给 planner 拆成并行子任务并合成一份报告。运行状态落盘，宿主重启后可继续、只补没做完的部分；每个 run 有调用数与 token 硬上限，结束时打印成本。"
+  },
+  "added": "2026-11-14"
+}
