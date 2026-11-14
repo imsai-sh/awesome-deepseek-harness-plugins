@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "dlgrv/dsh-remove-deepseek-logo",
+  "name": "dsh-remove-deepseek-logo",
+  "repository": "https://github.com/dlgrv/dsh-remove-deepseek-logo",
+  "category": "ui",
+  "description": {
+    "en": "Removes the DeepSeek logo, brand name, version string, and the conversation hero fish from the sidebar.",
+    "zh": "移除侧边栏里的 DeepSeek 标志、品牌名、版本号，以及对话页的主视觉小鱼。"
+  },
+  "added": "2026-11-14"
+}
