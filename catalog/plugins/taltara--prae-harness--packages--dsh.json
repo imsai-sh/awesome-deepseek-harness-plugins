@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "taltara/prae-harness/packages/dsh",
+  "name": "prae-gate",
+  "repository": "https://github.com/taltara/prae-harness",
+  "category": "tools",
+  "description": {
+    "en": "Judges every tool call against an operator policy pack on tools/pre-execute (allow, deny, ask, warn; shadow mode; hot reload) and appends each decision to a hash-chained, optionally signed JSONL ledger that persists beyond the session. Scans read targets and tool results for credentials and withholds them from the model.",
+    "zh": "在 tools/pre-execute 上依据操作者策略包裁决每一次工具调用（允许、拒绝、询问、警告；影子模式；热重载），并把每条决策追加到哈希链接、可选签名、在会话结束后仍保留的 JSONL 账本。扫描读取目标与工具结果中的凭据，并阻止其到达模型。"
+  },
+  "added": "2026-09-17"
+}
