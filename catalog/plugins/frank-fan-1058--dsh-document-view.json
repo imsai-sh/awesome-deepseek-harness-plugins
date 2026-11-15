@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Frank-Fan-1058/dsh-document-view",
+  "name": "dsh-document-view",
+  "repository": "https://github.com/Frank-Fan-1058/dsh-document-view",
+  "category": "ui",
+  "description": {
+    "en": "A DeepSeek Harness bundle that adds a split document view: the opened document stays in the center while the current conversation remains visible on the right. It provides a per-session toggle, a resizable divider with keyboard support, an optional auto-enter setting, three layout presets, and a Document/Chat switch for narrow windows. Only the window layout changes; editing, saving and preview continue to use the host's native document and Office viewers.",
+    "zh": "为 DeepSeek Harness 增加分栏文档视图的 bundle：打开的文档居中显示，当前会话保留在右侧。支持按会话保存的开关、可拖动并支持键盘调节的分隔线、可选的自动进入设置、三种布局预设，以及窄窗口下的「文档 / 对话」切换。仅调整窗口布局，编辑、保存与预览继续沿用宿主原生文档与 Office 查看器。"
+  },
+  "added": "2026-11-15"
+}
