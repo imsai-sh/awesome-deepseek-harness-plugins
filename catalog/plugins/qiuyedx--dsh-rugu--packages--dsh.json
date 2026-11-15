@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "QiuYeDx/dsh-rugu/packages/dsh",
+  "name": "dsh-rugu",
+  "repository": "https://github.com/QiuYeDx/dsh-rugu",
+  "category": "memory",
+  "description": {
+    "en": "DeepSeek Harness memory plugin that stores what the agent experienced across QQ, DSH desktop, and other wired entry points in one database, recalls by meaning, literal text, people, time, and who was present before each reply, and applies per-setting rules for what may be said. Includes a settings UI for review, backup, place toggles, embedding options, and background model spend limits.",
+    "zh": "DeepSeek Harness 记忆插件：将 QQ、DSH 桌面等接入点的亲身经历写入同一记忆库，每轮回话前按语义、字面、人物、时间与在场者多路回想，并按场合规则判断是否可说。带设置页，可查看与备份记忆、按场合开关、选择嵌入方式并配置后台模型花费上限。"
+  },
+  "added": "2026-11-15"
+}
