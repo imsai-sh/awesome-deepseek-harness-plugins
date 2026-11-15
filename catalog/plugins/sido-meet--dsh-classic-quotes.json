@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "sido-meet/dsh-classic-quotes",
+  "name": "dsh-classic-quotes",
+  "repository": "https://github.com/sido-meet/dsh-classic-quotes",
+  "category": "ui",
+  "description": {
+    "en": "DeepSeek Harness plugin that shows one classical Chinese quote in the sidebar, appends an encouragement card after each assistant reply, and provides a quote wall with attribution checks covering 13 authors and 39 quotes. The corpus ships as local data with no API key and no network access. A standalone zero-dependency MCP server over the same corpus (7 tools, 4 resources) is included for reuse in other agents.",
+    "zh": "DeepSeek Harness 插件：侧栏每日一条名人名句，每轮回复后附一张应时而变的鼓励卡，并提供带出处核查的语录墙，覆盖 13 位人物、39 条名句。语料以本地数据随包发布，无需 API key、无需联网。同时附带零依赖的独立 MCP server（7 个工具、4 个资源），暴露同一份语料，可供其他宿主复用。"
+  },
+  "added": "2026-11-15"
+}
