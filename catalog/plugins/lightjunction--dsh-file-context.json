@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-file-context",
+  "name": "dsh-file-context",
+  "repository": "https://github.com/LIghtJUNction/dsh-file-context",
+  "category": "memory",
+  "description": {
+    "en": "Captures immutable file excerpts and Git diffs with revision checks and per-agent isolation.",
+    "zh": "保存不可变文件摘录与 Git 差异快照，支持修订校验和 agent 隔离。"
+  },
+  "added": "2026-11-02"
+}
