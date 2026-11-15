@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LISHUANGXI1412/dsh-restart-continue",
+  "name": "dsh-restart-continue",
+  "repository": "https://github.com/LISHUANGXI1412/dsh-restart-continue",
+  "category": "session",
+  "description": {
+    "en": "Adds a dsh_restart tool so an agent can restart DSH Desktop itself and resume the same conversation: it waits for the current turn to go idle, flushes the session, relaunches the app silently (no confirmation dialog), then injects a continuation prompt into the same session. It refuses to restart while another conversation is running a turn. Silent relaunch is Windows-only.",
+    "zh": "提供一个 dsh_restart 工具，让 Agent 自己重启 DSH Desktop 并回到同一会话继续：等当前轮结束、落盘会话、静默重启（无确认弹窗），再向同一会话投递续聊指令；其他对话有 turn 在跑时拒绝重启。静默重启仅支持 Windows。"
+  },
+  "added": "2026-11-15"
+}
