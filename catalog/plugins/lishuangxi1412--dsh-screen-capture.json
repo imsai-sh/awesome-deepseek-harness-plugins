@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LISHUANGXI1412/dsh-screen-capture",
+  "name": "dsh-screen-capture",
+  "repository": "https://github.com/LISHUANGXI1412/dsh-screen-capture",
+  "category": "ui",
+  "description": {
+    "en": "Composer screenshot button for DSH with native full-desktop region selection, hidden-window capture, full-screen and last-region reuse, a Ctrl+Shift+S shortcut, and an optional model-facing screenshot tool that asks for confirmation before every capture.",
+    "zh": "DSH 的输入框截图按钮：系统级框选整个桌面、隐藏窗口后截图、整屏与上次选区复用、Ctrl+Shift+S 快捷键，并带一个每次截图前都会询问的模型侧截图工具。"
+  },
+  "added": "2026-11-15"
+}
