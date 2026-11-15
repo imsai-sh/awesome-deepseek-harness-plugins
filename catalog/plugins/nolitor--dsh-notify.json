@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Nolitor/dsh-notify",
+  "name": "dsh-notify",
+  "repository": "https://github.com/Nolitor/dsh-notify",
+  "category": "notify",
+  "description": {
+    "en": "Turn status notifications for Chrome OS, Windows and macOS: completion, approval, question and error alerts through the Web Notification API, a silent in-app toast fallback when the browser blocks them, and a 7-segment DeepSeek peak/off-peak countdown chip gated to official routes. No local app, ports, files or audio engine.",
+    "zh": "面向 Chrome OS、Windows 和 macOS 的回合状态通知：通过 Web Notification API 发送完成、审批、提问和错误提醒，浏览器拦截时回退为无声应用内提示，并在官方路由上显示 7 段式 DeepSeek 峰值倒计时芯片。不使用本地应用、端口、文件或音频引擎。"
+  },
+  "added": "2026-11-15"
+}
