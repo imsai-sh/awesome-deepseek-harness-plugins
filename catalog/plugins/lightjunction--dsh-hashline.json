@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LIghtJUNction/dsh-hashline",
+  "name": "dsh-hashline",
+  "repository": "https://github.com/LIghtJUNction/dsh-hashline",
+  "category": "tools",
+  "description": {
+    "en": "Reads files with hash-anchored lines and edits ranges while rejecting stale file revisions.",
+    "zh": "以行哈希锚点读取和编辑文件，拒绝使用过期文件修订进行写入。"
+  },
+  "added": "2026-11-02"
+}
