@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Nolitor/dsh-korean-locale",
+  "name": "dsh-korean-locale",
+  "repository": "https://github.com/Nolitor/dsh-korean-locale",
+  "category": "ui",
+  "description": {
+    "en": "Full Korean language pack: registers 한국어 in Settings → General → Language, translates every shipped DeepSeek Harness web GUI dictionary (77 namespaces, 4,253 keys measured against the installed runtime) and applies a scoped Korean typography stack.",
+    "zh": "完整韩语语言包：在 设置 → 通用 → 语言 注册韩语，翻译 DeepSeek Harness 网页界面全部内置词典（按已安装运行时实测 77 个命名空间、4,253 个键），并应用定制的韩语字体栈。"
+  },
+  "added": "2026-11-15"
+}
