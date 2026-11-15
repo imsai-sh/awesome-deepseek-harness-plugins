@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Nolitor/dsh-sidebar-manager",
+  "name": "dsh-sidebar-manager",
+  "repository": "https://github.com/Nolitor/dsh-sidebar-manager",
+  "category": "ui",
+  "description": {
+    "en": "Sidebar management surface: hard-delete archived sessions and archived workspaces, move sessions between workspaces, and fork a session into a new project workspace, all through journaled two-phase transactions with rollback, safety guards and a promotion gate.",
+    "zh": "侧边栏管理面板：通过带日志的两阶段事务，配合回滚、安全护栏和提升闸门，实现归档会话与归档工作区的彻底删除、会话跨工作区移动，以及把会话分叉为新项目工作区。"
+  },
+  "added": "2026-11-15"
+}
