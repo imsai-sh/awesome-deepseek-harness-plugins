@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LISHUANGXI1412/dsh-context-kit",
+  "name": "dsh-context-kit",
+  "repository": "https://github.com/LISHUANGXI1412/dsh-context-kit",
+  "category": "tools",
+  "description": {
+    "en": "Cuts context cost in DSH: a token-capped index of recent artifacts and touched paths keeps pointers after compaction, and a preset tuner moves the automatic compaction trigger earlier without freezing the preset (the override is regenerated from the shipped preset in app.asar). Adds a Settings page for the trigger, the retained amount, preview, and removal.",
+    "zh": "降低 DSH 的上下文成本：一份有 token 上限的索引保留最近产物与触碰过的路径，压缩后仍不丢指针；preset 调优器把自动压缩触发点提前，同时不冻结预设（覆盖由 app.asar 里的上游预设重新生成）。附带 Settings 面板，可调触发点与保留量、预览与移除。"
+  },
+  "added": "2026-11-15"
+}
