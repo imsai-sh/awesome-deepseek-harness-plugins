@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "YunaAloft/dsh-rtk-workbench",
+  "name": "dsh-rtk-workbench",
+  "repository": "https://github.com/YunaAloft/dsh-rtk-workbench",
+  "category": "dev",
+  "description": {
+    "en": "Brings rtk into DeepSeek Harness: rewrites supported shell commands through rtk, compresses large tool output with rtk's own method chain, ships the rtk binary for Windows, macOS and Linux, and shows token savings in a UI pill and /rtk stats. Fail-open: a missing or failing rtk leaves the command and output untouched.",
+    "zh": "把 rtk 接进 DeepSeek Harness：用 rtk 规则改写受支持的 shell 命令，用 rtk 自身方法链压缩较大的工具输出，随包分发 Windows/macOS/Linux 的 rtk 二进制，并在界面药丸与 /rtk stats 中显示省量。失败开放：rtk 缺失或出错时命令与输出保持原样。"
+  },
+  "added": "2026-11-17"
+}
