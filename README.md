@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14062** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-16。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14063** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-16。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=f5cfebf89a40)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=2e84beefd08d)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -146,7 +146,7 @@ docs/               目录数据模型文档
 - [会话与消息](#session) (903)
 - [记忆](#memory) (451)
 - [工具与能力](#tools) (4083)
-- [技能包](#skill) (1054)
+- [技能包](#skill) (1055)
 - [工作流与自动化](#workflow) (786)
 - [通知与集成](#notify) (515)
 - [模型与账号接入](#model) (836)
@@ -1410,7 +1410,7 @@ docs/               目录数据模型文档
 <a id="skill"></a>
 
 <details>
-<summary><strong>技能包</strong> · 显示 292 / 共 1054 个</summary>
+<summary><strong>技能包</strong> · 显示 291 / 共 1055 个</summary>
 
 - [.dsh-plugin](https://github.com/kongyecn-wq/dsh-okx-skill-hub/tree/HEAD/.dsh-plugin) — 将 OKX 官方行情技能（价格、K线、技术指标）适配到 DeepSeek Harness 生态中。
 - [academic-research-graph](https://github.com/watericetangcw/academic-research-graph) — 将单篇学术论文转化为可探索的研究地图。
@@ -1438,6 +1438,7 @@ docs/               目录数据模型文档
 - [base](https://github.com/xuedai-mayi/dsh-wenshan/tree/HEAD/deepseek-harness-master/deepseek-harness-master/packages/bundle/base) — 地理野外实习知识图谱插件的基础包。
 - [better-LVGL-for-dsh](https://github.com/sa998aaron/better-LVGL-for-dsh) — 提供在智能体中操作 LVGL 的专业知识和最佳实践。
 - [bigA](https://github.com/kobenfang/bigA) — openclaw-skills BigA · A股智能选股（选股分析·量化交易·股票池）
+- [BloomTutor](https://github.com/Li-Evan/BloomTutor) — 七个辅导 Skill。bloom-tutor 先写学习大纲，再在工作区里每次写一篇 Markdown 课文，下一篇按你标的 ??? 和反馈来调整；六个 learn-* Skill 分别用类比已会的知识、判断学多深、领域地图、粗糙原型和讲回来检验来帮你学，learn-deep 一次跑完这五种。
 - [brand-profile](https://github.com/WayJ/dsh-work/tree/HEAD/plugins/brand-profile) — 为 dsh 框架打包个人工作代理的人设与提示词集合。
 - [btw4DeepseekHarness](https://github.com/wensincai/btw4DeepseekHarness) — 为DeepSeek Harness添加/btw系统命令，用于插入附带说明或上下文。
 - [build-dsh-plugin](https://github.com/AI-Scarlett/build-dsh-plugin) — 提供可复用的代理技能和技能提供者以支持插件开发。
@@ -1702,9 +1703,7 @@ docs/               目录数据模型文档
 - [dsh-deployment-validation](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-deployment-validation) — 提供验证软件部署是否成功且稳定的技能。
 - [dsh-deprecation](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-deprecation) — 指导处理废弃功能和代码迁移。
 - [dsh-design](https://github.com/Viger1/dsh-design) — 提供设计系统技能和审计工具，衡量渲染页面是否符合设计规范。
-- [dsh-design-feishu-docs](https://github.com/welay21312312321/dsh-design-feishu-docs) — Feishu/Lark document design & layout skill for DeepSeek Harness (dsh) — management-readable, brand-consistent, evidence-traceable formatting for long-form docs. 飞书文档设计排版技能（DeepSeek Harness 技能插件）：管理层可扫描、品牌一致、证据可追溯的长文排版。
-- [dsh-design-skills](https://github.com/zhaiyateng/dsh-design-skills) — 提供六种设计美学风格的技能包，帮助网站摆脱千篇一律的AI外观。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 762 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 764 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
