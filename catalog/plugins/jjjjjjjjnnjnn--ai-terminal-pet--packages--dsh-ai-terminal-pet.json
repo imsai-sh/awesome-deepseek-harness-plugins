@@ -5,8 +5,8 @@
   "repository": "https://github.com/jjjjjjjjnnjnn/ai-terminal-pet",
   "category": "notify",
   "description": {
-    "en": "Windows-only always-on-top overlay fed by a Cordis bundle: session state (running, waiting for approval, finished, error) travels over a named pipe to a native Go executable, which draws a layered window with a tray icon so sessions from DeepSeek Harness, Claude Code, OpenCode and Antigravity stay visible at once. Clicking a row focuses the terminal it belongs to. Reporting is fire-and-forget, so a missing or stopped overlay never blocks the host. The overlay also runs standalone with terminal hooks instead of the bundle.",
-    "zh": "仅 Windows 的置顶浮窗，由 Cordis bundle 上报会话状态：运行中、等待审批、已完成、出错四类状态经命名管道送到原生 Go 程序，由它绘制分层窗口并附带托盘图标，把 DeepSeek Harness、Claude Code、OpenCode、Antigravity 的会话同时列出来；点击某一行会切到对应终端。上报是发后即忘的，浮窗没装或没运行时不会阻塞宿主。不使用 bundle 时也可通过终端钩子独立运行。"
+    "en": "Windows-only always-on-top overlay: session state (running, waiting for approval, finished, error) travels over a named pipe to a native Go executable, which draws a layered window with a tray icon so sessions from DeepSeek Harness, Claude Code, OpenCode and Antigravity stay visible at once. Clicking a row focuses the terminal it belongs to. Reporting is fire-and-forget, so a missing or stopped overlay never blocks the host. Installing this bundle hooks DeepSeek Harness only; sessions from Claude Code, OpenCode or Antigravity appear once each of those terminals has its own reporter from the repository installed. The overlay also runs standalone with those terminal hooks instead of the bundle.",
+    "zh": "仅 Windows 的置顶浮窗：运行中、等待审批、已完成、出错四类会话状态经命名管道送到原生 Go 程序，由它绘制分层窗口并附带托盘图标，把 DeepSeek Harness、Claude Code、OpenCode、Antigravity 的会话同时列出来；点击某一行会切到对应终端。上报是发后即忘的，浮窗没装或没运行时不会阻塞宿主。装上这个包后直接接上的是 DeepSeek Harness 的会话；Claude Code、OpenCode 与 Antigravity 的会话，要先各自装好仓库里对应的上报端才会出现。不使用 bundle 时也可通过这些终端钩子独立运行。"
   },
   "added": "2026-11-10"
 }
