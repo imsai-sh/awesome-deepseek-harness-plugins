@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LISHUANGXI1412/dsh-token-trim",
+  "name": "dsh-token-trim",
+  "repository": "https://github.com/LISHUANGXI1412/dsh-token-trim",
+  "category": "tools",
+  "description": {
+    "en": "Trims tool results before they enter the model context: structural summaries for JSON-shaped tool output, head/tail caps for long text, repeat deltas for identical calls, and an artifact spill with a guard_query tool that searches the original. The original is always written to disk and any failure passes the result through untouched. Ships a context index and a Savings view tab showing the net bill estimate (gross minus suspected rework) together with measured usage from dsh-context-kit when present.",
+    "zh": "在工具结果进入模型上下文之前做确定性治理：JSON 结果转结构摘要、长文本头尾截断、重复调用只发差异、原文落盘并可用 guard_query 检索；任何异常都原样放行，图片/多块结果不改写。附带上下文索引和「节省」视图标签，显示净账单估算（毛节省 − 疑似返工），装了 dsh-context-kit 时还会读它的实测用量。"
+  },
+  "added": "2026-11-16"
+}
