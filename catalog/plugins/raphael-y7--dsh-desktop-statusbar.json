@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "Rapheal-Y7/dsh-desktop-statusbar",
+  "id": "raphael-y7/dsh-desktop-statusbar",
   "name": "dsh-desktop-statusbar",
-  "repository": "https://github.com/Rapheal-Y7/dsh-desktop-statusbar",
+  "repository": "https://github.com/raphael-y7/dsh-desktop-statusbar",
   "category": "ui",
   "description": {
     "en": "Replaces the DSH desktop stats line under the composer with a configurable status bar. Ten optional fields - status, turn and step counts, cache hit rate, first-token latency, tokens per second, session duration, last-turn cost, session cost, account balance and token totals - can be shown, hidden and reordered. Costs are estimated per call from official peak/off-peak rates, and per-model prices plus the account balance are maintained in the settings page.",
