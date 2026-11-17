@@ -2,7 +2,7 @@
   "$schema": "../schema/plugin.schema.json",
   "id": "asuta/dsh-cdx-plus/packages/suite",
   "name": "DSH CDX Plus",
-  "repository": "https://github.com/Asuta/dsh-cdx-plus",
+  "repository": "https://github.com/asuta/dsh-cdx-plus",
   "category": "dev",
   "description": {
     "en": "A Codex-inspired bundle for DeepSeek Harness shipped as one npm package: 18 independently switchable plugins covering selection quotes, side conversations, Git worktree environments with setup scripts, code review, and session management. The bundle manifest composes the child packages, a Settings page lists every feature with its own toggle, and each child package is pinned to an exact version so a single install or upgrade moves the whole set.",
