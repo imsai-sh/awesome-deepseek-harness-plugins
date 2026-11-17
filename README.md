@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14064** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-17。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14068** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-17。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=3ce71f120eb6)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=23feeba98270)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -142,16 +142,16 @@ docs/               目录数据模型文档
 分组默认折叠，点开即可展开。GitHub 对单个文件的渲染长度有上限，条目较多的分类只列出其中一部分（分类标题会写明列出了多少），完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。
 
 - [UI 增强](#ui) (2698)
-- [主题与外观](#theme) (504)
+- [主题与外观](#theme) (505)
 - [会话与消息](#session) (903)
 - [记忆](#memory) (451)
 - [工具与能力](#tools) (4084)
 - [技能包](#skill) (1055)
 - [工作流与自动化](#workflow) (786)
 - [通知与集成](#notify) (515)
-- [模型与账号接入](#model) (836)
-- [开发与运行时](#dev) (1665)
-- [娱乐](#fun) (567)
+- [模型与账号接入](#model) (837)
+- [开发与运行时](#dev) (1666)
+- [娱乐](#fun) (568)
 
 <a id="ui"></a>
 
@@ -398,7 +398,7 @@ docs/               目录数据模型文档
 <a id="theme"></a>
 
 <details>
-<summary><strong>主题与外观</strong> · 显示 252 / 共 504 个</summary>
+<summary><strong>主题与外观</strong> · 显示 252 / 共 505 个</summary>
 
 - [ambient-theme](https://github.com/intpfx/OpenFX/tree/HEAD/domains/dsh-openfx/packages/ambient-theme) — 应用环境主题，根据环境或时间改变视觉外观。
 - [anthropic-theme](https://github.com/KimFischer99/DeepSeek-Harness-Desktop/tree/HEAD/plugins/anthropic-theme) — 提供Anthropic风格视觉主题，美化桌面外壳外观。
@@ -652,7 +652,7 @@ docs/               目录数据模型文档
 - [dsh-skin](https://github.com/Highjobop/dsh-gadgets/tree/HEAD/dsh-skin) — 为 DeepSeek Harness 界面提供外观与主题定制功能。
 - [dsh-skin](https://github.com/KinGao294/dsh-skin) — Codex 风格皮肤切换器 + 自定义壁纸层，可调透明度与模糊。
 - [dsh-skin-amis](https://github.com/wanzhiwei5/dsh-skin-amis) — 鸣潮爱弥斯主题皮肤: 粉白配色+赛博霓虹装饰的 DeepSeek Harness Web GUI 皮肤 / Amis-inspired pink-white skin for DSH Web UI
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 252 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 253 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
@@ -2219,7 +2219,7 @@ docs/               目录数据模型文档
 <a id="model"></a>
 
 <details>
-<summary><strong>模型与账号接入</strong> · 显示 253 / 共 836 个</summary>
+<summary><strong>模型与账号接入</strong> · 显示 253 / 共 837 个</summary>
 
 - [all](https://github.com/DamonBao/dsh-codex-suite/tree/HEAD/packages/all) — 提供包含 OpenAI Codex 模型接入和账户用量统计的插件套件。
 - [auth](https://github.com/daifuyang/dsh-plugin/tree/HEAD/plugins/auth) — 提供 DeepSeek Harness 的登录与认证流程，管理用户凭据与会话。
@@ -2474,14 +2474,14 @@ docs/               目录数据模型文档
 - [dsh-everything-oauth](https://github.com/4sa1ary9/dsh-everything-oauth) — 在Windows上启用Codex、Grok和Claude等多种AI模型的订阅登录。
 - [dsh-everything-oauth](https://github.com/kam74515-boop/dsh-everything-oauth) — 把本机 Codex / Grok / Claude / OpenCode / CC Switch 登录态导入 DSH，在设置里自选来源并启用模型。
 - [dsh-experience-plugin](https://github.com/SouleyMoni1/dsh-experience-plugin) — 为自定义API模型配置各模型的推理等级，提供预设和设置页编辑功能。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 583 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 584 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
 <a id="dev"></a>
 
 <details>
-<summary><strong>开发与运行时</strong> · 显示 253 / 共 1665 个</summary>
+<summary><strong>开发与运行时</strong> · 显示 251 / 共 1666 个</summary>
 
 - [_template](https://github.com/messiahyl/dsh-plugins/tree/HEAD/packages/_template) — 提供 DSH 插件开发的 monorepo 模板，包含安装源和第三方目录。
 - [_template](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/_template) — 提供创建新dsh插件的模板。
@@ -2635,6 +2635,7 @@ docs/               目录数据模型文档
 - [dsh](https://github.com/openguardrails/openguardrails/tree/HEAD/integrations/agent/dsh) — 定义AI代理安全的中立协议和基准，并提供DSH集成以执行安全策略。
 - [dsh](https://github.com/snzhi000-sys/harness-macos-desktop-plugin-suite/tree/HEAD/plugins/cowork/packages/dsh) — 桌面插件套件中的开发工具包，提供插件构建的脚手架和实用功能。
 - [DSH](https://github.com/Sean-Gao/DSH) — DSH插件
+- [DSH CDX Plus](https://github.com/asuta/dsh-cdx-plus/tree/HEAD/packages/suite) — 把 Codex 的交互方式搬进 DSH 的插件合集，一个 npm 包装齐 18 项可独立启停的增强：选中引用、侧边对话、带初始化脚本的 Git 工作树环境、代码审查与会话整理。合集清单负责组合各子包，设置页列出每个功能并提供独立开关，子包按精确版本锁定，一次安装或升级即整体更新。
 - [DSH Code Report](https://github.com/f-e-n-g-0531/dsh-code-report) — 比较最多 12 个 Git/SVN 项目的版本差异，并导出中文 Markdown 发布报告。模型分析需明确授权并人工复核。采用非商业源码公开许可证，商业用途需书面授权。
 - [dsh_review](https://github.com/CodeIdeal/dsh_review) — 以 Codex CLI 风格为 dsh 提供交互式代码审查界面。
 - [dsh-2origin](https://github.com/dongsheng123132/dsh-2origin) — 对代理轨迹进行状态投影、差异对比和不可变冻结以验证。
@@ -2733,17 +2734,14 @@ docs/               目录数据模型文档
 - [dsh-browser-testing](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-browser-testing) — 自动化浏览器测试，确保网页应用质量。
 - [dsh-browser-testing](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-browser-testing) — 在浏览器中测试网站的技能。
 - [dsh-bsl-editor](https://github.com/Mempemp/DSH-CodeEditor_BSL/tree/HEAD/dsh-bsl-editor) — 为 BSL 语言提供交互式代码编辑器。
-- [dsh-build-hermeticity-proof](https://github.com/dongsheng123132/dsh-build-hermeticity-proof) — 提供离线哈希证明，验证构建访问未超出声明范围。
-- [dsh-bundle-dedup-guard](https://github.com/Lstalu/dsh-bundle-dedup-guard) — 防止插件加载时因重复条目 ID 导致启动崩溃。
-- [dsh-ca-ref](https://github.com/Ansonfishing/dsh-ca-ref) — 提供固定仓库引用、全文搜索与审查记录的整洁架构参考库。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 1412 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 1415 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
 <a id="fun"></a>
 
 <details>
-<summary><strong>娱乐</strong> · 显示 292 / 共 567 个</summary>
+<summary><strong>娱乐</strong> · 显示 292 / 共 568 个</summary>
 
 - [7d7d](https://github.com/omdsh-dev/7d7d) — 无描述的插件，可能是娱乐或装饰性功能。
 - [Acidmoon-DIzzy-DSH](https://github.com/hezi2020/dsh-plugin-wiki/tree/HEAD/plugins/Acidmoon-DIzzy-DSH) — 为界面添加眩晕视觉效果和趣味动画，以娱乐为主。
@@ -2942,6 +2940,7 @@ docs/               目录数据模型文档
 - [dsh-genshin-redirect](https://github.com/tianhanly/dsh-genshin-redirect) — 完成任务后自动跳转到原神，为工作流程增添趣味彩蛋。
 - [dsh-godot-play](https://github.com/Pidan-Workshop/dsh-godot-play) — 在DSH界面一键构建并试玩Godot Web导出的游戏。
 - [dsh-gomoku](https://github.com/omdsh-dev/dsh-gomoku) — 与 AI 下五子棋，也可让 AI 对局比棋力。
+- [dsh-gonic](https://github.com/omdsh-dev/dsh-gonic) — 在 DSH Web 界面播放 Gonic/Subsonic 曲库，支持曲库搜索、歌单、队列和 Agent 指令浏览器播放。
 - [dsh-greet](https://github.com/HDylanYueH/dsh-greet) — 可能为界面添加友好问候或互动效果的插件。
 - [dsh-greet-plugin](https://github.com/luxiu666/dsh-greet-plugin) — 演示 DeepSeek Harness 插件开发的基础功能，提供问候消息。
 - [dsh-grill-me](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-grill-me) — 提供互动挑战或测验，用于娱乐和测试用户。
@@ -3036,8 +3035,7 @@ docs/               目录数据模型文档
 - [dsh-peak-badge](https://github.com/mj5809/dsh-peak-badge) — 展示峰值徽章，可能是用户资料或成就的趣味性元素。
 - [dsh-pelican](https://github.com/Little-Star888/dsh-pelican) — dsh-pelican插件
 - [dsh-perfume-layer](https://github.com/uckkk/dsh-perfume-layer) — 香水叠喷搭配
-- [dsh-pet](https://github.com/CAPTAIN1275/dsh-ui-web/tree/HEAD/packages/dsh-pet) — 添加虚拟桌面宠物伙伴，与用户互动，带来娱乐和趣味体验。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 275 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 276 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
