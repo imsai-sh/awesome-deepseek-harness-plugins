@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wychmod/dsh-mini-superagent",
+  "name": "dsh-mini-superagent",
+  "repository": "https://github.com/wychmod/dsh-mini-superagent",
+  "category": "workflow",
+  "description": {
+    "en": "Dispatches tasks from the main session to independent background sub-sessions, which report back automatically; a sidebar workbench shows concurrency, queueing, batch progress and failure reasons, with cancel, retry and archive. Adds 10 dispatch_* tools, zero runtime dependencies, pure ESM.",
+    "zh": "主会话把任务派给独立的后台子会话执行，立即返回、报告自动回流；侧边栏「派发工作台」查看并发、排队、批次进度与失败原因，可取消、重试、归档。提供 10 个 dispatch_* 工具，零运行时依赖，纯 ESM。"
+  },
+  "added": "2026-11-18"
+}
