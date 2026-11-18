@@ -2,7 +2,7 @@
   "$schema": "../schema/plugin.schema.json",
   "id": "hacklyc/dsh-zsearch",
   "name": "dsh-zsearch",
-  "repository": "https://github.com/hAcKlyc/dsh-zsearch",
+  "repository": "https://github.com/hacklyc/dsh-zsearch",
   "category": "tools",
   "description": {
     "en": "Dual-source Zhihu and web search for DeepSeek Harness, with a streamed answer beside cited source excerpts and a built-in plugin review topic.",
