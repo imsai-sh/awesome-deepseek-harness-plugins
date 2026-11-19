@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14074** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-18。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14075** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-19。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=40840edcc3b5)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=1ea79d462af0)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -147,7 +147,7 @@ docs/               目录数据模型文档
 - [记忆](#memory) (452)
 - [工具与能力](#tools) (4086)
 - [技能包](#skill) (1055)
-- [工作流与自动化](#workflow) (787)
+- [工作流与自动化](#workflow) (788)
 - [通知与集成](#notify) (515)
 - [模型与账号接入](#model) (837)
 - [开发与运行时](#dev) (1666)
@@ -1708,7 +1708,7 @@ docs/               目录数据模型文档
 <a id="workflow"></a>
 
 <details>
-<summary><strong>工作流与自动化</strong> · 显示 248 / 共 787 个</summary>
+<summary><strong>工作流与自动化</strong> · 显示 245 / 共 788 个</summary>
 
 - [adaptive-update](https://github.com/niushuanan/dsh-adaptive-update/tree/HEAD/payload/adaptive-update/product/plugins/adaptive-update) — 定期检查上游更新，通过限定代理完成兼容工作，并支持原子切换与回滚。
 - [agent](https://github.com/orziz/odai/tree/HEAD/dsh/agent) — 治理 AI agent 任务，对齐目标与事实，规划调度并验证交付。
@@ -1879,6 +1879,7 @@ docs/               目录数据模型文档
 - [dsh-blind-arena](https://github.com/changer-changer/dsh-blind-arena) — 运行盲测公平竞技场，隔离工作树并共享验证。
 - [dsh-bmi-adjust](https://github.com/uckkk/dsh-bmi-adjust) — 减重计划拆解
 - [dsh-book2skill](https://github.com/omdsh-dev/dsh-book2skill) — 通过五阶段流水线（获取、解析、理解、生成、安装）将书籍转化为技能，含人工审批门。
+- [dsh-bots](https://github.com/kadaliao/dsh-bots) — 给 DeepSeek Harness 的 Grok 式 bot 团队：一键雇用现成团队（一人公司、研发小队、内容工作室、研究台），每个 bot 有自己的人设、头像、模型、技能、定时任务和记忆。bot 之间私信协作；调度员把每件工作派成一个任务、在独立会话里进行，看板把每个请求做成卡片并按项目归档，用量页按 bot、任务、日期统计 tokens 和费用。也可以在飞书、Telegram、Slack 或 Discord 里给团队派活。
 - [dsh-bundle](https://github.com/Leo-Ayh-Oday/dsh-orcana/tree/HEAD/packages/dsh-bundle) — 运行时治理包：进度控制、证据新鲜度、完成守卫与能力路由。
 - [dsh-cae-plugin](https://github.com/DaiYuhangSustc/dsh-cae-plugin) — 自然语言驱动的 CAE 插件，一句话即可完成 CAD 到后处理的完整流程。
 - [dsh-captain](https://github.com/KanoNoUta/dsh-captain) — 编排多代理协作，包含规划、执行和审查。
@@ -1954,11 +1955,7 @@ docs/               目录数据模型文档
 - [dsh-db-migration](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-db-migration) — 管理跨环境的数据库迁移流程。
 - [dsh-debate](https://github.com/lkshjd/dsh-debate) — 多智能体辩论插件，并行组织研究、交叉质询和裁判收敛。
 - [dsh-deep-research](https://github.com/omdsh-dev/dsh-deep-research) — 自适应深度研究编排器（基于官方 workflow 引擎）。
-- [dsh-deepseek-flow](https://github.com/kanghelyu/dsh-deepseek-flow) — 可能在 DSH 中编排多步流程，但信息有限，谨慎归类为工作流。
-- [dsh-delay-tools](https://github.com/keyiadiannao/dsh-delay-tools) — 定时唤醒同一会话回复，支持可中断等待。
-- [dsh-delayed-task](https://github.com/m-guo-2/dsh-delayed-task) — 安排持久化的延迟决策，支持任务暂停并在稍后恢复。
-- [dsh-delegation-suite](https://github.com/wenheguo2/dsh-delegation-suite) — 为 DSH 提供委派功能，用于协调多个代理或进程之间的任务。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 539 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 543 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
