@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kadaliao/dsh-prompt-en",
+  "name": "dsh-prompt-en",
+  "repository": "https://github.com/kadaliao/dsh-prompt-en",
+  "category": "tools",
+  "description": {
+    "en": "Writes a line of English under every prompt in the DeepSeek Harness Web UI: a translation when the prompt is in another language, or corrections and alternative phrasings when it is in English. Phrases it teaches go into a vocabulary book reviewed with /vocab. Display-only: nothing is added to the conversation.",
+    "zh": "在 DeepSeek Harness Web UI 的每条 prompt 下方写一行英文：用其他语言写的给出译文，用英文写的给出纠错和替代说法。教过的说法收进生词本，用 /vocab 复习。只做展示，不往对话里加任何内容。"
+  },
+  "added": "2026-11-19"
+}
