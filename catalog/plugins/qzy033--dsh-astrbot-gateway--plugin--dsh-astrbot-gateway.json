@@ -5,8 +5,8 @@
   "repository": "https://github.com/qzy033/dsh-astrbot-gateway",
   "category": "notify",
   "description": {
-    "en": "Companion cordis plugin for the AstrBot dsh gateway: it polls cache/inbox for tasks and writes results to cache/outbox, and posts completion notices through the local AstrBot HTTP endpoint so the message reaches the user from their own chat account.",
-    "zh": "配套 AstrBot 插件的 dsh 侧 cordis 插件：轮询 cache/inbox 领取任务、把结果写回 cache/outbox，并通过本机 AstrBot 接口送出完成通知，让消息以用户自己的聊天账号到达用户。"
+    "en": "DSH-side cordis plugin paired with an AstrBot plugin: it picks up queued tasks from cache/inbox, writes the results back to cache/outbox, and reports task completion to the local AstrBot HTTP endpoint so the notice reaches the user from their own chat account.",
+    "zh": "与 AstrBot 插件配套的 dsh 侧 cordis 插件：从 cache/inbox 领取队列里的任务、把结果写回 cache/outbox，并调用本机 AstrBot 接口上报任务完成，让通知以用户自己的聊天账号送达。"
   },
   "added": "2026-09-12"
 }
