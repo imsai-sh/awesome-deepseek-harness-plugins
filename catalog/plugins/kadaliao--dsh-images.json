@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kadaliao/dsh-images",
+  "name": "dsh-images",
+  "repository": "https://github.com/kadaliao/dsh-images",
+  "category": "tools",
+  "description": {
+    "en": "Adds a generate_image tool backed by the image model of a provider you configure. Pictures appear in the conversation, and an Images panel collects everything drawn as a gallery to browse, enlarge and download. Each picture shows its cost (the public LiteLLM price list covers models the provider does not price). Reference images can be passed to edit or build on them, and a request for a GIF draws a sprite sheet and assembles a looping animated GIF.",
+    "zh": "给模型加一个 generate_image 工具，用你配置的供应商的生图模型出图。图直接显示在对话里，「图片」面板把画过的都收成图库，可浏览、放大、下载。每张图都标出费用（供应商不给价的模型用公开的 LiteLLM 价目表兜底）。可以带参考图改图或接着画；要动图时先画精灵图，再拼成循环播放的 GIF。"
+  },
+  "added": "2026-11-19"
+}
