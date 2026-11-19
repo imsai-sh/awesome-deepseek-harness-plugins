@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kadaliao/dsh-atlas",
+  "name": "dsh-atlas",
+  "repository": "https://github.com/kadaliao/dsh-atlas",
+  "category": "fun",
+  "description": {
+    "en": "Shows the macOS Photos library on a night globe that zooms to street level: footprints where photos were taken, thumbnails, 3D terrain and buildings, and Wikipedia entries nearby. Trips are drawn as flight arcs that can be replayed as a story, with a timeline of the years and on this day in your photos. The conversation model can search the photos and move the map. Base maps: night OpenStreetMap, Amap, satellite or offline. Reads the library read-only.",
+    "zh": "把 macOS「照片」图库放到一颗能放大到街道的夜色地球上：拍过照的地方发光、显示缩略图，有 3D 地形和建筑以及附近的维基百科条目。旅行画成航线、可以用故事模式回放，有逐年的时间轴和往年今天的照片。对话模型能搜照片、移动地图。底图可选夜景 OpenStreetMap、高德、卫星或离线。只读访问图库。"
+  },
+  "added": "2026-11-19"
+}
