@@ -1,0 +1,1 @@
+{"$schema":"../schema/plugin.schema.json","id":"SSHOOTING/dsh-plugin-safe-route","name":"dsh-plugin-safe-route","repository":"https://github.com/SSHOOTING/dsh-plugin-safe-route","category":"security","description":{"zh":"只读 DSH 命令，按可配置白名单审计会话使用过的模型路由。","en":"Read-only DSH command that audits model routes used in a session against a configurable allowlist."},"added":"2026-11-20"}
