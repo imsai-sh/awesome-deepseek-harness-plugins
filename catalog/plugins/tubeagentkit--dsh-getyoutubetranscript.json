@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "tubeagentkit/dsh-getyoutubetranscript",
+  "name": "dsh-getyoutubetranscript",
+  "repository": "https://github.com/tubeagentkit/dsh-getyoutubetranscript",
+  "category": "tools",
+  "description": {
+    "en": "Mounts the hosted GetYouTubeTranscript MCP server: YouTube transcripts in any caption language the video has, optional timestamps, YouTube search, and channel and playlist data. Needs a GetYouTubeTranscript API key.",
+    "zh": "挂载托管的 GetYouTubeTranscript MCP 服务：获取 YouTube 视频字幕（支持视频自带的任何字幕语言，可选时间戳）、搜索 YouTube，以及频道和播放列表数据。需要 GetYouTubeTranscript API Key。"
+  },
+  "added": "2026-11-20"
+}
