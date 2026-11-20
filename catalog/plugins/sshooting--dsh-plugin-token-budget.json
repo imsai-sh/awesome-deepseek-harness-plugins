@@ -1,0 +1,1 @@
+{"$schema":"../schema/plugin.schema.json","id":"SSHOOTING/dsh-plugin-token-budget","name":"dsh-plugin-token-budget","repository":"https://github.com/SSHOOTING/dsh-plugin-token-budget","category":"usage","description":{"zh":"只读 DSH 命令，按可配置预算为会话 token 用量评分。","en":"Read-only DSH command that scores session token usage against a configurable budget."},"added":"2026-11-20"}
