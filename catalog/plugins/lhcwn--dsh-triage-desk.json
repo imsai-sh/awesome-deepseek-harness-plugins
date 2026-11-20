@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "LHCWN/dsh-triage-desk",
+  "name": "dsh-triage-desk",
+  "repository": "https://github.com/LHCWN/dsh-triage-desk",
+  "category": "workflow",
+  "description": {
+    "en": "GitHub triage inbox for DSH: pull requests waiting for your review, your merge-ready pull requests, threads and mentions that need a reply, failing CI, and new or assigned issues in one panel. Each row opens a coding agent (Claude Code, Codex, opencode and others) in the repository's local clone, or a new DSH chat, with an editable prompt that is prepared but not sent. Works through the local GitHub CLI and stores no tokens.",
+    "zh": "DSH 的 GitHub 分诊收件箱：在一个面板中汇总等待你审核的 PR、可以合并的 PR、需要回复的讨论和提及、失败的 CI，以及新的或分配给你的议题。每一行都可以在仓库的本地克隆中打开编码智能体（Claude Code、Codex、opencode 等）或新的 DSH 对话，并带好可编辑、尚未发送的提示。通过本地 GitHub CLI 工作，不存储令牌。"
+  },
+  "added": "2026-11-20"
+}
