@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "youdotcom-oss/agent-skills/packages/dsh-plugin",
+  "name": "dsh-plugin",
+  "repository": "https://github.com/youdotcom-oss/agent-skills",
+  "category": "tools",
+  "description": {
+    "en": "You.com web search and URL content providers for the ctx.web seam, plus the you-research, you-finance and you-discover skills and MCP servers. Search works without an API key through the free MCP profile; YDC_API_KEY enables the keyed search and fetch providers.",
+    "zh": "面向 ctx.web 接缝的 You.com 网页搜索与 URL 内容提供方，并附带 you-research、you-finance 和 you-discover 技能及 MCP 服务器。搜索可通过免费 MCP 配置在无 API 密钥时使用；设置 YDC_API_KEY 后启用带密钥的搜索与抓取提供方。"
+  },
+  "added": "2026-11-20"
+}
