@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-dida",
+  "name": "dsh-dida",
+  "repository": "https://github.com/PerryLink/dsh-dida",
+  "category": "tools",
+  "description": {
+    "en": "TickTick / Dida365 task bridge for DeepSeek Harness: session-header task panel, agent tools and a settings card.",
+    "zh": "面向 DeepSeek Harness 的滴答清单/TickTick 任务桥：会话头部任务面板、agent 工具与设置卡片。"
+  },
+  "added": "2026-11-22"
+}
