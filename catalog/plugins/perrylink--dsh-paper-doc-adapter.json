@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-paper-doc-adapter",
+  "name": "dsh-paper-doc-adapter",
+  "repository": "https://github.com/PerryLink/dsh-paper-doc-adapter",
+  "category": "tools",
+  "description": {
+    "en": "Exam-paper structure check: check a paper's question types, answers, score allocation and labels for internal consistency; flags discrepancies only and makes no conclusive judgment.",
+    "zh": "试卷结构核对：按题型、答案、分值与标识核对试卷结构自洽，仅提示差异，不作出定性结论。"
+  },
+  "added": "2026-11-22"
+}
