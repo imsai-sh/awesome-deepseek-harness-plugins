@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-spc-gbt-adapter",
+  "name": "dsh-spc-gbt-adapter",
+  "repository": "https://github.com/PerryLink/dsh-spc-gbt-adapter",
+  "category": "tools",
+  "description": {
+    "en": "SPC control-chart and Cpk check against the current GB/T 17989.2—2020 control-chart constants.",
+    "zh": "按现行 GB/T 17989.2—2020 控制图常数表核对 SPC 控制图控制限与 CPK。"
+  },
+  "added": "2026-11-22"
+}
