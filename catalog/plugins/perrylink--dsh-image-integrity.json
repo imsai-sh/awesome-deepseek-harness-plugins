@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-image-integrity",
+  "name": "dsh-image-integrity",
+  "repository": "https://github.com/PerryLink/dsh-image-integrity",
+  "category": "tools",
+  "description": {
+    "en": "Image integrity checks for DeepSeek Harness: zero-dependency 8-bit PNG decoding with block fingerprints and NCC confirmation to find duplicated or mirrored regions within or across figures, plus REP evidence and Markdown/SARIF reports.",
+    "zh": "面向 DeepSeek Harness 的图像完整性检查：零依赖 8-bit PNG 解码，用块指纹与 NCC 确认查找同一图内或两图之间重复/镜像的区域，并输出 REP 证据与 Markdown/SARIF 报告。"
+  },
+  "added": "2026-11-22"
+}
