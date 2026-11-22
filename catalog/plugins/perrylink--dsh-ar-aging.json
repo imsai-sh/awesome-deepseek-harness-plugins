@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-ar-aging",
+  "name": "dsh-ar-aging",
+  "repository": "https://github.com/PerryLink/dsh-ar-aging",
+  "category": "workflow",
+  "description": {
+    "en": "Turn accounts-receivable detail CSV into an aging table: buckets, per-customer totals, overdue ratio, top overdue customers and CSV export.",
+    "zh": "把应收明细 CSV 变成账龄表：分桶、客户汇总、逾期占比、Top 逾期客户，再导出 CSV。"
+  },
+  "added": "2026-11-22"
+}
