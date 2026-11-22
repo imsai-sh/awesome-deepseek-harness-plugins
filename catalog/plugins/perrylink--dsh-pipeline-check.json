@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-pipeline-check",
+  "name": "dsh-pipeline-check",
+  "repository": "https://github.com/PerryLink/dsh-pipeline-check",
+  "category": "workflow",
+  "description": {
+    "en": "Project document chain integrity check: stage order, completeness and amount parseability.",
+    "zh": "项目全流程文件链条核对：环节顺序、文件齐备与金额可解析。"
+  },
+  "added": "2026-11-22"
+}
