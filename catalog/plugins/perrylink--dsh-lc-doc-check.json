@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-lc-doc-check",
+  "name": "dsh-lc-doc-check",
+  "repository": "https://github.com/PerryLink/dsh-lc-doc-check",
+  "category": "tools",
+  "description": {
+    "en": "Letter of credit document check against UCP600: documents, periods and discrepancies.",
+    "zh": "信用证单据与 UCP600 不符点核对。"
+  },
+  "added": "2026-11-22"
+}
