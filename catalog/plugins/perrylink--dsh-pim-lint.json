@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-pim-lint",
+  "name": "dsh-pim-lint",
+  "repository": "https://github.com/PerryLink/dsh-pim-lint",
+  "category": "tools",
+  "description": {
+    "en": "PIM catalog lint for DeepSeek Harness: required fields, duplicate SKU, GTIN check digit and price (repository marked FROZEN 2026-10-31).",
+    "zh": "面向 DeepSeek Harness 的 PIM 商品目录 lint：必填字段、SKU 重复、GTIN 校验位与价格（仓库标记 FROZEN 2026-10-31）。"
+  },
+  "added": "2026-11-22"
+}
