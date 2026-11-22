@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-qms-capa",
+  "name": "dsh-qms-capa",
+  "repository": "https://github.com/PerryLink/dsh-qms-capa",
+  "category": "tools",
+  "description": {
+    "en": "QMS NCR, CAPA and 8D tracking with batch and impact assessment.",
+    "zh": "QMS 不合格品、CAPA 与 8D 闭环跟踪。"
+  },
+  "added": "2026-11-22"
+}
