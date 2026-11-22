@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-eval-pack",
+  "name": "dsh-eval-pack",
+  "repository": "https://github.com/PerryLink/dsh-eval-pack",
+  "category": "tools",
+  "description": {
+    "en": "Public/synthetic eval-pack lint and deterministic JSON grader; not a validated benchmark.",
+    "zh": "公开/合成评测包的 lint 与确定性 JSON 评分器；不是经过验证的基准。"
+  },
+  "added": "2026-11-22"
+}
