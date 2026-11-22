@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "tfcheng80808080/dsh-token-budget",
+  "name": "dsh-token-budget",
+  "repository": "https://github.com/tfcheng80808080/dsh-token-budget",
+  "category": "tools",
+  "description": {
+    "en": "Sets a token or money budget per conversation, task, or project. A compact pill under the composer shows live usage and opens a popover to set limits, switch between token and money accounting, and toggle enforcement. Money is priced per model from a configurable table, with separate rates for uncached input, cache reads, cache writes, and output. When the budget is exhausted the turn is cancelled before any model request, and the conversation shows a short notice.",
+    "zh": "按会话、任务或项目设置 Token 或金额预算。输入框下方的胶囊实时显示用量，点开浮框可设置上限、切换 Token/金额口径、开关阻断。金额按可配置的模型价目表计算，未命中输入、缓存读、缓存写、输出分别计价。预算用尽时在发起模型请求前中止本轮，并在会话中显示提示。"
+  },
+  "added": "2026-11-22"
+}
