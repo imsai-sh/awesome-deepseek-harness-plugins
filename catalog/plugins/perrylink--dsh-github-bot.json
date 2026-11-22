@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-github-bot",
+  "name": "dsh-github-bot",
+  "repository": "https://github.com/PerryLink/dsh-github-bot",
+  "category": "tools",
+  "description": {
+    "en": "GitHub PRs, reviews, issues and CI for DeepSeek Harness, with approval-gated writes.",
+    "zh": "面向 DeepSeek Harness 的 GitHub PR、评审、issue 与 CI 集成，写操作需审批。"
+  },
+  "added": "2026-11-22"
+}
