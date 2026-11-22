@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14089** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-22。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14108** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-22。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=706e0059dc15)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=922391bfaa35)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,13 +145,13 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (506)
 - [会话与消息](#session) (906)
 - [记忆](#memory) (452)
-- [工具与能力](#tools) (4091)
+- [工具与能力](#tools) (4102)
 - [技能包](#skill) (1055)
-- [工作流与自动化](#workflow) (791)
+- [工作流与自动化](#workflow) (798)
 - [通知与集成](#notify) (515)
 - [模型与账号接入](#model) (839)
 - [开发与运行时](#dev) (1666)
-- [娱乐](#fun) (569)
+- [娱乐](#fun) (570)
 
 <a id="ui"></a>
 
@@ -1159,7 +1159,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 239 / 共 4091 个</summary>
+<summary><strong>工具与能力</strong> · 显示 239 / 共 4102 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1400,7 +1400,7 @@ docs/               目录数据模型文档
 - [dsh-ac-size](https://github.com/uckkk/dsh-ac-size) — 空调匹数选择
 - [dsh-ac-trouble](https://github.com/uckkk/dsh-ac-trouble) — 空调故障排查
 - [dsh-academic-paper-search](https://github.com/wp-a/dsh-academic-paper-search) — DeepSeek Harness 的中文学术论文检索 Bundle：复用 Academic Paper Search MCP，支持多源检索去重、引用核验、引文图谱、MeSH、试验检索与审计导出。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3852 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3863 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
@@ -1707,7 +1707,7 @@ docs/               目录数据模型文档
 <a id="workflow"></a>
 
 <details>
-<summary><strong>工作流与自动化</strong> · 显示 245 / 共 791 个</summary>
+<summary><strong>工作流与自动化</strong> · 显示 244 / 共 798 个</summary>
 
 - [adaptive-update](https://github.com/niushuanan/dsh-adaptive-update/tree/HEAD/payload/adaptive-update/product/plugins/adaptive-update) — 定期检查上游更新，通过限定代理完成兼容工作，并支持原子切换与回滚。
 - [agent](https://github.com/orziz/odai/tree/HEAD/dsh/agent) — 治理 AI agent 任务，对齐目标与事实，规划调度并验证交付。
@@ -1874,6 +1874,7 @@ docs/               目录数据模型文档
 - [dsh-backup](https://github.com/a903067276-rgb/dsh-backup) — 自动化备份会话、配置和自定义目录，支持定时或手动触发，打包为 tgz 并轮转。
 - [dsh-backup-sync](https://github.com/csiroqa/dsh-backup-sync) — 为 DeepSeek Harness 提供快照备份、恢复和跨机同步，支持 WebDAV、自动备份和保留策略。
 - [dsh-bangumi](https://github.com/YiRan0/dsh-bangumi) — 追番订阅 DSH 插件：Bangumi 查番 + nyaa/dmhy 搜种 + qBittorrent 自动下载 + 媒体库查重 + 日历 GUI
+- [dsh-bankrec](https://github.com/PerryLink/dsh-bankrec) — 银行对账单核对：导入 CAMT.053 与 MT940，与账簿条目匹配并导出工作底稿——6 个 `bankrec.*` 工具。
 - [dsh-batch-regression](https://github.com/PangYiMing/dsh-batch-regression) — 批量运行命令并汇总统计结果，用于回归测试。
 - [dsh-bgjobs](https://github.com/bitsmug/dsh-bgjobs) — 将命令提交为独立于 DSH 进程的后台任务，关闭 DSH 也不影响运行，并提供实时网页面板与离线 CLI/GUI 管理。Runs commands as background jobs that keep executing when DSH exits, with a live web panel and offline CLI/GUI management.
 - [dsh-blind-arena](https://github.com/changer-changer/dsh-blind-arena) — 运行盲测公平竞技场，隔离工作树并共享验证。
@@ -1952,9 +1953,7 @@ docs/               目录数据模型文档
 - [dsh-danus](https://github.com/Fisfzy/dsh-danus) — 编排验证器门控的多智能体数学证明搜索，包含事实图和工人群。
 - [dsh-dashboard](https://github.com/Uddoo/dsh-dashboard) — 将 Linear、GitHub、Jira 等多来源任务编排到统一仪表盘，用于 DeepSeek Harness。
 - [dsh-data-cleaning-agent](https://github.com/duhu2000/dsh-data-cleaning-agent) — 自动化企业数据清洗与富化流程，将原始数据转化为结构化洞察。
-- [dsh-db-migration](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-db-migration) — 管理跨环境的数据库迁移流程。
-- [dsh-debate](https://github.com/lkshjd/dsh-debate) — 多智能体辩论插件，并行组织研究、交叉质询和裁判收敛。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 546 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 554 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
@@ -2734,7 +2733,7 @@ docs/               目录数据模型文档
 <a id="fun"></a>
 
 <details>
-<summary><strong>娱乐</strong> · 显示 289 / 共 569 个</summary>
+<summary><strong>娱乐</strong> · 显示 288 / 共 570 个</summary>
 
 - [7d7d](https://github.com/omdsh-dev/7d7d) — 无描述的插件，可能是娱乐或装饰性功能。
 - [Acidmoon-DIzzy-DSH](https://github.com/hezi2020/dsh-plugin-wiki/tree/HEAD/plugins/Acidmoon-DIzzy-DSH) — 为界面添加眩晕视觉效果和趣味动画，以娱乐为主。
@@ -2903,6 +2902,7 @@ docs/               目录数据模型文档
 - [dsh-engram-recap](https://github.com/elmaxid/dsh-manage/tree/HEAD/plugins/dsh-engram-recap) — 为DeepSeek Harness会话提供趣味回顾，以娱乐方式回看交互记录。
 - [dsh-erii-boot-splash](https://github.com/yanglingrise/dsh-erii-boot-splash) — 显示樱花主题的开机动画，带有飘落花瓣和吉祥物，纯为视觉乐趣。
 - [dsh-event-sounds](https://github.com/linyuan-ai1/dsh-plugins/tree/HEAD/packages/dsh-event-sounds) — 在 DeepSeek Harness 中根据各种事件播放音效。
+- [dsh-famling](https://github.com/PerryLink/dsh-famling) — DSH 侧栏底部的研究原型桌宠：汀岚/布偶猫/金毛像素动画、默认零按钮极简 UI、分区互动、低打扰安静时段、本地内容包与只读 Advisers 简报。
 - [dsh-fear-pet](https://github.com/uckkk/dsh-fear-pet) — 恐惧缓解
 - [dsh-feed-rule](https://github.com/uckkk/dsh-feed-rule) — 喂食规则
 - [dsh-feng-gu](https://github.com/KeqingMoe/dsh-feng-gu) — 为界面添加风骨主题的趣味交互元素。
@@ -3023,9 +3023,7 @@ docs/               目录数据模型文档
 - [dsh-niu-lai](https://github.com/jxwb125646/dsh-niu-lai) — 发送消息和完成任务时播放梗音效，增添娱乐趣味。
 - [dsh-niulai-pet](https://github.com/whitefirer/dsh-niulai-pet) — 牛来桌宠：agent 任务完成它就蹦出来喊「妈～～妈～～」——dsh 纯客户端桌宠插件（6 皮肤/签名动作/合成叫声）
 - [dsh-novel-fish](https://github.com/gongfpp/dsh-novel-fish) — 主动展开选中的 DSH 原生聊天区域时，在保留真实思考和工具输出的下方阅读本地 EPUB、TXT、Markdown 小说；各书进度保存在本地，小说不发送给模型。
-- [dsh-oil-account](https://github.com/Dongfang81/dsh-oil-account) — 以电影风格对比油车与电车拥有成本的演示，专为 Better Sidebar 设计。
-- [dsh-opencode-go-meter](https://github.com/willwhi/dsh-opencode-go-meter) — 一个趣味仪表盘，统计编码时长或活动，增添乐趣和动力。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 280 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 282 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
