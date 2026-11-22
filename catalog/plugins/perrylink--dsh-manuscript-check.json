@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-manuscript-check",
+  "name": "dsh-manuscript-check",
+  "repository": "https://github.com/PerryLink/dsh-manuscript-check",
+  "category": "tools",
+  "description": {
+    "en": "Pre-submission checklist for DeepSeek Harness: manuscript structure and declaration statements, keyword-based coverage of starter CONSORT/STROBE/PRISMA items, and a submission-pack scan with JSON/Markdown reports.",
+    "zh": "面向 DeepSeek Harness 的投稿前清单：稿件结构与声明、对 CONSORT/STROBE/PRISMA 起始条目的关键词覆盖，以及投稿材料包扫描，输出 JSON/Markdown 报告。"
+  },
+  "added": "2026-11-22"
+}
