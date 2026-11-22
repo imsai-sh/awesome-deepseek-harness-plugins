@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-repair-order-qc",
+  "name": "dsh-repair-order-qc",
+  "repository": "https://github.com/PerryLink/dsh-repair-order-qc",
+  "category": "tools",
+  "description": {
+    "en": "Repair order settlement check: item amounts, labour/parts totals and grand total.",
+    "zh": "维修工单项目金额、工时配件与结算总额核对。"
+  },
+  "added": "2026-11-22"
+}
