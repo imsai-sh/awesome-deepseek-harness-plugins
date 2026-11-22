@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-irb",
+  "name": "dsh-irb",
+  "repository": "https://github.com/PerryLink/dsh-irb",
+  "category": "tools",
+  "description": {
+    "en": "Ethics-application checklist for DeepSeek Harness: an 18-item keyword checklist, an advisory risk level with required safeguards, and JSON/Markdown output with REP evidence. A checklist aid, not an ethics-committee decision.",
+    "zh": "面向 DeepSeek Harness 的伦理申请清单：18 项关键词清单、基于结构化标记的建议风险等级与必要保障，输出 JSON/Markdown 与 REP 证据。清单辅助，不替代伦理委员会决定。"
+  },
+  "added": "2026-11-22"
+}
