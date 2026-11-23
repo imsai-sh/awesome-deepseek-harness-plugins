@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14203** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-23。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14204** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-23。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=de2c21d0bcbc)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=103cf09e33ce)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,7 +145,7 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (506)
 - [会话与消息](#session) (909)
 - [记忆](#memory) (452)
-- [工具与能力](#tools) (4185)
+- [工具与能力](#tools) (4186)
 - [技能包](#skill) (1056)
 - [工作流与自动化](#workflow) (802)
 - [通知与集成](#notify) (515)
@@ -1158,7 +1158,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 239 / 共 4185 个</summary>
+<summary><strong>工具与能力</strong> · 显示 239 / 共 4186 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1185,6 +1185,7 @@ docs/               目录数据模型文档
 - [anime-find](https://github.com/cocofhu/anime-find) — DeepSeek Harness 搜番插件：对话内多源搜索番剧，卡片展示 Bangumi 评分与详情，支持复制磁力。
 - [Anionex-dsh-vision-toolkit](https://github.com/hezi2020/dsh-plugin-wiki/tree/HEAD/plugins/Anionex-dsh-vision-toolkit) — 提供视觉相关工具，可能支持图像分析或生成功能。
 - [anno-dsh-native](https://github.com/philmingdao/anno-dsh-native) — 提供本地优先的 HTML 审阅、编辑和批注功能。
+- [any-audio](https://github.com/cloudoyx/any-audio) — 面向 DeepSeek Harness 的音频制作工作站。通过本地 SoundFont 音源渲染音符乐谱，合成旁白与歌声，提供录音素材与程序化音效库，并将每个生成的声音作为可编辑片段落到时间轴上，支持逐轨试听、调节以及混音输出到视频。
 - [anysearch-dsh](https://github.com/anysearch-team/anysearch-dsh) — 为DeepSeek Harness提供网络搜索和高级搜索工具，增强信息检索能力。
 - [anysearch-team-anysearch-dsh](https://github.com/hezi2020/dsh-plugin-wiki/tree/HEAD/plugins/anysearch-team-anysearch-dsh) — 提供搜索工具，用于查询网络或本地数据源。
 - [apply-patch](https://github.com/ivwumupy/dsh-plugins/tree/HEAD/apply-patch) — 在 DSH 中应用补丁到文件或代码。
@@ -1398,8 +1399,7 @@ docs/               目录数据模型文档
 - [dsh-ac-save](https://github.com/uckkk/dsh-ac-save) — 空调节能
 - [dsh-ac-size](https://github.com/uckkk/dsh-ac-size) — 空调匹数选择
 - [dsh-ac-trouble](https://github.com/uckkk/dsh-ac-trouble) — 空调故障排查
-- [dsh-academic-paper-search](https://github.com/wp-a/dsh-academic-paper-search) — DeepSeek Harness 的中文学术论文检索 Bundle：复用 Academic Paper Search MCP，支持多源检索去重、引用核验、引文图谱、MeSH、试验检索与审计导出。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3946 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3947 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
