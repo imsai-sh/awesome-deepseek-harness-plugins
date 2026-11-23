@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "RioloveGG/dsh-claude-fonts",
+  "name": "dsh-claude-fonts",
+  "repository": "https://github.com/RioloveGG/dsh-claude-fonts",
+  "category": "theme",
+  "description": {
+    "en": "Claude (Anthropic) typefaces for the DeepSeek Harness web GUI: Anthropic Sans for the interface, Anthropic Serif for conversation prose and Anthropic Mono for code. The three fonts are bundled inside the plugin, so no system font install is required.",
+    "zh": "给 DeepSeek Harness 换上 Claude（Anthropic）字体：界面用 Anthropic Sans，对话正文用 Anthropic Serif，代码用 Anthropic Mono。三款字体已内置于插件，无需在系统里额外安装。"
+  },
+  "added": "2026-11-24"
+}
