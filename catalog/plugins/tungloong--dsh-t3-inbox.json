@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "tungloong/dsh-t3-inbox",
+  "name": "dsh-t3-inbox",
+  "repository": "https://github.com/tungloong/dsh-t3-inbox",
+  "category": "ui",
+  "description": {
+    "en": "Attention-first, T3 Code-inspired inbox sidebar for DeepSeek Harness: separates running threads from what needs your decision across Pinned, Active, Working, Snoozed, and Settled shelves; shows explicit status text and Git branch/worktree context on each card; supports single Settle, vertical Sweep with 5-second undo, customizable Snooze presets and calendar, ranked search, multi-select project filter, auto theme detection, 8 languages, and a one-click switch back to the native Workspaces View.",
+    "zh": "面向 DeepSeek Harness 的 T3 Code 风格注意力收件箱侧边栏：通过置顶/待处理/运行中/已暂缓/已收尾分区将运行中与待处理清晰隔开，卡片直接显示明确状态文字与 Git 分支/worktree 上下文，支持单点收尾、竖向扫选（Sweep）与 5 秒撤销、可编辑暂缓快捷选项与日历弹窗、高相关搜索、多选项目筛选、自动皮肤适配、8 语言界面，以及随时一键切回原生工作区视图。"
+  },
+  "added": "2026-11-23"
+}
