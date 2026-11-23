@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "DeepLifeStudio/dsh-lark-studio",
+  "name": "dsh-lark-studio",
+  "repository": "https://github.com/DeepLifeStudio/dsh-lark-studio",
+  "category": "tools",
+  "description": {
+    "en": "Feishu/Lark workbench for DeepSeek Harness: build a Base from one sentence, or run calendar, tasks, chat, mail, and contacts from the sidebar.",
+    "zh": "\u98de\u4e66\u667a\u80fd\u5de5\u4f5c\u53f0\uff1a\u4e00\u53e5\u8bdd\u751f\u6210\u591a\u7ef4\u8868\u683c\uff0c\u5e76\u5728\u4fa7\u680f\u5904\u7406\u65e5\u7a0b\u3001\u5f85\u529e\u3001\u7fa4\u804a\u3001\u90ae\u4ef6\u4e0e\u901a\u8baf\u5f55\u3002"
+  },
+  "added": "2026-11-23"
+}
