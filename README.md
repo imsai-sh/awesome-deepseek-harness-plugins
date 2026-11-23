@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14196** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-22。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14197** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-23。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=ba6a26fa6c1b)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=3cc03d815c6d)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -151,7 +151,7 @@ docs/               目录数据模型文档
 - [通知与集成](#notify) (515)
 - [模型与账号接入](#model) (839)
 - [开发与运行时](#dev) (1668)
-- [娱乐](#fun) (570)
+- [娱乐](#fun) (571)
 
 <a id="ui"></a>
 
@@ -2733,7 +2733,7 @@ docs/               目录数据模型文档
 <a id="fun"></a>
 
 <details>
-<summary><strong>娱乐</strong> · 显示 288 / 共 570 个</summary>
+<summary><strong>娱乐</strong> · 显示 288 / 共 571 个</summary>
 
 - [7d7d](https://github.com/omdsh-dev/7d7d) — 无描述的插件，可能是娱乐或装饰性功能。
 - [Acidmoon-DIzzy-DSH](https://github.com/hezi2020/dsh-plugin-wiki/tree/HEAD/plugins/Acidmoon-DIzzy-DSH) — 为界面添加眩晕视觉效果和趣味动画，以娱乐为主。
@@ -2995,6 +2995,7 @@ docs/               目录数据模型文档
 - [dsh-mascot-pet](https://github.com/jiuge2467/dsh-studio/tree/HEAD/plugins/dsh-mascot-pet) — 为 DSH 界面添加趣味吉祥物宠物，增加娱乐性和用户互动。
 - [dsh-mascot-pet](https://github.com/jiuge2467/DSH-WhaleDeck/tree/HEAD/plugins/dsh-mascot-pet) — 在桌面上引入可爱的鲸鱼姬桌宠，提供温馨有趣的用户体验。
 - [dsh-matrix-rain](https://github.com/awa-123-cw/dsh-matrix-rain) — DeepSeek Harness WebUI 动效美化插件：聊天背景黑客帝国代码雨，雨字内容 = 当前会话 AI 思考链（流式实时），设置页调色盘 + 全套 DIY
+- [dsh-mayday-encore](https://github.com/xiaoyesoso/dsh-mayday-encore) — 非官方的五月天卜卜桌宠，适用于 DeepSeek Harness Web。支持动画、点击互动和拖动位置记忆，不修改应用主题。
 - [dsh-mbti-jury](https://github.com/SleepEggTart/dsh-mbti-jury) — DSH 插件：16 型 MBTI 人格评审团，并排评审你最近一次 commit——同一个 diff，16 种看见世界的方式。
 - [dsh-mc-companion](https://github.com/hellosky983/dsh-mc-companion) — AI Minecraft伙伴，跟随玩家、聊天并记住冒险。
 - [dsh-md-quiz](https://github.com/MrElysium/dsh-md-quiz) — 将Markdown阅读变成答题游戏，含五阶段循环、侧边栏和阅读区标签。
@@ -3022,8 +3023,7 @@ docs/               目录数据模型文档
 - [dsh-night-greeting](https://github.com/HokkaidoCOLA/dsh-night-greeting) — 发送夜间问候消息，为界面增添趣味或主题性元素。
 - [dsh-niu-lai](https://github.com/jxwb125646/dsh-niu-lai) — 发送消息和完成任务时播放梗音效，增添娱乐趣味。
 - [dsh-niulai-pet](https://github.com/whitefirer/dsh-niulai-pet) — 牛来桌宠：agent 任务完成它就蹦出来喊「妈～～妈～～」——dsh 纯客户端桌宠插件（6 皮肤/签名动作/合成叫声）
-- [dsh-novel-fish](https://github.com/gongfpp/dsh-novel-fish) — 主动展开选中的 DSH 原生聊天区域时，在保留真实思考和工具输出的下方阅读本地 EPUB、TXT、Markdown 小说；各书进度保存在本地，小说不发送给模型。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 282 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 283 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
