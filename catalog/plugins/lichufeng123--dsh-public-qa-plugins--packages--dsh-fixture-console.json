@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lichufeng123/dsh-public-qa-plugins/packages/dsh-fixture-console",
+  "name": "dsh-fixture-console",
+  "repository": "https://github.com/lichufeng123/dsh-public-qa-plugins",
+  "category": "tools",
+  "description": {
+    "en": "Generates bounded synthetic JSON fixtures locally from a schema. It does not connect to or write to business systems.",
+    "zh": "根据 Schema 在本地生成有数量上限的合成 JSON 测试数据；不连接或写入业务系统。"
+  },
+  "added": "2026-11-23"
+}
