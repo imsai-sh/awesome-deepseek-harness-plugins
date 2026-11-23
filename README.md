@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14200** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-23。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14201** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-23。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=c079bc56e9b6)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=edafb7cde893)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -146,7 +146,7 @@ docs/               目录数据模型文档
 - [会话与消息](#session) (909)
 - [记忆](#memory) (452)
 - [工具与能力](#tools) (4183)
-- [技能包](#skill) (1055)
+- [技能包](#skill) (1056)
 - [工作流与自动化](#workflow) (802)
 - [通知与集成](#notify) (515)
 - [模型与账号接入](#model) (839)
@@ -1406,7 +1406,7 @@ docs/               目录数据模型文档
 <a id="skill"></a>
 
 <details>
-<summary><strong>技能包</strong> · 显示 291 / 共 1055 个</summary>
+<summary><strong>技能包</strong> · 显示 291 / 共 1056 个</summary>
 
 - [.dsh-plugin](https://github.com/kongyecn-wq/dsh-okx-skill-hub/tree/HEAD/.dsh-plugin) — 将 OKX 官方行情技能（价格、K线、技术指标）适配到 DeepSeek Harness 生态中。
 - [academic-research-graph](https://github.com/watericetangcw/academic-research-graph) — 将单篇学术论文转化为可探索的研究地图。
@@ -1699,7 +1699,7 @@ docs/               目录数据模型文档
 - [dsh-deployment-validation](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-deployment-validation) — 提供验证软件部署是否成功且稳定的技能。
 - [dsh-deprecation](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-deprecation) — 指导处理废弃功能和代码迁移。
 - [dsh-design](https://github.com/Viger1/dsh-design) — 提供设计系统技能和审计工具，衡量渲染页面是否符合设计规范。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 764 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 765 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
