@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "lichufeng123/dsh-public-qa-plugins/packages/dsh-requirement-review",
+  "name": "dsh-requirement-review",
+  "repository": "https://github.com/lichufeng123/dsh-public-qa-plugins",
+  "category": "skill",
+  "description": {
+    "en": "Registers portable requirement review, business assertion generation, and test case generation Skills in DSH. Project-specific business knowledge and review decisions remain external.",
+    "zh": "在 DSH 中注册通用的需求审阅、业务断言生成与测试用例生成 Skills。项目专属业务知识和审阅结论由外部项目上下文提供。"
+  },
+  "added": "2026-11-23"
+}
