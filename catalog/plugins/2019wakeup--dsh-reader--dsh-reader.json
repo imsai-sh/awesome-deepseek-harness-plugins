@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "2019wakeup/dsh-reader/dsh-reader",
+  "name": "dsh-reader",
+  "repository": "https://github.com/2019wakeup/dsh-reader",
+  "category": "tools",
+  "description": {
+    "en": "Reading workspace for DeepSeek Harness: opens PDF, EPUB and Markdown in the main view with highlights, notes, concept cards next to the passage, a guide/mind map, and an in-reader conversation panel driven by the current Session.",
+    "zh": "DeepSeek Harness 的阅读工作台：在主视图阅读 PDF、EPUB 与 Markdown，支持高亮、笔记、留在原文处的概念卡、分层导读与导图，以及由当前会话驱动的阅读侧边对话。"
+  },
+  "added": "2026-11-24"
+}
