@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "shinji00222/dsh-persona-continuity-bot",
+  "name": "dsh-persona-continuity",
+  "repository": "https://github.com/shinji00222/dsh-persona-continuity-bot",
+  "category": "memory",
+  "description": {
+    "en": "Per-persona cross-session local Markdown memory (no Git required) for DeepSeek Harness: pick or create personas in standard sessions, automatic distillation and deduplication, credential filtering, historical session import, workspace history recall, and an optional Tobs Bot bundle with DM work-process timeline and multi-persona group chat.",
+    "zh": "为 DeepSeek Harness 的每个人格提供独立本地 Markdown 跨会话记忆（无需 Git）：支持在普通会话直接选择或新建人格、自动提炼去重、凭据脱敏、旧对话一键导入与工作区历史召回，并可选合并 Tobs Bot 模式（私聊工作过程时间轴、多人格群聊与全体工作区授权）。"
+  },
+  "added": "2026-11-24"
+}
