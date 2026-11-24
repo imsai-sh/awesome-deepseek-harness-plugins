@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zijunyu81-source/dsh-deepseek-toolbox",
+  "name": "dsh-deepseek-toolbox",
+  "repository": "https://github.com/zijunyu81-source/dsh-deepseek-toolbox",
+  "category": "tools",
+  "description": {
+    "en": "DeepSeek Harness bundle plugin exposing the official DeepSeek Tool APIs as three model-facing tools: OCR (PDF, Word, PowerPoint and images to page-marked Markdown), web search, and page fetch. Billed by DeepSeek per successful page or request; requires a DeepSeek API key or a DeepSeek account sign-in. MIT.",
+    "zh": "DeepSeek Harness 本地 bundle 插件：把 DeepSeek 官方 Tool API 封装为 OCR（PDF、Word、PowerPoint、图片，按页输出 Markdown）、联网搜索、网页抓取三个模型工具；按成功页数或请求数计费，需要 DeepSeek API Key 或 DeepSeek 账号登录。MIT。"
+  },
+  "added": "2026-11-24"
+}
