@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14209** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-24。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14210** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-24。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=36340bf39617)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=cc47276b8454)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -146,7 +146,7 @@ docs/               目录数据模型文档
 - [会话与消息](#session) (909)
 - [记忆](#memory) (453)
 - [工具与能力](#tools) (4187)
-- [技能包](#skill) (1057)
+- [技能包](#skill) (1058)
 - [工作流与自动化](#workflow) (802)
 - [通知与集成](#notify) (515)
 - [模型与账号接入](#model) (839)
@@ -1405,7 +1405,7 @@ docs/               目录数据模型文档
 <a id="skill"></a>
 
 <details>
-<summary><strong>技能包</strong> · 显示 291 / 共 1057 个</summary>
+<summary><strong>技能包</strong> · 显示 283 / 共 1058 个</summary>
 
 - [.dsh-plugin](https://github.com/kongyecn-wq/dsh-okx-skill-hub/tree/HEAD/.dsh-plugin) — 将 OKX 官方行情技能（价格、K线、技术指标）适配到 DeepSeek Harness 生态中。
 - [academic-research-graph](https://github.com/watericetangcw/academic-research-graph) — 将单篇学术论文转化为可探索的研究地图。
@@ -1608,6 +1608,7 @@ docs/               目录数据模型文档
 - [dsh-career-ops](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-career-ops) — 提供职业发展与规划指导。
 - [dsh-career-ops](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-career-ops) — 管理职业运营和规划的技能。
 - [dsh-catgirl-plugin](https://github.com/Freakz2z/dsh-catgirl-plugin) — 一个高效 token 的人设运行时，将人格留在界面，把智能留给模型。
+- [dsh-ccgs-studio](https://github.com/y0n9/dsh-ccgs-studio) — 把 Claude Code Game Studios（Donchitos，MIT）适配到 dsh 的 bundle：以 78 个技能提供上游的工作室流程（start、next-step、prototype、design-system、design-review、create-architecture、dev-story、gate-check、sprint-plan、qa-plan、release-checklist、team-* 等），附 49 份可直接交给子代理的角色简报、工作室语料（角色名册、总监门禁、引擎与类型参考、规则、shell 辅助脚本、CLAUDE.md 入口文档与仓库文档）以及四个工具。ccgs_init 为新游戏项目搭脚手架：把语料复制到 .claude/、写入 project.yaml、建立 design/、docs/、tests/、production/、assets/ 目录并生成 AGENTS.md 入口。ccgs_state 只读报告项目状态：project.yaml 键值、解析后的 project.stage，以及 design、docs、production、tests 下实际存在的制品。ccgs_role 列出并读取角色简报；ccgs_doc 列出、读取或检索内置语料。技能通过 dsh 的 skills 服务注册，以 bundled 来源出现在技能目录中。未发布到 npm，因此以浏览模式收录；安装方式是克隆仓库后把目录作为插件添加，或使用其 github: 规格。
 - [dsh-changelog](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-changelog) — 生成发布变更日志的技能。
 - [dsh-channel-assistant](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-channel-assistant) — 协助管理渠道的技能。
 - [dsh-character-profiler](https://github.com/MlittleFriend/dsh-character-profiler) — 创建角色档案，用于角色扮演或叙事，存储性格特征与偏好。
@@ -1689,16 +1690,7 @@ docs/               目录数据模型文档
 - [dsh-data-storytelling](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-data-storytelling) — 帮助从数据中构建引人入胜的叙事用于展示。
 - [dsh-data-storytelling](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-data-storytelling) — 指导从数据洞察中创建引人入胜的故事和可视化。
 - [dsh-data-visualization](https://github.com/uckkk/dsh-data-visualization) — 图表类型选择参考
-- [dsh-database-design](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-database-design) — 提供设计高效可扩展数据库模式的技能。
-- [dsh-dataset-curation](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-dataset-curation) — 提供为机器学习或分析而系统整理和清理数据集的方法。
-- [dsh-db-migration](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-db-migration) — 指导以最小风险规划和执行数据库迁移。
-- [dsh-debug-recovery](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-debug-recovery) — 提供调试代码和从错误中恢复的提示词与策略。
-- [dsh-dehumid](https://github.com/uckkk/dsh-dehumid) — 除湿方法
-- [dsh-delhi-city](https://github.com/uckkk/dsh-delhi-city) — 德里市
-- [dsh-denmark](https://github.com/uckkk/dsh-denmark) — 丹麦国家
-- [dsh-deployment-validation](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-deployment-validation) — 提供验证软件部署是否成功且稳定的技能。
-- [dsh-deprecation](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-deprecation) — 指导处理废弃功能和代码迁移。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 766 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 775 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
