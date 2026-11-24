@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pidongqianqian/dsh-quota-inline",
+  "name": "dsh-quota-inline",
+  "repository": "https://github.com/pidongqianqian/dsh-quota-inline",
+  "category": "ui",
+  "description": {
+    "en": "Shows the selected model provider's balance or subscription usage-window percentage beside the model selector in the composer toolbar. Includes DeepSeek Account and API balance queries, custom HTTP templates with used/limit fields, a reading-selection menu, and a settings page. Resolves credential references through the local DSH credential service.",
+    "zh": "在输入框工具栏的模型选择器旁显示当前供应商的余额或订阅窗口百分比。支持 DeepSeek 账号与 API 余额查询、自定义 HTTP 模板及已用/总量字段，提供读数切换菜单和设置页，通过本地 DSH 凭证服务解析凭证引用。"
+  },
+  "added": "2026-11-24"
+}
