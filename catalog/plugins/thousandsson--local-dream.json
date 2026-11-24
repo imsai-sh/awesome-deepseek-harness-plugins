@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "thousandsson/local-dream",
+  "name": "local-dream",
+  "repository": "https://github.com/thousandsson/local-dream",
+  "category": "memory",
+  "description": {
+    "en": "Long-term memory for DSH Go: injects memory blocks into the system prompt, adds six memory tools, and consolidates conversations in the background.",
+    "zh": "给 DSH Go 用的长期记忆插件：把记忆块注入系统提示，提供六个记忆工具，并在后台整理对话。"
+  },
+  "added": "2026-11-25"
+}
