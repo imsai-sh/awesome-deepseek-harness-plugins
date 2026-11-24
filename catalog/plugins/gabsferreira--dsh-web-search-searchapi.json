@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "gabsferreira/dsh-web-search-searchapi",
+  "name": "dsh-web-search-searchapi",
+  "repository": "https://github.com/gabsferreira/dsh-web-search-searchapi",
+  "category": "tools",
+  "description": {
+    "en": "Registers a SearchApi (searchapi.io) search provider on the DSH web capability seam (ctx.web): web_search sends the query to SearchApi's Google engine in one GET request and returns the organic results as sources with title, snippet and ISO publication date. maxResults is honored, Google's goto redirect links are followed one hop so sources cite the real page, and web_fetch is unchanged. The API key is read from the credentials service or the SEARCHAPI_API_KEY environment variable; engine, country and language are configurable on the plugin row.",
+    "zh": "在 DSH 的 web 能力 seam（ctx.web）上注册 SearchApi（searchapi.io）搜索提供方：web_search 通过一次 GET 请求调用 SearchApi 的 Google 引擎，并把自然搜索结果作为来源返回，包含标题、摘要和 ISO 格式的发布日期。遵守 maxResults，对 Google 的 goto 跳转链接跟进一跳，使来源指向真实页面；web_fetch 不受影响。API 密钥从凭据服务或 SEARCHAPI_API_KEY 环境变量读取；引擎、国家和语言可在插件行上配置。"
+  },
+  "added": "2026-11-24"
+}
