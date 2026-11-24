@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "barnetshen/dsh-yingma-canvas",
+  "name": "dsh-yingma-canvas",
+  "repository": "https://github.com/barnetshen/dsh-yingma-canvas",
+  "category": "ui",
+  "description": {
+    "en": "Opens the Xiaoyingma AI video canvas in a DSH sidebar and dock tab; agents read and edit canvas nodes through the bundled yingma CLI. Requires a Xiaoyingma account. Published on npm as dsh-yingma-canvas.",
+    "zh": "在 DSH 侧栏和右侧停靠栏打开小影马 AI 视频无限画布；Agent 通过随包的 yingma CLI 读写画布节点。需要小影马账号。已发布到 npm，包名 dsh-yingma-canvas。"
+  },
+  "added": "2026-11-25"
+}
