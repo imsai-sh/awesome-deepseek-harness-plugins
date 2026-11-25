@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Tirpitz-39/dsh-selftest",
+  "name": "dsh-selftest",
+  "repository": "https://github.com/Tirpitz-39/dsh-selftest",
+  "category": "dev",
+  "description": {
+    "en": "Derived self-check for changed files: parses PowerShell, JS/TS and JSON with the matching tool, finds the tests of the plugin or project each changed file belongs to and runs them, then reports a per-file verdict. Unrecognized extensions are recorded as skipped instead of silently passed, and a plugin source change with no tests at all fails.",
+    "zh": "按「本次改了什么」自动推导检查：用对应工具解析 PowerShell、JS/TS 和 JSON，找到改动文件所属插件或项目并运行它的测试，最后给出逐文件判定。不认识的扩展名记为跳过而不是静默通过；插件源码有改动却没有任何测试时直接判失败。"
+  },
+  "added": "2026-11-15"
+}

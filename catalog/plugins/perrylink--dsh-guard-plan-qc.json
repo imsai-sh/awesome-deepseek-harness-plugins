@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-guard-plan-qc",
+  "name": "dsh-guard-plan-qc",
+  "repository": "https://github.com/PerryLink/dsh-guard-plan-qc",
+  "category": "tools",
+  "description": {
+    "en": "Labor-protection equipment allocation check: check item names, specifications and allocated quantities against published allocation standards; flags discrepancies only and makes no legal conclusion.",
+    "zh": "劳保用品配置核对：按公开配备标准核对品名规格与配置数量，仅提示差异，不作出定性结论。"
+  },
+  "added": "2026-11-22"
+}

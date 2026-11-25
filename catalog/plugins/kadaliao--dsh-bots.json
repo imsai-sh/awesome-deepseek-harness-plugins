@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kadaliao/dsh-bots",
+  "name": "dsh-bots",
+  "repository": "https://github.com/kadaliao/dsh-bots",
+  "category": "workflow",
+  "description": {
+    "en": "Grok-style bot teams for DeepSeek Harness: hire a ready-made team (one-person company, software squad, content studio, research desk) where each bot has its own persona, avatar, model, skills, scheduled tasks and memory. Bots message each other; a dispatcher hands each piece of work out as a task in its own session, a board shows every request as a card filed under projects, and a usage view counts tokens and cost by bot, task and day. The team can also be messaged from Feishu/Lark, Telegram, Slack or Discord.",
+    "zh": "给 DeepSeek Harness 的 Grok 式 bot 团队：一键雇用现成团队（一人公司、研发小队、内容工作室、研究台），每个 bot 有自己的人设、头像、模型、技能、定时任务和记忆。bot 之间私信协作；调度员把每件工作派成一个任务、在独立会话里进行，看板把每个请求做成卡片并按项目归档，用量页按 bot、任务、日期统计 tokens 和费用。也可以在飞书、Telegram、Slack 或 Discord 里给团队派活。"
+  },
+  "added": "2026-11-19"
+}

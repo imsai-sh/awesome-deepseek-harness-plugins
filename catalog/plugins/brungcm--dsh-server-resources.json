@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "brungcm/dsh-server-resources",
+  "name": "dsh-server-resources",
+  "repository": "https://github.com/brungcm/dsh-server-resources",
+  "category": "tools",
+  "description": {
+    "en": "Adds a Resources tab to the right sidebar that shows live CPU, RAM, swap and disk usage of a Linux host, with rankings of the top processes, folders and files. Read-only, no dependencies; requires dsh-better-sidebar.",
+    "zh": "在右侧边栏新增“资源”页，实时显示 Linux 主机的 CPU、内存、交换区和磁盘用量，并列出占用最多的进程、文件夹和文件。只读、无依赖；需要 dsh-better-sidebar。"
+  },
+  "added": "2026-11-08"
+}

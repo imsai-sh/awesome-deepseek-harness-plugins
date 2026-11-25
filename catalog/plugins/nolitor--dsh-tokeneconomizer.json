@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Nolitor/dsh-tokeneconomizer",
+  "name": "dsh-tokeneconomizer",
+  "repository": "https://github.com/Nolitor/dsh-tokeneconomizer",
+  "category": "dev",
+  "description": {
+    "en": "Token saving engine: turn-based hierarchical output tiering, tool-result hash deduplication, a KV-cache-safe prompt slot, a loop breaker with a thinking watchdog, prior-session recall through the harness FTS5 index, and a bridge to the microsoft/TokenEconomizer stdlib-only Python engine (pinned commit). CLI: dsh-te.",
+    "zh": "令牌节约引擎：基于回合的分层输出分级、工具结果哈希去重、KV 缓存安全提示槽位、带思考看门狗的循环断路器、通过 harness FTS5 索引召回先前会话，并桥接 microsoft/TokenEconomizer 仅用标准库的 Python 引擎（锁定提交）。命令行：dsh-te。"
+  },
+  "added": "2026-11-15"
+}

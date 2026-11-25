@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-claim-check",
+  "name": "dsh-claim-check",
+  "repository": "https://github.com/PerryLink/dsh-claim-check",
+  "category": "tools",
+  "description": {
+    "en": "Deterministic claim support checking for DeepSeek Harness: verbatim quote spans, number matching, labelled-value contradiction, negation and hedging polarity against the cited sentence, REP v1 evidence/claim/verdict records and SARIF output.",
+    "zh": "面向 DeepSeek Harness 的确定性论断支持检查：逐字引文跨度、数字匹配、标值矛盾、否定与模糊语极性对照被引句，生成 REP v1 证据/论断/裁决记录与 SARIF 输出。"
+  },
+  "added": "2026-11-22"
+}

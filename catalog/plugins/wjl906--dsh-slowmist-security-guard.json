@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wjl906/dsh-slowmist-security-guard",
+  "name": "dsh-slowmist-security-guard",
+  "repository": "https://github.com/wjl906/dsh-slowmist-security-guard",
+  "category": "dev",
+  "description": {
+    "en": "SlowMist Agent Security guard plugin. Reviews external MCP calls, skill loads, URLs and fetched documents, code repositories and on-chain addresses before execution, emits SlowMist-style risk reports and blocks high-risk calls in enforce mode.",
+    "zh": "接入慢雾 Agent 安全审查流程的防护插件。在执行前审查外部 MCP 调用、技能加载、URL 与外部文档、代码仓库和链上地址，输出慢雾风格风险报告，并在 enforce 模式下阻断高风险调用。"
+  },
+  "added": "2026-11-11"
+}

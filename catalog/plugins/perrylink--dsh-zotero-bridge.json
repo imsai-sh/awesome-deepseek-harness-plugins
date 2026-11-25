@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-zotero-bridge",
+  "name": "dsh-zotero-bridge",
+  "repository": "https://github.com/PerryLink/dsh-zotero-bridge",
+  "category": "tools",
+  "description": {
+    "en": "Read-only Zotero bridge for DeepSeek Harness (Local API and sqlite copy).",
+    "zh": "面向 DeepSeek Harness 的只读 Zotero 桥接（本地 API 与 sqlite 副本）。"
+  },
+  "added": "2026-11-22"
+}

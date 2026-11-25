@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "cloudoyx/any-audio",
+  "name": "any-audio",
+  "repository": "https://github.com/cloudoyx/any-audio",
+  "category": "tools",
+  "description": {
+    "en": "An audio production workstation for DeepSeek Harness. Renders note-level scores from local SoundFont banks, synthesizes narration and singing, offers a sound-effect library of recordings and generators, and places every generated audio as an editable clip on a timeline for auditioning, balancing and mixing into video.",
+    "zh": "面向 DeepSeek Harness 的音频制作工作站。通过本地 SoundFont 音源渲染音符乐谱，合成旁白与歌声，提供录音素材与程序化音效库，并将每个生成的声音作为可编辑片段落到时间轴上，支持逐轨试听、调节以及混音输出到视频。"
+  },
+  "added": "2026-11-23"
+}

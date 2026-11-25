@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zztdandan/dsh-deepseek-exa-hybrid-search",
+  "name": "dsh-deepseek-exa-hybrid-search",
+  "repository": "https://github.com/zztdandan/dsh-deepseek-exa-hybrid-search",
+  "category": "tools",
+  "description": {
+    "en": "DSH web_search provider that queries the DeepSeek Search API and Exa in parallel and returns one merged, URL-de-duplicated result list. Cross-source hits rank first, one failed engine degrades to the other, snippets are clipped to 800 characters, and the DeepSeek search slot is taken over regardless of the settings card.",
+    "zh": "把 DeepSeek 搜索 API 与 Exa 并发查询、按 URL 去重合并成单份结果的 DSH 搜索 provider。跨源命中优先，单路失败自动降级，摘要截断到 800 字符，并接管 DeepSeek 搜索槽，设置页切换不会使其失效。"
+  },
+  "added": "2026-11-09"
+}

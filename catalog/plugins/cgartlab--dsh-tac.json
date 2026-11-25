@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "cgartlab/dsh-tac",
+  "name": "dsh-tac",
+  "repository": "https://github.com/cgartlab/dsh-tac",
+  "category": "ui",
+  "description": {
+    "en": "Client plugin for DeepSeek Harness that adds a project/session task board in the right pane, a floating session list (HUD), a keyboard-first command palette, and task notifications. Ships 14 global shortcuts, bilingual (zh/en) UI, and reads only public DSH client services; zero runtime dependencies.",
+    "zh": "DeepSeek Harness 客户端插件：在右侧面板提供项目/会话任务看板，加上悬浮会话列表（HUD）、键盘优先的命令面板与任务通知。含 14 个全局快捷键、中英双语界面，只使用 DSH 公开的客户端服务，运行时零依赖。"
+  },
+  "added": "2026-11-10"
+}

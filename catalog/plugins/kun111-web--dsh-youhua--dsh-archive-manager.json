@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "kun111-web/dsh-youhua/dsh-archive-manager",
+  "name": "dsh-archive-manager",
+  "repository": "https://github.com/kun111-web/dsh-youhua",
+  "category": "session",
+  "description": {
+    "en": "Adds session archive management to DSH, with search, permanent deletion after confirmation, batch progress, and resumption of interrupted deletions.",
+    "zh": "为 DSH 提供会话归档管理，支持搜索、确认后彻底删除、查看批量进度和继续未完成的删除。"
+  },
+  "added": "2026-11-11"
+}

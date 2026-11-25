@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "opentandem/dsh-phone",
+  "name": "dsh-phone",
+  "repository": "https://github.com/opentandem/dsh-phone",
+  "category": "notify",
+  "description": {
+    "en": "Adds a Phone page to dsh web that shows a QR code; after scanning it and allowing the pairing in OpenTandem on the phone, tasks sent from OpenTandem run in this computer's dsh. Installs the OpenTandem command line and a background Runner on first use.",
+    "zh": "在 dsh web 中新增「手机连接」页并显示二维码；手机扫码并在 OpenTandem 中允许配对后，从 OpenTandem 发出的任务会在这台电脑的 dsh 中运行。首次使用会安装 OpenTandem 命令行和后台 Runner。"
+  },
+  "added": "2026-11-09"
+}

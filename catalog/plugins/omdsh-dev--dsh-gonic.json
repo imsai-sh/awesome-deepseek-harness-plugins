@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "omdsh-dev/dsh-gonic",
+  "name": "dsh-gonic",
+  "repository": "https://github.com/omdsh-dev/dsh-gonic",
+  "category": "fun",
+  "description": {
+    "en": "Play Gonic/Subsonic libraries in the DSH Web GUI with library search, playlists, queues, and agent-controlled browser playback.",
+    "zh": "在 DSH Web 界面播放 Gonic/Subsonic 曲库，支持曲库搜索、歌单、队列和 Agent 指令浏览器播放。"
+  },
+  "added": "2026-11-17"
+}

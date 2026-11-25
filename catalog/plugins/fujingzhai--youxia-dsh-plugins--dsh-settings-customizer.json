@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fujingzhai/youxia-dsh-plugins/dsh-settings-customizer",
+  "name": "dsh-settings-customizer",
+  "repository": "https://github.com/fujingzhai/youxia-dsh-plugins",
+  "category": "ui",
+  "description": {
+    "en": "Overrides the order, names and icons of DeepSeek Harness settings navigation entries using a personal profile configuration, without patching other plugins. The shipped defaults contain no rules, so the interface is unchanged until the user configures it.",
+    "zh": "用个人配置覆盖 DeepSeek Harness 设置导航的顺序、名称与图标，不修改其他插件源码；公共默认不含任何规则，未配置时界面不变。"
+  },
+  "added": "2026-11-10"
+}

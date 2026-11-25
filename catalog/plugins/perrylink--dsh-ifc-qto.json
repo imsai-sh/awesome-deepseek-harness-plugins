@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-ifc-qto",
+  "name": "dsh-ifc-qto",
+  "repository": "https://github.com/PerryLink/dsh-ifc-qto",
+  "category": "tools",
+  "description": {
+    "en": "IFC model quantity take-off with CSV export for quantity checking.",
+    "zh": "IFC 模型工程量提取与 CSV 导出核对。"
+  },
+  "added": "2026-11-22"
+}

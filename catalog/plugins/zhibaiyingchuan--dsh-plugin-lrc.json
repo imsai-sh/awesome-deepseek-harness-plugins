@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "zhibaiYingChuan/dsh-plugin-lrc",
+  "name": "dsh-plugin-lrc",
+  "repository": "https://github.com/zhibaiYingChuan/dsh-plugin-lrc",
+  "category": "memory",
+  "description": {
+    "en": "Connects DeepSeek Harness to LRC's local structured memory. Every 8 turns (or 6000 characters) it distills conclusions, deduplicates them semantically and writes them to a local LRC store; five tools cover the rest of the loop — lrc_recall for on-demand retrieval, lrc_forget for retracting wrong entries, lrc_remember_now for immediate writes, lrc_handoff for session handoff and lrc_status for a one-line status snapshot. The plugin ships its own LRC runtime, so the LRC desktop app is not required; data stays in $DSH_HOME/cache/lrc-plugin/data unless LRC_BASE points at an existing instance. MIT.",
+    "zh": "把 DeepSeek Harness 接到 LRC 的本地结构化记忆。每 8 轮（或 6000 字符）提炼一次结论，语义去重后写入本地 LRC 库；其余环节由五个工具承担——lrc_recall 按需召回、lrc_forget 撤回错误条目、lrc_remember_now 立即写入、lrc_handoff 会话交接、lrc_status 输出一行状态快照。插件自带 LRC 运行时，无需先装 LRC 桌面端；数据默认写在 $DSH_HOME/cache/lrc-plugin/data，设置 LRC_BASE 可复用已有实例。MIT。"
+  },
+  "added": "2026-11-08"
+}

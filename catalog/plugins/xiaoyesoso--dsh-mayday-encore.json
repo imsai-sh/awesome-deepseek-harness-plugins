@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "xiaoyesoso/dsh-mayday-encore",
+  "name": "dsh-mayday-encore",
+  "repository": "https://github.com/xiaoyesoso/dsh-mayday-encore",
+  "category": "fun",
+  "description": {
+    "en": "An unofficial Mayday Bubu desktop pet for DeepSeek Harness Web. It animates, responds to clicks, and remembers where you drag it without changing the app theme.",
+    "zh": "非官方的五月天卜卜桌宠，适用于 DeepSeek Harness Web。支持动画、点击互动和拖动位置记忆，不修改应用主题。"
+  },
+  "added": "2026-11-23"
+}

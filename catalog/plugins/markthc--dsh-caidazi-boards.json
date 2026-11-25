@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "markthc/dsh-caidazi-boards",
+  "name": "财搭子研究看板 · Caidazi Research Boards",
+  "repository": "https://github.com/markthc/dsh-caidazi-boards",
+  "category": "tools",
+  "description": {
+    "en": "Research boards for memory, AI infrastructure, PCB/CCL and US data-center policy, with Caidazi MCP market data, shared research updates and DSH chat handoff.",
+    "zh": "财搭子研究看板，跟踪存储、AI基建、PCB/CCL与美国数据中心政策，接入财搭子MCP行情与资料，支持共享研究更新和DSH会话追问。"
+  },
+  "added": "2026-11-16"
+}

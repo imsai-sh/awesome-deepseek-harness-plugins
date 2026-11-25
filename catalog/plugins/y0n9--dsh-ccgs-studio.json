@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "y0n9/dsh-ccgs-studio",
+  "name": "dsh-ccgs-studio",
+  "repository": "https://github.com/y0n9/dsh-ccgs-studio",
+  "category": "skill",
+  "description": {
+    "en": "A DeepSeek Harness bundle that adapts Claude Code Game Studios (Donchitos, MIT) to dsh: 78 skills for the studio workflow (start, next-step, prototype, design-system, design-review, create-architecture, dev-story, gate-check, sprint-plan, qa-plan, release-checklist, team-* and others), 49 agent role briefs to hand to a subagent, the studio corpus (agent roster, director gates, engine and genre references, rules, helpers, CLAUDE.md), and four tools. ccgs_init scaffolds a game project: it copies the corpus into .claude/, writes project.yaml, creates design/, docs/, tests/, production/, assets/ and an AGENTS.md entry point. ccgs_state reports a project without writing: project.yaml keys, the resolved project.stage and which artifacts exist. ccgs_role lists and reads role briefs; ccgs_doc lists, reads or searches the bundled corpus. Skills register through the dsh skills service as bundled skills. Not on npm, so catalogued browse-only; install from the repository.",
+    "zh": "把 Claude Code Game Studios（Donchitos，MIT）适配到 dsh 的 bundle：以 78 个技能提供上游的工作室流程（start、next-step、prototype、design-system、design-review、create-architecture、dev-story、gate-check、sprint-plan、qa-plan、release-checklist、team-* 等），附 49 份可直接交给子代理的角色简报、工作室语料（角色名册、总监门禁、引擎与类型参考、规则、shell 辅助脚本、CLAUDE.md 入口文档与仓库文档）以及四个工具。ccgs_init 为新游戏项目搭脚手架：把语料复制到 .claude/、写入 project.yaml、建立 design/、docs/、tests/、production/、assets/ 目录并生成 AGENTS.md 入口。ccgs_state 只读报告项目状态：project.yaml 键值、解析后的 project.stage，以及 design、docs、production、tests 下实际存在的制品。ccgs_role 列出并读取角色简报；ccgs_doc 列出、读取或检索内置语料。技能通过 dsh 的 skills 服务注册，以 bundled 来源出现在技能目录中。未发布到 npm，因此以浏览模式收录；安装方式是克隆仓库后把目录作为插件添加，或使用其 github: 规格。"
+  },
+  "added": "2026-11-24"
+}

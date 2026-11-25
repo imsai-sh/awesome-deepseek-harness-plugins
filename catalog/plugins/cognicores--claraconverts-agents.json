@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "cognicores/claraconverts-agents",
+  "name": "claraconverts-agents",
+  "repository": "https://github.com/cognicores/claraconverts-agents",
+  "category": "skill",
+  "description": {
+    "en": "Skill and MCP server for adding the ClaraConverts website chat agent (voice and text) to a site: creates a trial account, returns the embed snippet, loads the site content, and changes settings and integrations.",
+    "zh": "提供安装 Skill 与 MCP 服务器，用于把 ClaraConverts 网站对话代理（语音与文字）添加到网站：创建试用账户、返回嵌入代码、载入网站内容，并修改设置与集成。"
+  },
+  "added": "2026-11-23"
+}

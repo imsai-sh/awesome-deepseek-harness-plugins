@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-dataset-card",
+  "name": "dsh-dataset-card",
+  "repository": "https://github.com/PerryLink/dsh-dataset-card",
+  "category": "tools",
+  "description": {
+    "en": "Dataset documentation for DeepSeek Harness: bounded CSV/TSV/JSON/JSONL profiling, redacted PII detection, a Datasheet-style card, and Markdown/JSON/SARIF output with REP evidence that stores the analysis but never the raw data.",
+    "zh": "面向 DeepSeek Harness 的数据集文档：有界 CSV/TSV/JSON/JSONL 画像、脱敏 PII 检测、Datasheet 式卡片，以及 Markdown/JSON/SARIF 输出与只存分析不存原始数据的 REP 证据。"
+  },
+  "added": "2026-11-22"
+}

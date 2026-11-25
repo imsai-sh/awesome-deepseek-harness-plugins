@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "bamboosir1109/dsh-lanya",
+  "name": "dsh-lanya",
+  "repository": "https://github.com/bamboosir1109/dsh-lanya",
+  "category": "notify",
+  "description": {
+    "en": "Windows QQ character integration kit for DSH with NapCatQQ/SnowLuma, Bilibili interactions, local GPT-SoVITS voice and revisable memory. Development preview; companion services require separate setup.",
+    "zh": "Windows DSH QQ 角色集成包，连接 NapCatQQ / SnowLuma、B站互动、本地 GPT-SoVITS 语音和可塑记忆。开发预览，配套服务需单独配置。"
+  },
+  "added": "2026-11-10"
+}

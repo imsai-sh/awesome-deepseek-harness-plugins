@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Hercules-debug/dsh-fork-map",
+  "name": "dsh-fork-map",
+  "repository": "https://github.com/Hercules-debug/dsh-fork-map",
+  "category": "session",
+  "description": {
+    "en": "Per-workspace Fork library: a bookmark icon on each finished assistant turn stores that turn boundary as a full compressed snapshot that keeps working after the source session is deleted, and a Fork library tab lists a workspace's forks as a tree with turn count, last question and answer, note, source link and launch history, where any fork seeds a new session on demand, repeatable, named automatically from its own context. Also bundles a one-click button and /ws command that create a new workspace next to the current one.",
+    "zh": "每个工作区一个持久化 Fork 库：每轮已结束的回复下多一个书签按钮，把这一轮结束处的完整上下文压缩存成快照，源会话删掉后仍然可用；「Fork 库」标签把当前工作区的 Fork 列成树，显示轮数、最后一问一答、备注、来源链接和启动记录，任意 Fork 都能随时启动一个带上下文的新会话、可反复启动，并按自身上下文自动起名。另外附带一键新建工作区和 /ws 命令，在当前工作区旁边建新目录。"
+  },
+  "added": "2026-11-23"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "MathewWuZJ/dsh-tv",
+  "name": "dsh-tv",
+  "repository": "https://github.com/MathewWuZJ/dsh-tv",
+  "category": "fun",
+  "description": {
+    "en": "Right-sidebar short-video/TV panel for DeepSeek Harness: Douyin, short-drama, YouTube, Bilibili, Instagram, HackerTube, plus a random Global TV player.",
+    "zh": "DeepSeek Harness 右侧边栏短视频/电视面板：抖音、短剧、YouTube、B站、Instagram、HackerTube，外加随机全球频道。"
+  },
+  "added": "2026-11-08"
+}

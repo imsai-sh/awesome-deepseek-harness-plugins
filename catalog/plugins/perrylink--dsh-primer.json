@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-primer",
+  "name": "dsh-primer",
+  "repository": "https://github.com/PerryLink/dsh-primer",
+  "category": "tools",
+  "description": {
+    "en": "A practical primer for building DeepSeek Harness plugins.",
+    "zh": "构建 DeepSeek Harness 插件的实用入门指南。"
+  },
+  "added": "2026-11-22"
+}

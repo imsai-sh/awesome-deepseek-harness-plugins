@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Jensen0925/dsh-codearts-dock",
+  "name": "dsh-codearts-dock",
+  "repository": "https://github.com/Jensen0925/dsh-codearts-dock",
+  "category": "model",
+  "description": {
+    "en": "Unofficial Huawei Cloud CodeArts model connector for DeepSeek Harness with account management, credit reminders, model presets, local request metadata and encrypted configuration backups.",
+    "zh": "为 DeepSeek Harness 接入华为云码道模型的非官方插件，提供多账号管理、积分提醒、模型预设、本机请求记录和加密配置备份。"
+  },
+  "added": "2026-11-20"
+}

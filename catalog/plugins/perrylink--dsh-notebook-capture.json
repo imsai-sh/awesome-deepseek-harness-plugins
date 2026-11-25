@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-notebook-capture",
+  "name": "dsh-notebook-capture",
+  "repository": "https://github.com/PerryLink/dsh-notebook-capture",
+  "category": "tools",
+  "description": {
+    "en": "Notebook reproducibility capture for DeepSeek Harness: reads .ipynb JSON without executing it, reports kernel, cell types, execution order, imports, runtime installs, seeds and paths, hashes the notebook and environment declarations, and writes REP evidence with a record.",
+    "zh": "面向 DeepSeek Harness 的 Notebook 可复现性采集：不执行地读取 .ipynb JSON，报告内核、单元类型、执行顺序、导入、运行时安装、随机种子与路径，散列 notebook 与环境声明，并写入 REP 证据与记录。"
+  },
+  "added": "2026-11-22"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Yzm889/TianZheng-ai-plugin",
+  "name": "TianZheng AI Plugin",
+  "repository": "https://github.com/Yzm889/TianZheng-ai-plugin",
+  "category": "tools",
+  "description": {
+    "en": "MCP connector that drives a running AutoCAD with T20/T30 Tianzheng: axis grids, walls, doors, windows, columns, stairs, balconies, slabs, rooms, dimensions, symbols, title frames and sheet layout. Every capability is reported together with an entity-count delta so each change is measurable. Door and window insertion requires Tianzheng's own MC command, so the plugin generates a position list and verifies the result afterwards.",
+    "zh": "MCP 连接器，驱动运行中的 AutoCAD 与天正建筑 T20/T30：轴网、墙体、门窗、柱、楼梯、阳台、楼板、房间、尺寸、符号、图框与排版。每项能力都随结果返回实体计数增量，改动可量化核对。门窗插入必须走天正自身的 MC 命令，插件因此生成位置清单并在事后核对结果。"
+  },
+  "added": "2026-11-19"
+}

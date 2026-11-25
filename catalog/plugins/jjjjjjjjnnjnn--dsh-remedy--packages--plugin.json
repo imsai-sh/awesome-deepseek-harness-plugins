@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jjjjjjjjnnjnn/dsh-remedy/packages/plugin",
+  "name": "dsh-remedy",
+  "repository": "https://github.com/jjjjjjjjnnjnn/dsh-remedy",
+  "category": "dev",
+  "description": {
+    "en": "Repairs fused tool-call argument text at the llm/stream seam and re-throws whatever it cannot prove; names the deterministic refusals it will not retry at agent/request-error; answers per failure class which patch covers it and whether that patch is switched on here; reads multi-frame zstd session logs offline.",
+    "zh": "在 llm/stream 接缝上修复粘连的工具调用参数，证不出来的原样抛回；在 agent/request-error 上命名它不重试的确定性拒绝；按失败类回答哪个补丁覆盖它、以及它在本 profile 里是否启用；离线读取多帧 zstd 会话日志。"
+  },
+  "added": "2026-11-13"
+}

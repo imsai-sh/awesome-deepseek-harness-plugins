@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "ShawnZhangGy/dsh-whale-reminder",
+  "name": "dsh-whale-reminder",
+  "repository": "https://github.com/ShawnZhangGy/dsh-whale-reminder",
+  "category": "notify",
+  "description": {
+    "en": "Windows desktop reminder when a session finishes, needs your input, or fails: a corner unread badge that lists session names and jumps to the session on click, Web Audio chimes, taskbar flashing, and a tray whale icon with a numeric badge. Only visible (non-archived, non-subagent) sessions count; seven settings including a zh/en switch.",
+    "zh": "Windows 桌面端会话结束、需要你回答或出错时提醒：角落未读浮层列出会话名并可点击跳转、Web Audio 双音效、任务栏闪烁、托盘小鲸鱼叠加数字徽章，只统计看得见的会话（已归档/子代理不计），七项设置含中英文切换。"
+  },
+  "added": "2026-11-11"
+}

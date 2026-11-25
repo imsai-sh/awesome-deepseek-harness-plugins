@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "dongsheng123132/dsh-move-up",
+  "name": "dsh-move-up",
+  "repository": "https://github.com/dongsheng123132/dsh-move-up",
+  "category": "ui",
+  "description": {
+    "en": "Adds one item to the DeepSeek Harness workspace menu that moves a workspace to the top of the sidebar once through the host workspace registry. No favorites, pins, stars, automatic reordering or startup re-sort; 8 KB tarball, no runtime dependencies, no saved state.",
+    "zh": "在 DeepSeek Harness 工作区菜单里加一项「移到最上面」，通过宿主 workspace 注册表只调整一次顺序。没有收藏、固定置顶、星标、自动重排或启动重排；8 KB，零运行时依赖，不存状态。"
+  },
+  "added": "2026-11-09"
+}

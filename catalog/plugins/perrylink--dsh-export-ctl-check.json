@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "PerryLink/dsh-export-ctl-check",
+  "name": "dsh-export-ctl-check",
+  "repository": "https://github.com/PerryLink/dsh-export-ctl-check",
+  "category": "tools",
+  "description": {
+    "en": "Export-control item ledger check for DeepSeek Harness: check export-control item ledgers against the Export Control Law of the PRC. Flags discrepancies only and makes no legal conclusion.",
+    "zh": "出口管制物项台账核对：依据《中华人民共和国出口管制法》。仅提示差异，不作出定性结论。"
+  },
+  "added": "2026-11-22"
+}

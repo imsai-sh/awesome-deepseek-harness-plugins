@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "dongsheng123132/dsh-project-gallery",
+  "name": "dsh-project-gallery",
+  "repository": "https://github.com/dongsheng123132/dsh-project-gallery",
+  "category": "ui",
+  "description": {
+    "en": "Browses the images a DSH project or session has seen, generated or delivered: hover preview on workspace rows, a session panel, and a global album whose lightbox pairs each image with the conversation behind it. Reads local files only.",
+    "zh": "按项目或会话浏览 DSH 里 AI 看过、生成过、交付过的图：工作区行悬停预览、会话面板、全局相册；灯箱里每张图都带对应那段对话。只读本机文件。"
+  },
+  "added": "2026-11-18"
+}
