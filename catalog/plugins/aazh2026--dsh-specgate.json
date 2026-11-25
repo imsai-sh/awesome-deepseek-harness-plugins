@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "aazh2026/dsh-specgate",
+  "name": "dsh-specgate",
+  "repository": "https://github.com/aazh2026/dsh-specgate",
+  "category": "dev",
+  "description": {
+    "en": "Scans the working directory for acceptance criteria and reports each as covered, inferred, untested, or uncovered, with the evidence gap for every uncovered item. Runs on deterministic local rules, without calling an LLM or reaching the network.",
+    "zh": "扫描工作目录中的验收标准，逐条报告 covered、inferred、untested 或 uncovered，并给出每条未覆盖项的证据缺口。全部基于本地确定性规则运行，不调用大模型，也不访问网络。"
+  },
+  "added": "2026-11-26"
+}
