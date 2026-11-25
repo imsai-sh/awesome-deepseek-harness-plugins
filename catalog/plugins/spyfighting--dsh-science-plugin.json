@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "spyfighting/dsh-science-plugin",
+  "name": "dsh-science-plugin",
+  "repository": "https://github.com/spyfighting/dsh-science-plugin",
+  "category": "tools",
+  "description": {
+    "en": "Research workbench for organizing research questions, results, supporting evidence, figures and specialist-agent tasks in a shared project. Includes SQL queries, SSH jobs and transcript review.",
+    "zh": "科研工作台在同一项目内组织研究问题、结果、证据、图件和专业子代理任务，支持 SQL 查询、SSH 作业和会话结果审查。"
+  },
+  "added": "2026-11-08"
+}
