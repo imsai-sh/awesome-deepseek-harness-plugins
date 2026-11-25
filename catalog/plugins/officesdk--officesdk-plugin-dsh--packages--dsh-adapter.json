@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "officesdk/officesdk-plugin-dsh/packages/dsh-adapter",
+  "name": "OfficeSDK for DeepSeek Harness (Plugin)",
+  "repository": "https://github.com/officesdk/officesdk-plugin-dsh",
+  "category": "tools",
+  "description": {
+    "en": "This plugin adds native Office editors to DeepSeek Harness. You and your AI agent can edit Word documents, Excel workbooks, and PowerPoint slide decks and review changes in place.",
+    "zh": "这款插件给 DeepSeek Harness 装上原生 Office 编辑器。你可以与 AI 在同一份文件里编辑 Word 文稿、Excel 表格和 PowerPoint 幻灯片，在原位置核对修改。"
+  },
+  "added": "2026-11-25"
+}
