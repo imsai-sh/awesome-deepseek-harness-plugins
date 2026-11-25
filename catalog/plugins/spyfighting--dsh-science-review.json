@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "spyfighting/dsh-science-review",
+  "name": "dsh-science-review",
+  "repository": "https://github.com/spyfighting/dsh-science-review",
+  "category": "workflow",
+  "description": {
+    "en": "Reviews research and everyday task answers against user instructions, tool results and delivered files, with quoted evidence beneath each answer.",
+    "zh": "对照用户要求、工具执行记录和交付文件，审查科研与日常任务的回答，并在原回答下展示问题和证据原文。"
+  },
+  "added": "2026-11-25"
+}
