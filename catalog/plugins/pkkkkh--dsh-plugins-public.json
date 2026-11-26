@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public",
+  "name": "pkkkkh DSH plugins",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "tools",
+  "description": {
+    "en": "Seven DeepSeek Harness plugins published to npm as @pkkkkh/*: safe self-restart (schedules a kill/start task pair and announces when it is back), server-side image generation (Volcengine Seedream, no client UI), a video toolbox over ffmpeg (transcode/frames/transcribe), Bilibili video analysis (transcript first, then targeted frame capture; discards decoy subtitle tracks), session archiving with a cross-session LONGTERM.md, per-session permission grants that are a no-op by default, and handoff documents that summarise a session for the next one. MIT.",
+    "zh": "七个发布在 npm（@pkkkkh/*）的 DeepSeek Harness 插件：安全自重启（排一对 kill/start 计划任务，回来后主动播报）、服务端生图（火山方舟 Seedream，无客户端 UI）、ffmpeg 视频工具箱（转码/抽帧/转写）、B站 视频分析（先读文稿再定向抓帧，会丢弃引流假字幕轨）、会话归档并维护跨会话 LONGTERM.md、按会话下发权限（默认空转不放权）、给下一个会话看的交接文档。MIT。"
+  },
+  "added": "2026-11-26"
+}
