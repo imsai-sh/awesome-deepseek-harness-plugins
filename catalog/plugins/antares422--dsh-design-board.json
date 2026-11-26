@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Antares422/dsh-design-board",
+  "name": "dsh-design-board",
+  "repository": "https://github.com/Antares422/dsh-design-board",
+  "category": "ui",
+  "description": {
+    "en": "Interactive right-sidebar design canvas for DeepSeek Harness: compares multiple agent-generated HTML prototypes side by side, supports clicking or marquee-selecting DOM elements and adding canvas notes that inject structured <design-feedback> back to the agent, includes live Play mode, light/dark theme toggle, PNG/PDF/HTML export, automatic <design-check> validation, and 165 built-in design system presets (Apple style by default). MIT; local-only with prebuilt index.js and client.js.",
+    "zh": "面向 DeepSeek Harness 的右侧栏交互式设计画布：支持并排对比 Agent 生成的多份 HTML 原型、直接点选或框选 DOM 元素与画布批注并以隐藏 <design-feedback> 自动回传给 Agent，提供实时交互模式、深浅主题切换、PNG/PDF/HTML 导出、<design-check> 质量门禁，以及 165 套内置设计体系预设（默认 Apple 规范）。MIT 协议，纯本地运行，含预构建产物。"
+  },
+  "added": "2026-11-26"
+}
