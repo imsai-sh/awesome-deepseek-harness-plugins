@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "liyupi/vibefather",
+  "name": "dsh-plugin-vibefather",
+  "repository": "https://github.com/liyupi/vibefather",
+  "category": "skill",
+  "description": {
+    "en": "Connects the VibeFather remote MCP server (6 tools) and bundled Agent Skill to search and build 320+ original website templates with prompts and DESIGN.md.",
+    "zh": "接入 VibeFather 远程 MCP 服务（6 个工具）与内置 Agent Skill，在 DSH 中直接检索、预览并构建 320+ 原创网站模板与 DESIGN.md。"
+  },
+  "added": "2026-11-26"
+}
