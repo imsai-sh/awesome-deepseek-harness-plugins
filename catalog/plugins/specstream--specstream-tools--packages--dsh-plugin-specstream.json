@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "specstream/specstream-tools/packages/dsh-plugin-specstream",
+  "name": "dsh-plugin-specstream",
+  "repository": "https://github.com/specstream/specstream-tools",
+  "category": "tools",
+  "description": {
+    "en": "Registers SpecStream as a search and fetch provider on ctx.web and selects it for web_search via cordis.patch.yml, returning answers with source URLs and up to 10 results per query via GET /v1/web-search and optional page extraction via POST /v1/extract. Also registers specstream_research and specstream_research_result on ctx.tools for cited web research reports.",
+    "zh": "在 ctx.web 注册 SpecStream 搜索与抓取提供方并通过 cordis.patch.yml 设为 web_search 默认提供方，通过 GET /v1/web-search 返回带来源 URL 的回答与最多 10 条结果，并支持通过 POST /v1/extract 抓取正文。同时在 ctx.tools 注册 specstream_research 与 specstream_research_result 工具以生成带引用的网络研究报告。"
+  },
+  "added": "2026-11-16"
+}
