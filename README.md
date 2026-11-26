@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14222** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-26。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14223** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-26。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=990e5750171c)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=a92043a675b9)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,7 +145,7 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (507)
 - [会话与消息](#session) (909)
 - [记忆](#memory) (454)
-- [工具与能力](#tools) (4192)
+- [工具与能力](#tools) (4193)
 - [技能包](#skill) (1060)
 - [工作流与自动化](#workflow) (803)
 - [通知与集成](#notify) (515)
@@ -1157,7 +1157,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 239 / 共 4192 个</summary>
+<summary><strong>工具与能力</strong> · 显示 236 / 共 4193 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1366,6 +1366,7 @@ docs/               目录数据模型文档
 - [donsetch-dsh](https://github.com/dondai44423/donsetch-dsh) — 将 DonSeTch 集成为原生 dsh 工具，支持抓取、搜索和爬取网页内容。
 - [draw2code](https://github.com/guchang/draw2code) — 促进人机协同原型设计，将绘图转换为代码以加速开发。
 - [ds-harness-remote](https://github.com/liguobao/deepseek-harness-remote) — 支持从桌面或安卓设备安全远程连接并操作 Harness。
+- [ds-saver](https://github.com/T1113047/ds-saver) — 为 OpenCode 与 DeepSeek Harness（DSH）提供 tree、rag、misc、handoff 工具与本机会话计量。rag 支持可选的便宜模型筛选（先筛 3-5 条候选再注入）；bundle 一键安装包会安装插件 shim、三个 skills 与 RAG 工具。
 - [ds-vision-plugin](https://github.com/Sorwcyra/ds-vision-plugin) — 支持粘贴图片进行多模型视觉对比、OCR和自动文本桥接。
 - [dsh](https://github.com/Altairpaca/dshelm/tree/HEAD/packages/dsh) — 为 DSH 提供代理层，包含可组合组件和生态集成能力。
 - [dsh](https://github.com/Bandersnatch0x/amber-protocol/tree/HEAD/dsh) — 通过DSH补丁覆盖实现Amber协议，用于编码代理的仓库本地治理。
@@ -1394,11 +1395,7 @@ docs/               目录数据模型文档
 - [dsh-a2a](https://github.com/TGYD-helige/dsh-plugins/tree/HEAD/packages/dsh-a2a) — 实现 A2A 协议服务器，支持智能体间通信。
 - [dsh-a2a-agent](https://github.com/fangweixuan26-hash/dsh-a2a-agent) — 通过Agent2Agent协议暴露DeepSeek Harness智能体，支持JSON-RPC的智能体间通信。
 - [dsh-ab-sample](https://github.com/uckkk/dsh-ab-sample) — A/B测试样本量
-- [dsh-abs](https://github.com/uckkk/dsh-abs) — 绝对值
-- [dsh-ac-save](https://github.com/uckkk/dsh-ac-save) — 空调节能
-- [dsh-ac-size](https://github.com/uckkk/dsh-ac-size) — 空调匹数选择
-- [dsh-ac-trouble](https://github.com/uckkk/dsh-ac-trouble) — 空调故障排查
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3953 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3957 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
