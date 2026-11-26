@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "liyupi/memecub",
+  "name": "dsh-plugin-memecub",
+  "repository": "https://github.com/liyupi/memecub",
+  "category": "skill",
+  "description": {
+    "en": "Connects the memecub remote MCP server (5 tools: search_memes, get_meme, match_article, generate_meme, list_categories) and bundled Agent Skill to search Chinese and English reaction memes, place them into articles, or generate custom memes.",
+    "zh": "接入 memecub 远程 MCP 服务（5 个工具：search_memes / get_meme / match_article / generate_meme / list_categories）与内置 Agent Skill，在 DSH 中检索中英文表情包与梗图、自动给文章配图或用 AI 生成专属表情包。"
+  },
+  "added": "2026-11-26"
+}
