@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "T1113047/ds-saver",
+  "name": "ds-saver",
+  "repository": "https://github.com/T1113047/ds-saver",
+  "category": "tools",
+  "description": {
+    "en": "Adds tree, rag, misc, and handoff tools plus local session metering to OpenCode and DeepSeek Harness (DSH). rag supports an optional cheap-model filter that selects 3-5 candidates before injection; the bundle installer adds the plugin shim, three skills, and RAG tooling.",
+    "zh": "为 OpenCode 与 DeepSeek Harness（DSH）提供 tree、rag、misc、handoff 工具与本机会话计量。rag 支持可选的便宜模型筛选（先筛 3-5 条候选再注入）；bundle 一键安装包会安装插件 shim、三个 skills 与 RAG 工具。"
+  },
+  "added": "2026-11-27"
+}
