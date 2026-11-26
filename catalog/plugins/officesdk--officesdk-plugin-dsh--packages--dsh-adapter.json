@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/plugin.schema.json",
   "id": "officesdk/officesdk-plugin-dsh/packages/dsh-adapter",
-  "name": "OfficeSDK for DeepSeek Harness (Plugin)",
+  "name": "OfficeSDK",
   "repository": "https://github.com/officesdk/officesdk-plugin-dsh",
   "category": "tools",
   "description": {
