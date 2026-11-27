@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "mantou132/dsh-plugin-agentdeck",
+  "name": "dsh-plugin-agentdeck",
+  "repository": "https://github.com/mantou132/dsh-plugin-agentdeck",
+  "category": "tools",
+  "description": {
+    "en": "Mobile remote control for DeepSeek Harness via AgentDeck (iOS/Android) over native ACP with XChaCha20-Poly1305 end-to-end encryption. Auto-installs @openma/deepseek-harness-acp and agentdeckd with OS autostart, and adds pairing QR, service, keep-awake, and default model controls in Settings.",
+    "zh": "通过 AgentDeck 手机端（iOS/Android）基于原生 ACP 端到端加密远程控制 DeepSeek Harness。启动时自动安装 @openma/deepseek-harness-acp 与 agentdeckd 并开启系统自启，在设置页提供扫码配对、服务控制、防自动休眠与默认模型同步。"
+  },
+  "added": "2026-11-27"
+}
