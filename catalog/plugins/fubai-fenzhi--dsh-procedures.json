@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fubai-fenzhi/dsh-procedures",
+  "name": "dsh-procedures",
+  "repository": "https://github.com/fubai-fenzhi/dsh-procedures",
+  "category": "tools",
+  "description": {
+    "en": "Turn repeated agent mistakes into small cards; a hit injects one line and saves roughly 83–90% tokens, with a community card library.",
+    "zh": "把 agent 反复踩的坑变成小卡片：报错命中只注入一行指针，实测省 83–90% token，带社区卡库"
+  },
+  "added": "2026-11-27"
+}
