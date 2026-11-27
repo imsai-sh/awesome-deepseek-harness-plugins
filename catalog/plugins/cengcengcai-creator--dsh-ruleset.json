@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "cengcengcai-creator/dsh-ruleset",
+  "name": "dsh-ruleset",
+  "repository": "https://github.com/cengcengcai-creator/dsh-ruleset",
+  "category": "dev",
+  "description": {
+    "en": "Audits whether an agent follows AGENTS.md-style rules: 21 predicate types over native DSH events (approvals, sandbox modes, jobs, turns, file writes), a pre-execute approval gate for red lines, per-finding false-positive triage, baseline significance, and rule-authoring advice with one-click fixes.",
+    "zh": "审计 agent 是否真的遵守 AGENTS.md 式规则：21 类判据基于 DSH 原生事件（审批、沙箱模式、后台任务、轮次、文件写入），红线在执行前弹审批，发现级误报标记，与基线做显著性比较，并对规则本身给出制定建议且支持一键采纳。"
+  },
+  "added": "2026-11-27"
+}
