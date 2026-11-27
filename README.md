@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14228** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-27。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14229** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-27。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=4310778332db)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=96f2ca56f990)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -141,7 +141,7 @@ docs/               目录数据模型文档
 
 分组默认折叠，点开即可展开。GitHub 对单个文件的渲染长度有上限，条目较多的分类只列出其中一部分（分类标题会写明列出了多少），完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。
 
-- [UI 增强](#ui) (2704)
+- [UI 增强](#ui) (2705)
 - [主题与外观](#theme) (507)
 - [会话与消息](#session) (909)
 - [记忆](#memory) (455)
@@ -156,7 +156,7 @@ docs/               目录数据模型文档
 <a id="ui"></a>
 
 <details>
-<summary><strong>UI 增强</strong> · 显示 230 / 共 2704 个</summary>
+<summary><strong>UI 增强</strong> · 显示 230 / 共 2705 个</summary>
 
 - [01_content](https://github.com/Aisland-SJL/dsh-worktable/tree/HEAD/01_content) — 为控制台增加侧边栏应用抽屉和可停靠拆分工作区，形成项目实时控制台。
 - [a2ui-render-in-dsh](https://github.com/baihui-ai/a2ui-render-in-dsh) — 在聊天中内联渲染交互式卡片，支持测验、表单、图表等并回传操作。
@@ -236,6 +236,7 @@ docs/               目录数据模型文档
 - [bundle](https://github.com/zgxaxdd/dsh-html-render/tree/HEAD/bundle) — 在聊天消息中使用沙箱 iframe 渲染内联 HTML 和 KaTeX 公式，并适配主题样式。
 - [bundle-main](https://github.com/A-G-guy/dsh-plugins/tree/HEAD/packages/bundle-main) — 打包移动端窄屏适配、任务完成邮件通知、子代理独立模型和自定义路由等多项功能。
 - [busy-enter-steer](https://github.com/StarPivotNet/dsh-plugins-public/tree/HEAD/packages/busy-enter-steer) — 调整忙碌时的行为，可能重定向输入或显示通知。
+- [CanvasMind](https://github.com/afspero/CanvasMind) — DeepSeek Harness 的整页画布工作区：项目画布（23 种组件）、Excalidraw 自由白板与组件工坊。数据存本机 JSON，AI 复用 Harness 默认模型。
 - [captain](https://github.com/bLueriVerLHR/dsh-better-webui/tree/HEAD/packages/captain) — 为 Web 界面增加船长控制条，提供常用操作的快捷入口，提升整体可用性。
 - [channel-config](https://github.com/mapan0424/deepseek-harness-channels/tree/HEAD/packages/channel-config) — 为DeepSeek Harness通道提供可视化配置界面，方便用户调整设置。
 - [chart](https://github.com/SparkElf/dsh-plugins-plus/tree/HEAD/packages/chart) — 在界面中渲染交互式图表，帮助直观呈现数据。
@@ -387,8 +388,7 @@ docs/               目录数据模型文档
 - [dsh-ai-ui-studio](https://github.com/wjinxuan/dsh-ai-ui-studio) — 用于设计和定制 DeepSeek Harness 中 AI 用户界面的工作室。
 - [dsh-aionui-panel](https://github.com/CAPTAIN1275/dsh-ui-web/tree/HEAD/packages/dsh-aionui-panel) — 为客户端界面提供 AionUI 面板组件，增强视觉面板。
 - [dsh-aionui-panel](https://github.com/chenw2759-wq/dsh-IDE/tree/HEAD/packages/dsh-aionui-panel) — 将 DSH 网页界面升级为 IDE，提供文件树、编辑器、预览、终端和远程工作区。
-- [dsh-aionui-panel](https://github.com/jiuge2467/DSH-WhaleDeck/tree/HEAD/plugins/dsh-aionui-panel) — 为 DeepSeek Harness 提供桌面面板，集成桌宠、MCP 调试沙箱、持久化终端和看板。
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 2474 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 2475 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
