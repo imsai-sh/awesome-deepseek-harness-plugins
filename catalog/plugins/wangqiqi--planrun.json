@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "wangqiqi/planrun",
+  "name": "planrun",
+  "repository": "https://github.com/wangqiqi/planrun",
+  "category": "workflow",
+  "description": {
+    "en": "Plan-to-run-to-verify growth workflow for DSH: a .growing/ mirror (plan, per-task retros, lessons ledger) the repository dogfoods on itself; 28 bundled skills and 4 subagent presets, plus a portable bash guard (gate-check, task-verify, next-task, doctor) with a retro gate, ranked lesson injection, and a turn-end verify-stamp guard.",
+    "zh": "面向 DSH 的 plan→run→verify 成长型开发流程：仓库自身 dogfood 的 .growing/ 镜像（计划、逐任务复盘、教训台账）；内置 28 个技能与 4 个子代理预设，外加可移植 bash 守卫（gate-check、task-verify、next-task、doctor），含复盘必交门、教训排名注入与回合收尾 verify 印记守卫。"
+  },
+  "added": "2026-11-27"
+}
