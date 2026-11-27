@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Nolitor/dsh-a2ui-plus",
+  "name": "dsh-a2ui-plus",
+  "repository": "https://github.com/Nolitor/dsh-a2ui-plus",
+  "category": "ui",
+  "description": {
+    "en": "Bidirectional A2UI 1.0 renderer: one surface store feeds a live conversation card and a persistent right-sidebar tab at the same time, so a user's edit or a STATE_DELTA updates both views. The card and the tab are different view models by design: the card shows a condensed summary (title, resolved rows, component count) and the tab renders the full interactive graph. Actions from either view go through a single dispatch with a 200 ms idempotency window, so a click repeated across both views reaches the agent once. Cross-session reads are refused and a session switch releases every subscription before it tracks the next one.",
+    "zh": "双向 A2UI 1.0 渲染器：同一个 surface 存储同时驱动聊天中的摘要卡与右侧常驻标签页，用户编辑或 STATE_DELTA 会让两个视图一起更新。卡片与标签页按设计是不同的视图模型：卡片展示精简摘要（标题、已解析的行、组件数量），标签页渲染完整的交互图。任一视图的动作都经过同一条 dispatch 路径，并带 200 毫秒的幂等窗口，因此在两个视图中重复点击同一按钮，代理只收到一次。跨会话读取会被拒绝，切换会话时先释放全部订阅再跟踪新会话。"
+  },
+  "added": "2026-11-27"
+}
