@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "nickzhangcomes/dsh-doc-review",
-  "name": "dsh-doc-review",
-  "repository": "https://github.com/nickzhangcomes/dsh-doc-review",
+  "id": "nickzhangcomes/dsh-markup",
+  "name": "dsh-markup",
+  "repository": "https://github.com/nickzhangcomes/dsh-markup",
   "category": "ui",
   "description": {
     "en": "Review DeepSeek Harness responses with inline annotations, document reading, comment threads, and text revisions, then bring a reading summary back to the main conversation.",
