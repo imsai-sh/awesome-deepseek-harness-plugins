@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "afspero/CanvasMind",
+  "name": "CanvasMind",
+  "repository": "https://github.com/afspero/CanvasMind",
+  "category": "ui",
+  "description": {
+    "en": "Full-page canvas workspace for DeepSeek Harness: a project canvas with 23 node types, an Excalidraw whiteboard and a component studio. Data is stored in a local JSON file and the AI reuses the Harness default model.",
+    "zh": "DeepSeek Harness 的整页画布工作区：项目画布（23 种组件）、Excalidraw 自由白板与组件工坊。数据存本机 JSON，AI 复用 Harness 默认模型。"
+  },
+  "added": "2026-11-27"
+}
