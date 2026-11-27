@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Zbcc0826/dsh-llm-wiki",
+  "name": "dsh-llm-wiki",
+  "repository": "https://github.com/Zbcc0826/dsh-llm-wiki",
+  "category": "memory",
+  "description": {
+    "en": "Local DeepSeek Harness plugin (not published to npm) built from Andrej Karpathy's LLM Wiki gist. Raw sources stay unchanged in raw/, and pages update only from validated patches after approval. Keeps both sides of contradictions, walks 0 to 4 relation hops via wiki_graph without a model, caps each ingest at 8 segments (by headings and tables, with no resume parameter), and returns NEED_EXTERNAL_PARSER for PDF, Office, audio, and video.",
+    "zh": "基于 Andrej Karpathy 的 LLM Wiki 说明实现的 DeepSeek Harness 本地插件（不发布到 npm）。原料存入 raw/ 后不再改，页面只在批准后按校验过的补丁更新。可保留矛盾双方，通过 wiki_graph 不调用模型沿关系走 0 到 4 跳，按章节和表格切分时每次最多摄入 8 段（没有续读参数），并对 PDF、Office、音视频返回 NEED_EXTERNAL_PARSER。"
+  },
+  "added": "2026-11-27"
+}
