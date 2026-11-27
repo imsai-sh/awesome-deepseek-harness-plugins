@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "Zbcc0826/better-dsh",
+  "name": "dsh-friction-drive",
+  "repository": "https://github.com/Zbcc0826/better-dsh",
+  "category": "tools",
+  "description": {
+    "en": "Local DeepSeek Harness plugin dsh-friction-drive (repo Zbcc0826/better-dsh, not npm, not pgmi-builds/better-dsh). Records failures, same-argument retries, and truncated results. After the gate, the next call waits for friction_choose; the user can pause the session. Replacements and compiled procedures install only after approval; original definitions stay unchanged. Registers only friction_status, friction_choose, friction_pause, propose_quality_loop, record_quality_critique, record_quality_plan, propose_tool_goal, apply_tool_change, restore_tool_definition, propose_compiled_procedure. Also installs sample tools ledger_lookup, fx_convert, and window_overlap; they are not a ledger product.",
+    "zh": "DeepSeek Harness 本地插件（包名 `dsh-friction-drive`，仓库 `Zbcc0826/better-dsh`，不发布到 npm）。插件记录当前会话里工具的失败、同参数重试和带截断标记的结果；过线后下一次直接调用不执行，等待用户通过 `friction_choose` 选择，也可由用户暂停当前会话。替代工具和沉淀程序只在用户同意后安装，原工具定义不改。`dsh-friction-drive` 只注册这 10 个工具：`friction_status`、`friction_choose`、`friction_pause`、`propose_quality_loop`、`record_quality_critique`、`record_quality_plan`、`propose_tool_goal`、`apply_tool_change`、`restore_tool_definition`、`propose_compiled_procedure`。同一个 bundle 还会装上 `dsh-friction-demo`，注册 3 个示例工具：`ledger_lookup`、`fx_convert`、`window_overlap`，它们只是示例，不是账本产品。这个仓库是 Zbcc0826/better-dsh，不是 pgmi-builds/better-dsh。"
+  },
+  "added": "2026-11-27"
+}
