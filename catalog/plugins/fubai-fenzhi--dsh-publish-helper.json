@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fubai-fenzhi/dsh-publish-helper",
+  "name": "dsh-publish-helper",
+  "repository": "https://github.com/fubai-fenzhi/dsh-publish-helper",
+  "category": "tools",
+  "description": {
+    "en": "DSH plugin publishing assistant: preflight, submit review, registry entry, npm publish and recall.",
+    "zh": "DSH 插件发布助手：预检、提交审核、生成收录、发布 npm、撤回"
+  },
+  "added": "2026-11-27"
+}
