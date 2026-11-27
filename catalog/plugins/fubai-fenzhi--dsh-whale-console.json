@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "fubai-fenzhi/dsh-whale-console",
+  "name": "dsh-whale-console",
+  "repository": "https://github.com/fubai-fenzhi/dsh-whale-console",
+  "category": "tools",
+  "description": {
+    "en": "Whale console: start or stop a local desktop pet, voice and local models with one click.",
+    "zh": "鲸鱼娘控制台：一键启动/关闭本地桌宠、语音和本地模型"
+  },
+  "added": "2026-11-27"
+}
