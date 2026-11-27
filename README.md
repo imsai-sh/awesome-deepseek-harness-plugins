@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14224** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-27。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14225** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-27。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=e54c86c4fec8)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=813d77096118)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -141,7 +141,7 @@ docs/               目录数据模型文档
 
 分组默认折叠，点开即可展开。GitHub 对单个文件的渲染长度有上限，条目较多的分类只列出其中一部分（分类标题会写明列出了多少），完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。
 
-- [UI 增强](#ui) (2703)
+- [UI 增强](#ui) (2704)
 - [主题与外观](#theme) (507)
 - [会话与消息](#session) (909)
 - [记忆](#memory) (454)
@@ -156,7 +156,7 @@ docs/               目录数据模型文档
 <a id="ui"></a>
 
 <details>
-<summary><strong>UI 增强</strong> · 显示 233 / 共 2703 个</summary>
+<summary><strong>UI 增强</strong> · 显示 230 / 共 2704 个</summary>
 
 - [01_content](https://github.com/Aisland-SJL/dsh-worktable/tree/HEAD/01_content) — 为控制台增加侧边栏应用抽屉和可停靠拆分工作区，形成项目实时控制台。
 - [a2ui-render-in-dsh](https://github.com/baihui-ai/a2ui-render-in-dsh) — 在聊天中内联渲染交互式卡片，支持测验、表单、图表等并回传操作。
@@ -356,6 +356,7 @@ docs/               目录数据模型文档
 - [dsh-101](https://github.com/bill9109/dsh-101) — DSH 文档阅读模式。
 - [dsh-7d-tray-win](https://github.com/7dgroup-ai/dsh-7d-tray-win) — DeepSeek Harness（dsh）的 `Windows 专属` 系统托盘插件。在 `dsh web` 运行期间，系统托盘会自动出现 DeepSeek 鲸鱼图标；服务停止后，托盘图标 3 秒内自动消失——托盘与服务同生命周期。同时自动维护一个静默桌面启动器 `DSH.lnk`，双击即可无窗口启动服务并打开浏览器。
 - [dsh-a2a](https://github.com/kouyichi/dsh-plugins/tree/HEAD/dsh-a2a) — 提供终端界面组件与工具，如看板与塔视图，增强DeepSeek Harness的交互体验。
+- [dsh-a2ui-plus](https://github.com/Nolitor/dsh-a2ui-plus) — 双向 A2UI 1.0 渲染器：同一个 surface 存储同时驱动聊天中的摘要卡与右侧常驻标签页，用户编辑或 STATE_DELTA 会让两个视图一起更新。卡片与标签页按设计是不同的视图模型：卡片展示精简摘要（标题、已解析的行、组件数量），标签页渲染完整的交互图。任一视图的动作都经过同一条 dispatch 路径，并带 200 毫秒的幂等窗口，因此在两个视图中重复点击同一按钮，代理只收到一次。跨会话读取会被拒绝，切换会话时先释放全部订阅再跟踪新会话。
 - [dsh-about](https://github.com/1010n111/dsh-about) — 为 DeepSeek Harness Web 设置面板添加“关于”页，展示当前运行的 DSH 版本、插件版本与项目主页。
 - [dsh-about](https://github.com/EricXu20266/dsh-gui/tree/HEAD/plugins/dsh-about) — 在 GUI 中显示 DSH 应用信息、版本详情和致谢。
 - [dsh-about](https://github.com/lihuu/dsh-plugins/tree/HEAD/plugins/dsh-about) — 在界面中展示关于面板，显示插件详情和版本信息。
@@ -387,11 +388,7 @@ docs/               目录数据模型文档
 - [dsh-aionui-panel](https://github.com/CAPTAIN1275/dsh-ui-web/tree/HEAD/packages/dsh-aionui-panel) — 为客户端界面提供 AionUI 面板组件，增强视觉面板。
 - [dsh-aionui-panel](https://github.com/chenw2759-wq/dsh-IDE/tree/HEAD/packages/dsh-aionui-panel) — 将 DSH 网页界面升级为 IDE，提供文件树、编辑器、预览、终端和远程工作区。
 - [dsh-aionui-panel](https://github.com/jiuge2467/DSH-WhaleDeck/tree/HEAD/plugins/dsh-aionui-panel) — 为 DeepSeek Harness 提供桌面面板，集成桌宠、MCP 调试沙箱、持久化终端和看板。
-- [dsh-aionui-panel](https://github.com/ningbainb/deepseek-harness-desktop/tree/HEAD/packages/dsh-aionui-panel) — 为桌面客户端提供AionUI面板，增强界面交互功能。
-- [dsh-aionui-panel](https://github.com/springbrand-lab/dsh-skin-universe/tree/HEAD/packages/dsh-aionui-panel) — 为 DSH 网页界面添加任务面板，以看板形式展示任务和进度。
-- [dsh-AIR](https://github.com/kaieye/dsh-AIR) — 使用 ↑ / ↓ 切换历史发送记录，并通过 /btw 打开停靠式侧边对话。
-- [dsh-all-enhance](https://github.com/rangdl/dsh-all-enhance) — DSH（DeepSeek Harness）功能增强插件
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 2470 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 2474 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
