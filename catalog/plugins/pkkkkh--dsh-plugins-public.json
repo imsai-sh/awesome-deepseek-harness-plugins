@@ -5,8 +5,8 @@
   "repository": "https://github.com/pkkkkh/dsh-plugins-public",
   "category": "tools",
   "description": {
-    "en": "Seven DeepSeek Harness plugins published to npm as @pkkkkh/*: safe self-restart (schedules a kill/start task pair and announces when it is back), server-side image generation (Volcengine Seedream, no client UI), a video toolbox over ffmpeg (transcode/frames/transcribe), Bilibili video analysis (transcript first, then targeted frame capture; discards decoy subtitle tracks), session archiving with a cross-session LONGTERM.md, per-session permission grants that are a no-op by default, and handoff documents that summarise a session for the next one. MIT.",
-    "zh": "七个发布在 npm（@pkkkkh/*）的 DeepSeek Harness 插件：安全自重启（排一对 kill/start 计划任务，回来后主动播报）、服务端生图（火山方舟 Seedream，无客户端 UI）、ffmpeg 视频工具箱（转码/抽帧/转写）、B站 视频分析（先读文稿再定向抓帧，会丢弃引流假字幕轨）、会话归档并维护跨会话 LONGTERM.md、按会话下发权限（默认空转不放权）、给下一个会话看的交接文档。MIT。"
+    "en": "Seven DeepSeek Harness plugins published to npm as @pkkkkh/* — install once, get all: safe self-restart (schedules a kill/start task pair and announces when it is back), server-side image generation (Volcengine Seedream, no client UI), ffmpeg video toolbox (transcode / frames / transcribe), Bilibili video analysis (transcript first, then targeted frame capture; discards decoy subtitle tracks), session archiving with a cross-session LONGTERM.md, per-session permission grants that are a no-op by default, and handoff documents that summarise a session for the next one. Keywords: restart, image, video, ffmpeg, bilibili, subtitle, archive, permission, handoff. MIT.",
+    "zh": "@pkkkkh 出品的七个 DeepSeek Harness 插件合集，装一次全都有：安全自重启（排一对 kill/start 计划任务，回到来自动播报）、服务端生图（火山方舟 Seedream，无需客户端 UI）、ffmpeg 视频工具箱（转码 / 抽帧 / 转写）、B站（哔哩哔哩 bilibili）视频分析（先读文稿再定向抓帧，自动丢弃引流假字幕轨）、会话归档并维护跨会话 LONGTERM.md、按会话下发权限（默认空转不放权）、交接文档。关键词：重启 restart · 生图 image · 视频 video · B站 字幕 subtitle · 归档 archive · 权限 permission · 交接 handoff。MIT。"
   },
   "added": "2026-11-26"
 }
