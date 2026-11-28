@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/dsh-bilibili",
+  "name": "dsh-bilibili",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "tools",
+  "description": {
+    "en": "Bilibili video analysis for DSH: transcript first, targeted frame capture on demand, contact sheets to save tokens, decoy subtitle detection, and a silence probe when capturing frames. Keywords: bilibili, subtitle, video summary, keyframes, ASR. MIT.",
+    "zh": "B站（哔哩哔哩 bilibili）视频分析：先读文稿、按需定向抓帧、抽帧拼图省 token；自动丢弃引流假字幕轨，抓帧时附带静音段探测。关键词：B站、bilibili、字幕 subtitle、视频总结、抽帧、ASR。MIT。"
+  },
+  "added": "2026-11-28"
+}
