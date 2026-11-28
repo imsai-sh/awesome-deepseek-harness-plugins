@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/dsh-session-permissions",
+  "name": "dsh-session-permissions",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "dev",
+  "description": {
+    "en": "Per-session permission grants: enable workspace-write, full access or no-approval for chosen sessions while staying a no-op everywhere else; includes path fallback and approval policy. Keywords: permission, approval, sandbox, full access. MIT.",
+    "zh": "按会话下发权限：给指定会话开工作区写 / 全盘 / 免审批，其余会话默认空转不放权；带路径回退与审批策略。关键词：权限 permission、审批 approval、沙箱 sandbox、full access。MIT。"
+  },
+  "added": "2026-11-28"
+}
