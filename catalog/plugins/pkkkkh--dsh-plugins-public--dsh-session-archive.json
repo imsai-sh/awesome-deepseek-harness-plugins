@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/dsh-session-archive",
+  "name": "dsh-session-archive",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "session",
+  "description": {
+    "en": "Session archiving with cross-session long-term memory: keeps the last few sessions per channel, retires stale un-prefixed sessions, and maintains a LONGTERM.md handed to the next session. Keywords: archive, long-term memory, session cleanup. MIT.",
+    "zh": "会话归档 + 跨会话长期记忆：按渠道保留最近几轮，无前缀旧会话到期自动归档；每轮维护一份 LONGTERM.md 交给下一个会话。关键词：会话归档 archive、长期记忆 memory、清理会话。MIT。"
+  },
+  "added": "2026-11-28"
+}

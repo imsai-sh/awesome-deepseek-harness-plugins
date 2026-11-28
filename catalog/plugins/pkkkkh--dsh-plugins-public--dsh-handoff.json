@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/dsh-handoff",
+  "name": "dsh-handoff",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "session",
+  "description": {
+    "en": "Handoff documents: summarise the current session into markdown for the next one (task, done, next steps, pitfalls), with automatic generation and several templates. Keywords: handoff, context handoff, compaction. MIT.",
+    "zh": "交接文档：把当前会话整理成给下一个会话看的 markdown（任务 / 已完成 / 下一步 / 坑），支持自动生成与多模板。关键词：交接 handoff、上下文交接、compaction。MIT。"
+  },
+  "added": "2026-11-28"
+}

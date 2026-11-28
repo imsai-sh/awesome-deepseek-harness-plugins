@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/video-toolbox",
+  "name": "video-toolbox",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "tools",
+  "description": {
+    "en": "Video toolbox over ffmpeg: transcode, frame extraction, GIF, subtitle burn-in, trim and concat, speed, watermark, snapshot and storyboard. Keywords: video, ffmpeg, transcode, frames, GIF, subtitles. MIT.",
+    "zh": "视频工具箱（聚合 ffmpeg）：转码、抽帧、GIF、字幕烧录、裁剪拼接、变速、水印、截图、storyboard 批量。关键词：视频 video、ffmpeg、转码 transcode、抽帧、GIF、字幕。MIT。"
+  },
+  "added": "2026-11-28"
+}

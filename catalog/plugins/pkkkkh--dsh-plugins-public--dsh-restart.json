@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/dsh-restart",
+  "name": "dsh-restart",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "dev",
+  "description": {
+    "en": "Safe self-restart for DSH: arms a Windows scheduled-task pair (kill then start) so the app comes back in about 15 seconds and announces when it is back; derives the start script from DSH_HOME or common install paths. Keywords: restart, scheduled task, crash recovery, keep alive. MIT.",
+    "zh": "DSH 安全自重启：排一对 Windows 计划任务（kill + start），重启全程约 15 秒、回来主动播报；start 脚本按 DSH_HOME / 常见安装目录自动推导。关键词：重启 restart、计划任务、崩溃恢复、keep alive、安全重启。MIT。"
+  },
+  "added": "2026-11-28"
+}

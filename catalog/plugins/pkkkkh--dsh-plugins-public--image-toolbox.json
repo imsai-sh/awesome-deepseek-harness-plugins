@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "pkkkkh/dsh-plugins-public/image-toolbox",
+  "name": "image-toolbox",
+  "repository": "https://github.com/pkkkkh/dsh-plugins-public",
+  "category": "tools",
+  "description": {
+    "en": "Server-side image generation that calls Volcengine Ark Seedream directly, with no client UI: 1024 to 2048 sizes, reference images (image-to-image) and a six-part prompt shape. Keywords: image generation, text-to-image, image-to-image, Seedream. MIT.",
+    "zh": "服务端生图：直连火山方舟 Seedream，无客户端 UI；支持 1024~2048 尺寸、参考图（图生图）与六段式提示词。关键词：生图 image、文生图、图生图、Seedream、豆包。MIT。"
+  },
+  "added": "2026-11-28"
+}
