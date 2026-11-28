@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "byteuser1977/ColaMD-themes",
+  "name": "colamd-themes",
+  "repository": "https://github.com/byteuser1977/ColaMD-themes",
+  "category": "tools",
+  "description": {
+    "en": "Markdown themes for DeepSeek Harness: a theme chip beside the composer picks one of 69 themes (12 ColaMD built-ins) shown as sample cards, .md files render in place in the document preview under the selected theme, and documents or slide decks export to A4 PDF, Word, 16:9 slide PDF or PPTX with the same CSS the screen uses. Slide mode follows ColaMD-extend's own slides.css and 11 layouts (cover, section, agenda, kpi, timeline, steps, matrix, two-col, figure, quote, closing) with page directives, page-by-page flow, a fullscreen presenter and per-theme layout colouring.",
+    "zh": "DeepSeek Harness 的 Markdown 主题工具：输入框旁的主题胶囊以样例卡片展示 69 套主题（含 12 套 ColaMD 内置），.md 在文档预览里按所选主题就地渲染，文稿与幻灯片可导出为 A4 PDF、Word、16:9 幻灯片 PDF 或 PPTX，且与屏幕使用同一份 CSS。幻灯片模式沿用 ColaMD-extend 的 slides.css 与 11 种版式（cover、section、agenda、kpi、timeline、steps、matrix、two-col、figure、quote、closing），支持页头指令、逐页流动、全屏演示与主题自带的分版式配色。"
+  },
+  "added": "2026-11-28"
+}
