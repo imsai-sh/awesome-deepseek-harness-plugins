@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "switch33-os/dsh-grant-proposal",
+  "name": "dsh-grant-proposal",
+  "repository": "https://github.com/switch33-os/dsh-grant-proposal",
+  "category": "skill",
+  "description": {
+    "en": "Industrialized assistance for Chinese research-grant proposals: parses .docx templates, checks section structure against four built-in schemas, renders matplotlib figures from JSON specs, flags high-risk formatting issues derived from real reviewer feedback, and runs an incremental pre-submission self-check. Does not write research content.",
+    "zh": "基金/项目申报书的工业化辅助：解析 docx 模板、按四套内置 schema 对照章节结构、用 JSON 声明生成 matplotlib 图表、依据真实评审意见识别高风险格式问题，并在交付前执行增量自查。不生成研究内容。"
+  },
+  "added": "2026-11-28"
+}
