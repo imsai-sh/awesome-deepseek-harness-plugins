@@ -2,7 +2,7 @@
 
 <!-- 本文件由 scripts/build-readme.mjs 从 deepseek1024.com 目录 API 自动生成，请勿手工编辑。 -->
 
-面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14234** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-27。
+面向 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（`dsh`）生态的社区插件目录，共收录 **14235** 个插件（含 PR 收录与 GitHub `dsh-plugin` topic 自动发现），目录数据更新于 2026-11-28。
 
 > [!TIP]
 > **新开源项目：[Fish Pocket](https://github.com/imsai-sh/fish-pocket)**
@@ -13,7 +13,7 @@
 
 **但这个项目不只是一份 awesome list。** 它还包括一个在线插件市场、一个把市场装进 `dsh` 本体的插件，以及一套免费的公开查询 API——这些应用代码开源在姊妹仓库 [dsh-1024store](https://github.com/imsai-sh/dsh-1024store)；本仓库专注目录本身：经静态校验的 PR 收录流水线与自动生成的目录 README，目录数据另有自动收集服务持续喂入。全部代码 MIT 协议，fork 之后就能部署成你自己的插件市场。
 
-[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=ae6fd9931519)](https://deepseek1024.com/)
+[![DSH 1024Store 插件市场首页](https://raw.githubusercontent.com/imsai-sh/awesome-deepseek-harness-plugins/assets/homepage.zh.png?v=ff45639f287c)](https://deepseek1024.com/)
 
 [在线网站](https://deepseek1024.com/) · [API 文档](https://github.com/imsai-sh/dsh-1024store/blob/main/web/docs/api.md) · [英文目录](catalog/README.md) · [提交插件](CONTRIBUTING.md) · [网站与 CLI 源码](https://github.com/imsai-sh/dsh-1024store)
 
@@ -145,7 +145,7 @@ docs/               目录数据模型文档
 - [主题与外观](#theme) (507)
 - [会话与消息](#session) (909)
 - [记忆](#memory) (455)
-- [工具与能力](#tools) (4200)
+- [工具与能力](#tools) (4201)
 - [技能包](#skill) (1060)
 - [工作流与自动化](#workflow) (803)
 - [通知与集成](#notify) (515)
@@ -1152,7 +1152,7 @@ docs/               目录数据模型文档
 <a id="tools"></a>
 
 <details>
-<summary><strong>工具与能力</strong> · 显示 236 / 共 4200 个</summary>
+<summary><strong>工具与能力</strong> · 显示 232 / 共 4201 个</summary>
 
 - [@perrylink/dsh-checkers-suite](https://github.com/PerryLink/dsh-checkers) — 53 个合规核查插件的一键安装入口：一次插入全部 53 条 Cordis 行，每个 checker 仍保留自己的 npm 包、规则包与版本。
 - [@xiaohe-store/dsh-canvas](https://github.com/wild-river2016/dsh-xiaohe-canvas) — 小禾画布 AI 创作助手 - 操作画布创作电商内容（图片、视频、工作流）。
@@ -1294,6 +1294,7 @@ docs/               目录数据模型文档
 - [CodeReader](https://github.com/PathChan/CodeReader) — 提供代码文件读取和分析的工具。
 - [codex-bridge](https://github.com/xiaoxiao44443/dfy-dsh-plugins/tree/HEAD/plugins/codex-bridge) — 桥接 DeepSeek Harness 与 Codex，实现跨平台的代码执行与集成。
 - [codex-terminal](https://github.com/Ephemeral-AI-Lab/dsh-plugins/tree/HEAD/plugins/codex-terminal) — 在 Harness 内提供终端界面，用于直接运行代码和命令。
+- [colamd-themes](https://github.com/byteuser1977/ColaMD-themes) — DeepSeek Harness 的 Markdown 主题工具：输入框旁的主题胶囊以样例卡片展示 69 套主题（含 12 套 ColaMD 内置），.md 在文档预览里按所选主题就地渲染，文稿与幻灯片可导出为 A4 PDF、Word、16:9 幻灯片 PDF 或 PPTX，且与屏幕使用同一份 CSS。幻灯片模式沿用 ColaMD-extend 的 slides.css 与 11 种版式（cover、section、agenda、kpi、timeline、steps、matrix、two-col、figure、quote、closing），支持页头指令、逐页流动、全屏演示与主题自带的分版式配色。
 - [comfy-local-tools](https://github.com/pirate-608/dsh-multi-tools/tree/HEAD/plugins/comfy-local-tools) — 提供视觉、ComfyUI、Unity、创意应用、CAD 和 Ren'Py 集成的多模态工具集。
 - [comm-protocol-hub](https://github.com/Thanksgiver233/comm-protocol-hub) — 将分散在 3GPP Release 15~18 的 70+ 条通信协议规范，按 TN/NTN/全息/近远场/混合/安全等 8 个维度结构化整理，为通信工程师和 AI 助手提供一键式协议查询能力。通过三个 DSH 工具（关键词搜索、分类浏览、单条详情），取代人工翻阅数百页 PDF 的繁琐过程，让大模型在通信领域回答更准确、有据可查。本项目填补了通信工程专业知识在 AI 助手中的空白，是首个面向通信领域的 DSH 协议知识库插件。
 - [command-scout](https://github.com/JohnXu22786/command-scout) — 命令侦察插件：扫描工作区，把项目声明的构建命令（Makefile、npm scripts、just、deno 等）暴露为可调用工具。
@@ -1385,12 +1386,7 @@ docs/               目录数据模型文档
 - [dsh-3d-model-viewer](https://github.com/lishLRF/dsh-3d-model-viewer) — DSH 插件：在 DeepSeek Harness 的 Web 界面查看 OBJ/STL/STEP 三维模型，并转译为标准化、LLM 可读的 JSON（含语义分析），一键发送给 AI。
 - [dsh-a-share-screener](https://github.com/Gaines-cz/dsh-a-share-screener) — 提供 A 股股票筛选，支持可插拔策略和多数据源。
 - [dsh-a11y-audit](https://github.com/satan9394/dsh-public/tree/HEAD/plugins/dsh-a11y-audit) — 执行可访问性审计，提供报告和修复建议。
-- [dsh-a11y-audit](https://github.com/satan9394/dsh-skills-bundle/tree/HEAD/plugins/dsh-a11y-audit) — 审计Web界面可访问性问题并提出改进建议。
-- [dsh-a2a](https://github.com/ryubyte/dsh-a2a) — 支持出站调用远程 Agent 技能，并提供入站 A2A 服务及连接面板。
-- [dsh-a2a](https://github.com/TGYD-helige/dsh-plugins/tree/HEAD/packages/dsh-a2a) — 实现 A2A 协议服务器，支持智能体间通信。
-- [dsh-a2a-agent](https://github.com/fangweixuan26-hash/dsh-a2a-agent) — 通过Agent2Agent协议暴露DeepSeek Harness智能体，支持JSON-RPC的智能体间通信。
-- [dsh-ab-sample](https://github.com/uckkk/dsh-ab-sample) — A/B测试样本量
-- *GitHub 单个文件能渲染的长度有上限，本分类还有 3964 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
+- *GitHub 单个文件能渲染的长度有上限，本分类还有 3969 个插件没能列在这里；完整目录请在[在线网站](https://deepseek1024.com/)搜索浏览。*
 
 </details>
 
